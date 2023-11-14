@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ParticleJS from './components/ParticlesJS/ParticleJS';
+import MousePointer from './components/MousePointerAnimated/MousePointer';
+import Navbar from './components/Navbar/Navbar';
+import DarkMode from './components/DarkMode/DarkMode';
+import ColorChange from './components/ColorChange/ColorChange';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* mouse pointer and particle portion */}
+      {/* <ParticleJS></ParticleJS> */}
+      {/* <MousePointer></MousePointer> */}
+
+      {/* Navbar  */}
+      <Navbar></Navbar>
+      <ColorChange></ColorChange>
+
+
     </div>
   );
 }
