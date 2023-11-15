@@ -45,7 +45,7 @@ const Navbar = () => {
                     </nav>
                 </div>
                 <div className='nevigate-button'>
-                    <div> <button>See in 1 Page</button></div>
+                    <div> <button  >See in 1 Page</button></div>
                     <div><DarkMode></DarkMode></div>
                 </div>
             </div>

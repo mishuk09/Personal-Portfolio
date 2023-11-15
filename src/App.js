@@ -5,6 +5,7 @@ import MousePointer from './components/MousePointerAnimated/MousePointer';
 import Navbar from './components/Navbar/Navbar';
 import DarkMode from './components/DarkMode/DarkMode';
 import ColorChange from './components/ColorChange/ColorChange';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
 
       {/* Navbar  */}
       <Navbar></Navbar>
-      <ColorChange></ColorChange>
-
+      {/* <ColorChange></ColorChange> */}
+      <Home></Home>
 
     </div>
   );

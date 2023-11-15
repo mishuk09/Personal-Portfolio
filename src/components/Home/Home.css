@@ -1,0 +1,62 @@
+.home-div {
+    display: flex;
+}
+
+.name-div {
+    height: 500px;
+    width: 50%;
+    background-color: #0E0A1B;
+}
+
+.pic-div {
+    height: 500px;
+    width: 50%;
+    background-color: rgb(25, 25, 36);
+}
+
+.name-div {
+    color: white;
+    padding-top: 70px;
+    padding-left: 30px;
+
+}
+
+.name-div22 {
+    line-height: 0;
+    margin-top: 30px;
+}
+
+.name-div .name-p {
+    color: white;
+}
+
+.name-div img {
+    width: 100px;
+}
+
+.name-div h1 {
+    padding-top: 0px;
+    color: lime;
+}
+
+.name-div span {
+    color: red;
+}
+
+.name-div p {
+    color: #a8a7a7;
+}
+
+.social-link {
+    display: flex;
+
+}
+
+.social-link div img {
+    color: white;
+
+}
+
+.icon-div {
+    display: flex;
+}
