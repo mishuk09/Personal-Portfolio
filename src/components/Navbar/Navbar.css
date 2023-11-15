@@ -49,6 +49,8 @@
 
 .homeDiv:hover {
     color: #0487FB;
+    transition: 0.3s;
+
 
 }
 

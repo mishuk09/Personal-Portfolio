@@ -1,5 +1,15 @@
+.whatsapp-logo {
+    position: fixed;
+    top: 80%;
+    right: 0;
+    margin-right: 10px;
+    transform: translate(0, -50%);
+}
+
 .home-div {
     display: flex;
+    margin-top: 1px;
+
 }
 
 .name-div {
@@ -24,6 +34,8 @@
 .name-div22 {
     line-height: 0;
     margin-top: 30px;
+    font-family: serif;
+
 }
 
 .name-div .name-p {
@@ -31,16 +43,18 @@
 }
 
 .name-div img {
-    width: 100px;
+    width: 80px;
 }
 
 .name-div h1 {
     padding-top: 0px;
-    color: lime;
+    color: aqua;
+    font-weight: 700;
 }
 
 .name-div span {
-    color: red;
+    font-weight: 700;
+    color: #0487FB;
 }
 
 .name-div p {
@@ -52,6 +66,12 @@
 
 }
 
+.social-link FontAwesomeIcon {
+    width: 100px;
+
+
+}
+
 .social-link div img {
     color: white;
 
@@ -59,4 +79,37 @@
 
 .icon-div {
     display: flex;
+}
+
+.pic-div {
+    background-color: #0E0A1B;
+}
+
+.pic-div img {
+    width: 500px;
+}
+
+.wave1 img {
+    position: absolute;
+
+}
+
+/* ==================== */
+.sort-intro {
+    height: 400px;
+    width: 800px;
+    background-color: #0487FB;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 10px;
+}
+.sort-intro-headline{
+    display: flex;
+    justify-content: space-between;
+}
+.sort-intro-headline img{
+    width: 150px;
+    
 }
