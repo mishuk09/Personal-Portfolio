@@ -6,10 +6,14 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(100%, -50%);
     padding: 1rem;
     border-radius: 5px;
 
+}
+
+.main-div--open {
+    transform: translate(0, -50%);
 }
 
 .main-div h3 {
@@ -33,7 +37,20 @@
     display: grid;
     place-items: center;
 
+
 }
+
+
+@keyframes app-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .color-list {
     display: grid;

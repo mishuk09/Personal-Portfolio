@@ -4,4 +4,8 @@ const ColorItem = ({color}) =>
 
     </div>
 
+
+
+
+
 export default ColorItem;
