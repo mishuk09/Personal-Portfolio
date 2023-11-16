@@ -1,0 +1,117 @@
+/* ==================== */
+.sort-intro {
+    height: 400px;
+    width: 800px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.sort-intro-headline {
+    display: flex;
+    background-color: #EBF1F8;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+.sort-intro-headline .sort-intro-head img {
+
+    width: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.sort-intro-headline img {
+    width: 150px;
+
+}
+.sort-intro-img img {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+
+.sort-intro-head {
+
+    padding: 10px;
+    height: 40px;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-left: auto;
+    margin-right: auto;
+    clip-path: polygon(75% 0%, 84% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
+}
+
+
+
+.linkedin-follow img {
+    right: 0;
+    padding-right: 7px;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+
+
+.sort-intro-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7pxpx;
+    background-color: #EBF1F8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.sort-intro-child-div {
+    height: 120px;
+    width: 365px;
+    border-radius: 5px;
+    line-height: 0.5;
+
+
+}
+
+.sort-intro-child-div img {
+    width: 80px;
+    margin: 20px;
+
+
+
+}
+
+.institution {
+    margin-left: 130px;
+    font-family: sans-serif;
+}
+
+.institution33 {
+    margin-left: 130px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #3a4251;
+}
+
+.institution44 {
+    margin-left: 130px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #727B8A;
+}
+
+.institution11 {
+    font-size: 21px;
+    margin-left: 130px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #504848;
+    font-family: 'Times New Roman', Times, serif;
+}

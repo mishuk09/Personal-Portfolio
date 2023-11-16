@@ -1,0 +1,35 @@
+.skills-div {
+    margin-top: 400px;
+    width: 100%;
+    height: 100px;
+    background-color: #0E0A1B;
+    color: white;
+    text-align: center;
+    line-height: 1;
+
+}
+
+.skills-div p {
+    color: #E0D3D3;
+    font-size: 16px;
+
+}
+
+.skills-div h1 {
+    font-size: 25px;
+
+}
+
+.skillswave img {
+    position: absolute;
+
+}
+
+.skillswave .prolanguage {
+    margin-top: 100px;
+    position: relative;
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    background-color: aliceblue;
+}

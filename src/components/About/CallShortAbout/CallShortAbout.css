@@ -1,0 +1,95 @@
+.sortabout {
+    width: 68%;
+    margin-left: auto;
+}
+
+.sort-intro-child11 {
+    height: 80px;
+    width: 95%;
+    border-radius: 5px;
+    display: flex;
+    background-color: #E7F4FD;
+}
+
+.sort-intro-child-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.sort-intro-child11 img {
+
+    width: 80px;
+}
+
+.sort-intro-child11 .circle1 {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+.email-section {
+    line-height: 0.5;
+}
+
+.email-section h5 {
+    color: #432323;
+
+}
+
+.email-section p {
+    color: #2E1818;
+
+}
+
+.circle1 .icon {
+    color: #0487FB;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sort-introimg img {
+    width: 170px;
+    border-radius: 5px;
+
+}
+
+.followgithub img {
+    width: 170px;
+    border-radius: 5px;
+}
+
+.sort-intro-he {
+    display: flex;
+    background-color: #EBF1F8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.sort-intro-he .sort-intro-head11 img {
+
+    width: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.sort-intro-head11 {
+
+    padding: 10px;
+    height: 40px;
+    width: 500px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-left: auto;
+    margin-right: auto;
+    clip-path: polygon(75% 0%, 84% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
+}
