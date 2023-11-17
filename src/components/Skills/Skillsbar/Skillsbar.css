@@ -1,5 +1,5 @@
 .skillsbar-div-head {
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 
 .skillsbar {
@@ -50,9 +50,69 @@
 .skills-child-main {
     height: 500px;
     width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
-.lastupdate{
+.lastupdate {
     border: 1px solid rgb(152, 152, 152);
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.skills-headline-child {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.skills-headline-child div {
+    height: 100px;
+    width: 100%;
+    background-color: #0487FB;
+    border-radius: 5px;
+    line-height: 0.4;
+    padding: 15px;
+    padding-top: 20px;
+
+}
+
+.skills-headline-child div .dsahead {
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+
+}
+
+.skills-headline-child div .dsahead1 {
+    font-weight: 700;
+    color: #d1def4;
+    font-size: 14px;
+
+}
+
+.bar-chart {
+    display: flex;
+}
+
+.pro-barchart {
+    height: 300px;
+    width: 32%;
+    /* background-color: #c2cdd7; */
+}
+
+.language-barchart {
+    
+    width: 100%;
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bar-chart-child {
+    height: 300px;
+    width: 100%;
+    background-color: #EBF1F8;
+    border-radius: 5px;
 }

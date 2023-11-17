@@ -1,0 +1,18 @@
+.chart a button {
+     
+    background-color: #0487FB;
+    border-radius: 20px;
+    width: 100px;
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+
+
+
+}
+
+.chart a {
+    margin-top: 20px;
+    margin-left: 30%;
+}
