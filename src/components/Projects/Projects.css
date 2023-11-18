@@ -1,0 +1,111 @@
+.projects-head {
+
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+}
+
+.projects-head12 {
+    align-items: center;
+    text-align: center;
+}
+
+.project-child {
+    margin: 0 auto;
+    margin-top: 60px;
+    height: 350px;
+    width: 600px;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-child-head {
+
+    height: 50px;
+    width: 100%;
+    background-color: #0e0a1b;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.project-child-head span {
+    font-size: 15px;
+    color: #c1c1c1;
+    font-weight: 700;
+    margin-left: 0px;
+    padding-left: 0px;
+
+
+}
+
+ 
+
+.projects-head .asdsa {
+    color: white;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.projects-head button {
+    color: white;
+    background-color: #0487FB;
+    width: 150px;
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.img-head {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.img-head img {
+    width: 60px;
+
+
+}
+
+.img-head h4 {
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 20px;
+
+}
+
+.cerifyby{
+    margin-top:20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+     
+
+}
+.sdfsafsd{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cerifyby img{
+    width: 100px;
+    margin-left: 10px;
+}
+.cerifvyp{
+    color: #0e0a1b;
+    font-weight: 700;
+}
+.cerifvyp span{
+    color: #0487FB;
+    font-weight: 700;
+}

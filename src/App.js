@@ -10,6 +10,7 @@ import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Certificate from './components/Certificate/Certificate';
 import Service from './components/Service/Service';
+import Projects from './components/Projects/Projects';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
@@ -27,8 +28,7 @@ function App() {
       <Skills></Skills>
       <Certificate></Certificate>
       <Service></Service>
-
-
+      <Projects></Projects>
 
 
 
