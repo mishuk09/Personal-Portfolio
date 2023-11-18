@@ -1,0 +1,46 @@
+.service-head {
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.service-head h1 {
+    font-size: 25px;
+
+}
+
+.cervice-parents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+
+}
+
+.service-child {
+    border: 1px solid rgb(198, 198, 198);
+    height: 100px;
+    width: 100%;
+    /* background-color: rgb(102, 102, 112); */
+    border-radius: 5px;
+    display: flex;
+}
+
+.service-child img {
+    width: 80px;
+}
+
+.service-child-2 h3 {
+    color: #333F52;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.service-child-2 p {
+    color: #727B8A;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}

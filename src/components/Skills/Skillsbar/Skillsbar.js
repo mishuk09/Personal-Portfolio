@@ -7,6 +7,7 @@ import Skills from '../img/skills.png';
 import Chart from '../AcumulationChart/Chart';
 import Barchart from '../Barchart/Barchart';
 import Toolchart from '../ToolsChart/Toolchart';
+import benext from './img/benext.png';
 
 const Skillsbar = () => {
     return (
@@ -55,6 +56,20 @@ const Skillsbar = () => {
 
 
 
+                </div>
+            </div>
+            <img className='asasas mx-10' src={benext} alt="" />
+            <div className='benest '>
+
+                <div className='benext-child'>
+
+                </div>
+
+                <div className='benext-child2 p-4'>
+                    <h1>Be my next success story?</h1>
+                    <p  >Have an idea? Talk to me today! Share your requirements and let's
+                        team up for a successful project with simplicity."</p>
+                    <button>Have A Free Consultation</button>
                 </div>
             </div>
         </div>
