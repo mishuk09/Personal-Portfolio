@@ -14,6 +14,7 @@ import Projects from './components/Projects/Projects';
 import Mission from './components/Mission/Mission';
 import Ceo from './components/CEO/Ceo';
 import MapChart from './components/CEO/earth/MapChart';
+import Contact from './components/Contact/Contact';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
       <Projects></Projects>
       <Mission></Mission>
       <Ceo></Ceo>
-      {/* <MapChart></MapChart> */}
+      <Contact></Contact>
 
 
 

@@ -1,0 +1,35 @@
+.contact-main-head {
+    margin-top: 900px;
+    position: relative;
+}
+
+.contact-main-head h3 {
+    text-align: center;
+
+}
+
+.contact-head {
+    display: flex;
+    border-radius: 5px;
+    margin-top: 50px;
+    height: 400px;
+    width: 100%;
+    background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+
+}
+
+.contact-child {
+    height: 400px;
+    width: 100%;
+    /* background-color: aliceblue; */
+
+}
+
+.contact-child2 {
+    height: 400px;
+    width: 100%;
+    /* background-color: blueviolet; */
+
+}
+
+.email-div {}
