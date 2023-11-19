@@ -91,14 +91,14 @@
 
 }
 .sdfsafsd{
-    margin-top: 20px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 .cerifyby img{
-    width: 100px;
+    width: 150px;
     margin-left: 10px;
 }
 .cerifvyp{
@@ -108,4 +108,13 @@
 .cerifvyp span{
     color: #0487FB;
     font-weight: 700;
+}
+.w3c{
+    width: 80px;
+}
+.bigimages img{
+    width: 220px;
+}
+.browserstack img{
+    width: 200px;
 }

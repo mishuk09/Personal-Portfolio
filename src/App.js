@@ -11,6 +11,9 @@ import Skills from './components/Skills/Skills';
 import Certificate from './components/Certificate/Certificate';
 import Service from './components/Service/Service';
 import Projects from './components/Projects/Projects';
+import Mission from './components/Mission/Mission';
+import Ceo from './components/CEO/Ceo';
+import MapChart from './components/CEO/earth/MapChart';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
       <Certificate></Certificate>
       <Service></Service>
       <Projects></Projects>
+      <Mission></Mission>
+      <Ceo></Ceo>
+      {/* <MapChart></MapChart> */}
 
 
 

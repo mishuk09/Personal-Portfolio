@@ -4,7 +4,8 @@ import work from './img/work.png';
 import google from './img/google.png';
 import browser from './img/browser.png';
 import W3C from './img/W3C.png';
-import gtmetrix from './img/gtmetrix.png';
+import bigimage from './img/bigimage.jpg';
+
 
 
 
@@ -31,10 +32,15 @@ const Projects = () => {
                 <div className='cerifyby'>
                     <p className='cerifvyp'>Verified by <span>Google PageSpeed Insights</span></p>
                     <div className='sdfsafsd '>
-                        <img className='w-30' src={google} alt="" /><img src={gtmetrix} alt="" /><img src={W3C} alt="" /><img src={browser} alt="" /></div>
+                        <div>  <img className='pt-2' src={google} alt="" /></div>
+                        <div className='bigimages'> <img src={bigimage} alt="" /></div>
+                        <div className='w3c pt-3'>  <img className='w3c' src={W3C} alt="" /></div>
+                        <div className='browserstack mx-4 pt-3'>  <img src={browser} alt="" /></div>
+                    </div>
                 </div>
 
             </div>
+            
 
         </div>
     );

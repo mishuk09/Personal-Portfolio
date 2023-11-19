@@ -1,0 +1,57 @@
+.mission-head {
+    margin-top: 770px;
+}
+
+.mission-head img {
+    width: 250px;
+    position: absolute;
+
+}
+
+.mission-parent {
+    display: flex;
+}
+
+.img-title-mission {
+    position: relative;
+    margin-left: 200px;
+    margin-top: 840px;
+    display: flex;
+}
+
+.mission-head-img {
+    margin-left: 0px;
+    width: 70%;
+}
+
+.mission-head-img img {
+    width: 100%;
+}
+
+.mission-detils {
+    height: auto;
+    width: 100%;
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+.mission-detils h1 {
+    font-size: 30px;
+    color: #504848;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.mission-detils p {
+    margin-top: 15px;
+    color: #727B8A;
+}
+
+.mission-detils button {
+    margin-top: 20px;
+    color: white;
+    padding: 5px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #0487FB;
+
+}
