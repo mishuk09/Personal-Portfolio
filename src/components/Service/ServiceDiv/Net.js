@@ -18,7 +18,7 @@ const Net = () => {
                         <div> <img src={tic} alt="" /><span className='px-2 '>ASP.NET MVC/Core</span></div>
 
                     </div>
-                    <div className='website-button'><a href=""><button>Get Your First Website</button></a></div>
+                    <div className='website-button'><a href=""><button>Get Your Windows App</button></a></div>
                 </div>
                 <div className='web-service-parents2'>
                     <img src={net} alt="" />

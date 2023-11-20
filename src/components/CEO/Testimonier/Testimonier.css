@@ -1,0 +1,42 @@
+.testimonial-card .card-up {
+    height: 120px;
+    overflow: hidden;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.testimonial-card .avatar {
+    width: 110px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.testimonier-div {
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.name-div-12 h4,
+span {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-div-12 div {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-div-12 div .span234 {
+    font-size: 18px;
+}
+
+ 
