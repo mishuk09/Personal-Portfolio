@@ -5,6 +5,7 @@ import google from './img/google.png';
 import browser from './img/browser.png';
 import W3C from './img/W3C.png';
 import bigimage from './img/bigimage.jpg';
+import ProjectVideo from './ProjectVideo';
 
 
 
@@ -26,6 +27,7 @@ const Projects = () => {
                     <div className='project-child-head ps-3 pt-2'>
                         <span>CSEHacks </span> <span>A Learning Website</span>
                     </div>
+                    <ProjectVideo></ProjectVideo>
 
 
                 </div>
@@ -40,7 +42,7 @@ const Projects = () => {
                 </div>
 
             </div>
-            
+
 
         </div>
     );

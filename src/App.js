@@ -15,6 +15,8 @@ import Mission from './components/Mission/Mission';
 import Ceo from './components/CEO/Ceo';
 import MapChart from './components/CEO/earth/MapChart';
 import Contact from './components/Contact/Contact';
+import Pro from './components/Projects/ProjectVideo';
+import Uiux from './components/Service/ServiceDiv/Uiux';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
       <Skills></Skills>
       <Certificate></Certificate>
       <Service></Service>
+      {/* <Uiux></Uiux> */}
+      {/* <Pro></Pro> */}
       <Projects></Projects>
       <Mission></Mission>
       <Ceo></Ceo>

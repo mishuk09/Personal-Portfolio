@@ -10,12 +10,20 @@
 
 }
 
-.cervice-parents {
+.cervice-parents nav {
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
 
 }
+
+.service-child-2 h3,
+.service-child-2 p {
+
+    text-decoration: none !important;
+}
+
 
 .service-child {
     border: 1px solid rgb(198, 198, 198);

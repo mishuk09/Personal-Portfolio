@@ -1,0 +1,91 @@
+.web-service-head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.web-service-parents {
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 400px;
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+
+.web-service-parents h3 {
+    color: #333F52;
+    font-size: 25px;
+
+}
+
+.web-service-parents p {
+    color: #727B8A;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.web-service-parents .tic {
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.web-service-parents .tic img {
+
+    width: 17px;
+    height: 17px;
+}
+
+.web-service-parents .tic img span {
+    padding-left: 10px;
+
+
+}
+
+.web-service-parents .tic div {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.web-service-parents .tic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.web-service-parents button {
+
+    border-radius: 20px;
+    background-color: #0487FB;
+    padding: 7px;
+    width: 200px;
+    color: white;
+    font-size: 13px;
+
+}
+
+.web-service-parents .website-button {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.web-service-parents a {
+    margin-top: 100px;
+}
+
+.web-service-parents2 {
+
+    height: 400px;
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+
+.web-service-parents2 img {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}

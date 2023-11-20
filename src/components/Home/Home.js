@@ -55,6 +55,7 @@ const Home = () => {
                                 <div className='ps-4 h-5 w-'><FontAwesomeIcon icon={faLinkedin} size="2x" /></div>
                                 <div className='ps-4 h-5 w-'><FontAwesomeIcon icon={faFacebook} size="2x" /></div>
                                 <div className='ps-4 h-5 w-'><FontAwesomeIcon icon={faTwitch} size="2x" /></div>
+                            
                             </div>
                         </div>
                     </div>
