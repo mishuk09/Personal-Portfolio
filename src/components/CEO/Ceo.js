@@ -8,7 +8,7 @@ const Ceo = () => {
     return (
         <div>
             <div className='ceo'>
-                <Testimonier></Testimonier>
+                {/* <Testimonier></Testimonier> */}
                 <div className='img-div'>
                     {/* <img className='container' src={download} alt="" /> */}
                     <MapChart className='img'></MapChart>

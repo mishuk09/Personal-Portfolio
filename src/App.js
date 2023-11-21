@@ -17,6 +17,7 @@ import MapChart from './components/CEO/earth/MapChart';
 import Contact from './components/Contact/Contact';
 import Pro from './components/Projects/ProjectVideo';
 import Uiux from './components/Service/ServiceDiv/Uiux';
+import Testimonier from './components/CEO/Testimonier/Testimonier';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Mission></Mission>
       <Ceo></Ceo>
       <Contact></Contact>
+      <Testimonier></Testimonier>
 
 
 

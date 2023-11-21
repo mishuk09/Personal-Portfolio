@@ -1,73 +1,100 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Testimonier.css';
-import rku from '../img/rku.webp';
-import apple from '../img/apple.png';
-import {
-    MDBCard,
-    MDBCardBody,
-    MDBCol,
-    MDBContainer,
-    MDBIcon,
-    MDBRow,
-} from 'mdb-react-ui-kit';
+import $ from 'jquery';
 
-const Testimonier = () => {
+function Testimonier() {
+    useEffect(() => {
+        // jQuery code
+        $(".testimonial .indicators li").click(function () {
+            var i = $(this).index();
+            var targetElement = $(".testimonial .tabs li");
+            targetElement.eq(i).addClass('active');
+            targetElement.not(targetElement[i]).removeClass('active');
+        });
+
+        $(".testimonial .tabs li").click(function () {
+            var targetElement = $(".testimonial .tabs li");
+            targetElement.addClass('active');
+            targetElement.not($(this)).removeClass('active');
+        });
+
+        $(".slider .swiper-pagination span").each(function (i) {
+            $(this).text(i + 1).prepend("0");
+        });
+    }, []);
+
     return (
-        <MDBContainer className="py-5 ">
-            <div className='testimonier-div'><h3  >Testimonier</h3></div>
-            <MDBRow className="d-flex justify-content-center">
-                {/* Testimonial content */}
-                <MDBCol md="4" className="mb-5 mb-md-0 d-flex align-items-stretch">
-                    <MDBCard className="testimonial-card">
-                        <div className="card-up" style={{ backgroundColor: '#9d789b' }}>
-                            <img src={rku} alt="" />
+        <div>
+            <section class="testimonial">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <ol class="carousel-indicators tabs">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                                    <figure>
+                                        <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-01-179x179.png"
+                                            class="img-fluid" alt="" />
+                                    </figure>
+                                </li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                                    <figure>
+                                        <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-02-306x306.png"
+                                            class="img-fluid" alt="" />
+                                    </figure>
+                                </li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                                    <figure>
+                                        <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-03-179x179.png"
+                                            class="img-fluid" alt="" />
+                                    </figure>
+                                </li>
+                            </ol>
                         </div>
-                        <div className="avatar mx-auto bg-blue">
-                            <img
-                                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                className="rounded-circle img-fluid"
-                                alt="User Avatar"
-                            />
-                        </div>
-                        <MDBCardBody className='name-div-12'>
-                            <h4 className="mb-0">Shivangi Patel</h4>
-                            <div className='pb-0 mb-0'>
-                                <span>Assistant professor</span> <br />
-                                <span className='span234'>Rk University,Gujarat,India.</span>
-                            </div>
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                            <div id="carouselExampleIndicators" data-interval="false" class="carousel slide"
+                                data-ride="carousel">
 
-                            <hr />
-                            <p className="dark-grey-text mt-2">
-                                <MDBIcon fas icon="quote-left" className="pe-2" />
-                                Lorem ipsum dolor sit amet eos adipisci, consectetur adipisicing elit.
-                            </p>
-                        </MDBCardBody>
-                    </MDBCard>
-                </MDBCol>
-                {/* <MDBCol md="4" className="mb-5 mb-md-0 d-flex align-items-stretch">
-                    <MDBCard className="testimonial-card">
-                        <div className="card-up" style={{ backgroundColor: '#9d789b' }}></div>
-                        <div className="avatar mx-auto bg-white">
-                            <img
-                                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                className="rounded-circle img-fluid"
-                                alt="User Avatar"
-                            />
+                                <h1>TESTIMONIALS</h1>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="quote-wrapper">
+                                            <p>I have tried a lot of food delivery services but Plate is something out of
+                                                this world! Their food is really healthy and it tastes great, which is why I
+                                                recommend this company to all my friends!</p>
+                                            <h3>Shivangi Patel</h3>
+                                            <span> Assistant Professor</span>
+                                            <h5>Rk University,Rajkot,Gujarat,India.</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="quote-wrapper">
+                                            <p>I have tried a lot of food delivery services but Plate is something out of
+                                                this world! Their food is really healthy and it tastes great, which is why I
+                                                recommend this company to all my friends!</p>
+                                            <h3>peter lee</h3>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="quote-wrapper">
+                                            <p>I have tried a lot of food delivery services but Plate is something out of
+                                                this world! Their food is really healthy and it tastes great, which is why I
+                                                recommend this company to all my friends!</p>
+                                            <h3>peter lee</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ol class="carousel-indicators indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                            </div>
                         </div>
-                        <MDBCardBody>
-                            <h4 className="mb-4">Maria Smantha</h4>
-                            <hr />
-                            <p className="dark-grey-text mt-4">
-                                <MDBIcon fas icon="quote-left" className="pe-2" />
-                                Lorem ipsum dolor sit amet eos adipisci, consectetur adipisicing elit.
-                            </p>
-                        </MDBCardBody>
-                    </MDBCard>
-                </MDBCol> */}
-                {/* Repeat this structure for other testimonials */}
-            </MDBRow>
-        </MDBContainer>
+                    </div>
+                </div>
+            </section>
+        </div>
     );
-};
+}
 
 export default Testimonier;
