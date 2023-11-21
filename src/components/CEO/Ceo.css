@@ -1,5 +1,7 @@
 .ceo {
-    background-color: #00020F;
+    background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+
+    /* background-color: #00020F; */
     height: 620px;
     width: 100%;
     margin-top: 100px;

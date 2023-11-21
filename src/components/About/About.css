@@ -1,5 +1,7 @@
 .about-section {
-    background-color: #0487FB;
+    /* background-color: #0487FB; */
+    background: rgb(59, 27, 149);
+    background: linear-gradient(90deg, rgba(59, 27, 149, 1) 0%, rgba(105, 49, 212, 1) 51%, rgba(137, 65, 251, 1) 100%);
     height: 510px;
     width: 100%;
     border-radius: 5px;
@@ -79,14 +81,14 @@
 .yearexperience h3 {
     color: #e8e8e8;
     font-weight: 700;
-     
+
 }
 
 .yearexperience p {
     color: #A0A0A0;
     font-weight: 700;
     font-size: 18px;
-    
+
 }
 
 .yearexperience .years {
@@ -96,20 +98,22 @@
     border-right: 1px solid white;
     line-height: 10px;
 }
+
 .yearexperience .years1 {
     height: 100px;
     width: 100%;
-    background-color: black; 
-    border-top-right-radius: 5px;  
-    border-bottom-right-radius: 5px;  
+    background-color: black;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     line-height: 10px;
 }
+
 .yearexperience .years11 {
     height: 100px;
     width: 100%;
     border-right: 1px solid white;
-    background-color: black; 
-    border-top-left-radius: 5px;  
-    border-bottom-left-radius: 5px;  
+    background-color: black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     line-height: 10px;
 }
