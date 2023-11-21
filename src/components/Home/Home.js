@@ -12,6 +12,7 @@ import Typical from 'react-typical'
 
 import homelogo from './img/homelogo.png';
 import Shortintro from '../Shortintro/Shortintro';
+import Solar from './SolarSystem/Solar';
 
 const Home = () => {
 
@@ -62,7 +63,8 @@ const Home = () => {
 
 
                     <div className='pic-div'>
-                        <img className='container-fluid' src={home} alt="" />
+                        {/* <img className='container-fluid' src={home} alt="" /> */}
+                        <Solar></Solar>
                     </div>
                 </div>
             </div>
