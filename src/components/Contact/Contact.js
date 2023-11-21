@@ -9,31 +9,7 @@ import location from './img/location.png';
 
 const Contact = () => {
     return (
-        // <div className='container contact-main-head'>
-        //     <h3>So Let's Contact With Me</h3>
-        //     <div className='contact-head'>
-        //         <div className='contact-child'>
-        //             <div className='email-div'>
-        //                 <div></div>
-        //                 <div></div>
-        //             </div>
-        //             <div className='call-div'>
-        //                 <div></div>
-        //                 <div></div>
-        //             </div>
-        //             <div className='location-div'>
-        //                 <div></div>
-        //                 <div></div>
-        //             </div>
-        //             <div className='mapdiv'>
-        //                 <div></div>
-        //                 <div></div>
-        //             </div>
-        //         </div>
-        //         <div className='contact-child2'></div>
-        //     </div>
-
-        // </div>
+        
 
         <div className="flex flex-col items-stretch  contact-headmain   ">
             <div className="text-black text-justify text-3xl font-bold leading-10 self-center whitespace-nowrap max-md:max-w-full">

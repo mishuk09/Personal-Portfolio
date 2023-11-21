@@ -12,7 +12,7 @@ import { Animation } from 'react-ui-ox-anim';
 const Shortintro = () => {
     return (
         <div>
-            <div className='    wave1'>
+            <div className='wave1'>
                 
                 <div className='sort-intro  '>
                     <div className='sort-intro-headline p-2 '>

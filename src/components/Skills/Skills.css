@@ -46,6 +46,11 @@
 } */
 
 
+.skills-main-head-div{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
 .skills {
     height: 400px;
     width: 100%;

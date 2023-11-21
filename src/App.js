@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       {/* mouse pointer and particle portion */}
-      {/* <ParticleJS></ParticleJS> */}
+      <ParticleJS></ParticleJS>
       {/* <MousePointer></MousePointer> */}
 
       {/* Navbar  */}
@@ -41,7 +41,7 @@ function App() {
       <Mission></Mission>
       <Ceo></Ceo>
       <Contact></Contact>
-      <Testimonier></Testimonier>
+      {/* <Testimonier></Testimonier> */}
 
 
 

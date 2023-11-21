@@ -1,7 +1,4 @@
-.mission-head {
-    margin-top: 770px;
-}
-
+ 
 .mission-head img {
     width: 250px;
     position: absolute;
@@ -9,13 +6,16 @@
 }
 
 .mission-parent {
+    margin-top: 350px;
     display: flex;
+    position: relative;
+    background-color: rgb(255, 255, 255);
 }
 
 .img-title-mission {
     position: relative;
     margin-left: 200px;
-    margin-top: 840px;
+    margin-top: 50px;
     display: flex;
 }
 

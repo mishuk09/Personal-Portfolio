@@ -10,23 +10,9 @@ import Skillsbar from './Skillsbar/Skillsbar';
 
 const Skills = () => {
     return (
-        <div className='container'>
+        <div className='container skills-main-head-div'>
             <div className='skills-div'>
-                {/* <div className=' container'><h1 className='pt-3'>Technologies/Tools/Skills</h1>
-                    <p  >I work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your
-                        business needs while we handle the technical aspect.</p>
-
-                    <div className='prolanguage  '>
-
-                        <div> <img src={javascript} alt="" /></div>
-                        <div> <img src={react} alt="" /></div>
-                        <div> <img src={nodejs} alt="" /></div>
-                        <div> <img src={java} alt="" /></div>
-                        <div> <img src={github} alt="" /></div>
-                        <div> <img src={sql} alt="" /></div>
-                    </div>
-                </div> */}
-
+                 
 
 
             </div>

@@ -1,6 +1,6 @@
 .projects-head {
 
-    position: absolute;
+    position: relative;
     height: 450px;
     width: 100%;
     background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);

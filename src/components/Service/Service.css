@@ -1,9 +1,15 @@
+.container-head-main{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
 .service-head {
     margin-top: 80px;
     text-align: center;
     justify-content: center;
 
 }
+
+
 
 .service-head h1 {
     font-size: 25px;
@@ -18,11 +24,10 @@
 
 }
 
-.service-child-2 h3,
-.service-child-2 p {
-
-    text-decoration: none !important;
+.Link-div {
+    text-decoration: none;
 }
+
 
 
 .service-child {

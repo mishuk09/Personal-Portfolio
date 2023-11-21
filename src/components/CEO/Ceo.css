@@ -2,14 +2,14 @@
     background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
 
     /* background-color: #00020F; */
-    height: 620px;
+    height: 1700px;
     width: 100%;
     margin-top: 100px;
     position: absolute;
 }
 
 .img-div {
-    margin-top: 330px;
+    margin-top: 60px;
 }
 
 .ceo-parent {
@@ -17,7 +17,7 @@
     position: absolute;
     /* top: 50%; */
     left: 50%;
-    margin-top: 700px;
+    margin-top: 1800px;
     transform: translate(-50%, -50%);
     height: 230px;
     width: 400px;

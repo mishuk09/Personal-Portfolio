@@ -144,6 +144,7 @@
     from {
         transform: rotateY(0deg);
     }
+
     to {
         transform: rotateY(360deg);
     }
@@ -161,6 +162,7 @@
     background-color: #13111c;
     padding-bottom: 10px;
     margin-top: 100px;
+    position: relative;
 }
 
 .certi-div {
@@ -198,12 +200,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.certificate-img  {
-display: flex;
-align-items: center;
-justify-content: center;
+.certificate-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
+
 .certificate-img h1 {
     color: #fff;
     font-weight: 700;
@@ -211,10 +214,11 @@ justify-content: center;
     font-family: 'Times New Roman', Times, serif;
 
 }
-.certificate-img img{
-width: 80px;
+
+.certificate-img img {
+    width: 80px;
 }
- 
+
 .certificate-description {
     padding-left: 50px;
     display: flex;
@@ -236,5 +240,3 @@ width: 80px;
     border-left: 1px solid blue;
     padding-left: 10px;
 }
-
- 

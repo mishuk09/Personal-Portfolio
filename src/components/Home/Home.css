@@ -5,9 +5,10 @@
     margin-right: 10px;
     transform: translate(0, -50%);
 }
-.whatsapp-logo .whatsapplogo{
+
+.whatsapp-logo .whatsapplogo {
     color: limegreen;
-     
+
 }
 
 .home-div {
@@ -21,9 +22,11 @@
     width: 50%;
     background-color: #0E0A1B;
 }
-.home-div-main{
+
+.home-div-main {
+    position: relative;
     background-color: #0E0A1B;
-     
+
 }
 
 .pic-div {
@@ -106,6 +109,12 @@
 
 }
 
+
+
+.wave1 {
+    top: 1000px;
+}
+
 /* ==================== */
 .sort-intro {
     height: 400px;
@@ -114,7 +123,7 @@
     margin-left: auto;
     margin-right: auto;
 
-     
+
 }
 
 .sort-intro-headline {
@@ -179,33 +188,38 @@
     width: 365px;
     border-radius: 5px;
     line-height: 0.5;
-     
+
 
 }
-.sort-intro-child-div img{
-     width: 80px;
-     margin: 20px;
-    
-     
+
+.sort-intro-child-div img {
+    width: 80px;
+    margin: 20px;
+
+
 
 }
-.institution{
+
+.institution {
     margin-left: 130px;
     font-family: sans-serif;
 }
-.institution33{
+
+.institution33 {
     margin-left: 130px;
     font-family: sans-serif;
     font-size: 15px;
     color: #3a4251;
 }
-.institution44{
+
+.institution44 {
     margin-left: 130px;
     font-family: sans-serif;
     font-size: 14px;
     color: #727B8A;
 }
-.institution11{
+
+.institution11 {
     font-size: 23px;
     margin-left: 130px;
     font-family: 'Times New Roman', Times, serif;

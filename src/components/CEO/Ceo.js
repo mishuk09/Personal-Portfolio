@@ -3,12 +3,14 @@ import './Ceo.css';
 import MapChart from './earth/MapChart';
 import mishuk1 from './img/mishuk2.png';
 import Testimonier from './Testimonier/Testimonier';
+import Workpv from './Marquee/Workpv';
 
 const Ceo = () => {
     return (
         <div>
             <div className='ceo'>
-                {/* <Testimonier></Testimonier> */}
+                <Workpv></Workpv>
+                <Testimonier></Testimonier>
                 <div className='img-div'>
                     {/* <img className='container' src={download} alt="" /> */}
                     <MapChart className='img'></MapChart>

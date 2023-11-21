@@ -1,0 +1,36 @@
+.marquee-div {
+    display: flex;
+}
+
+.marquee-div-name {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.marquee-div {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-div img {
+    border-radius: 5px;
+    width: 200px;
+    margin: 13px;
+    transition: transform 0.4s ease;
+    /* Adding transition for smooth zoom */
+}
+
+.marquee-div img:hover {
+    transform: scale(1.2);
+    /* Zoom effect on hover */
+    transition: transform 0.4s ease;
+    /* Smooth transition on hover */
+    animation-play-state: paused;
+    /* Pausing the marquee on hover */
+}

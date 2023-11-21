@@ -13,7 +13,7 @@ import Seo from './ServiceDiv/Seo';
 
 const Service = () => {
     return (
-        <div className='container'>
+        <div className='container container-head-main'>
 
 
 
@@ -25,8 +25,8 @@ const Service = () => {
 
             <div className='cervice-parents mt-5'>
 
-                <nav>
-                    <Link to="uiux">
+                <nav >
+                    <Link to="uiux" className='Link-div'  >
                         <div className='service-child p-2'>
                             <div>
                                 <img src={ui} alt="" />
@@ -36,8 +36,8 @@ const Service = () => {
                                 <p>Designing for People, Not Just Screens</p>
                             </div>
                         </div>
-                    </Link>
-                    <Link to="/">
+                    </Link >
+                    <Link to="/" className='Link-div'>
                         <div className='service-child  p-2 '>
                             <div>
                                 <img src={web} alt="" />
@@ -48,7 +48,7 @@ const Service = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="net">
+                    <Link to="net" className='Link-div'>
                         <div className='service-child p-2'>
                             <div>
                                 <img src={net} alt="" />
@@ -59,7 +59,7 @@ const Service = () => {
                         </div>
                     </Link>
 
-                    <Link to="seo">
+                    <Link to="seo" className='Link-div'>
                         <div className='service-child p-2'>
                             <div>
                                 <img src={seo} alt="" />
