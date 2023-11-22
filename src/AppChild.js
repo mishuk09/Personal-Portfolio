@@ -21,20 +21,37 @@ import Testimonier from './components/CEO/Testimonier/Testimonier';
 import ContactForm from './components/Contact/ContactForm';
 import { Route, Routes } from 'react-router-dom';
 import ContactPage from './components/ContactPage/ContactPage';
-import AppChild from './AppChild';
 // import Shortintro from './components/Shortintro/Shortintro';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Routes>
-        <Route path='/' element={<AppChild></AppChild>}></Route>
-        <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
+const AppChild = () => {
+    return (
+        <div className="App">
+            {/* mouse pointer and particle portion */}
+            {/* <ParticleJS></ParticleJS> */}
+            {/* <MousePointer></MousePointer> */}
 
-      </Routes>
-    </div>
-  );
-}
 
-export default App;
+
+            {/* Navbar  */}
+            {/* <Navbar></Navbar> */}
+            {/* <ColorChange></ColorChange> */}
+            <Home></Home>
+            <About></About>
+            <Skills></Skills>
+            <Certificate></Certificate>
+            <Service></Service>
+            {/* <Uiux></Uiux> */}
+            {/* <Pro></Pro> */}
+            <Projects></Projects>
+            <Mission></Mission>
+            <Ceo></Ceo>
+            <Contact></Contact>
+            {/* <Testimonier></Testimonier> */}
+
+            {/* <ContactForm></ContactForm> */}
+
+        </div>
+    );
+};
+
+export default AppChild;

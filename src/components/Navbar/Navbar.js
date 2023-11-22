@@ -1,15 +1,19 @@
 import React from 'react';
 import './Navbar.css';
 import logo from './logo/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, Route, Routes, Switch } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faHome, faBatteryFull, faCertificate, faCode, faAddressBook, faComment } from '@fortawesome/free-solid-svg-icons'
 import DarkMode from '../DarkMode/DarkMode';
 import Popup from 'reactjs-popup';
 import ContactForm from '../Contact/ContactForm';
+import ContactPage from '../ContactPage/ContactPage';
+
 
 
 const Navbar = () => {
+
+
     return (
 
         <div className='header'>
@@ -49,10 +53,10 @@ const Navbar = () => {
                 <div className='nevigate-button'>
 
                     <div>
-                        <Popup trigger={<button  >Get Free Consultation</button>} position='bottom center'>
-                            <ContactForm></ContactForm>
+                        <Link to="/contactpage"> <button >Get Free Consultation</button></Link>
+                    </div>
 
-                        </Popup></div>
+
                     <div><DarkMode></DarkMode></div>
                 </div>
             </div>

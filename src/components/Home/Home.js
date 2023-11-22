@@ -20,7 +20,7 @@ const Home = () => {
     const steps = [
         'Hello 👋', 1000,
         'I am a Junior Web-Developer🌐', 1000,
-        'I am practicing Data Structures and Algorithms 👌', 1000,
+        ' I am practicing Data Structures & Algorithms 👌', 1000,
 
     ];
     return (
