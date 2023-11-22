@@ -16,3 +16,81 @@
  .location-div img {
      width: 50px;
  }
+
+
+ /* ================== */
+
+
+ /* ContactForm.css */
+ .contact-form-container {
+     background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+     border-radius: 5px;
+     /* background-color: #ccc; */
+     max-width: 600px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ .contact-form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ input,
+ textarea {
+     margin-bottom: 15px;
+
+     padding: 10px;
+     border-radius: 5px;
+     border: 1px solid #ccc;
+ }
+
+ .text-area {
+     height: 120px;
+     max-height: 120px;
+     min-height: 120px;
+ }
+
+ button {
+     padding: 10px;
+     border-radius: 5px;
+     border: none;
+     background-color: #007bff;
+     color: white;
+     cursor: pointer;
+ }
+
+ /* Media query for responsiveness */
+ @media (max-width: 600px) {
+
+     input,
+     textarea {
+         width: 100%;
+     }
+ }
+
+
+ .how-can {
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+     font-size: 25px;
+     color: white;
+ }
+
+ .contact-form button {
+     width: 100%;
+     height: 40px;
+     color: white;
+     background-color: #007bff;
+     margin-top: 20px;
+     border-radius: 5px;
+ }
+
+ .phoneinput .phoneinput {
+     width: 48%;
+     background-color: wheat;
+     /* border: 1px solid white; */
+     border-radius: 5px;
+
+ }

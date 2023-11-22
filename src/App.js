@@ -18,13 +18,14 @@ import Contact from './components/Contact/Contact';
 import Pro from './components/Projects/ProjectVideo';
 import Uiux from './components/Service/ServiceDiv/Uiux';
 import Testimonier from './components/CEO/Testimonier/Testimonier';
+import ContactForm from './components/Contact/ContactForm';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
   return (
     <div className="App">
       {/* mouse pointer and particle portion */}
-      <ParticleJS></ParticleJS>
+      {/* <ParticleJS></ParticleJS> */}
       {/* <MousePointer></MousePointer> */}
 
       {/* Navbar  */}
@@ -43,7 +44,7 @@ function App() {
       <Contact></Contact>
       {/* <Testimonier></Testimonier> */}
 
-
+      <ContactForm></ContactForm>
 
     </div>
   );

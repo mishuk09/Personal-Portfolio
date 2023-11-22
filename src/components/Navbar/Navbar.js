@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faHome, faBatteryFull, faCertificate, faCode, faAddressBook, faComment } from '@fortawesome/free-solid-svg-icons'
 import DarkMode from '../DarkMode/DarkMode';
+import Popup from 'reactjs-popup';
+import ContactForm from '../Contact/ContactForm';
 
 
 const Navbar = () => {
@@ -45,7 +47,12 @@ const Navbar = () => {
                     </nav>
                 </div>
                 <div className='nevigate-button'>
-                    <div> <button  >See in 1 Page</button></div>
+
+                    <div>
+                        <Popup trigger={<button  >Get Free Consultation</button>} position='bottom center'>
+                            <ContactForm></ContactForm>
+
+                        </Popup></div>
                     <div><DarkMode></DarkMode></div>
                 </div>
             </div>

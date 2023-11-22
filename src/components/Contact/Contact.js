@@ -5,11 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import email from './img/email.png';
 import call from './img/call.png';
 import location from './img/location.png';
+import SendMessage from './ContactForm';
+import ContactForm from './ContactForm';
 
 
 const Contact = () => {
     return (
-        
+
 
         <div className="flex flex-col items-stretch  contact-headmain   ">
             <div className="text-black text-justify text-3xl font-bold leading-10 self-center whitespace-nowrap max-md:max-w-full">
@@ -19,7 +21,7 @@ const Contact = () => {
                 <div className="flex w-full  flex-col items-center  ">
 
                     <div className="self-stretch mt-10  ">
-                        <div className="gap-1 flex  ">
+                        <div className=" flex  ">
                             <div className="flex flex-col items-stretch w-[57%] max-md:w-full  ">
                                 <div className="flex grow flex-col    ">
                                     <div className="self-stretch flex justify-between gap-4  ">
@@ -77,29 +79,8 @@ const Contact = () => {
 
                                 </div>
                             </div>{" "}
-                            <div className="flex flex-col items-stretch w-[35%] ml-5  ">
-                                <div className="flex flex-col items-stretch  ">
-                                    <div className="text-white text-justify text-1xl leading-8 whitespace-nowrap max-md:max-w-full">
-                                        Name
-                                    </div>{" "}
-                                    <input className="border  text-white bg-inherit flex flex-col mt-2 py-2 rounded-md border-solid  border-slate-400 max-md:max-w-full" type="text" />
-
-                                    <div className="text-white text-justify text-1xl leading-8 whitespace-nowrap mt-3 max-md:max-w-full">
-                                        Email
-                                    </div>{" "}
-                                    <input className="border  text-white bg-inherit flex flex-col mt-2 py-2 rounded-md border-solid border-white max-md:max-w-full" type="text" />
-
-
-                                    <div className="text-white text-justify text-1xl leading-8 whitespace-nowrap mt-2  ">
-
-                                    </div>
-
-                                    <input className="border   h-40 flex-col mt-5 rounded-md border-solid border-white bg-inherit   text-white " type="text" />
-                                    <div className="text-white   text-1xl text-center font-bold leading-8 whitespace-nowrap   bg-sky-500 items-center mt-12 px-5 py-2 rounded-[50px]   ">
-                                        Send{" "}
-                                    </div>
-                                </div>
-                            </div>
+                            {/* <SendMessage></SendMessage> */}
+                            <ContactForm></ContactForm>
                         </div>
                     </div>
                 </div>
@@ -117,7 +98,7 @@ const Contact = () => {
 
                     </div>{" "}
                     <div className="text-white text-justify       leading-5 self-stretch whitespace-nowrap mt-3">
-                         MAHADI HASAN MISHUK 2023
+                        MAHADI HASAN MISHUK 2023
                     </div>
                 </div>
             </div>

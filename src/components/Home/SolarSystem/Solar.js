@@ -1,19 +1,27 @@
 import React from 'react';
-import './Solar.css'
+import './Solar.css';
+import mishuk from '../img/mishuk2.png';
+import javascript from '../img/javascript.png';
+import react from '../img/react.png';
+import java from '../img/java.png';
 
 const Solar = () => {
     return (
         <div class="solar-system">
-            <div id="sun"></div>
+            <div id="sun">
+                <img src={mishuk} alt="" />
+            </div>
 
             <div class="orbit mercury-orbit"></div>
-            <div class="mercury-spin">
+            {/* <div class="mercury-spin">
                 <div id="mercury"></div>
-            </div>
+            </div> */}
 
             <div class="orbit venus-orbit"></div>
             <div class="venus-spin">
-                <div id="venus"></div>
+                <div id="venus">
+                    <img src={javascript} alt="" />
+                </div>
             </div>
 
             <div class="orbit earth-orbit"></div>
@@ -23,12 +31,14 @@ const Solar = () => {
                     <div id="moon"></div>
                 </div>
 
-                <img id="earth" src="https://dl.dropboxusercontent.com/u/55240438/temp_site_links/solarsystemcss/earth_small_150.jpg" />
+                <img id="earth" src={react} alt="" />
             </div>
 
             <div class="orbit mars-orbit"></div>
             <div class="mars-spin">
-                <div id="mars"></div>
+                <div id="mars">
+                    <img src={java} alt="" />
+                </div>
             </div>
         </div>
     );

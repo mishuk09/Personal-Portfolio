@@ -7,12 +7,14 @@ import java from './img/java.png';
 import nodejs from './img/nodejs.png';
 import sql from './img/sql.png';
 import Skillsbar from './Skillsbar/Skillsbar';
+import Popup from 'reactjs-popup';
+import ContactForm from '../Contact/ContactForm';
 
 const Skills = () => {
     return (
         <div className='container skills-main-head-div'>
             <div className='skills-div'>
-                 
+
 
 
             </div>
@@ -22,7 +24,9 @@ const Skills = () => {
                 <div className='skills-headline'>
                     <h1>Technologies/Tools/Skills</h1>
                     <p>I work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your business needs while we handle the technical aspect.</p>
-                    <button className='skills-button'>Ask Your Query</button>
+                    <Popup trigger={<button className='skills-button'>Ask Your Query</button>} position='right center'>
+                        <ContactForm></ContactForm>
+                    </Popup>
                 </div>
                 <div className='skills-img'>
                     <div className='w=5   js'> <img src={javascript} alt="" /></div>
