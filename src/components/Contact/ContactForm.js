@@ -84,12 +84,21 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className='phoneinput flex'>
-                    <PhoneInput
+                    {/* <PhoneInput
                         className='mt-3 w-full bg-inherit  phoneinput'
                         name="phoneNumber"
                         placeholder="Phone"
                         value={formData.phoneNumber}
                         onChange={(value) => setFormData({ ...formData, phoneNumber: value })}
+                        required
+                    /> */}
+                    <input
+                        className='mt-3  w-full bg-inherit  text-white'
+                        type="text"
+                        name="phone"
+                        placeholder="Phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         required
                     />
                     <input

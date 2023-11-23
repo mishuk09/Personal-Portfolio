@@ -23,7 +23,6 @@
     width: 200px;
     margin: 13px;
     transition: transform 0.4s ease;
-    /* Adding transition for smooth zoom */
 }
 
 .marquee-div img:hover {

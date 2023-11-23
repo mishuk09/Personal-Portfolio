@@ -13,7 +13,7 @@ const Contact = () => {
     return (
 
 
-        <div className="flex flex-col items-stretch  contact-headmain   ">
+        <div id='contact' className="flex flex-col items-stretch  contact-headmain   ">
             <div className="text-black text-justify text-3xl font-bold leading-10 self-center whitespace-nowrap max-md:max-w-full">
                 So Let's Contact With Me
             </div>{" "}

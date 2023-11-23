@@ -1,57 +1,54 @@
- 
-.mission-head img {
-    width: 250px;
-    position: absolute;
+ .mission-head img {
+     width: 250px;
+     position: absolute;
 
-}
+ }
 
-.mission-parent {
-    margin-top: 350px;
-    display: flex;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-}
+ .mission-parent {
+     font-family: "Montserrat", sans-serif;
 
-.img-title-mission {
-    position: relative;
-    margin-left: 200px;
-    margin-top: 50px;
-    display: flex;
-}
+     margin-top: 350px;
+     display: flex;
+     position: relative;
+     background-color: rgb(255, 255, 255);
+ }
 
-.mission-head-img {
-    margin-left: 0px;
-    width: 70%;
-}
+ .img-title-mission {
+     position: relative;
+     margin-left: 200px;
+     margin-top: 50px;
+     display: flex;
+ }
 
-.mission-head-img img {
-    width: 100%;
-}
+ .mission-head-img {
+     margin-left: 0px;
+     width: 70%;
+ }
 
-.mission-detils {
-    height: auto;
-    width: 100%;
-    margin-top: 150px;
-    margin-left: 50px;
-}
+ .mission-head-img img {
+     width: 100%;
+ }
 
-.mission-detils h1 {
-    font-size: 30px;
-    color: #504848;
-    font-family: 'Times New Roman', Times, serif;
-}
+ .mission-detils {
+     height: auto;
+     width: 100%;
+     margin-top: 150px;
+     margin-left: 50px;
+ }
 
-.mission-detils p {
-    margin-top: 15px;
-    color: #727B8A;
-}
+ .mission-detils h1 {
+     font-size: 30px;
+     color: #504848;
+     font-weight: 700;
 
-.mission-detils button {
-    margin-top: 20px;
-    color: white;
-    padding: 5px;
-    width: 200px;
-    border-radius: 20px;
-    background-color: #0487FB;
+ }
 
-}
+ .mission-detils p {
+     margin-top: 15px;
+     color: #727B8A;
+ }
+
+ .mission-detils button {
+     margin-top: 20px;
+
+ }

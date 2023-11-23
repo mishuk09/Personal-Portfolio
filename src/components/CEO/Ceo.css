@@ -6,6 +6,7 @@
     width: 100%;
     margin-top: 100px;
     position: absolute;
+
 }
 
 .img-div {
@@ -13,6 +14,8 @@
 }
 
 .ceo-parent {
+   
+
     border-radius: 5px;
     position: absolute;
     /* top: 50%; */
@@ -45,26 +48,30 @@
 .ceo-detils {
     color: rgb(163, 165, 167);
     width: 100%;
+    
 }
 
 .ceo-detils h3 {
-    margin-top: 20px;
+    margin-top: 24px;
     color: white;
     font-size: 25px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .ceo-detils span {
     color: #0487FB;
     font-size: 13px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .ceo-detils p {
+    
     margin-bottom: 0px;
     /* padding-bottom: 0px; */
-    margin-top: 20px;
+    margin-top: 15px;
     color: #CCCCCC;
     font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
 }
 
 .ceo-detils button {
@@ -80,6 +87,7 @@
 .ceo-detils h5 {
     margin-top: 10px;
     font-size: 15px;
+    font-family: "Montserrat", sans-serif;
 
 }
 

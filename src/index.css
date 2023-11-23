@@ -11,9 +11,10 @@
 }
 
 [data-theme="dark"] {
+  --div_background: #282c34;
   --body_background: #282c34;
   --body_color: white;
-  --link_color: black;
+  --link_color: rgb(255, 0, 0);
 }
 
 * {

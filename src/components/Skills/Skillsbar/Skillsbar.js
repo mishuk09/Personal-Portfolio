@@ -9,6 +9,7 @@ import Barchart from '../Barchart/Barchart';
 import Toolchart from '../ToolsChart/Toolchart';
 import benext from './img/benext.png';
 import { Link } from 'react-router-dom';
+import Button from '../../OthersComponent/Button/Button';
 
 const Skillsbar = () => {
     return (
@@ -70,7 +71,7 @@ const Skillsbar = () => {
                     <h1>Be my next success story?</h1>
                     <p  >Have an idea? Talk to me today! Share your requirements and let's
                         team up for a successful project with simplicity."</p>
-                    <Link to="/contactpage"><button>Have A Free Consultation</button></Link>
+                    <Link to="/contactpage"> <Button>Have a Free Consultation</Button></Link>
                 </div>
             </div>
         </div>

@@ -22,6 +22,7 @@ import ContactForm from './components/Contact/ContactForm';
 import { Route, Routes } from 'react-router-dom';
 import ContactPage from './components/ContactPage/ContactPage';
 import AppChild from './AppChild';
+import Button from './components/OthersComponent/Button/Button';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
@@ -31,8 +32,8 @@ function App() {
       <Routes>
         <Route path='/' element={<AppChild></AppChild>}></Route>
         <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
-
       </Routes>
+      {/* <Button></Button> */}
     </div>
   );
 }

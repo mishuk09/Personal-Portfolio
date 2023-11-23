@@ -32,7 +32,7 @@ function Testimonier() {
                                 </li>
                                 <li onClick={() => handleIndicatorClick(1)} className={activeSlide === 1 ? 'active' : ''}>
                                     <figure className={activeSlide === 1 ? 'active-border' : ''}>
-                                        <img src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-02-306x306.png" className="img-fluid" alt="" />
+                                        <img   src="https://livedemo00.template-help.com/wt_62267_v8/prod-20823-one-service/images/testimonials-02-306x306.png" className="img-fluid" alt="" />
                                     </figure>
                                 </li>
                                 <li onClick={() => handleIndicatorClick(2)} className={activeSlide === 2 ? 'active' : ''}>

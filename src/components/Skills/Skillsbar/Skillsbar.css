@@ -155,7 +155,7 @@
 }
 
 .benext-child2 h1 {
-     
+
     color: white;
     font-size: 25px;
     font-weight: 700;
@@ -170,11 +170,5 @@
 
 .benext-child2 button {
     margin-top: 15px;
-    padding: 7px;
-    width: 180px;
-    border-radius: 20px;
-    background-color: #0487FB;
-    color: white;
-    font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
 }

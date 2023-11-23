@@ -8,6 +8,7 @@ import DarkMode from '../DarkMode/DarkMode';
 import Popup from 'reactjs-popup';
 import ContactForm from '../Contact/ContactForm';
 import ContactPage from '../ContactPage/ContactPage';
+import Button from '../OthersComponent/Button/Button';
 
 
 
@@ -26,7 +27,7 @@ const Navbar = () => {
 
                         <div className='homeDiv'>
                             <p><FontAwesomeIcon icon={faHome} /></p>
-                            <Link className='link' >Home</Link>
+                            <Link className='link'   >Home</Link>
                         </div>
 
                         <div className='homeDiv'>
@@ -53,7 +54,8 @@ const Navbar = () => {
                 <div className='nevigate-button'>
 
                     <div>
-                        <Link to="/contactpage"> <button >Get Free Consultation</button></Link>
+
+                        <Link to="/contactpage">  <Button>Get Free Consultation</Button></Link>
                     </div>
 
 

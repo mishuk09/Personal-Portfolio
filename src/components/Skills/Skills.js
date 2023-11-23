@@ -10,6 +10,7 @@ import Skillsbar from './Skillsbar/Skillsbar';
 // import Popup from 'reactjs-popup';
 // import ContactForm from '../Contact/ContactForm';
 import { Link } from 'react-router-dom';
+import Button from '../OthersComponent/Button/Button';
 
 const Skills = () => {
     return (
@@ -25,8 +26,8 @@ const Skills = () => {
                 <div className='skills-headline'>
                     <h1>Technologies/Tools/Skills</h1>
                     <p>I work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your business needs while we handle the technical aspect.</p>
-                    <Link to="/contactpage"><button className='skills-button'>Ask Your Query</button></Link>
-                    
+                    <Link to="/contactpage"><Button className='skills-button'>Ask Your Query</Button></Link>
+
 
                 </div>
                 <div className='skills-img'>

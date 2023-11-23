@@ -1,5 +1,6 @@
 .header {
     background-color: #000515;
+    
 }
 
 .navdiv {
@@ -74,14 +75,12 @@
 
 .nevigate-button button {
 
-    background-color: #0487FB;
-    border: none;
+    
     margin-left: 10px;
     border-radius: 50px;
-    color: white;
-    width: 200px;
-    font-size: 15px;
-    padding: 5px;
+    
+
+    
 }
 
 .nevigate-button {

@@ -1,7 +1,16 @@
-.container-head-main{
+
+.active-tab {
+    background-color:seashell;
+    
+}
+
+.container-head-main {
     position: relative;
     background-color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+
 }
+
 .service-head {
     margin-top: 80px;
     text-align: center;
@@ -46,14 +55,14 @@
 .service-child-2 h3 {
     color: #333F52;
     font-size: 20px;
-    font-weight: 700;
-    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
 
 }
 
 .service-child-2 p {
     color: #727B8A;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
 
 
 }

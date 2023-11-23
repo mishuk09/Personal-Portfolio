@@ -24,7 +24,7 @@ const Home = () => {
 
     ];
     return (
-        <div  >
+        <div id='home' >
             <div className='home-div-main'>
                 <div className='container   home-div'>
 
@@ -34,7 +34,7 @@ const Home = () => {
 
                         <p className='name-p'>Welcome to my Portfolio</p>
                         <div className='name-div22'>
-                            <p>I'm</p>
+                            <p className='text-slate-400 font-bold	'	>I'm</p>
                             <h1>MAHADI HASAN <span>MISHUK</span> </h1>
                             <hr />
                         </div>
@@ -46,16 +46,16 @@ const Home = () => {
                                 wrapper="span"
                             />
                         </p>
-                        <p  >I am Sincere,responsible,confident,dedicated,down to earth & trustworthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
+                        <p className=' text-slate-400	'>I am Sincere,responsible,confident,dedicated,down to earth & trustworthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
 
                         <div className=' icon-div mt-10'>
                             <div> <img src={homelogo} alt="" /></div>
                             <div className='social-link pt-8 '>
 
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon icon={faGithub} size="2x" />  </div>
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon icon={faLinkedin} size="2x" /></div>
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon icon={faFacebook} size="2x" /></div>
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon icon={faTwitch} size="2x" /></div>
+                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faGithub} size="2x" />  </div>
+                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faLinkedin} size="2x" /></div>
+                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faFacebook} size="2x" /></div>
+                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faTwitch} size="2x" /></div>
 
                             </div>
                         </div>

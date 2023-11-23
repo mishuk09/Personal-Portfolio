@@ -36,21 +36,26 @@
 }
 
 .name-div {
-    color: white;
+
     padding-top: 70px;
     padding-left: 30px;
 
 }
 
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+
+
 .name-div22 {
     line-height: 0;
     margin-top: 30px;
-    font-family: serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: "Poppins", sans-serif;
 
 }
 
 .typical {
     font-size: 20px;
+    color: #C0C0C0;
 }
 
 .name-div .name-p {
@@ -60,35 +65,61 @@
 .name-div img {
     width: 80px;
 }
+.name-div hr{
+    color: #a8a7a7;
+     
+}
 
 .name-div h1 {
+
+    background-image: linear-gradient(to right, #fd5d93, #c76df1);
+
+
+
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     padding-top: 0px;
-    color: aqua;
+    font-family: "Montserrat", sans-serif;
+
+    /* color: #d467fc; */
     font-weight: 700;
 }
 
-.name-div span {
+/* .name-div span {
     font-weight: 700;
     color: #0487FB;
-}
+} */
 
-.name-div p {
-    color: #a8a7a7;
-}
-
+ 
 .social-link {
     display: flex;
 
 }
+.name-div .typical{
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
 
+}
+.name-div p{
+    font-family: "Montserrat", sans-serif;
+}
+ 
 .social-link FontAwesomeIcon {
     width: 100px;
+    color: #EBF1F8;
 
 
 }
 
 .social-link div img {
     color: white;
+
+}
+.social-link .icon-main {
+    color: white;
+    
 
 }
 

@@ -192,6 +192,11 @@ body .testimonial .row .carousel .carousel-indicators {
     list-style: none;
 }
 
+body .testimonial .row .carousel .carousel-indicators img:hover {
+    border: 5px solid lime;
+    transform: scale(1.1);
+}
+
 body .testimonial .row .carousel .carousel-indicators li {
     background: #000;
     background-clip: padding-box;
