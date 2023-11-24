@@ -65,9 +65,10 @@
 .name-div img {
     width: 80px;
 }
-.name-div hr{
+
+.name-div hr {
     color: #a8a7a7;
-     
+
 }
 
 .name-div h1 {
@@ -92,20 +93,22 @@
     color: #0487FB;
 } */
 
- 
+
 .social-link {
     display: flex;
 
 }
-.name-div .typical{
+
+.name-div .typical {
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
 
 }
-.name-div p{
+
+.name-div p {
     font-family: "Montserrat", sans-serif;
 }
- 
+
 .social-link FontAwesomeIcon {
     width: 100px;
     color: #EBF1F8;
@@ -117,9 +120,10 @@
     color: white;
 
 }
+
 .social-link .icon-main {
     color: white;
-    
+
 
 }
 
@@ -128,7 +132,7 @@
 }
 
 .pic-div {
-    background-color: #0E0A1B;
+    background-color: #0E0A1B !important;
 }
 
 .pic-div img {

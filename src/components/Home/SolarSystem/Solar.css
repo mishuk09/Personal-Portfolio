@@ -49,13 +49,10 @@ body {
 }
 
 
-/* Individual objects rules. They are pretty much the same for 
-  all objects and basically only vary in orbit size 
-  and planet size. And colors :) */
+ 
 
 #sun {
-    /* Positions the top-left corner of the image to be *
-      /* in the middle of the box */
+     
     height: 150px;
     width: 150px;
     background-color: #fae20a;
@@ -127,23 +124,7 @@ body {
     height: 220px;
 }
 
-/* #mercury {
-    margin-top: -13.5px;
-    margin-left: -13.5px;
-    height: 25px;
-    width: 25px;
-    background-color: #a65e22;
-    box-shadow: 0 0 34px #3a4385;
-}
-
-.mercury-orbit,
-.mercury-spin {
-
-    width: 230px;
-    height: 230px;
-    margin-left: -120px;
-    margin-top: -120px;
-} */
+ 
 
 #mars {
     margin-top: -22px;

@@ -23,12 +23,14 @@ import { Route, Routes } from 'react-router-dom';
 import ContactPage from './components/ContactPage/ContactPage';
 import AppChild from './AppChild';
 import Button from './components/OthersComponent/Button/Button';
+import Nav from './components/Navbar/Nav';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Nav></Nav>
+      {/* <Navbar></Navbar> */}
       <Routes>
         <Route path='/' element={<AppChild></AppChild>}></Route>
         <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>

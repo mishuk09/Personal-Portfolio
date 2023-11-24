@@ -63,7 +63,6 @@ const Home = () => {
 
 
                     <div className='pic-div'>
-                        {/* <img className='container-fluid' src={home} alt="" /> */}
                         <Solar></Solar>
                     </div>
                 </div>

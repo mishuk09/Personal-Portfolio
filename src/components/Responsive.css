@@ -1,0 +1,142 @@
+/* Your existing styles */
+
+@media screen and (max-width: 880px) {
+    .no-underline {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px)and (max-width: 1023px) {
+    .home-div {
+        display: inline;
+    }
+
+    .name-div {
+        width: 100%;
+    }
+
+    .pic-div {
+        align-items: center;
+        height: 500px;
+        width: 100%;
+        background-color: rgb(25, 25, 36);
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:300px)and (max-width: 768px) {
+    .home-div {
+        display: inline;
+    }
+
+    .name-div {
+        width: 100%;
+    }
+
+    .name-div {
+        padding-top: 7px;
+        padding-left: 18px;
+
+    }
+
+    .name-div p {
+        word-wrap: break-word;
+        font-size: 14px;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .pic-div {
+        align-items: center;
+        height: 500px;
+        width: 100%;
+        background-color: rgb(25, 25, 36);
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* Solar system responsive */
+
+@media screen and (min-width:440px)and (max-width: 520px) {
+
+    .venus-orbit,
+    .venus-spin {
+        margin-top: -97px;
+        margin-left: -97px;
+        width: 186px;
+        height: 186px;
+    }
+
+    #venus {
+        margin-top: -10px;
+        margin-left: -20px;
+        height: 25px;
+        width: 25px;
+        box-shadow: 0 0 34px #3a4385;
+    }
+
+    .earth-orbit,
+    .earth-spin {
+        width: 281px;
+        height: 281px;
+        margin-left: -149px;
+        margin-top: -148px;
+    }
+
+    #earth {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 56px;
+        width: 56px;
+        margin-left: -28px;
+        margin-top: -28px;
+        /* box-shadow: 0 0 34px #08199b; */
+    }
+
+    .mars-orbit,
+    .mars-spin {
+        width: 418px;
+        height: 418px;
+        margin-left: -217px;
+        margin-top: -217px;
+    }
+    .solar-system {
+        position: relative;
+        width: 455px;
+        height: 500px;
+        margin: auto;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width:300px)and (max-width: 440px) {
+    #sun {
+     
+        height: 100px;
+        width: 100px;
+        background-color: #fae20a;
+        margin-top: -54px;
+        margin-left: -54px;
+        border-radius: 50%;
+        box-shadow: 0 0 84px orange;
+    }
+    .venus-orbit, .venus-spin {
+        margin-top: -79px;
+        margin-left: -82px;
+        width: 151px;
+        height: 150px;
+    }
+    #venus {
+        margin-top: -7px;
+        margin-left: -32px;
+        height: 20px;
+        width: 20px;
+        /* background-color: #3498db; */
+        box-shadow: 0 0 34px #3a4385;
+    }
+
+}
