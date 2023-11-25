@@ -1,6 +1,5 @@
 import React from 'react';
 import './Home.css'
-// import './response.css'
 import { faGithub, faFacebook, faLinkedin, faTwitch, faWhatsapp, } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import home from './img/home.png'
@@ -68,7 +67,7 @@ const Home = () => {
                 </div>
             </div>
             <div className='wave1'>
-                <img className='' src={wave} alt="" />
+                <img className=' img645' src={wave} alt="" />
 
 
                 <Shortintro></Shortintro>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Shortintro.css'
+import '../Responsive.css';
 import sort from '../Home/img/sort.png'
 import tick from '../Home/img/tick.png';
 import college from '../Home/img/college.svg';
@@ -16,7 +17,7 @@ const Shortintro = () => {
 
                 <div className='sort-intro  '>
                     <div className='sort-intro-headline p-2 '>
-                        <div className='sort-intro-img ps-1'><img src={sort} alt=""  className='jhdsahdf'/></div>
+                        <div className='sort-intro-img ps-1'><img src={sort} alt="" className='jhdsahdf' /></div>
                         <div className='sort-intro-head ps-5'>
                             <div ><img className=' ' src={tick} alt="" /> </div>
                             <div><img className=' ' src={tick} alt="" /></div>
@@ -28,11 +29,16 @@ const Shortintro = () => {
                     <div className='sort-intro-child mt-2'>
                         {
                             shortInreo.map((shortintro) => {
-                                return <div className=' sort-intro-child-div m-3  bg-white' key={shortInreo.id}><img src={shortintro.img} alt="" />
-                                    <p className='mt-3 institution'>{shortintro.tittle}</p>
-                                    <p className='mt-3 institution11'>  {shortintro.name}</p>
-                                    <p className='mt-3 institution33'>  {shortintro.descrip}</p>
-                                    <p className='mt-3 institution44'>  {shortintro.date}</p>
+                                return <div className=' flex sort-intro-child-div m-3  bg-white' key={shortInreo.id}>
+                                    <div className='sort-intro-div-img23'>
+                                        <img src={shortintro.img} alt="" />
+                                    </div>
+                                    <div className='sort-intro-div-descrip234'>
+                                        <p className='mt-3 institution'>{shortintro.tittle}</p>
+                                        <p className='mt-3 institution11'>  {shortintro.name}</p>
+                                        <p className='mt-3 institution33'>  {shortintro.descrip}</p>
+                                        <p className='mt-3 institution44'>  {shortintro.date}</p>
+                                    </div>
                                 </div>
                             })
                         }
