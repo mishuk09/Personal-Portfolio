@@ -8,8 +8,9 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     return (
-        <div className='container '>
+        <div className='container aboutme-main-pic'>
             <div className='container about-section'>
+                <img className='mainimg' src={aboutmepic} alt="" />
                 <h1>Mahadi Hasan Mishuk</h1>
                 <p className='about-para-about'>Junior Web-Developer</p>
                 <div className='callabout'><CallAhortAbout></CallAhortAbout></div>
@@ -21,15 +22,15 @@ const About = () => {
                         <h3> 1+</h3>
                         <p>Years Experience</p></div>
                     <div className='years pt-3'> <h3> 10+</h3>
-                    <p>Happy Clients</p></div>
+                        <p>Happy Clients</p></div>
                     <div className='years pt-3'> <h3> 5+</h3>
-                    <p>Projects Done</p></div>
+                        <p>Projects Done</p></div>
                     <div className='years1 pt-3'> <h3> 2</h3>
-                    <p>Get Awards</p></div>
+                        <p>Get Awards</p></div>
                 </div>
             </div>
-
-            <img className='mainimg' src={aboutmepic} alt="" />
+{/* 
+            <img className='mainimg' src={aboutmepic} alt="" /> */}
 
         </div>
     );

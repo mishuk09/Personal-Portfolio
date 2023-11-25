@@ -1,5 +1,6 @@
 import React from 'react';
-import './CallShortAbout.css'
+import './CallShortAbout.css';
+import '../../Responsive.css';
 import about from '../img/about.png'
 import tick from '../../Home/img/tick.png';
 import followgithub from '../img/followgithub.png'
