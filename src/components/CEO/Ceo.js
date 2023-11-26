@@ -4,13 +4,15 @@ import MapChart from './earth/MapChart';
 import mishuk1 from './img/mishuk2.png';
 import Testimonier from './Testimonier/Testimonier';
 import Workpv from './Marquee/Workpv';
+import Test from './Testimonier/Test';
 
 const Ceo = () => {
     return (
         <div className='ceo-head-parant'>
             <div className='ceo'>
                 <Workpv></Workpv>
-                <Testimonier></Testimonier>
+                {/* <Testimonier></Testimonier> */}
+                <Test></Test>
                 <div className='img-div'>
                     {/* <img className='container' src={download} alt="" /> */}
                     <MapChart className='img'></MapChart>

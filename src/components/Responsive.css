@@ -1208,6 +1208,22 @@
 
 
 
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+
+    .mission-parent {
+        top: 800px;
+    }
+
+    .ceo-head-parant {
+        margin-top: 1000px;
+
+    }
+
+    .mission-parent .img-title-mission .mission-detils {
+        margin-top: 10px;
+    }
+}
+
 @media only screen and (min-width: 670px) and (max-width: 1000px) {
 
     .mission-parent {
@@ -1283,5 +1299,42 @@
 
 
 
+
+/* ----------------Project  responsive End -------------*/
+
+
+
+
+
+
+
+
+/* ----------------CEO  responsive Start -------------*/
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 670px) {
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ----------------CEO  responsive End -------------*/
+
+/* ----------------Project  responsive End -------------*/
+
+/* ----------------Project  responsive End -------------*/
+
+/* ----------------Project  responsive End -------------*/
+
+/* ----------------Project  responsive End -------------*/
 
 /* ----------------Project  responsive End -------------*/
