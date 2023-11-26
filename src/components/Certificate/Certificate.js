@@ -1,5 +1,6 @@
 import React from 'react';
 import './Certificate.css';
+import '../Responsive.css';
 import certificate from './img/certificate.png';
 import one from './img/one.jpg';
 import two from './img/two.jpg';

@@ -1,6 +1,5 @@
 .about-section {
-
-    height: 530px;
+    height: 550px;
     width: 100%;
     border-radius: 5px;
     margin-top: 220px;
@@ -25,29 +24,20 @@
     margin-top: 210px;
     margin-left: 30px;
     color: #d3c2e6;
-
-}
-
-.about-detilsold {
-    display: none;
 }
 
 .about-section .about-detils {
-
     color: #e8e8e8;
     margin-left: 30px;
     margin-top: 20px;
     font-family: "Montserrat", sans-serif;
-
 }
 
 .about-section .about-detilsold {
-
     color: #e8e8e8;
     margin-left: 30px;
     margin-top: 20px;
     font-family: "Montserrat", sans-serif;
-
 }
 
 .about-section button {
@@ -62,16 +52,13 @@
 }
 
 .about-section .resume {
-
     margin-top: 25px;
     align-items: center;
     text-align: center;
     justify-content: center;
-
 }
 
 .mainimg {
-
     position: relative;
     margin-top: 0px;
     width: 390px;
@@ -83,8 +70,6 @@
     border-radius: 10px;
     background-color: aliceblue;
 }
-
-
 
 .yearexperience {
     margin-top: 20px;
@@ -98,14 +83,12 @@
 .yearexperience h3 {
     color: #e8e8e8;
     font-weight: 700;
-
 }
 
 .yearexperience p {
     color: #A0A0A0;
     font-weight: 700;
     font-size: 18px;
-
 }
 
 .yearexperience .years {
@@ -134,3 +117,5 @@
     border-bottom-left-radius: 5px;
     line-height: 10px;
 }
+
+.about {}

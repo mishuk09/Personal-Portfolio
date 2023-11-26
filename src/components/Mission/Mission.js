@@ -23,7 +23,9 @@ const Mission = () => {
                     <div className='mission-detils   '>
                         <h1>My Mission and Vission</h1>
                         <p className=''>I'm Mahadi Hasan Mishuk and my mission is simple create websites that blend creativity and functionality. I'm dedicated to making your digital vision a reality with clear communication, cutting-edge tech, and a user-first mindset. Let's build something amazing together!</p>
-                        <Link to="/contactpage"> <Button  >Take The First Step</Button></Link>
+                        <div>
+                            <Link to="/contactpage"> <Button  >Take The First Step</Button></Link>
+                        </div>
                     </div>
                 </div>
 

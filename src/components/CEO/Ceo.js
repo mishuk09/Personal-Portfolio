@@ -7,7 +7,7 @@ import Workpv from './Marquee/Workpv';
 
 const Ceo = () => {
     return (
-        <div>
+        <div className='ceo-head-parant'>
             <div className='ceo'>
                 <Workpv></Workpv>
                 <Testimonier></Testimonier>

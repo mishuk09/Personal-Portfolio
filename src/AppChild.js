@@ -36,6 +36,7 @@ const AppChild = () => {
             {/* <Navbar></Navbar> */}
             {/* <ColorChange></ColorChange> */}
             <Home></Home>
+
             <About></About>
             <Skills></Skills>
             <Certificate></Certificate>

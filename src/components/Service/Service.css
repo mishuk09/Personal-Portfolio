@@ -1,7 +1,6 @@
-
 .active-tab {
-    background-color:seashell;
-    
+    background-color: seashell;
+
 }
 
 .container-head-main {
@@ -22,6 +21,7 @@
 
 .service-head h1 {
     font-size: 25px;
+    font-weight: 700;
 
 }
 
@@ -55,6 +55,7 @@
 .service-child-2 h3 {
     color: #333F52;
     font-size: 20px;
+
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
 

@@ -37,7 +37,6 @@
     .name-div {
         padding-top: 7px;
         padding-left: 18px;
-
     }
 
     .name-div p {
@@ -116,7 +115,6 @@
 
 @media screen and (min-width:300px)and (max-width: 440px) {
     #sun {
-
         height: 100px;
         width: 100px;
         background-color: #fae20a;
@@ -159,7 +157,6 @@
         width: 51px;
         margin-left: -24px;
         margin-top: -26px;
-
     }
 
     .mars-orbit,
@@ -180,12 +177,9 @@
 }
 
 
-
-
 /* Responsive for SHortintroduction */
 
 @media screen and (min-width:500px)and (max-width: 820px) {
-
     /* .sort-intro-child {
          display: grid;
          grid-template-columns: max-content;
@@ -202,7 +196,9 @@
     } */
 }
 
+
 /* For screen sizes between 300px to 600px */
+
 @media only screen and (min-width: 300px) and (max-width: 600px) {
     .sort-intro {
         width: 90%;
@@ -227,7 +223,6 @@
         margin: 15px auto;
         display: flex;
         flex-direction: row;
-
     }
 
     .sort-intro-div-img23 img {
@@ -253,7 +248,10 @@
 
 
 /* For mid-sized screens (600px - 820px) */
+
+
 /* For screen sizes between 600px to 820px */
+
 @media only screen and (min-width: 600px) and (max-width: 820px) {
     .sort-intro {
         width: 90%;
@@ -291,7 +289,6 @@
     }
 
     .sort-intro-div-descrip234 {
-
         /* background-color: #3a4385; */
         padding-left: 10px;
     }
@@ -308,16 +305,16 @@
 
     .sort-intro-child-div {
         height: 106px;
-
     }
-
-
 }
 
-/* Aboout me section Responsive */
-/* For screen sizes between 300px to 600px */
-@media only screen and (min-width: 300px) and (max-width: 600px) {
 
+/* Aboout me section Responsive */
+
+
+/* For screen sizes between 300px to 600px */
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
     .aboutme-main-pic .about-section .yearexperience {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -341,10 +338,7 @@
         border-radius: 5px;
         height: 80px;
     }
-
 }
-
-
 
 @media only screen and (min-width: 300px) and (max-width: 600px) {
     .aboutme-main-pic {
@@ -352,13 +346,11 @@
         width: 100%;
     }
 
-
     .aboutme-main-pic .mainimg {
         position: relative;
         top: 220px;
         width: 300px;
         margin: 0 auto;
-
     }
 
     .shortabout {
@@ -383,7 +375,6 @@
     }
 
     .callabout .sortabout .sort-intro-he .sort-introimg img {
-
         width: 50%;
     }
 
@@ -396,39 +387,30 @@
         display: none;
     }
 
-
     .callabout .sortabout .sort-intro-child-main {
         display: inline;
-
     }
 
     .about-section .about-detils {
-
         color: #e8e8e8;
         display: none;
         padding-top: 100px;
         margin-left: 30px;
-
         font-family: "Montserrat", sans-serif;
     }
 
     .about-section .about-detilsold {
-
         color: #e8e8e8;
-
         padding-top: 100px;
         margin-left: 30px;
-
         font-family: "Montserrat", sans-serif;
     }
 
     .aboutme-main-pic .about-section h1 {
-
         font-size: 25px;
         position: absolute;
         margin-top: 20px;
         padding-top: 20px;
-
         color: #d1abfd;
         font-weight: 700;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -438,8 +420,6 @@
         margin-top: 75px;
     }
 
-
-
     .skills-main-head-div {
         top: 500px;
     }
@@ -448,32 +428,24 @@
         color: #A0A0A0;
         font-weight: 700;
         font-size: 13px;
-
     }
 
     .yearexperience .years p {
         color: #A0A0A0;
         font-weight: 700;
         font-size: 13px;
-
     }
 
     .yearexperience .years1 p {
         color: #A0A0A0;
         font-weight: 700;
         font-size: 13px;
-
     }
 
     .aboutme-main-pic.about-section .about-detils {
         font-size: 13px;
     }
 }
-
-
-
-
-
 
 @media only screen and (min-width: 600px) and (max-width: 820px) {
     .aboutme-main-pic {
@@ -482,7 +454,6 @@
     }
 
     .aboutme-main-pic .mainimg {
-
         position: relative;
         top: 220px;
         width: 300px;
@@ -498,7 +469,6 @@
         padding-top: 300px;
         padding-left: 10px;
         padding-right: 10px;
-
         height: 1290px;
         width: 100%;
         border-radius: 5px;
@@ -514,7 +484,6 @@
     }
 
     .callabout .sortabout .sort-intro-he .sort-introimg img {
-
         width: 40%;
     }
 
@@ -523,15 +492,12 @@
         width: 50%;
     }
 
-
-
     .callabout .sortabout .sort-intro-he .sort-intro-head11 {
         display: none;
     }
 
     .callabout .sortabout .sort-intro-child-main {
         display: inline;
-
     }
 
     .about-section .about-detils {
@@ -539,26 +505,21 @@
         display: none;
         padding-top: 100px;
         margin-left: 30px;
-
         font-family: "Montserrat", sans-serif;
     }
 
     .about-section .about-detilsold {
         color: #e8e8e8;
-
         padding-top: 100px;
         margin-left: 30px;
-
         font-family: "Montserrat", sans-serif;
     }
 
     .aboutme-main-pic .about-section h1 {
-
         font-size: 25px;
         position: absolute;
         margin-top: 20px;
         padding-top: 20px;
-
         color: #d1abfd;
         font-weight: 700;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -566,12 +527,6 @@
 
     .aboutme-main-pic .about-section .about-para-about {
         margin-top: 75px;
-    }
-
-
-
-    .skills-main-head-div {
-        top: 500px;
     }
 
     .aboutme-main-pic .about-section .yearexperience {
@@ -598,8 +553,6 @@
         font-family: "Montserrat", sans-serif;
     }
 
-
-
     .about-section button {
         background-color: white;
         padding: 5px;
@@ -609,7 +562,6 @@
         color: black;
         margin-left: auto;
         margin-right: auto;
-
     }
 }
 
@@ -621,10 +573,8 @@
     }
 
     .aboutme-main-pic .about-section {
-
         padding-left: 10px;
         padding-right: 10px;
-
         height: 810px;
         width: 100%;
         border-radius: 5px;
@@ -634,24 +584,704 @@
     }
 
     .skills-main-head-div {
-        top: 500px;
+        top: 300px;
     }
 
     .about-section .about-detils {
         display: none;
         color: #e8e8e8;
-
         padding-top: 100px;
         margin-left: 30px;
-
         font-family: "Montserrat", sans-serif;
     }
 
     .about-section .about-detilsold {
-
         color: #e8e8e8;
         padding-top: 220px;
         margin-left: 30px;
         font-family: "Montserrat", sans-serif;
     }
 }
+
+@media only screen and (min-width: 1200px) {
+    .about-detilsold {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Skills section responsive========================================================================================== */
+
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+
+    .skills-main-head-div {
+        top: 600px;
+    }
+
+    .skills-main-head-div .skills {
+        display: inline;
+    }
+
+    .skills-main-head-div .skills .skills-img {
+        margin-top: 30px;
+    }
+
+    .skills-main-head-div .skills .skills-headline {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 820px) {
+
+    .skills-main-head-div {
+        top: 600px;
+    }
+
+    .skills-main-head-div .skills {
+        display: inline;
+    }
+
+    .skills-main-head-div .skills .skills-img {
+        margin-top: 30px;
+    }
+
+    .skills-main-head-div .skills .skills-headline {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+/* skillsbar responsive ==================================================================== */
+
+@media only screen and (min-width: 510px) and (max-width: 1000px) {
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
+        width: 450px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width:510px) {
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
+        width: 320px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart a {
+        margin-left: 15%;
+
+
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .language-barchart {
+        margin-top: 20px;
+
+    }
+
+
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child div {
+        height: 80px;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child div .dsahead {
+        font-weight: 700;
+        color: white;
+        font-size: 12px;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child div .dsahead1 {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart .chart-child {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: auto 0;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart a {
+        margin-left: 0px;
+
+
+    }
+
+    .certification-main {
+        top: 500px;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        height: 1150px;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .language-barchart {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+        width: 100%;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .language-barchart .bar-chart-child {
+
+        width: 100%;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .skills-introimg img {
+        width: 293px;
+        border-radius: 5px;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .followglinkedin img {
+        width: 305px;
+        border-radius: 5px;
+    }
+
+    .skills-bar-head11 {
+        padding: 10px;
+        height: 40px;
+        width: 700px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 3px;
+        margin-left: auto;
+        margin-right: auto;
+        clip-path: polygon(75% 0%, 84% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
+    }
+}
+
+
+
+
+
+/* have a idea responsive ================================== */
+
+@media only screen and (min-width: 300px) and (max-width: 820px) {
+    .certification-main {
+        background-color: #13111c;
+        padding-bottom: 10px;
+        margin-top: 377px;
+        position: relative;
+    }
+
+    .certification-main {
+        top: 600px;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+    .certification-main {
+        background-color: #13111c;
+        padding-bottom: 10px;
+        margin-top: 377px;
+        position: relative;
+    }
+
+    .certification-main {
+        top: 600px;
+    }
+
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 h1 {
+
+        font-size: 16px;
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 p {
+
+        font-size: 12px;
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 {
+
+        font-size: 12px;
+    }
+
+    .skills-main-head-div .skillsbar .asasas {
+        width: 250px;
+        margin-top: 150px;
+        left: 0px;
+        margin-left: 10px;
+
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 h1 {
+
+        font-size: 16px;
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 p {
+
+        font-size: 12px;
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 {
+
+        font-size: 12px;
+    }
+
+    .skills-main-head-div .skillsbar .asasas {
+        width: 200px;
+        margin-top: 150px;
+        left: 0px;
+        margin-left: 10px;
+
+    }
+
+    .skills-main-head-div .skillsbar .benest {
+        line-height: 1;
+        height: 150px;
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 {
+        padding-top: 10px !important;
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 button {
+        margin-top: 5px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------Ceertificate  responsive start -------------*/
+
+@media only screen and (min-width:300px) and (max-width:1000px) {
+    .certificate-description {
+        padding-left: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .courseDetils1 {
+        width: 50%;
+    }
+
+    .courseDetils2 {
+        width: 50%;
+    }
+
+    .courseDetils3 {
+        width: 50%;
+        margin-top: 10px;
+    }
+
+    .courseDetils4 {
+        width: 50%;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:700px) {
+    #slideshow {
+        margin: 0 auto;
+        height: 265px;
+        width: 48%;
+        box-sizing: border-box;
+        /* display: none; */
+    }
+
+    .entire-content {
+        margin: auto;
+        width: 169px;
+        perspective: 1141px;
+        position: relative;
+        padding-top: 65px;
+    }
+
+    .content-carrousel figure {
+        width: 117%;
+        height: 116px;
+        border: 1px solid #3b444b;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .certificate-description {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .certificate-description {
+        padding-left: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .courseDetils1 {
+        width: 100%;
+    }
+
+    .courseDetils2 {
+        width: 100%;
+    }
+
+    .courseDetils3 {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .courseDetils4 {
+        width: 50%;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width:468px) and (max-width:768px) {
+    .certi-div img {
+        margin: 0px;
+        padding: 21px;
+    }
+
+    .certi-div img {
+        width: 124px;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:468px) {
+    .certi-div img {
+        margin: 0px;
+        padding: 13px;
+    }
+
+    .certi-div img {
+        width: 85px;
+    }
+}
+
+
+
+
+
+
+/* ----------------Ceertificate  responsive End -------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------Servoice  responsive start -------------*/
+
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+
+    .container-head-main {
+        top: 600px;
+
+    }
+
+    .projects-head {
+        top: 700px;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .container-head-main .cervice-parents .service-child {
+        height: 90px;
+
+    }
+
+    .container-head-main .cervice-parents .service-child img {
+        width: 70px;
+    }
+
+
+    .container-head-main .cervice-parents .service-child-2 {
+        font-size: 17px;
+        padding-top: 5px !important;
+        line-height: 1;
+
+    }
+
+    .container-head-main .cervice-parents .service-child-2 h3 {
+        font-size: 16px;
+        padding-top: 0px !important;
+    }
+
+    .container-head-main .cervice-parents .service-child-2 p {
+        font-size: 12px;
+    }
+
+    .web-service-head .web-service-parents h3 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .web-service-head .web-service-parents p {
+        font-size: 15px;
+    }
+
+    .web-service-head .web-service-parents .tic {
+        font-size: 13px;
+    }
+
+    .web-service-head .web-service-parents2 img {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+
+    .container-head-main .cervice-parents nav {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+
+
+    }
+
+    .container-head-main .cervice-parents .service-child {
+        height: 90px;
+
+    }
+
+    .container-head-main .cervice-parents .service-child img {
+        width: 70px;
+    }
+
+
+    .container-head-main .cervice-parents .service-child-2 {
+        font-size: 17px;
+        padding-top: 5px !important;
+        line-height: 1;
+
+    }
+
+    .container-head-main .cervice-parents .service-child-2 h3 {
+        font-size: 16px;
+        padding-top: 0px !important;
+    }
+
+    .container-head-main .cervice-parents .service-child-2 p {
+        font-size: 12px;
+    }
+
+    .container-head-main .web-service-head {
+        display: inline;
+
+    }
+
+    .web-service-head .web-service-parents h3 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .web-service-head .web-service-parents p {
+        font-size: 15px;
+    }
+
+    .web-service-head .web-service-parents .tic {
+        font-size: 13px;
+    }
+
+    .web-service-head .web-service-parents2 img {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------Servoice  responsive End -------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------Project  responsive start -------------*/
+
+
+
+
+
+@media only screen and (min-width: 670px) and (max-width: 1000px) {
+
+    .mission-parent {
+        top: 800px;
+    }
+
+    .ceo-head-parant {
+        margin-top: 1000px;
+
+    }
+
+    .mission-parent .img-title-mission .mission-detils {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 670px) {
+
+    .mission-parent {
+        top: 700px;
+    }
+
+    .ceo-head-parant {
+        margin-top: 1000px;
+
+    }
+
+    .projects-head .project-child {
+        /* width: 500px; */
+        width: 90%;
+        height: 300px;
+
+    }
+
+    .projects-head .cerifyby .cerifvyp {
+        margin-top: 100px;
+
+
+    }
+
+    .mission-parent .img-title-mission .mission-detils {
+        margin-left: 10px;
+        padding-right: 10px;
+        margin-top: 10px;
+    }
+
+    .mission-parent .img-title-mission .mission-detils div {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mission-parent .img-title-mission {
+
+        display: inline;
+    }
+
+    .mission-parent .img-title-mission .mission-head-img {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/* ----------------Project  responsive End -------------*/
