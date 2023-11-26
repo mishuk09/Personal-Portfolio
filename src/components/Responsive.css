@@ -317,15 +317,48 @@
 /* Aboout me section Responsive */
 /* For screen sizes between 300px to 600px */
 @media only screen and (min-width: 300px) and (max-width: 600px) {
+
+    .aboutme-main-pic .about-section .yearexperience {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+
+    .about-section .yearexperience .years11 {
+        border: none;
+        border-radius: 5px;
+        height: 80px;
+    }
+
+    .about-section .yearexperience .years {
+        border: none;
+        border-radius: 5px;
+        height: 80px;
+    }
+
+    .about-section .yearexperience .years1 {
+        border: none;
+        border-radius: 5px;
+        height: 80px;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
     .aboutme-main-pic {
         height: 1000px;
         width: 100%;
     }
 
+
     .aboutme-main-pic .mainimg {
-        top: 40px;
+        position: relative;
+        top: 220px;
         width: 300px;
         margin: 0 auto;
+
     }
 
     .shortabout {
@@ -334,23 +367,53 @@
     }
 
     .aboutme-main-pic .about-section {
-
-        padding-left: 10px;
-        padding-right: 10px;
-
-        height: 730px;
+        padding-top: 300px;
+        height: 1300px;
         width: 100%;
         border-radius: 5px;
         margin-top: 220px;
-        position: relative;
+        position: absolute;
         background-color: #01001f;
     }
 
-    .callabout {
+    .callabout .sortabout {
+        width: 100%;
+        left: 0;
+        padding-top: 20px;
+    }
+
+    .callabout .sortabout .sort-intro-he .sort-introimg img {
+
+        width: 50%;
+    }
+
+    .callabout .sortabout .sort-intro-he .followgithub img {
+        display: none;
+        width: 80%;
+    }
+
+    .callabout .sortabout .sort-intro-he .sort-intro-head11 {
         display: none;
     }
 
+
+    .callabout .sortabout .sort-intro-child-main {
+        display: inline;
+
+    }
+
     .about-section .about-detils {
+
+        color: #e8e8e8;
+        display: none;
+        padding-top: 100px;
+        margin-left: 30px;
+
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .about-section .about-detilsold {
+
         color: #e8e8e8;
 
         padding-top: 100px;
@@ -379,6 +442,31 @@
 
     .skills-main-head-div {
         top: 500px;
+    }
+
+    .yearexperience .years11 p {
+        color: #A0A0A0;
+        font-weight: 700;
+        font-size: 13px;
+
+    }
+
+    .yearexperience .years p {
+        color: #A0A0A0;
+        font-weight: 700;
+        font-size: 13px;
+
+    }
+
+    .yearexperience .years1 p {
+        color: #A0A0A0;
+        font-weight: 700;
+        font-size: 13px;
+
+    }
+
+    .aboutme-main-pic.about-section .about-detils {
+        font-size: 13px;
     }
 }
 
@@ -394,7 +482,9 @@
     }
 
     .aboutme-main-pic .mainimg {
-        top: 40px;
+
+        position: relative;
+        top: 220px;
         width: 300px;
         margin: 0 auto;
     }
@@ -405,23 +495,55 @@
     }
 
     .aboutme-main-pic .about-section {
-
+        padding-top: 300px;
         padding-left: 10px;
         padding-right: 10px;
 
-        height: 730px;
+        height: 1290px;
         width: 100%;
         border-radius: 5px;
         margin-top: 220px;
-        position: relative;
+        position: absolute;
         background-color: #01001f;
     }
 
-    .callabout {
+    .callabout .sortabout {
+        width: 100%;
+        left: 0;
+        padding-top: 20px;
+    }
+
+    .callabout .sortabout .sort-intro-he .sort-introimg img {
+
+        width: 40%;
+    }
+
+    .callabout .sortabout .sort-intro-he .followgithub img {
+        display: none;
+        width: 50%;
+    }
+
+
+
+    .callabout .sortabout .sort-intro-he .sort-intro-head11 {
         display: none;
     }
 
+    .callabout .sortabout .sort-intro-child-main {
+        display: inline;
+
+    }
+
     .about-section .about-detils {
+        color: #e8e8e8;
+        display: none;
+        padding-top: 100px;
+        margin-left: 30px;
+
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .about-section .about-detilsold {
         color: #e8e8e8;
 
         padding-top: 100px;
@@ -450,5 +572,86 @@
 
     .skills-main-head-div {
         top: 500px;
+    }
+
+    .aboutme-main-pic .about-section .yearexperience {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+
+    .about-section .yearexperience .years11 {
+        border: none;
+        border-radius: 5px;
+    }
+
+    .about-section .yearexperience .years {
+        border: none;
+        border-radius: 5px;
+    }
+
+    .aboutme-main-pic .about-section .about-detils {
+        color: #e8e8e8;
+        font-size: 13px;
+        margin-left: 30px;
+        margin-top: 20px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+
+
+    .about-section button {
+        background-color: white;
+        padding: 5px;
+        width: 120px;
+        border-radius: 20px;
+        font-weight: 700;
+        color: black;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .callabout .sortabout {
+        width: 100%;
+        left: 0;
+        padding-top: 20px;
+    }
+
+    .aboutme-main-pic .about-section {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        height: 810px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 220px;
+        position: absolute;
+        background-color: #01001f;
+    }
+
+    .skills-main-head-div {
+        top: 500px;
+    }
+
+    .about-section .about-detils {
+        display: none;
+        color: #e8e8e8;
+
+        padding-top: 100px;
+        margin-left: 30px;
+
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .about-section .about-detilsold {
+
+        color: #e8e8e8;
+        padding-top: 220px;
+        margin-left: 30px;
+        font-family: "Montserrat", sans-serif;
     }
 }

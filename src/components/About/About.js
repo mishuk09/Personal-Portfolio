@@ -10,9 +10,11 @@ const About = () => {
     return (
         <div className='container aboutme-main-pic'>
             <div className='container about-section'>
-                <img className='mainimg' src={aboutmepic} alt="" />
+                {/* <img className='mainimg' src={aboutmepic} alt="" /> */}
                 <h1>Mahadi Hasan Mishuk</h1>
                 <p className='about-para-about'>Junior Web-Developer</p>
+                <p className='about-detilsold'>Aspiring computer engineer with a strong foundation in programming and web development. Seeking opportunities to apply my skills in creating innovative web solutions, leveraging proficiency in HTML, CSS, JavaScript, React, and Node.js. Dedicated to continuous learning.</p>
+
                 <div className='callabout'><CallAhortAbout></CallAhortAbout></div>
 
                 <p className='about-detils'>Aspiring computer engineer with a strong foundation in programming and web development. Seeking opportunities to apply my skills in creating innovative web solutions, leveraging proficiency in HTML, CSS, JavaScript, React, and Node.js. Dedicated to continuous learning.</p>
@@ -29,8 +31,8 @@ const About = () => {
                         <p>Get Awards</p></div>
                 </div>
             </div>
-{/* 
-            <img className='mainimg' src={aboutmepic} alt="" /> */}
+
+            <img className='mainimg' src={aboutmepic} alt="" />
 
         </div>
     );
