@@ -1392,10 +1392,10 @@
 
 /* ----------------CEO  responsive start -------------*/
 @media only screen and (min-width: 1023px) and (max-width: 1200px) {
-    .ceo-head-parant .ceo-parent .ceo-detils  {
+    .ceo-head-parant .ceo-parent .ceo-detils {
         margin-left: 20px;
         line-height: 1.2;
-     }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1421,10 +1421,11 @@
         top: 20%;
     }
 
-    .ceo-head-parant .ceo-parent .ceo-detils  {
-       margin-left: 20px;
-       line-height: 1.2;
+    .ceo-head-parant .ceo-parent .ceo-detils {
+        margin-left: 20px;
+        line-height: 1.2;
     }
+
     .ceo-head-parant .ceo-parent .ceo-detils .h3-span h3 {
         font-size: 20px;
     }
@@ -1539,6 +1540,20 @@
 
 
 
-/* ----------------Project  responsive End -------------*/
+/* ----------------Contact  responsive start -------------*/
 
-/* ----------------Project  responsive End -------------*/
+
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+    .contact-headmain .contact-head-main .self-stretch .contact-email-form {
+        display: inline;
+    }
+
+
+
+}
+
+
+
+
+
+/* ----------------Contact  responsive End -------------*/

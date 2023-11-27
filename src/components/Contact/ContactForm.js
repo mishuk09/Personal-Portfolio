@@ -61,7 +61,7 @@ const ContactForm = () => {
 
     return (
         <div className="contact-form-container">
-            <div className='how-can mt-3 mb-5'> <h3>How Can We Help You?</h3></div>
+            <div className='how-can mt-3 mb-5'> <h3>How Can I Help You?</h3></div>
             <form className="contact-form" onSubmit={handleSubmit}>
                 <div className='name-email flex w-full'>
                     <input
@@ -121,7 +121,8 @@ const ContactForm = () => {
                 ></textarea>
 
                 <ReCAPTCHA
-                    className="w-full mt-3"
+                    className="w-ful mt-3"
+                    style={{ width: '200px' }}
                     sitekey="6Lc2eRgpAAAAAMwYZC85iVlVaybjSycxpv75zMBd" // Replace with your actual reCAPTCHA site key
                     onChange={handleRecaptchaChange}
 
