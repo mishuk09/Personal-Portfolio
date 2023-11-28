@@ -3,12 +3,14 @@
     height: 10rem;
     background-color: blanchedalmond;
     position: fixed;
-    right: 5px;
+    right: 0px;
     z-index: 999;
     transform: translate(100%, -50%);
     padding: 1rem;
-    border-radius: 5px;
     bottom: 100px;
+    transition: 0.5s;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 
 }
 

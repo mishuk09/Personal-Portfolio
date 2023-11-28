@@ -42,12 +42,12 @@
 
 }
 
- 
+
 
 .projects-head .asdsa {
     color: white;
-    font-weight: 700;
-     
+    font-weight: 500;
+
 }
 
 .projects-head button {
@@ -56,8 +56,8 @@
     width: 150px;
     border-radius: 20px;
     padding: 5px;
-     
-    
+
+
 }
 
 .img-head {
@@ -66,7 +66,7 @@
     text-align: center;
     justify-content: center;
     color: white;
-    
+
 
 }
 
@@ -85,39 +85,46 @@
 
 }
 
-.cerifyby{
-    margin-top:20px;
+.cerifyby {
+    margin-top: 20px;
     text-align: center;
     align-items: center;
     justify-content: center;
-     
+
 
 }
-.sdfsafsd{
-    
+
+.sdfsafsd {
+
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
-.cerifyby img{
+
+.cerifyby img {
     width: 150px;
     margin-left: 10px;
 }
-.cerifvyp{
+
+.cerifvyp {
     color: #0e0a1b;
     font-weight: 700;
 }
-.cerifvyp span{
+
+.cerifvyp span {
     color: #0487FB;
     font-weight: 700;
 }
-.w3c{
+
+.w3c {
     width: 80px;
 }
-.bigimages img{
+
+.bigimages img {
     width: 220px;
 }
-.browserstack img{
+
+.browserstack img {
     width: 200px;
 }

@@ -65,7 +65,7 @@ const ContactForm = () => {
             <form className="contact-form" onSubmit={handleSubmit}>
                 <div className='name-email flex w-full'>
                     <input
-                        className='w-full bg-inherit text-white'
+                        className='w-full  text-white'
                         type="text"
                         name="name"
                         placeholder="Name"
@@ -74,7 +74,7 @@ const ContactForm = () => {
                         required
                     />
                     <input
-                        className='ms-3 w-full bg-inherit  text-white'
+                        className='ms-3 w-full   text-white'
                         type="email"
                         name="email"
                         placeholder="Email"
@@ -85,7 +85,7 @@ const ContactForm = () => {
                 </div>
                 <div className='phoneinput flex'>
                     {/* <PhoneInput
-                        className='mt-3 w-full bg-inherit  phoneinput'
+                        className='mt-3 w-full   phoneinput'
                         name="phoneNumber"
                         placeholder="Phone"
                         value={formData.phoneNumber}
@@ -93,7 +93,7 @@ const ContactForm = () => {
                         required
                     /> */}
                     <input
-                        className='mt-3  w-full bg-inherit  text-white'
+                        className='mt-3  w-full  text-white'
                         type="text"
                         name="phone"
                         placeholder="Phone"
@@ -102,7 +102,7 @@ const ContactForm = () => {
                         required
                     />
                     <input
-                        className='mt-3 ms-3 w-full bg-inherit  text-white'
+                        className='mt-3 ms-3 w-full   text-white'
                         type="text"
                         name="subject"
                         placeholder="Subject"
@@ -112,7 +112,7 @@ const ContactForm = () => {
                     />
                 </div>
                 <textarea
-                    className='mt-3 w-full text-area bg-inherit  text-white'
+                    className='mt-3 w-full text-area   text-white'
                     name="message"
                     placeholder="Your Message"
                     value={formData.message}

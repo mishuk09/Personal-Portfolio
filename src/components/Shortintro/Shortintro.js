@@ -29,13 +29,13 @@ const Shortintro = () => {
                     <div className='sort-intro-child mt-2'>
                         {
                             shortInreo.map((shortintro) => {
-                                return <div className=' flex sort-intro-child-div m-3  bg-white' key={shortInreo.id}>
+                                return <div className=' flex sort-intro-child-div ms-3 mt-3 mb-3   bg-white' key={shortInreo.id}>
                                     <div className='sort-intro-div-img23'>
                                         <img src={shortintro.img} alt="" />
                                     </div>
-                                    <div className='sort-intro-div-descrip234'>
-                                        <p className='mt-3 institution'>{shortintro.tittle}</p>
-                                        <p className='mt-3 institution11'>  {shortintro.name}</p>
+                                    <div className='sort-intro-div-descrip234  '>
+                                        <p className='mt-4 institution'>{shortintro.tittle}</p>
+                                        <p className='mt-1 institution11'>  {shortintro.name}</p>
                                         <p className='mt-3 institution33'>  {shortintro.descrip}</p>
                                         <p className='mt-3 institution44'>  {shortintro.date}</p>
                                     </div>

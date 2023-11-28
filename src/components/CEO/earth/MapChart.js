@@ -44,7 +44,7 @@ const MapChart = () => {
         polygonTemplate.urlTarget = '_blank';
 
         let graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
-        graticuleSeries.mapLines.template.line.stroke = am4core.color('#ffffff');
+        graticuleSeries.mapLines.template.line.stroke = am4core.color('#fff');
         graticuleSeries.mapLines.template.line.strokeOpacity = 0.08;
         graticuleSeries.fitExtent = false;
 
@@ -70,7 +70,7 @@ const MapChart = () => {
         };
     }, []);
 
-    return <div id="chartdiv" style={{ width: '100%', height: '400px', maxWidth: '100%',  }} />;
+    return <div id="chartdiv" style={{ width: '100%', height: '400px', maxWidth: '100%', }} />;
 };
 
 export default MapChart;

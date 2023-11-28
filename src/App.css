@@ -4,6 +4,37 @@
     color: var(--body_color);
 }
 
+
+.darkmode-toggle {
+
+
+    /* background-color: rgb(185, 179, 172); */
+    background-color: #b6adfd;
+
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    right: 0px;
+    z-index: 999;
+    bottom: 180px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+
+}
+
+.sunny-dark {
+    color: rgb(26, 6, 6);
+    /* Set the color for the sunny icon in dark mode */
+}
+
+ 
+
+
+
+
+
+
 .App-link {
     color: var(--link_color);
 }

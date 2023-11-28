@@ -28,10 +28,10 @@ const AppChild = () => {
     return (
         <div className="App">
             {/* mouse pointer and particle portion */}
-            {/* <ParticleJS></ParticleJS> */}
+            <ParticleJS></ParticleJS>
             {/* <MousePointer></MousePointer> */}
 
-
+        
 
             {/* Navbar  */}
             {/* <Navbar></Navbar> */}

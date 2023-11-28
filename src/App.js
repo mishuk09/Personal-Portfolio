@@ -35,13 +35,14 @@ import { dark } from '@mui/material/styles/createPalette';
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 
-
+import { ReactComponent as Sun } from "./Sun.svg";
+import { ReactComponent as Moon } from "./Moon.svg";
 
 
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -66,40 +67,21 @@ function App() {
       <div className="App">
 
         <Nav></Nav>
-        {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
-          <h2>Toggle Dark mode</h2>
-          <Switch checked={darkMode} onChange={toggleDarkMode} />
-          <Card sx={{ width: '30%', borderRadius: 3, padding: 1, marginTop: '20px' }}>
-            <CardContent>
-              <CardMedia
-                sx={{ height: 180, borderRadius: 3 }}
-                image="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg"
-                title="semaphore"
-              />
-              <h1 variant="h4" component="div" sx={{ marginTop: 3 }}>
-                Programming Blogs
-              </h1>
-              <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                by Semaphore
-              </Typography>
-              <Typography variant="body1">
-                Checkout the latest blogs on Semaphore. Semaphore provides you the best CI/CD solution
-                for high-performance engineering teams.
-              </Typography>
-              <p>hi i am mishuk</p>
-            </CardContent>
-          </Card>
-        </div> */}
-      
-      <div >
-             
-             <Switch
-                 checked={darkMode}
-                 onChange={toggleDarkMode}
-                 icon={<Brightness4Icon />} // Icon for normal mode
-                 checkedIcon={<WbSunnyIcon />} // Icon for dark mode
-             />
-         </div>
+
+
+        <div className='darkmode-toggle pt-1'>
+
+          <Switch
+            checked={darkMode}
+            onChange={toggleDarkMode}
+            icon={<Brightness4Icon  />} // Icon for normal mode
+            checkedIcon={<WbSunnyIcon className={darkMode ? 'sunny-dark' : ''} />} // Icon for dark mode
+          // checkedIcon={<WbSunnyIcon className='' />} // Icon for dark mode
+          />
+
+
+
+        </div>
 
         {/* <Navbar></Navbar> */}
         <Routes>
