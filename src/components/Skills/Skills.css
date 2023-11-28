@@ -1,6 +1,6 @@
  .skills-main-head-div {
-     background-color: #ffffff;
-     
+     /* background-color: #ffffff; */
+
      position: relative;
      /* font-family: "Montserrat", sans-serif; */
 
@@ -25,15 +25,15 @@
  }
 
  .skills-headline h1 {
-     color: #333F52;
+     
      font-size: 30px;
      font-weight: 700;
      font-family: "Montserrat", sans-serif;
  }
 
  .skills-headline p {
-
-     color: #333F52;
+font-weight: 500;
+    color: #727B8A;
      font-size: 15px;
      font-family: "Montserrat", sans-serif;
  }

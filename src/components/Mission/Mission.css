@@ -10,7 +10,7 @@
      margin-top: 350px;
      display: flex;
      position: relative;
-     background-color: rgb(255, 255, 255);
+     /* background-color: rgb(255, 255, 255); */
  }
 
  .img-title-mission {
@@ -38,7 +38,7 @@
 
  .mission-detils h1 {
      font-size: 30px;
-     color: #504848;
+     /* color: #504848; */
      font-weight: 700;
 
  }
@@ -46,6 +46,7 @@
  .mission-detils p {
      margin-top: 15px;
      color: #727B8A;
+     font-weight: 500;
  }
 
  .mission-detils button {

@@ -4,7 +4,7 @@ import work from './img/work.png';
 import google from './img/google.png';
 import browser from './img/browser.png';
 import W3C from './img/W3C.png';
-import bigimage from './img/bigimage.jpg';
+import bigimage from './img/bigimage.png';
 import ProjectVideo from './ProjectVideo';
 
 

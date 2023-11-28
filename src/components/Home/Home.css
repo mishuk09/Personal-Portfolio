@@ -1,13 +1,14 @@
 .whatsapp-logo {
     position: fixed;
-    top: 80%;
-    right: 0;
-    margin-right: 10px;
+    z-index: 999;
+    right: 15px;
+    bottom: 50px;
+
     transform: translate(0, -50%);
 }
 
 .whatsapp-logo .whatsapplogo {
-    color: limegreen;
+    color: green;
 
 }
 
@@ -215,6 +216,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 7pxpx;
     background-color: #EBF1F8;
+    box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.3);
 
 }
 

@@ -27,14 +27,14 @@ const CallAhortAbout = () => {
 
 
                     <div className='sort-intro-child11 m-2  '>
-                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faPaperPlane} className='icon mt-3 mx-3' size="2x" /></div>
+                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faPaperPlane} className='icon mt-3 ' size="2x" /></div>
                         <div className='email-section mt-3 mx-2'>
                             <h5>Email</h5>
                             <p>mishukinfo09@gmail.com</p>
                         </div>
                     </div>
                     <div className=' sort-intro-child11 m-2 '>
-                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faCakeCandles} className='icon mt-3 mx-4' size="2x" /></div>
+                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faCakeCandles} className='icon mt-3 ' size="2x" /></div>
                         <div className='email-section mt-3 mx-2'>
                             <h5>Age</h5>
                             <p>22</p>
@@ -42,7 +42,7 @@ const CallAhortAbout = () => {
 
                     </div>
                     <div className=' sort-intro-child11 m-2 '>
-                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faPhone} className='icon mt-3 mx-3' size="2x" /></div>
+                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faPhone} className='icon mt-3  ' size="2x" /></div>
                         <div className='email-section mt-3 mx-2'>
                             <h5>Phone</h5>
                             <p>+91 7069089661</p>
@@ -50,7 +50,7 @@ const CallAhortAbout = () => {
 
                     </div>
                     <div className=' sort-intro-child11 m-2'>
-                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faLocationDot} className='icon mt-3 mx-4' size="2x" /></div>
+                        <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faLocationDot} className='icon mt-3  ' size="2x" /></div>
                         <div className='email-section mt-3 mx-2'>
                             <h5>Location</h5>
                             <p>Rajkot,Gujarat,India.</p>

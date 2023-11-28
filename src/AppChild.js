@@ -4,7 +4,7 @@ import ParticleJS from './components/ParticlesJS/ParticleJS';
 import MousePointer from './components/MousePointerAnimated/MousePointer';
 import Navbar from './components/Navbar/Navbar';
 import DarkMode from './components/DarkMode/DarkMode';
-// import ColorChange from './components/ColorChange/ColorChange';
+import ColorChange from './components/ColorChange/ColorChange';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
@@ -21,6 +21,7 @@ import Testimonier from './components/CEO/Testimonier/Testimonier';
 import ContactForm from './components/Contact/ContactForm';
 import { Route, Routes } from 'react-router-dom';
 import ContactPage from './components/ContactPage/ContactPage';
+import ScrollButton from './components/ScrollButton/ScrollButton';
 // import Shortintro from './components/Shortintro/Shortintro';
 
 const AppChild = () => {
@@ -34,7 +35,8 @@ const AppChild = () => {
 
             {/* Navbar  */}
             {/* <Navbar></Navbar> */}
-            {/* <ColorChange></ColorChange> */}
+            <ScrollButton></ScrollButton>
+            <ColorChange></ColorChange>
             <Home></Home>
 
             <About></About>

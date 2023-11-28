@@ -15,16 +15,16 @@ const Contact = () => {
 
 
         <div id='contact' className="flex flex-col items-stretch  contact-headmain   ">
-            <div className="text-black text-justify text-3xl font-bold leading-10 self-center whitespace-nowrap max-md:max-w-full">
+            <div className="  text-justify text-3xl font-bold leading-10 self-center whitespace-nowrap max-md:max-w-full">
                 So Let's Contact With Me
             </div>{" "}
             <div className="container contact-head-main shadow-sm  self-center flex w-full   flex-col items-center mt-16 px-5  rounded-md    ">
-                <div className="flex w-full  flex-col items-center  ">
+                <div className="flex w-full  flex-col items-center  contact-head-child ">
 
-                    <div className="self-stretch mt-10  ">
-                        <div className=" flex  contact-email-form ">
-                            <div className="flex flex-col items-stretch w-[50%] max-md:w-full pt-4 ">
-                                <div className="flex grow flex-col    ">
+                    <div className="self-stretch mt-10 contact-head-child1  ">
+                        <div className=" flex  contact-email-form  ">
+                            <div className="flex flex-col items-stretch w-[50%] max-md:w-full pt-4 contact-head-child2 ">
+                                <div className="flex grow flex-col  contact-head-child3  ">
                                     <div className="self-stretch flex justify-between gap-4  ">
                                         {/* <div className='location-div'> <img src={email} alt="" /> </div> */}
                                         <div className='location-div pt-3'><FontAwesomeIcon icon={faEnvelope} color='white' size="2x" /> </div>
@@ -66,7 +66,7 @@ const Contact = () => {
 
                                     <div className="text-white text-justify   font-bold leading-8 whitespace-nowrap  self-stretch items-center   pt-10 pb-10      ">
                                         <iframe
-                                            className='rounded'
+                                            className='rounded iframe-map'
                                             title="Google Map"
                                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59091.95342571948!2d70.9144792896636!3d22.230701929315895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b4a660019ee9%3A0x3d6254f36ed0e794!2sRK%20University%20Main%20Campus!5e0!3m2!1sen!2sin!4v1700453227845!5m2!1sen!2sin"
                                             width="100%"

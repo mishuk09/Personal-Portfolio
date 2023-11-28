@@ -1,5 +1,90 @@
 /* Your existing styles */
 
+
+
+@media screen and (min-width:640px)and (max-width: 1023px) {
+
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
+        padding-left: 7px !important;
+        padding-right: 7px !important;
+        margin-left: 0px;
+        margin-right: 0px;
+        text-decoration: none !important;
+
+    }
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child .navbar-child-child2 {
+        display: none;
+    }
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 {
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:300px)and (max-width: 640px) {
+
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
+
+        text-decoration: none !important;
+
+    }
+
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child .navbar-child-child2 {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:1023px) {
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: 0px;
+        margin-right: 0px;
+        text-decoration: none !important;
+
+    }
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 {
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child .navbar-child-child2 {}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 880px) {
     .no-underline {
         display: none;
@@ -1345,6 +1430,7 @@
     .ceo-head-parant .ceo .Testimonials-head {
         flex-wrap: wrap;
         overflow: auto;
+        overflow-x: scroll;
 
     }
 
@@ -1546,6 +1632,16 @@
 @media only screen and (min-width: 300px) and (max-width: 768px) {
     .contact-headmain .contact-head-main .self-stretch .contact-email-form {
         display: inline;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 964px) {
+    .contact-headmain .contact-head-main .contact-head-child .contact-head-child1 .contact-email-form .contact-head-child2 .contact-head-child3 .iframe-map {
+        width: 80%;
+
     }
 
 

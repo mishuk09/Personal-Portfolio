@@ -67,7 +67,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    background-color: #EBF1F8;
+    /* background-color: #EBF1F8; */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 

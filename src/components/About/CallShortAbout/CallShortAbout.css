@@ -25,10 +25,14 @@
 }
 
 .sort-intro-child11 .circle1 {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     height: 70px;
     width: 70px;
     background-color: white;
     border-radius: 50%;
+    overflow: hidden;
 
 }
 
