@@ -57,7 +57,7 @@ const ParticleJS = () => {
                     links: {
                         //particle connector
                         color: "#0F111E",
-                        distance: 120,
+                        distance: 50,
                         enable: true,
                         opacity: 0.5,
                         width: 0.5,
@@ -81,10 +81,10 @@ const ParticleJS = () => {
                         value: 70,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.3,
                     },
                     shape: {
-                        type: "circle",
+                        type: "triangle",
                     },
                     size: {
                         value: { min: 1, max: 5 },
