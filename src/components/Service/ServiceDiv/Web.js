@@ -2,6 +2,8 @@ import React from 'react';
 import './Web.css';
 import webimg from '../img/webimg.png';
 import tic from '../img/tick.png';
+import { Link } from 'react-router-dom';
+import Button from '../../OthersComponent/Button/Button';
 
 const Web = () => {
     return (
@@ -16,7 +18,12 @@ const Web = () => {
                     <div> <img src={tic} alt="" /><span className='px-2 '>REACT JS</span></div>
                     <div> <img src={tic} alt="" /><span className='px-2 '>NODE JS</span></div>
                 </div>
-                <div className='website-button'><a href=""><button>Get Your First Website</button></a></div>
+                {/* <div className='website-button'><a href=""><button>Get Your First Website</button></a></div> */}
+                <div className='mt-5 w-25'>
+                    <Link to='/contactpage'>
+                        <Button>Get Your First Website</Button>
+                    </Link>
+                </div>
             </div>
             <div className='web-service-parents2'>
                 <img src={webimg} alt="" />

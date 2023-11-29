@@ -1,5 +1,6 @@
 .ceo {
-    background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+    /* background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334); */
+    background-color: #0E0A1B;
 
     /* background-color: #00020F; */
     height: 1400px;
@@ -14,7 +15,7 @@
 }
 
 .ceo-parent {
-   
+
 
     border-radius: 5px;
     position: absolute;
@@ -48,7 +49,7 @@
 .ceo-detils {
     color: rgb(163, 165, 167);
     width: 100%;
-    
+
 }
 
 .ceo-detils h3 {
@@ -65,7 +66,7 @@
 }
 
 .ceo-detils p {
-    
+
     margin-bottom: 0px;
     /* padding-bottom: 0px; */
     margin-top: 15px;

@@ -6,6 +6,7 @@ import tick from '../../Home/img/tick.png';
 import followgithub from '../img/followgithub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCakeCandles, faPhone, faLocationDot, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import Marquee from "react-fast-marquee";
 
 
 const CallAhortAbout = () => {
@@ -17,8 +18,20 @@ const CallAhortAbout = () => {
                 <div className='sort-intro-he p-2 '>
                     <div className='sort-introimg ps-1'><img src={about} alt="" /></div>
                     <div className='sort-intro-head11 ps-5'>
-                        <div><img className=' ' src={tick} alt="" /> </div>
-                        <div><img className=' ' src={tick} alt="" /></div>
+                        {/* <div><img className=' ' src={tick} alt="" /> </div>
+                        <div><img className=' ' src={tick} alt="" /></div> */}
+                        <Marquee
+                            speed={40}
+                            gradient={false}
+                            pauseOnHover={false}
+                            direction='left'
+                            className='marquee-intro-div'
+                            pauseOnClick={false}
+
+                        >
+                            Hello
+
+                        </Marquee>
 
                     </div>
                     <div className=' followgithub   '><img src={followgithub} alt="img" /></div>

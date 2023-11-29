@@ -6,6 +6,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import logo from './logo/logo.png';
 import Button from '../OthersComponent/Button/Button';
 import DarkMode from '../DarkMode/DarkMode';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
     const navigation = [
@@ -67,7 +68,10 @@ const Nav = () => {
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 navbar-child-child">
-                                <Button>Talk To Me</Button>
+                                <Link to='/contactpage'>
+                                    <Button>Talk To Me</Button>
+
+                                </Link>
 
                                 {/* Profile dropdown */}
                                 <Menu as="div" className="relative ml-3 navbar-child-child2">

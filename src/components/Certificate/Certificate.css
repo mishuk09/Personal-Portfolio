@@ -159,7 +159,8 @@
 +++++++++++++++++++++++ */
 
 .certification-main {
-    background-color: #13111c;
+
+    background-color: #0E0A1B;
     padding-bottom: 10px;
     margin-top: 100px;
     position: relative;
@@ -167,8 +168,7 @@
 
 .certi-div {
     height: 80px;
-    background-color: #051d40;
-    background-color: #050d18;
+    background-color: #13111c;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;

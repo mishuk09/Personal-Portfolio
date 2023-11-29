@@ -71,7 +71,9 @@ const Skillsbar = () => {
                     <h1>Be my next success story?</h1>
                     <p  >Have an idea? Talk to me today! Share your requirements and let's
                         team up for a successful project with simplicity."</p>
-                    <Link to="/contactpage"> <Button>Have a Free Consultation</Button></Link>
+                    <div className='w-25'>
+                        <Link to="/contactpage"> <Button>Have a Free Consultation</Button></Link>
+                    </div>
                 </div>
             </div>
         </div>

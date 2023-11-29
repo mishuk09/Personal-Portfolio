@@ -11,7 +11,10 @@
  }
 
  .contact-head-main {
-     background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+     /* background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334); */
+     background-color: #0E0A1B;
+
+
 
  }
 
@@ -32,6 +35,8 @@
      margin: 0 auto;
      padding: 20px;
      background-color: #070925;
+     background-color: #0E0A1B;
+
  }
 
  .contact-form {

@@ -10,6 +10,7 @@
 
 .sort-intro-headline {
     display: flex;
+
     background-color: #EBF1F8;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -36,18 +37,15 @@
 }
 
 
-.sort-intro-head {
-
+.wave1 .sort-intro .sort-intro-headline .sort-intro-head {
     padding: 10px;
     height: 40px;
     width: 500px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     margin-left: auto;
     margin-right: auto;
-    clip-path: polygon(75% 0%, 84% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
 }
 
 
@@ -66,7 +64,7 @@
 .sort-intro-child {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+
     /* background-color: #EBF1F8; */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -74,7 +72,7 @@
 }
 
 .sort-intro-child-div {
-    
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 120px;

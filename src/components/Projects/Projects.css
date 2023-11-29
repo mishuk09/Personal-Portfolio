@@ -4,7 +4,9 @@
     position: relative;
     height: 450px;
     width: 100%;
-    background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+    background-color: #0E0A1B;
+
+    /* background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334); */
 }
 
 .projects-head12 {
@@ -27,7 +29,7 @@
 
     height: 50px;
     width: 100%;
-    background-color: #0e0a1b;
+    background-color: #131237;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }

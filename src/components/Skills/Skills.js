@@ -24,9 +24,12 @@ const Skills = () => {
                     <p>
                         I work with cutting-edge technologies designed to solve your product requirements. Focus on finding solutions for your business needs while we handle the technical aspect.
                     </p>
-                    <Link to="/contactpage">
+                    <div className='w-25'> <Link to="/contactpage">
                         <Button className='skills-button'>Ask Your Query</Button>
                     </Link>
+
+                    </div>
+
                 </div>
                 <div className='skills-img'>
                     <div className='w=5 js'>
