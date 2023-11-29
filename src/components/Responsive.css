@@ -199,40 +199,67 @@
 }
 
 @media screen and (min-width:300px)and (max-width: 440px) {
-    #sun {
+    .solar-system #sun {
         height: 100px;
         width: 100px;
         background-color: #fae20a;
-        margin-top: -54px;
-        margin-left: -54px;
+        margin-top: -51px;
+        margin-left: -123px;
         border-radius: 50%;
         box-shadow: 0 0 84px orange;
     }
 
-    .venus-orbit,
-    .venus-spin {
-        margin-top: -79px;
-        margin-left: -82px;
-        width: 151px;
-        height: 150px;
+    .solar-system .venus-orbit {
+        margin-top: -67px;
+        margin-left: -137px;
+        width: 130px;
+        height: 130px;
     }
 
-    #venus {
-        margin-top: -7px;
-        margin-left: -32px;
-        height: 20px;
-        width: 20px;
-        /* background-color: #3498db; */
-        box-shadow: 0 0 34px #3a4385;
+    .solar-system .venus-spin {
+        margin-top: -67px;
+        margin-left: -138px;
+        width: 130px;
+        height: 130px;
     }
 
-    .earth-orbit,
-    .earth-spin {
-        width: 255px;
-        height: 255px;
-        margin-left: -133px;
-        margin-top: -134px;
+    .solar-system .venus-spin #venus img {
+        border-radius: 150%;
+        width: 30px;
+        height: 30px;
+
+
+
+
     }
+
+    .solar-system .venus-spin #venus {
+
+        box-shadow: none;
+
+
+
+
+    }
+
+
+
+    .solar-system .earth-orbit {
+        width: 210px;
+        height: 210px;
+        margin-left: -177px;
+        margin-top: -109px;
+    }
+
+    .solar-system .earth-spin {
+        width: 210px;
+        height: 210px;
+        margin-left: -177px;
+        margin-top: -109px;
+    }
+
+
+
 
     #earth {
         position: absolute;
@@ -244,12 +271,19 @@
         margin-top: -26px;
     }
 
-    .mars-orbit,
+    .solar-system .mars-orbit,
     .mars-spin {
-        width: 383px;
-        height: 383px;
-        margin-left: -195px;
-        margin-top: -200px;
+        width: 317px;
+        height: 317px;
+        margin-left: -231px;
+        margin-top: -166px;
+    }
+
+    .solar-system .mars-spin {
+        width: 317px;
+        height: 317px;
+        margin-left: -231px;
+        margin-top: -166px;
     }
 
     .solar-system {
@@ -259,6 +293,13 @@
         margin: auto;
         overflow: hidden;
     }
+
+    .solar-system .mars-spin #mars img {
+        border-radius: 50%;
+
+    }
+
+
 }
 
 

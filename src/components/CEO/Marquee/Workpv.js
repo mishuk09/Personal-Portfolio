@@ -6,6 +6,7 @@ import ahms from '../img/ahms.png';
 import calendar from '../img/calendar.png';
 import movieapp from '../img/movieapp.png';
 import portt from '../img/portt.png';
+import csehacks from '../img/csehacks.png';
 
 const Workpv = () => {
     const [isPaused, setIsPaused] = useState(false);
@@ -33,11 +34,12 @@ const Workpv = () => {
                 onMouseEnter={handleMouseOver}
                 onMouseLeave={handleMouseOut}
             >
-                <img src={portt} alt="" />
+                <img src={csehacks} alt="" />
                 <img src={sihh} alt="" />
                 <img src={movieapp} alt="" />
                 <img src={calendar} alt="" />
                 <img src={ahms} alt="" />
+                <img src={portt} alt="" />
             </Marquee>
         </div>
     );

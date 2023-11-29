@@ -21,7 +21,7 @@ const ContactPage = () => {
         // filter: 'blur(1px)',
     };
     return (
-        <div className='pt-7' style={divStyle}>
+        <div className='pt-7 mt-[65px]' style={divStyle}>
             {/* <Navbar></Navbar> */}
             <ContactForm ></ContactForm>
         </div>

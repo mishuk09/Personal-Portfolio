@@ -16,7 +16,7 @@ const ScrollButton = () => {
         bottom: '20px',
         right: '10px',
         zIndex: '999',
-        backgroundColor: 'green',
+        backgroundColor: '#007bff',
         
         borderRadius: '50%',
         padding: '10px',

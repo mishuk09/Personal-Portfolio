@@ -1,6 +1,8 @@
 import React from 'react';
 import tic from '../img/tick.png';
 import seo from '../img/seo.png';
+import { Link } from 'react-router-dom';
+import Button from '../../OthersComponent/Button/Button';
 
 const Seo = () => {
     return (
@@ -16,7 +18,11 @@ const Seo = () => {
                         <div> <img src={tic} alt="" /><span className='px-2 '> Link </span></div>
 
                     </div>
-                    <div className='website-button'><a href=""><button> Let's Talk</button></a></div>
+                    <div className='mt-5 w-25'>
+                        <Link to='/contactpage'>
+                            <Button>Get SEO Service</Button>
+                        </Link>
+                    </div>
                 </div>
                 <div className='web-service-parents2'>
                     <img src={seo} alt="" />

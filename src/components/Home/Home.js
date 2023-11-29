@@ -12,6 +12,7 @@ import Typical from 'react-typical'
 import homelogo from './img/homelogo.png';
 import Shortintro from '../Shortintro/Shortintro';
 import Solar from './SolarSystem/Solar';
+import WhatsApp from '../OthersComponent/Button/WhatsApp';
 
 const Home = () => {
 
@@ -23,12 +24,13 @@ const Home = () => {
 
     ];
     return (
-        <div id='home' >
+        <div id='home' className='mt-[67px]' >
             <div className='home-div-main'>
                 <div className='container   home-div'>
 
                     {/* whatsapp logo */}
-                    <div className='whatsapp-logo'><FontAwesomeIcon icon={faWhatsapp} size="2x" beat className='whatsapplogo' /></div>
+                    <WhatsApp></WhatsApp>
+                    {/* <div className='whatsapp-logo'><FontAwesomeIcon icon={faWhatsapp} size="2x" beat className='whatsapplogo' /></div> */}
                     <div className='name-div'>
 
                         <p className='name-p'>Welcome to my Portfolio</p>

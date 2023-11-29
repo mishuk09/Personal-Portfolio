@@ -1,6 +1,8 @@
 import React from 'react';
 import tic from '../img/tick.png';
 import net from '../img/net.png';
+import { Link } from 'react-router-dom';
+import Button from '../../OthersComponent/Button/Button';
 
 const Net = () => {
     return (
@@ -18,7 +20,11 @@ const Net = () => {
                         <div> <img src={tic} alt="" /><span className='px-2 '>ASP.NET MVC/Core</span></div>
 
                     </div>
-                    <div className='website-button'><a href=""><button>Get Your Windows App</button></a></div>
+                    <div className='mt-5 w-25'>
+                        <Link to='/contactpage'>
+                            <Button>Get Window Application</Button>
+                        </Link>
+                    </div>
                 </div>
                 <div className='web-service-parents2'>
                     <img src={net} alt="" />

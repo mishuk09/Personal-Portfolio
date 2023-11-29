@@ -1,15 +1,8 @@
-.App {
-    background-color: var(--body_background);
-    min-height: 100vh;
-    color: var(--body_color);
-}
-
-
 .darkmode-toggle {
 
 
     /* background-color: rgb(185, 179, 172); */
-    background-color: #b6adfd;
+    background-color: #007bff;
 
     width: 3rem;
     height: 3rem;
@@ -28,7 +21,7 @@
     /* Set the color for the sunny icon in dark mode */
 }
 
- 
+
 
 
 

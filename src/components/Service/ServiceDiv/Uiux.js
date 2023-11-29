@@ -1,6 +1,8 @@
 import React from 'react';
 import tic from '../img/tick.png';
 import uiux from '../img/uiux.png';
+import { Link } from 'react-router-dom';
+import Button from '../../OthersComponent/Button/Button';
 
 const Uiux = () => {
     return (
@@ -17,8 +19,12 @@ const Uiux = () => {
                     <div> <img src={tic} alt="" /><span className='px-2 '>AI</span></div>
 
                 </div>
-                <div className='website-button'><a href=""><button>Get Your First Website</button></a></div>
-            </div>
+                <div className='mt-5 w-25'>
+                    <Link to='/contactpage'>
+                        <Button>Get Your First Website</Button>
+                    </Link>
+                </div>
+             </div>
             <div className='web-service-parents2'>
                 <img src={uiux} alt="" />
             </div>

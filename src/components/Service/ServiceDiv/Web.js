@@ -18,7 +18,6 @@ const Web = () => {
                     <div> <img src={tic} alt="" /><span className='px-2 '>REACT JS</span></div>
                     <div> <img src={tic} alt="" /><span className='px-2 '>NODE JS</span></div>
                 </div>
-                {/* <div className='website-button'><a href=""><button>Get Your First Website</button></a></div> */}
                 <div className='mt-5 w-25'>
                     <Link to='/contactpage'>
                         <Button>Get Your First Website</Button>

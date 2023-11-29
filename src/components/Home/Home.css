@@ -1,16 +1,3 @@
-.whatsapp-logo {
-    position: fixed;
-    z-index: 999;
-    right: 15px;
-    bottom: 50px;
-
-    transform: translate(0, -50%);
-}
-
-.whatsapp-logo .whatsapplogo {
-    color: green;
-
-}
 
 .home-div {
     display: flex;
