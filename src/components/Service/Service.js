@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Service.css';
 import ui from './img/ui.png';
 import we from './img/we.png';
@@ -8,6 +8,8 @@ import Uiux from './ServiceDiv/Uiux';
 import Web from './ServiceDiv/Web';
 import Net from './ServiceDiv/Net';
 import Seo from './ServiceDiv/Seo';
+import AOS from 'aos';
+
 
 const Service = () => {
     const [activetab, setActivetab] = useState(2);
@@ -43,6 +45,12 @@ const Service = () => {
         }
     ];
 
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, []);
+
+
     return (
         <div className='container container-head-main'>
             <div className='service-head'>
@@ -51,12 +59,14 @@ const Service = () => {
             <div className='cervice-parents mt-5'>
                 <nav>
                     {tabItems.map((item) => (
+
                         <div
+                            data-aos="fade-up"
                             onClick={() => handleTabClick(item.id)}
                             className={`Link-div ${activetab === item.id ? 'active-tab' : ''}`}
                             key={item.id}
                         >
-                            <div className='service-child p-2 hover:bg-slate-100'>
+                            <div className='service-child p-2 hover:bg-slate-100 ' >
                                 <div>
                                     <img src={`${item.img}`} alt="img" />
                                 </div>
@@ -66,6 +76,7 @@ const Service = () => {
                                 </div>
                             </div>
                         </div>
+
                     ))}
                 </nav>
             </div>

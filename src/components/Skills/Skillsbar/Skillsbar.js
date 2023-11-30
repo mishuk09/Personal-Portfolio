@@ -10,8 +10,14 @@ import Toolchart from '../ToolsChart/Toolchart';
 import benext from './img/benext.png';
 import { Link } from 'react-router-dom';
 import Button from '../../OthersComponent/Button/Button';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
 const Skillsbar = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 })
+    }, []);
     return (
         <div className='skillsbar'>
             <div className='skillsbar-div-head mt-2  '>
@@ -61,7 +67,7 @@ const Skillsbar = () => {
                 </div>
             </div>
             <img className='asasas mx-10' src={benext} alt="" />
-            <div className='benest '>
+            <div className='benest ' data-aos='fade-up'>
 
                 <div className='benext-child'>
 

@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
 import './Contact.css'; // CSS file for styling
 import ReCAPTCHA from 'react-google-recaptcha';
+import emailjs from '@emailjs/browser';
+
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -34,9 +36,13 @@ const ContactForm = () => {
             recaptchaValue: value,
         });
     };
-
+    const form = useRef();
     const handleSubmit = (e) => {
+
+        //control emial js 
         e.preventDefault();
+
+        
         // Basic validation - check if required fields are filled
         const errors = {};
         if (!formData.name.trim()) {
@@ -59,10 +65,14 @@ const ContactForm = () => {
         }
     };
 
+
+
+    //email js control
+
     return (
         <div className="contact-form-container">
             <div className='how-can mt-3 mb-5'> <h3>How Can I Help You?</h3></div>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                 <div className='name-email flex w-full'>
                     <input
                         className='w-full  text-white'
@@ -84,14 +94,7 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className='phoneinput flex'>
-                    {/* <PhoneInput
-                        className='mt-3 w-full   phoneinput'
-                        name="phoneNumber"
-                        placeholder="Phone"
-                        value={formData.phoneNumber}
-                        onChange={(value) => setFormData({ ...formData, phoneNumber: value })}
-                        required
-                    /> */}
+
                     <input
                         className='mt-3  w-full  text-white'
                         type="text"
