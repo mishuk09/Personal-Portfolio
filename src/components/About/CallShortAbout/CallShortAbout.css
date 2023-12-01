@@ -69,6 +69,7 @@
 }
 
 .sort-intro-he {
+    justify-content: space-between;
     display: flex;
     background-color: #EBF1F8;
     border-top-left-radius: 5px;
@@ -95,5 +96,28 @@
 
     margin-left: auto;
     margin-right: auto;
-    /* clip-path: polygon(75% 0%, 84% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%); */
+}
+
+/* Define keyframes for the beat animation */
+@keyframes beatAnimation {
+    0% {
+        transform: scale(1);
+        /* Start scale */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Scale up */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to normal scale */
+    }
+}
+
+/* Apply the animation to the image */
+.sort-introimg img {
+    animation: beatAnimation 2s ease-in-out infinite;
+    /* Adjust duration, timing, and iteration */
 }

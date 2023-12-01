@@ -1,3 +1,17 @@
+.certificate-flex-box {
+    display: flex;
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    max-width: 100%;
+}
+
+.certificate-flex-box .shad12 {
+    flex: 0 0 auto;
+    padding: 5px;
+}
+
 #slideshow {
     margin: 0 auto;
     height: 300px;

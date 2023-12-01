@@ -12,7 +12,9 @@
 
  .contact-head-main {
      /* background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334); */
+     height: 800px;
      background-color: #0E0A1B;
+     clip-path: polygon(0 0, 100% 0%, 100% 80%, 50% 100%, 0 80%);
 
 
 

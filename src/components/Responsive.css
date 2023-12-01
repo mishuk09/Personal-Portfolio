@@ -1,6 +1,16 @@
 /* Your existing styles */
 
+@media screen and (max-width:550px) {
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child {
+        display: none;
+    }
 
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 {
+        width: 50%;
+    }
+
+
+}
 
 @media screen and (min-width:640px)and (max-width: 1023px) {
 
@@ -22,6 +32,7 @@
         text-align: center;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
     }
 }
 
@@ -288,9 +299,10 @@
 
     .solar-system {
         position: relative;
-        width: 405px;
-        height: 500px;
-        margin: auto;
+        width: 500px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
         overflow: hidden;
     }
 
@@ -466,6 +478,21 @@
     }
 }
 
+/* @media only screen and (min-width: 300px) and (max-width: 800px) {
+    .aboutme-main-pic .about-section .callabout .sortabout .sort-intro-he .short-intro-marquee {
+        display: none;
+
+    }
+
+} */
+@media (max-width: 768px) {
+    .aboutme-main-pic .about-section .callabout .sortabout .sort-intro-he .short-intro-marquee {
+        display: none;
+        /* Hide the marquee on smaller screens */
+    }
+}
+
+
 @media only screen and (min-width: 300px) and (max-width: 600px) {
     .aboutme-main-pic {
         height: 1000px;
@@ -499,6 +526,7 @@
         left: 0;
         padding-top: 20px;
     }
+
 
     .callabout .sortabout .sort-intro-he .sort-introimg img {
         width: 50%;
@@ -1076,14 +1104,37 @@
     }
 }
 
+@media only screen and (min-width:700px) {
+    #certificate .certificate-flex-box {
+        display: none;
+    }
+}
+
 @media only screen and (min-width:300px) and (max-width:700px) {
-    #slideshow {
+    .certification-main #slideshow {
+        display: none;
         margin: 0 auto;
         height: 265px;
         width: 48%;
         box-sizing: border-box;
         /* display: none; */
     }
+
+    #certificate .certificate-flex-box {
+
+        overflow-x: auto;
+    }
+
+    #certificate .certificate-flex-box .shad12 {
+        width: 300px;
+
+    }
+
+    #certificate .certificate-flex-box .shad12 img {
+        width: 100%;
+
+    }
+
 
     .entire-content {
         margin: auto;

@@ -24,7 +24,7 @@ const Contact = () => {
                     <div className="self-stretch mt-10 contact-head-child1  ">
                         <div className=" flex  contact-email-form  ">
                             <div className="flex flex-col items-stretch w-[50%] max-md:w-full pt-4 contact-head-child2 ">
-                                <div className="flex grow flex-col  contact-head-child3  ">
+                                <div className="flex grow flex-col    contact-head-child3  ">
                                     <div className="self-stretch flex justify-between gap-4  ">
                                         {/* <div className='location-div'> <img src={email} alt="" /> </div> */}
                                         <div className='location-div pt-3'><FontAwesomeIcon icon={faEnvelope} color='white' size="2x" /> </div>
@@ -64,7 +64,7 @@ const Contact = () => {
                                     </div>{" "}
 
 
-                                    <div className="text-white text-justify   font-bold leading-8 whitespace-nowrap  self-stretch items-center   pt-10 pb-10      ">
+                                    <div className="text-white text-justify    font-bold leading-8 whitespace-nowrap  self-stretch items-center   pt-10 pb-10      ">
                                         <iframe
                                             className='rounded iframe-map'
                                             title="Google Map"

@@ -8,7 +8,7 @@ class ProjectVideo extends React.Component {
                     className='rounded-b-lg'
                     width="100%"
                     height="330"
-                    src="https://www.youtube.com/embed/hNsn0CA94xg?autoplay=1" // Append "?autoplay=1" to the URL
+                    src="https://www.youtube.com/embed/hNsn0CA94xg"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

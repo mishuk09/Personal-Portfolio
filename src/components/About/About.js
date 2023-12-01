@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css'
+import '../Responsive.css';
 import aboutmepic from './img/aboutmepic.png'
 import CallAhortAbout from './CallShortAbout/CallAhortAbout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

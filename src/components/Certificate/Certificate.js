@@ -22,7 +22,7 @@ import infosys from './img/Infosys.png';
 const Certificate = () => {
     return (
 
-        <div id="certificate" className="  certification-main">
+        <div id="certificate" className="  certification-main ">
 
             <div className='certificate-img pt-3 pb-3'>
                 <img src={certificate} alt="" />
@@ -65,6 +65,19 @@ const Certificate = () => {
                     </div>
                 </div>
             </div>
+            <div className='flex certificate-flex-box'>
+
+                <div className="shad12"> <img src={one} alt="" /> </div>
+                <div className="shad12"> <img src={two} alt="" /> </div>
+                <div className="shad12"> <img src={three} alt="" /> </div>
+                <div className="shad12"> <img src={four} alt="" /> </div>
+                <div className="shad12"> <img src={five} alt="" /> </div>
+                <div className="shad12"> <img src={six} alt="" /> </div>
+                <div className="shad12"> <img src={seven} alt="" /> </div>
+                <div className="shad12"><img src={eight} alt="" /> </div>
+                <div className="shad12"> <img src={nine} alt="" /> </div>
+
+            </div>
 
 
 
@@ -72,7 +85,7 @@ const Certificate = () => {
 
 
 
-            <div className=" container pt-0 mt-5 certificate-description">
+            <div className=" container pt-0 mt-5 mb-5 certificate-description">
 
                 <div className="courseDetils1">
                     <h3>JAVA</h3>

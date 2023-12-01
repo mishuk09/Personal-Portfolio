@@ -70,17 +70,11 @@ const Nav = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 navbar-child-child">
+                            <div className="absolute inset-y-0 right-0   flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 navbar-child-child">
                                 <Link to='/contactpage'>
                                     <Button>Get A Free Consultation</Button>
 
                                 </Link>
-
-                                {/* Profile dropdown */}
-                                <Menu as="div" className="relative ml-3 navbar-child-child2">
-
-                                    {/* <DarkMode></DarkMode> */}
-                                </Menu>
                             </div>
                         </div>
                     </div>

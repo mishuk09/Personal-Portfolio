@@ -3,7 +3,7 @@ import './CallShortAbout.css';
 import '../../Responsive.css';
 import about from '../img/about.png'
 import tick from '../../Home/img/tick.png';
-import followgithub from '../img/followgithub.png'
+import followgithub from '../img/followgithub.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCakeCandles, faPhone, faLocationDot, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import Marquee from "react-fast-marquee";
@@ -15,25 +15,21 @@ const CallAhortAbout = () => {
 
 
             <div className='sortabout mt-2  '>
-                <div className='sort-intro-he p-2 '>
+                <div className='sort-intro-he  p-1 '>
                     <div className='sort-introimg ps-1'><img src={about} alt="" /></div>
-                    <div className='sort-intro-head11 ps-5'>
-                        {/* <div><img className=' ' src={tick} alt="" /> </div>
-                        <div><img className=' ' src={tick} alt="" /></div> */}
+                    <div className='w-[50%] short-intro-marquee md:block sm:block hidden rounded bg-blue-400 p-2'>
                         <Marquee
                             speed={40}
                             gradient={false}
                             pauseOnHover={false}
                             direction='left'
-                            className='marquee-intro-div'
+                            className='marquee-div'
                             pauseOnClick={false}
-
                         >
-                            Hello
-
+                            Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
                         </Marquee>
-
                     </div>
+
                     <div className=' followgithub   '><img src={followgithub} alt="img" /></div>
                 </div>
                 <div className='sort-intro-child-main mt-2'>

@@ -10,7 +10,7 @@
 
 .sort-intro-headline {
     display: flex;
-
+    justify-content: space-between;
     background-color: #EBF1F8;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -36,6 +36,31 @@
 
 }
 
+/* Define keyframes for the beat animation */
+@keyframes beatAnimation {
+    0% {
+        transform: scale(1);
+        /* Start scale */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Scale up */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to normal scale */
+    }
+}
+
+/* Apply the animation to the image */
+.sort-intro-img img {
+    animation: beatAnimation 2s ease-in-out infinite;
+    /* Adjust duration, timing, and iteration */
+}
+
+
 
 .wave1 .sort-intro .sort-intro-headline .sort-intro-head {
     padding: 10px;
@@ -53,7 +78,9 @@
 .linkedin-follow img {
     right: 0;
     padding-right: 7px;
-
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 
