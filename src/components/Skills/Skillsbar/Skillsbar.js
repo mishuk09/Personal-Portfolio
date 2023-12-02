@@ -12,6 +12,8 @@ import { Link } from 'react-router-dom';
 import Button from '../../OthersComponent/Button/Button';
 import Aos from 'aos';
 import { useEffect } from 'react';
+import { Zoom } from 'react-reveal';
+import { Fade } from 'react-reveal';
 
 const Skillsbar = () => {
 
@@ -33,19 +35,33 @@ const Skillsbar = () => {
                 <div className='skills-child-main mt-2 px-3 pt-2'>
                     <p >Last Update:: <span className='lastupdate  '>1 Decembar 2023</span></p>
                     <div className='skills-headline-child'>
-                        <div>
-                            <p className='dsahead'>DSA</p>
-                            <p className='dsahead1' >Number of Problem solve</p>
-                            <p className='dsahead'>50</p></div>
-                        <div> <p className='dsahead'>Github</p>
-                            <p className='dsahead1'>Total Repositories</p>
-                            <p className='dsahead'>50</p></div>
-                        <div> <p className='dsahead'>Github</p>
-                            <p className='dsahead1'>Total Contributions</p>
-                            <p className='dsahead'>869</p></div>
-                        <div> <p className='dsahead'>Github</p>
-                            <p className='dsahead1'>Total Commits</p>
-                            <p className='dsahead'>694</p></div>
+                        <Zoom  >
+                            <div>
+                                <p className='dsahead'>DSA</p>
+                                <p className='dsahead1' >Number of Problem solve</p>
+                                <p className='dsahead'>50</p>
+                            </div>
+                        </Zoom>
+                        <Zoom>
+                            <div>
+                                <p className='dsahead'>Github</p>
+                                <p className='dsahead1'>Total Repositories</p>
+                                <p className='dsahead'>50</p>
+                            </div>
+                        </Zoom>
+                        <Zoom>
+                            <div>
+                                <p className='dsahead'>Github</p>
+                                <p className='dsahead1'>Total Contributions</p>
+                                <p className='dsahead'>869</p>
+                            </div>
+                        </Zoom>
+                        <Zoom>
+                            <div> <p className='dsahead'>Github</p>
+                                <p className='dsahead1'>Total Commits</p>
+                                <p className='dsahead'>694</p>
+                            </div>
+                        </Zoom>
                     </div>
 
                     <div className='bar-chart mt-3 '>
@@ -74,12 +90,17 @@ const Skillsbar = () => {
                 </div>
 
                 <div className='benext-child2 p-4'>
-                    <h1>Be my next success story?</h1>
-                    <p  >Have an idea? Talk to me today! Share your requirements and let's
-                        team up for a successful project with simplicity."</p>
-                    <div className='w-25'>
+                    <Fade top>
+                        <h1>Be my next success story?</h1>
+                    </Fade>
+                    <Fade right>
+                        <p  >Have an idea? Talk to me today! Share your requirements and let's
+                            team up for a successful project with simplicity."</p> </Fade  >
+
+                    <Fade bottom> <div className='w-25'>
                         <Link to="/contactpage"> <Button>Have a Free Consultation</Button></Link>
                     </div>
+                    </Fade>
                 </div>
             </div>
         </div>

@@ -9,6 +9,8 @@ import Web from './ServiceDiv/Web';
 import Net from './ServiceDiv/Net';
 import Seo from './ServiceDiv/Seo';
 import AOS from 'aos';
+import { Zoom } from 'react-reveal';
+
 
 
 const Service = () => {
@@ -57,28 +59,32 @@ const Service = () => {
                 <h1>My App/Web Development<br />Services</h1>
             </div>
             <div className='cervice-parents mt-5'>
-                <nav>
-                    {tabItems.map((item) => (
 
-                        <div
-                            data-aos="fade-up"
-                            onClick={() => handleTabClick(item.id)}
-                            className={`Link-div ${activetab === item.id ? 'active-tab' : ''}`}
-                            key={item.id}
-                        >
-                            <div className='service-child p-2 hover:bg-slate-100 ' >
-                                <div>
-                                    <img src={`${item.img}`} alt="img" />
-                                </div>
-                                <div className='service-child-2 test ps-4 pt-3'>
-                                    <h3>{item.title}</h3>
-                                    <p>{item.description}</p>
+                <nav>
+                    <Zoom>
+                        {tabItems.map((item) => (
+
+                            <div
+                                data-aos="fade-up"
+                                onClick={() => handleTabClick(item.id)}
+                                className={`Link-div ${activetab === item.id ? 'active-tab' : ''}`}
+                                key={item.id}
+                            >
+                                <div className='service-child p-2 hover:bg-slate-100 ' >
+                                    <div>
+                                        <img src={`${item.img}`} alt="img" />
+                                    </div>
+                                    <div className='service-child-2 test ps-4 pt-3'>
+                                        <h3>{item.title}</h3>
+                                        <p>{item.description}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    ))}
+                        ))}
+                    </Zoom  >
                 </nav>
+
             </div>
             <div>
                 {activetab === 2 ? <Web /> : activetab === 1 ? <Uiux /> : activetab === 3 ? <Net /> : <Seo />}

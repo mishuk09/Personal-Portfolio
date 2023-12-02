@@ -10,6 +10,7 @@ import sql from './img/sql.png';
 import Skillsbar from './Skillsbar/Skillsbar';
 import { Link } from 'react-router-dom';
 import Button from '../OthersComponent/Button/Button';
+import Bounce from 'react-reveal/Bounce';
 
 const Skills = () => {
     return (
@@ -32,18 +33,26 @@ const Skills = () => {
 
                 </div>
                 <div className='skills-img'>
-                    <div className='w=5 js'>
-                        <img src={javascript} alt="" />
-                    </div>
-                    <div className='w=5 react'>
-                        <img className='mb-4' src={nodejs} alt="" />
-                        <img src={react} alt="" />
-                    </div>
-                    <div className='w=5 bg-pink react'>
-                        <img className='mb-4' src={sql} alt="" />
-                        <img className='mb-4' src={github} alt="" />
-                        <img src={java} alt="" />
-                    </div>
+                    <Bounce left>
+
+
+                        <div className='w=5 js'>
+                            <img src={javascript} alt="" />
+                        </div>
+                    </Bounce>
+                    <Bounce top>
+                        <div className='w=5 react'>
+                            <img className='mb-4' src={nodejs} alt="" />
+                            <img src={react} alt="" />
+                        </div>
+                    </Bounce>
+                    <Bounce right>
+                        <div className='w=5 bg-pink react'>
+                            <img className='mb-4' src={sql} alt="" />
+                            <img className='mb-4' src={github} alt="" />
+                            <img src={java} alt="" />
+                        </div>
+                    </Bounce>
                 </div>
             </div>
 

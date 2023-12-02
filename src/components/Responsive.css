@@ -1574,6 +1574,31 @@
         margin-left: 20px;
         line-height: 1.2;
     }
+
+    .ceo-head-parant .ceo {
+        background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
+
+        /* background-color: #00020F; */
+        height: 1520px;
+        width: 100%;
+        margin-top: -100px;
+        position: absolute;
+
+    }
+
+    .ceo-head-parant .ceo-parent {
+        border-radius: 5px;
+        position: absolute;
+        /* top: 50%; */
+        left: 50%;
+        margin-top: 1400px;
+        transform: translate(-50%, -50%);
+        height: 230px;
+        width: 100%;
+        background-color: #000;
+        box-shadow: 2px 2px 2px 2px #333;
+        display: flex;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1583,7 +1608,7 @@
         position: absolute;
         /* top: 50%; */
         left: 50%;
-        margin-top: 1480px;
+        margin-top: 1280px;
         transform: translate(-50%, -50%);
         height: 230px;
         width: 100%;
@@ -1616,9 +1641,9 @@
         background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
 
         /* background-color: #00020F; */
-        height: 1200px;
+        height: 1400px;
         width: 100%;
-        margin-top: 100px;
+        margin-top: -100px;
         position: absolute;
 
     }
@@ -1636,7 +1661,7 @@
         position: absolute;
         /* top: 50%; */
         left: 50%;
-        margin-top: 1560px;
+        margin-top: 1260px;
         transform: translate(-50%, -50%);
         height: 230px;
         width: 100%;
@@ -1694,9 +1719,9 @@
         background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
 
         /* background-color: #00020F; */
-        height: 1300px;
+        height: 1450px;
         width: 100%;
-        margin-top: 100px;
+        margin-top: -170px;
         position: absolute;
 
     }
@@ -1726,6 +1751,9 @@
         display: inline;
     }
 
+    .contact-headmain .contact-head-main {
+        height: 1400px;
+    }
 
 
 }

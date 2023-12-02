@@ -17,6 +17,8 @@ import cisco from './img/cisco.png';
 import coursera from './img/coursera.png';
 import greatelearning from './img/greatelearning.png';
 import infosys from './img/Infosys.png';
+import { Slide } from 'react-reveal';
+
 
 
 const Certificate = () => {
@@ -86,31 +88,38 @@ const Certificate = () => {
 
 
             <div className=" container pt-0 mt-5 mb-5 certificate-description">
-
-                <div className="courseDetils1">
-                    <h3>JAVA</h3>
-                    <p className="px-2">I have completed JAVA certificate course with 70% marks.Currently i am doing DSA with
-                        JAVA
-                    </p>
-                </div>
-                <div className="courseDetils2">
-                    <h3>Python</h3>
-                    <p className="px-2">Python is one of the most polular language.I have completed PYTHON Intermediate course
-                        with 75% marks.
-                    </p>
-                </div>
-                <div className="courseDetils3">
-                    <h3>HTML,CSS,JS</h3>
-                    <p className="px-2">I want to be a Full Stack Web Developer,I have completed HTML CSS & JS coursers from
-                        INFOSYS limited with 80%,60%,65% marks.</p>
-                </div>
-                <div className="courseDetils3">
-                    <h3>Google Analytics</h3>
-                    <p className="px-2">I have done Google Analytics course from COURSERA with 75% marks.</p>
-                </div>
+                <Slide left>
+                    <div className="courseDetils1">
+                        <h3>JAVA</h3>
+                        <p className="px-2">I have completed JAVA certificate course with 70% marks.Currently i am doing DSA with
+                            JAVA
+                        </p>
+                    </div>
+                </Slide>
+                <Slide left>
+                    <div className="courseDetils2">
+                        <h3>Python</h3>
+                        <p className="px-2">Python is one of the most polular language.I have completed PYTHON Intermediate course
+                            with 75% marks.
+                        </p>
+                    </div>
+                </Slide>
+                <Slide right>
+                    <div className="courseDetils3">
+                        <h3>HTML,CSS,JS</h3>
+                        <p className="px-2">I want to be a Full Stack Web Developer,I have completed HTML CSS & JS coursers from
+                            INFOSYS limited with 80%,60%,65% marks.</p>
+                    </div>
+                </Slide>
+                <Slide right>
+                    <div className="courseDetils3">
+                        <h3>Google Analytics</h3>
+                        <p className="px-2">I have done Google Analytics course from COURSERA with 75% marks.</p>
+                    </div>
+                </Slide>
 
             </div>
-        </div>
+        </div >
 
     );
 };

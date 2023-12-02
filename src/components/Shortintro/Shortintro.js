@@ -10,6 +10,7 @@ import projects from '../Home/img/projects.svg';
 import linkedinfollow from '../Home/img/linkedinfollow.gif'
 import { Animation } from 'react-ui-ox-anim';
 import Marquee from 'react-fast-marquee';
+import { Zoom } from 'react-reveal';
 
 const Shortintro = () => {
     return (
@@ -35,22 +36,26 @@ const Shortintro = () => {
                         <div className='linkedin-follow h-10    '><img className='pt-[3px]' src={linkedinfollow} alt="img" /></div>
                     </div>
                     <div className='sort-intro-child mt-2'>
-                        {
-                            shortInreo.map((shortintro) => {
-                                return <div className=' flex sort-intro-child-div ms-3 mt-3 mb-3   bg-white' key={shortInreo.id}>
-                                    <div className='sort-intro-div-img23'>
-                                        <img src={shortintro.img} alt="" />
-                                    </div>
-                                    <div className='sort-intro-div-descrip234  '>
-                                        <p className='mt-4 institution'>{shortintro.tittle}</p>
-                                        <p className='mt-1 institution11'>  {shortintro.name}</p>
-                                        <p className='mt-3 institution33'>  {shortintro.descrip}</p>
-                                        <p className='mt-3 institution44'>  {shortintro.date}</p>
-                                    </div>
-                                </div>
-                            })
-                        }
+                        <Zoom>
+                            {
+                                shortInreo.map((shortintro) => {
+                                    return <div className=' flex sort-intro-child-div ms-3 mt-3 mb-3   bg-white' key={shortInreo.id}>
+                                        <div className='sort-intro-div-img23'>
+                                            <img src={shortintro.img} alt="" />
+                                        </div>
 
+                                        <div className='sort-intro-div-descrip234  '>
+                                            <p className='mt-4 institution'>{shortintro.tittle}</p>
+                                            <p className='mt-1 institution11'>  {shortintro.name}</p>
+                                            <p className='mt-3 institution33'>  {shortintro.descrip}</p>
+                                            <p className='mt-3 institution44'>  {shortintro.date}</p>
+                                        </div>
+                                    </div>
+
+                                })
+                            }
+
+                        </Zoom>
 
 
 

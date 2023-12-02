@@ -1,5 +1,6 @@
 import React from 'react';
 import './Ceo.css';
+import '../Responsive.css';
 import MapChart from './earth/MapChart';
 import mishuk1 from './img/mishuk2.png';
 import Testimonier from './Testimonier/Testimonier';
@@ -18,7 +19,7 @@ const Ceo = () => {
 
                     {/* <img className='container' src={download} alt="" /> */}
                     <MapChart className='img'></MapChart>
-                    <Wave></Wave>
+                    {/* <Wave></Wave> */}
                 </div>
 
                 {/* <Testimonier></Testimonier> */}

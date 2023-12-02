@@ -3,10 +3,12 @@ import tic from '../img/tick.png';
 import uiux from '../img/uiux.png';
 import { Link } from 'react-router-dom';
 import Button from '../../OthersComponent/Button/Button';
+import { Fade } from 'react-reveal';
 
 const Uiux = () => {
     return (
         <div className='container web-service-head pt-5'>
+            <Fade bottom>
             <div className='container fluid web-service-parents'>
                 <h3 className=''>UI/UX Design & Development</h3>
                 <p> As a designer and developer, I craft exceptional websites that seamlessly blend wonderfull visuals with flawless functionality. <br />
@@ -28,6 +30,7 @@ const Uiux = () => {
             <div className='web-service-parents2'>
                 <img src={uiux} alt="" />
             </div>
+            </Fade>
         </div>
     );
 };
