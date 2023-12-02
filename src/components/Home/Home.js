@@ -13,6 +13,7 @@ import homelogo from './img/homelogo.png';
 import Shortintro from '../Shortintro/Shortintro';
 import Solar from './SolarSystem/Solar';
 import WhatsApp from '../OthersComponent/Button/WhatsApp';
+import Three from '../Threejs/Three';
 
 const Home = () => {
 
@@ -24,14 +25,17 @@ const Home = () => {
 
     ];
     return (
+
         <div id='home' className='mt-[67px]' >
+
+
             <div className='home-div-main'>
                 <div className='container   home-div'>
 
                     {/* whatsapp logo */}
                     <WhatsApp></WhatsApp>
                     {/* <div className='whatsapp-logo'><FontAwesomeIcon icon={faWhatsapp} size="2x" beat className='whatsapplogo' /></div> */}
-                    <div className='name-div'>
+                    <div className='name-div  '>
 
                         <p className='name-p'>Welcome to my Portfolio</p>
                         <div className='name-div22'>
@@ -49,7 +53,7 @@ const Home = () => {
                         </p>
                         <p className=' text-slate-400	'>I am Sincere,responsible,confident,dedicated,down to earth & trustworthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
 
-                        <div className=' icon-div mt-10'>
+                        <div className=' icon-div mt-10'>   
                             <div> <img src={homelogo} alt="" /></div>
                             <div className='social-link pt-8 '>
 
@@ -63,7 +67,7 @@ const Home = () => {
                     </div>
 
 
-                    <div className='pic-div'>
+                    <div className='pic-div bg-black'>
                         <Solar></Solar>
                     </div>
                 </div>

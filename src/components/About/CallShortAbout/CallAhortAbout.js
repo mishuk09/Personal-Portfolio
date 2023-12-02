@@ -19,7 +19,7 @@ const CallAhortAbout = () => {
             <div className='sortabout mt-2  '>
                 <div className='sort-intro-he  p-1 '>
                     <div className='sort-introimg ps-1'><img src={about} alt="" /></div>
-                    <div className='w-[50%] short-intro-marquee md:block sm:block hidden rounded bg-blue-400 p-2'>
+                    <div className='w-[50%] short-intro-marquee   rounded bg-blue-400 p-2'>
                         <Marquee
                             speed={40}
                             gradient={false}

@@ -8,18 +8,21 @@
     height: 500px;
     width: 50%;
     background-color: #0E0A1B;
+    background-color: #000000;
+
 }
 
 .home-div-main {
     position: relative;
     background-color: #0E0A1B;
+    background-color: #000000;
 
 }
 
-.pic-div {
+#home .home-div-main .home-div .pic-div {
     height: 500px;
     width: 50%;
-    background-color: rgb(25, 25, 36);
+    background-color: #000000;
 }
 
 .name-div {

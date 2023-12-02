@@ -20,7 +20,7 @@ const Shortintro = () => {
                 <div className='sort-intro  '>
                     <div className='sort-intro-headline p-1 '>
                         <div className='sort-intro-img ps-1'><img src={sort} alt="" className='jhdsahdf' /></div>
-                        <div className='w-[55%] h-10 rounded bg-blue-400 p-2'>
+                        {/* <div className='w-[50%] h-10 marquee-div rounded bg-blue-400 p-2'>
                             <Marquee
                                 speed={40}
                                 gradient={false}
@@ -32,7 +32,7 @@ const Shortintro = () => {
                             >
                                 Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
                             </Marquee>
-                        </div>
+                        </div> */}
                         <div className='linkedin-follow h-10    '><img className='pt-[3px]' src={linkedinfollow} alt="img" /></div>
                     </div>
                     <div className='sort-intro-child mt-2'>

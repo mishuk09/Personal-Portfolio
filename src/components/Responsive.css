@@ -337,6 +337,12 @@
 
 /* For screen sizes between 300px to 600px */
 
+@media only screen and (max-width: 800px) {
+    .wave1 .sort-intro .marquee-div {
+        display: none;
+    }
+}
+
 @media only screen and (min-width: 300px) and (max-width: 600px) {
     .sort-intro {
         width: 90%;
@@ -492,6 +498,19 @@
     }
 }
 
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+    .aboutme-main-pic .about-section {
+        padding-top: 300px;
+        height: 1330px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 220px;
+        position: absolute;
+        background-color: #01001f;
+    }
+
+
+}
 
 @media only screen and (min-width: 300px) and (max-width: 600px) {
     .aboutme-main-pic {
@@ -549,14 +568,17 @@
         color: #e8e8e8;
         display: none;
         padding-top: 100px;
-        margin-left: 30px;
+        margin-left: 10px;
         font-family: "Montserrat", sans-serif;
     }
 
     .about-section .about-detilsold {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
         color: #e8e8e8;
         padding-top: 100px;
-        margin-left: 30px;
+        margin-left: 10px;
         font-family: "Montserrat", sans-serif;
     }
 
@@ -623,7 +645,7 @@
         padding-top: 300px;
         padding-left: 10px;
         padding-right: 10px;
-        height: 1290px;
+        height: 1310px;
         width: 100%;
         border-radius: 5px;
         margin-top: 220px;
@@ -799,12 +821,36 @@
         margin-top: 30px;
     }
 
-    .skills-main-head-div .skills .skills-headline {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+    .skills-main-head-div .skills .skills-headline {}
+
+    .skills-main-head-div .skills .skills-headline h1 {
+        font-size: 20px;
+        text-align: justify;
+        text-justify: inter-word;
+
     }
 
+    .skills-main-head-div .skills .skills-headline p {
+
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+
+    .skills-main-head-div .skills .skills-headline div {
+        width: 200px;
+
+
+    }
+
+}
+
+@media only screen and (min-width: 820px) {
+    .skills-main-head-div .skills .skills-headline div {
+        width: 200px;
+
+
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 820px) {
@@ -827,11 +873,52 @@
         justify-content: center;
     }
 
+
+    .skills-main-head-div .skills .skills-headline h1 {
+
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+
+    .skills-main-head-div .skills .skills-headline p {
+
+        text-align: justify;
+        text-justify: inter-word;
+
+    }
+
+    .skills-main-head-div .skills .skills-headline div {
+        width: 200px;
+        margin-left: 0px;
+        padding-left: 0px;
+
+    }
+
 }
 
 
 
 /* skillsbar responsive ==================================================================== */
+
+@media only screen and (max-width: 820px) {
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .gfhdg {
+        display: none;
+
+    }
+
+}
+
+@media only screen and (min-width: 300 px) and (max-width: 1000px) {
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+}
 
 @media only screen and (min-width: 510px) and (max-width: 1000px) {
     .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {

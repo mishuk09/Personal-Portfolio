@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skillsbar.css'
 import tick from '../../Home/img/tick.png';
-import linkedin from '../img/linkedin.png';
+import linkedin from '../img/linkedin.gif';
 import Skills from '../img/skills.png';
 // import { AccumulationChartComponent } from '@syncfusion/ej2-react-charts';
 import Chart from '../AcumulationChart/Chart';
@@ -14,6 +14,7 @@ import Aos from 'aos';
 import { useEffect } from 'react';
 import { Zoom } from 'react-reveal';
 import { Fade } from 'react-reveal';
+import Marquee from 'react-fast-marquee';
 
 const Skillsbar = () => {
 
@@ -25,10 +26,17 @@ const Skillsbar = () => {
             <div className='skillsbar-div-head mt-2  '>
                 <div className='skills-bar-head p-2 '>
                     <div className='skills-introimg ps-1 '><img src={Skills} alt="" /></div>
-                    <div className='skills-bar-head11 ps-5'>
-                        <div><img className=' ' src={tick} alt="" /> </div>
-                        <div><img className=' ' src={tick} alt="" /></div>
-
+                    <div className='w-[60%]  gfhdg rounded bg-blue-400 p-2'>
+                        <Marquee
+                            speed={40}
+                            gradient={false}
+                            pauseOnHover={false}
+                            direction='left'
+                            className='marquee-div'
+                            pauseOnClick={false}
+                        >
+                            Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
+                        </Marquee>
                     </div>
                     <div className='  followglinkedin   '><img className=' ' src={linkedin} alt="" /> </div>
                 </div>

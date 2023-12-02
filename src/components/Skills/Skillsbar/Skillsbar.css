@@ -3,6 +3,7 @@
 }
 
 .skills-bar-head {
+    justify-content: space-between;
     display: flex;
     background-color: #EBF1F8;
     border-top-left-radius: 5px;
@@ -36,6 +37,29 @@
     width: 170px;
     border-radius: 5px;
 
+}
+
+@keyframes beatAnimation {
+    0% {
+        transform: scale(1);
+        /* Start scale */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Scale up */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Return to normal scale */
+    }
+}
+
+/* Apply the animation to the image */
+.skills-introimg img {
+    animation: beatAnimation 2s ease-in-out infinite;
+    /* Adjust duration, timing, and iteration */
 }
 
 .followglinkedin img {

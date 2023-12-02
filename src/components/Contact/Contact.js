@@ -8,6 +8,7 @@ import location from './img/location.png';
 import SendMessage from './ContactForm';
 import ContactForm from './ContactForm';
 import { faCopyright, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import Three from '../Threejs/Three';
 
 
 const Contact = () => {
@@ -23,7 +24,7 @@ const Contact = () => {
 
                     <div className="self-stretch mt-10 contact-head-child1  ">
                         <div className=" flex  contact-email-form  ">
-                            <div className="flex flex-col items-stretch w-[50%] max-md:w-full pt-4 contact-head-child2 ">
+                            <div className="flex flex-col items-stretch w-[100%] max-md:w-full pt-4 contact-head-child2 ">
                                 <div className="flex grow flex-col    contact-head-child3  ">
                                     <div className="self-stretch flex justify-between gap-4  ">
                                         {/* <div className='location-div'> <img src={email} alt="" /> </div> */}
@@ -81,12 +82,15 @@ const Contact = () => {
 
                                 </div>
                             </div>{" "}
-                            {/* <SendMessage></SendMessage> */}
-                            <ContactForm></ContactForm>
+                            <div className='w-[100%]'>
+                                <ContactForm></ContactForm>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>{" "}
+
             <div className="bg-slate-950 flex w-full flex-col items-center pt-3 mt-10 pb-3 px-5 max-md:max-w-full">
                 <div className="flex w-56 max-w-full flex-col items-center">
                     <div className="text-white text-justify text-1xl font-bold   whitespace-nowrap">

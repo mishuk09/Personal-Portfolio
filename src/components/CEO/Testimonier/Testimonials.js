@@ -9,7 +9,7 @@ const Testimonials = () => {
     return (
         <div className='container'>
             <div className='Testimonials-name-div'>
-                <h1>Testimonials </h1>
+                Testimonials
             </div>
 
             <div className='Testimonials-head flex'>

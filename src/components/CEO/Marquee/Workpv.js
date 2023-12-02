@@ -22,7 +22,8 @@ const Workpv = () => {
     return (
         <div className='container'>
             <div className='marquee-div-name'>
-                Here Are a Few of My Work Among Many
+                <span>What I Do</span>
+                <p> Design & Development</p>
             </div>
             <Marquee
                 speed={40}

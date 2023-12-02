@@ -1,5 +1,5 @@
 .about-section {
-    height: 550px;
+    height: 520px;
     width: 100%;
     border-radius: 5px;
     margin-top: 220px;
@@ -31,6 +31,10 @@
     margin-left: 30px;
     margin-top: 20px;
     font-family: "Montserrat", sans-serif;
+
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 0.5px;
 }
 
 .about-section .about-detilsold {
@@ -38,6 +42,9 @@
     margin-left: 30px;
     margin-top: 20px;
     font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+    letter-spacing: 0.5px;
 }
 
 .about-section button {
@@ -56,6 +63,23 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+}
+
+.about-section .resume button {
+    background-color: #0487FB;
+    color: white;
+    font-weight: 500;
+
+
+}
+
+.about-section .resume button:hover {
+
+    background-color: #016fcf;
+    color: white;
+    transition: 0.5s;
+
+
 }
 
 .mainimg {
