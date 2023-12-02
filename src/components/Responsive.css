@@ -485,7 +485,7 @@
     }
 
 } */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .aboutme-main-pic .about-section .callabout .sortabout .sort-intro-he .short-intro-marquee {
         display: none;
         /* Hide the marquee on smaller screens */
@@ -641,9 +641,11 @@
         width: 40%;
     }
 
+
     .callabout .sortabout .sort-intro-he .followgithub img {
         display: none;
         width: 50%;
+
     }
 
     .callabout .sortabout .sort-intro-he .sort-intro-head11 {

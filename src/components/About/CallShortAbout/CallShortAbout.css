@@ -11,6 +11,17 @@
     background-color: #E7F4FD;
 }
 
+.sort-intro-child11:hover {
+    transition: 0.5s;
+    background-color: #0487FB;
+    color: white;
+
+    .email-section h5,p {
+        color: #E7F4FD;
+
+    }
+}
+
 .sort-intro-child-main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -30,6 +41,7 @@
     justify-content: center;
     height: 70px;
     width: 70px;
+    padding: 0px;
     background-color: white;
     border-radius: 50%;
     overflow: hidden;
@@ -51,6 +63,7 @@
 }
 
 .circle1 .icon {
+    width: 20px;
     color: #0487FB;
     text-align: center;
     align-items: center;
@@ -64,6 +77,7 @@
 }
 
 .followgithub img {
+    right: 0px;
     width: 170px;
     border-radius: 5px;
 }

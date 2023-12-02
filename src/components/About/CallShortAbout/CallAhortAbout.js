@@ -37,10 +37,10 @@ const CallAhortAbout = () => {
                 <div className='sort-intro-child-main mt-2'>
 
                     <Fade top>
-
+ 
 
                         <div className='sort-intro-child11 m-2  '>
-                            <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faPaperPlane} className='icon mt-3 ' size="2x" /></div>
+                            <div className='circle1 mt-1 mx-2 '><FontAwesomeIcon icon={faPaperPlane} className='icon mt-3  ' size="2x" /></div>
                             <div className='email-section mt-3 mx-2'>
                                 <h5>Email</h5>
                                 <p>mishukinfo09@gmail.com</p>
@@ -67,7 +67,7 @@ const CallAhortAbout = () => {
 
                         </div>
                     </Fade>
-                    <Fade bottom>
+                    <Fade right>
                         <div className=' sort-intro-child11 m-2'>
                             <div className='circle1 mt-1 mx-2'><FontAwesomeIcon icon={faLocationDot} className='icon mt-3  ' size="2x" /></div>
                             <div className='email-section mt-3 mx-2'>
