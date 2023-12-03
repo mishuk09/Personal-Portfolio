@@ -67,7 +67,7 @@ const Certificate = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex certificate-flex-box'>
+            <div className='flex certificate-flex-box py-2'>
 
                 <div className="shad12"> <img src={one} alt="" /> </div>
                 <div className="shad12"> <img src={two} alt="" /> </div>

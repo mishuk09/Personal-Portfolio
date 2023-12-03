@@ -15,7 +15,7 @@ const Testimonials = () => {
                 <hr className='text-white h-3 pt-0 mt-0' />
             </div>
 
-            <div className='Testimonials-head flex mt-0'>
+            <div className='Testimonials-head flex mt-0 py-3'>
 
                 <div className="e-card playing">
                     <div className="image"></div>

@@ -3,7 +3,7 @@
     background-color: #0E0A1B;
 
     /* background-color: #00020F; */
-    height: 1500px;
+    height: 1600px;
     width: 100%;
     margin-top: 100px;
     position: absolute;
@@ -11,7 +11,7 @@
 }
 
 .img-div {
-    margin-top: 10px;
+    margin-top: 90px;
 }
 
 .ceo-parent {
@@ -21,7 +21,7 @@
     position: absolute;
     /* top: 50%; */
     left: 50%;
-    margin-top: 1600px;
+    margin-top: 1680px;
     transform: translate(-50%, -50%);
     height: 230px;
     width: 400px;

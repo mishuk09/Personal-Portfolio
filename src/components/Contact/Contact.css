@@ -10,20 +10,16 @@
 
  }
 
- .contact-head-main {
-     /* background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334); */
-     height: 800px;
-     background-color: #0E0A1B;
-     clip-path: polygon(0 0, 100% 0%, 100% 80%, 50% 100%, 0 80%);
-
-
-
- }
 
  .location-div img {
      width: 50px;
  }
 
+ .contact-headmain .container .marquee-div-name .flex h3 {
+     color: #000000;
+     font-family: sans-serif;
+     font-weight: 800;
+ }
 
  /* ================== */
 
@@ -96,14 +92,6 @@
      cursor: pointer;
  }
 
- /* Media query for responsiveness */
- @media (max-width: 600px) {
-
-     input,
-     textarea {
-         width: 100%;
-     }
- }
 
 
  .how-can {

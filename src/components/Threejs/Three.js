@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DOTS from 'vanta/dist/vanta.dots.min';
 import './Three.css';
+import '../Responsive.css';
 
 class Three extends Component {
     constructor(props) {
@@ -15,8 +16,8 @@ class Three extends Component {
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
-            // minHeight: 400, // Set height to the window's height
-            // minWidth: 600, // Set width to the window's width
+            minHeight: 400, // Set height to the window's height
+            minWidth: 600, // Set width to the window's width
             scale: 1.00,
             scaleMobile: 1.00,
             showLines: false,

@@ -1,5 +1,7 @@
 import '../Responsive.css';
+import './ContactPage.css'
 import React, { useState } from 'react';
+
 import Navbar from '../Navbar/Navbar';
 import ContactForm from '../Contact/ContactForm';
 import contact from './img/contact.png';
@@ -12,19 +14,14 @@ import { Zoom } from 'react-reveal';
 const ContactPage = () => {
     const [showContactInfo, setShowContactInfo] = useState(false);
 
-    const divStyle = {
-        overflowX: 'hidden',
-        position: 'relative',
-        width: '100vw',
-        height: '100vh',
-    };
+
 
     const toggleContactInfo = () => {
         setShowContactInfo(!showContactInfo);
     };
 
     return (
-        <div style={divStyle}>
+        <div className='contactpage-div-style pb-10' >
             <div className='absolute three-div'>
                 <Three></Three>
             </div>
@@ -111,7 +108,7 @@ const ContactPage = () => {
                     )}
                 </div>
                 <Fade right>
-                    <div className='w-[50%]  contactform absolute   right-0  '>
+                    <div className='w-[50%]  contactform absolute    right-0  '>
                         <ContactForm></ContactForm>
                     </div>
                 </Fade>
