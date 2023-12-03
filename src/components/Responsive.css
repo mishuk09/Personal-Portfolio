@@ -1835,6 +1835,84 @@
 /* ----------------Contact  responsive start -------------*/
 
 
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+    .contact-page-form .hnjhgyh img {
+        padding-top: 100px;
+        margin: 0 auto;
+    }
+
+    .contact-page-form {
+        display: inline;
+    }
+
+    .contact-page-form .contactform {
+        margin-top: 50px;
+        width: 100%;
+        position: relative;
+    }
+
+    .contact-page-form .hnjhgyh .contactInfo {
+        left: 0;
+        position: relative;
+        width: 80%;
+        padding-left: 0px;
+        margin: 0 auto;
+
+
+    }
+
+    .contact-page-form .hnjhgyh .contactInfo .iframe-map {
+        width: 90%;
+
+    }
+
+    .three-div .dootdoot {
+        height: 1050px;
+        width: 100vw;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================== */
 @media only screen and (min-width: 300px) and (max-width: 768px) {
     .contact-headmain .contact-head-main .self-stretch .contact-email-form {
         display: inline;

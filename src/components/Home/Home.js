@@ -13,7 +13,7 @@ import homelogo from './img/homelogo.png';
 import Shortintro from '../Shortintro/Shortintro';
 import Solar from './SolarSystem/Solar';
 import WhatsApp from '../OthersComponent/Button/WhatsApp';
-import Three from '../Threejs/Three';
+ 
 
 const Home = () => {
 

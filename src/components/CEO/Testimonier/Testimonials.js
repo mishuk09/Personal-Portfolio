@@ -2,17 +2,20 @@ import React from 'react';
 import './Test.css';
 import mishuk2 from '../img/mishuk2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUpRightFromSquare, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 
 const Testimonials = () => {
     return (
         <div className='container'>
-            <div className='Testimonials-name-div'>
-                Testimonials
+            <div className='Testimonials-name-div mt-[80px] mb-0 '>
+                <span className='text-blue-500'>What People Say</span>
+                <div className='flex justify-between'> <p> Testimonials</p>  <button className='text-white rounded-full bg-blue-500 w-40 h-10'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></button>
+                </div>
+                <hr className='text-white h-3 pt-0 mt-0' />
             </div>
 
-            <div className='Testimonials-head flex'>
+            <div className='Testimonials-head flex mt-0'>
 
                 <div className="e-card playing">
                     <div className="image"></div>

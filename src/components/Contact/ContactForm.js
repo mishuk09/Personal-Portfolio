@@ -4,6 +4,7 @@ import PhoneInput from 'react-phone-number-input';
 import './Contact.css'; // CSS file for styling
 import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from '@emailjs/browser';
+import '../Responsive.css';
 
 
 const ContactForm = () => {
@@ -42,7 +43,7 @@ const ContactForm = () => {
         //control emial js 
         e.preventDefault();
 
-        
+
         // Basic validation - check if required fields are filled
         const errors = {};
         if (!formData.name.trim()) {
@@ -70,8 +71,8 @@ const ContactForm = () => {
     //email js control
 
     return (
-        <div className="contact-form-container">
-            <div className='how-can mt-3 mb-5'> <h3>How Can I Help You?</h3></div>
+        <div className="contact-form-container bg-transparent">
+            <div className='how-can  mb-5'> <h3>How Can I Help You?</h3></div>
             <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                 <div className='name-email flex w-full'>
                     <input

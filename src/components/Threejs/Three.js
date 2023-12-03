@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DOTS from 'vanta/dist/vanta.dots.min';
+import './Three.css';
 
 class Three extends Component {
     constructor(props) {
@@ -14,8 +15,8 @@ class Three extends Component {
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
-            minHeight: window.innerHeight, // Set height to the window's height
-            minWidth: window.innerWidth, // Set width to the window's width
+            // minHeight: 400, // Set height to the window's height
+            // minWidth: 600, // Set width to the window's width
             scale: 1.00,
             scaleMobile: 1.00,
             showLines: false,
@@ -31,15 +32,10 @@ class Three extends Component {
 
     render() {
         return (
-            <div
+            <div className='dootdoot'
                 ref={this.vantaRef}
-                style={{
-                    width: '100vh', // Set width to 100% of the viewport width
-                    height: '400px', // Set height to 100% of the viewport height
-                    overflow: 'hidden', // Hide any content that overflows
-                }}
             >
-                {/* Content goes here */}
+
             </div>
         );
     }
