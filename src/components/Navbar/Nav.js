@@ -12,12 +12,13 @@ import './Nav.css';
 const Nav = () => {
     const navigation = [
         { name: 'Home', href: '#home', current: true },
-        { name: 'About', href: '#', current: false },
-        { name: 'Skills', href: '#', current: false },
-        { name: 'Certification', href: '#', current: false },
-        { name: 'Projects', href: '#', current: false },
-        { name: 'Testimonier', href: '#', current: false },
-        { name: 'Contact', href: 'contact', current: false }
+        { name: 'About', href: '/#about', current: false },
+        { name: 'Skills', href: '/#skills', current: false },
+        { name: 'Certification', href: '/#certificate', current: false },
+        { name: 'Service', href: '/#service', current: false },
+        { name: 'Projects', href: '/#project', current: false },
+        { name: 'Testimonier', href: '/#testimonials', current: false },
+        { name: 'Contact', href: '/#contact', current: false }
     ];
 
     function classNames(...classes) {

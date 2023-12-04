@@ -9,7 +9,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
     return (
-        <div className='container aboutme-main-pic'>
+        <div id='about' className='container aboutme-main-pic'>
             <div className='container about-section'>
                 {/* <img className='mainimg' src={aboutmepic} alt="" /> */}
                 <h1>Mahadi Hasan Mishuk</h1>

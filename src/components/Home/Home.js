@@ -1,10 +1,12 @@
 import React from 'react';
 import './Home.css'
-import { faGithub, faFacebook, faLinkedin, faTwitch, faWhatsapp, } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faFacebook, faLinkedin, faUpwork, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import home from './img/home.png'
 import wave from './img/wave.svg';
-import Typical from 'react-typical'
+import Typical from 'react-typical';
+import code from './img/code.png';
+import welcome from './img/welcome.png';
 
 
 
@@ -13,7 +15,8 @@ import homelogo from './img/homelogo.png';
 import Shortintro from '../Shortintro/Shortintro';
 import Solar from './SolarSystem/Solar';
 import WhatsApp from '../OthersComponent/Button/WhatsApp';
- 
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+
 
 const Home = () => {
 
@@ -36,14 +39,24 @@ const Home = () => {
                     <WhatsApp></WhatsApp>
                     {/* <div className='whatsapp-logo'><FontAwesomeIcon icon={faWhatsapp} size="2x" beat className='whatsapplogo' /></div> */}
                     <div className='name-div  '>
+                        <div className='absolute left-0  welcome-img'>
+                            <img className=' ' src={welcome} alt="" />
+                        </div>
 
-                        <p className='name-p'>Welcome to my Portfolio</p>
+                        {/* <p className='name-p'>Welcome to my Portfolio</p> */}
                         <div className='name-div22'>
                             <p className='text-slate-400 font-bold	'	>I'm</p>
                             <h1>MAHADI HASAN <span>MISHUK</span> </h1>
-                            <hr />
+                            <div className='flex   align-items-center justify-center mt-2'>
+                                <div className='gradient-line1 w-[48%] pt-1'> </div>
+                                <div className='gradient-line0 mx-3'>
+                                    <FontAwesomeIcon icon={faCode} className='    coding-icon34 text-white' size='1xl' beat />
+                                    {/* <img className=' ' src={code} alt="" /> */}
+                                </div>
+                                <div className='gradient-line w-[48%]  '> </div>
+                            </div>
                         </div>
-                        <p className='typical'>
+                        <p className='typical mt-4'>
                             <Typical
                                 // steps={['Hello', 1000, 'Hello world!', 500]}
                                 steps={steps}
@@ -53,14 +66,14 @@ const Home = () => {
                         </p>
                         <p className=' text-slate-400	'>I am Sincere,responsible,confident,dedicated,down to earth & trustworthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
 
-                        <div className=' icon-div mt-10'>   
+                        <div className=' icon-div mt-10'>
                             <div> <img src={homelogo} alt="" /></div>
                             <div className='social-link pt-8 '>
 
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faGithub} size="2x" />  </div>
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faLinkedin} size="2x" /></div>
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faFacebook} size="2x" /></div>
-                                <div className='ps-4 h-5 w-'><FontAwesomeIcon className='icon-main' icon={faTwitch} size="2x" /></div>
+                                <div className='ps-4 h-5 w-'><a href="https://github.com/mishuk09"><FontAwesomeIcon className='icon-main' icon={faGithub} size="2x" /> </a> </div>
+                                <div className='ps-4 h-5 w-'><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><FontAwesomeIcon className='icon-main' icon={faLinkedin} size="2x" /></a></div>
+                                <div className='ps-4 h-5 w-'><a href="https://www.facebook.com/mishuk0910/" target='blank'> <FontAwesomeIcon className='icon-main' icon={faFacebook} size="2x" /></a></div>
+                                <div className='ps-4 h-5 w-'><a href=""></a><FontAwesomeIcon className='icon-main' icon={faTwitter} size="2x" /></div>
 
                             </div>
                         </div>

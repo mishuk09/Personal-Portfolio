@@ -14,7 +14,7 @@ import Bounce from 'react-reveal/Bounce';
 
 const Skills = () => {
     return (
-        <div className='container skills-main-head-div'>
+        <div id='skills' className='container skills-main-head-div'>
             <div className='skills-div'>
                 {/* Your content here */}
             </div>

@@ -26,12 +26,7 @@ const Contact = () => {
                     <hr className='text-black h-3 pt-0 mt-0' />
                 </div>
             </div>{" "}
-            {/* <div className='marquee-div-name mt-[40px] mb-10'>
-                <span className='text-blue-500'>What I Do</span>
-                <div className='flex justify-between'> <p> Design & Development</p>  <button className='text-white rounded-full bg-blue-500 w-40 h-10'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></button>
-                </div>
-                <hr className='text-white h-3 pt-0 mt-0' />
-            </div> */}
+
             <ContactPage></ContactPage>
             <div className="bg-slate-950 contact-icon flex w-full flex-col items-center pt-3   pb-3 px-5 max-md:max-w-full">
                 <div className="flex w-56 max-w-full flex-col items-center">

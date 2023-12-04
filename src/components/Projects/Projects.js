@@ -14,7 +14,7 @@ const Projects = () => {
     return (
         <div >
 
-            <div className='projects-head mt-10'>
+            <div id='project' className='projects-head mt-10'>
                 <div className='projects-head12'>
                     <div className='img-head pt-3'><img src={work} alt="" /><h4>Projects</h4>
                     </div>
