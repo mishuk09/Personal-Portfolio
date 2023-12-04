@@ -1,5 +1,6 @@
 import React from 'react';
-import './Home.css'
+import './Home.css';
+import '../Responsive.css';
 import { faGithub, faFacebook, faLinkedin, faUpwork, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import home from './img/home.png'
@@ -34,14 +35,14 @@ const Home = () => {
 
             <div className='home-div-main'>
                 <div className='container   home-div'>
-
+                    <div className='absolute left-0 mt-5  welcome-img'>
+                        <img className=' ' src={welcome} alt="" />
+                    </div>
                     {/* whatsapp logo */}
                     <WhatsApp></WhatsApp>
                     {/* <div className='whatsapp-logo'><FontAwesomeIcon icon={faWhatsapp} size="2x" beat className='whatsapplogo' /></div> */}
-                    <div className='name-div  '>
-                        <div className='absolute left-0  welcome-img'>
-                            <img className=' ' src={welcome} alt="" />
-                        </div>
+                    <div className='name-div  mt-5'>
+
 
                         {/* <p className='name-p'>Welcome to my Portfolio</p> */}
                         <div className='name-div22'>
@@ -50,6 +51,7 @@ const Home = () => {
                             <div className='flex   align-items-center justify-center mt-2'>
                                 <div className='gradient-line1 w-[48%] pt-1'> </div>
                                 <div className='gradient-line0 mx-3'>
+
                                     <FontAwesomeIcon icon={faCode} className='    coding-icon34 text-white' size='1xl' beat />
                                     {/* <img className=' ' src={code} alt="" /> */}
                                 </div>
@@ -66,7 +68,7 @@ const Home = () => {
                         </p>
                         <p className=' text-slate-400	'>I am Sincere,responsible,confident,dedicated,down to earth & trustworthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
 
-                        <div className=' icon-div mt-10'>
+                        <div className=' icon-div mt-6'>
                             <div> <img src={homelogo} alt="" /></div>
                             <div className='social-link pt-8 '>
 

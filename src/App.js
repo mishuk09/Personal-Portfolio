@@ -68,22 +68,15 @@ function App() {
 
         <Nav></Nav>
 
-
         <div className='darkmode-toggle pt-1'>
-
           <Switch
             checked={darkMode}
             onChange={toggleDarkMode}
             icon={<Brightness4Icon  />} // Icon for normal mode
             checkedIcon={<WbSunnyIcon className={darkMode ? 'sunny-dark' : ''} />} // Icon for dark mode
-          // checkedIcon={<WbSunnyIcon className='' />} // Icon for dark mode
-          />
-
-
-
+          /> 
         </div>
 
-        {/* <Navbar></Navbar> */}
         <Routes>
           <Route path='/' element={<AppChild></AppChild>}></Route>
           <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
