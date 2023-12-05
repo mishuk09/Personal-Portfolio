@@ -57,7 +57,7 @@
 /* Apply the animation to the image */
 .sort-intro-img img {
     animation: beatAnimation 2s ease-in-out infinite;
-    /* Adjust duration, timing, and iteration */
+    
 }
 
 
@@ -92,7 +92,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    /* background-color: #EBF1F8; */
+    
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 

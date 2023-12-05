@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import { faGithub, faFacebook, faLinkedin, faTwitch } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faFacebook, faLinkedin, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import email from './img/email.png';
 import call from './img/call.png';
@@ -21,27 +21,28 @@ const Contact = () => {
 
                 <div className='marquee-div-name mt-[40px] '>
                     <span className='text-blue-500'>Contact</span>
-                    <div className='flex justify-between'> <h3 className=' '> Let's Contact With Me</h3>
+                    <div className='flex justify-between'> <h3 className='text-black '> Let's Contact With Me</h3>
                     </div>
                     <hr className='text-black h-3 pt-0 mt-0' />
                 </div>
             </div>{" "}
 
             <ContactPage></ContactPage>
-            <div className="bg-slate-950 contact-icon flex w-full flex-col items-center pt-3   pb-3 px-5 max-md:max-w-full">
-                <div className="flex w-56 max-w-full flex-col items-center">
+            <div className="bg-slate-950 contact-icon flex w-full flex-col items-center pt-3   pb-3 px-1 max-md:max-w-full">
+                <div className="flex w-[100%] max-w-full text-center flex-col items-center">
                     <div className="text-white text-justify text-1xl font-bold   whitespace-nowrap">
                         Follow Me
                     </div>{" "}
-                    <div className="self-stretch footer-logo flex items-start justify-between  mt-3 ">
-                        <div ><FontAwesomeIcon icon={faGithub} className='icon-c' color='white' size="2x" />  </div>
-                        <div ><FontAwesomeIcon icon={faLinkedin} className='icon-c' color='white' size="2x" /></div>
-                        <div ><FontAwesomeIcon icon={faFacebook} className='icon-c' color='white' size="2x" /></div>
-                        <div ><FontAwesomeIcon icon={faTwitch} className='icon-c' color='white' size="2x" /></div>
+                    <div className="   text-center    footer-logo flex     mt-3 ">
+                        <div className='ps-3 ms-0 '><a href="https://github.com/mishuk09"><FontAwesomeIcon className='icon-main' color='white' icon={faGithub} size="2x" /> </a> </div>
+                        <div className='ps-3 ms-0 '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><FontAwesomeIcon className='icon-main' color='white' icon={faLinkedin} size="2x" /></a></div>
+                        <div className='ps-3 ms-0 '><a href="https://www.facebook.com/mishuk0910/" target='blank'> <FontAwesomeIcon className='icon-main' color='white' icon={faFacebook} size="2x" /></a></div>
+                        <div className='ps-3 ms-0 '><a href="https://www.facebook.com/mishuk0910"><FontAwesomeIcon className='icon-main' icon={faTwitter} color='white' size="2x" /></a></div>
 
                     </div>{" "}
-                    <div className="text-white text-justify       leading-5 self-stretch whitespace-nowrap mt-3">
-                        <FontAwesomeIcon icon={faCopyright} size='1x' />  MAHADI HASAN MISHUK 2023
+                    <div className=" text-slate-200  text-center  w-[100%]    self-stretch whitespace-nowrap mt-2">
+
+                        <FontAwesomeIcon icon={faCopyright} size='1x' />   MAHADI HASAN MISHUK 2023
                     </div>
                 </div>
             </div>

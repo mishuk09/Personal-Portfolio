@@ -1,5 +1,14 @@
 /* Your existing styles */
 
+/* welcome img reponsive */
+
+@media screen and (max-width:1600px) {
+    .home-div-main .home-div .welcome-img {
+        left: 0px;
+        margin-left: 0px;
+    }
+}
+
 @media screen and (max-width:550px) {
     .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child {
         display: none;
@@ -162,11 +171,18 @@
 }
 
 
-/* Solar system responsive */
+
+/*#################################################
+####                                            ####
+####       Solar system responsive start        ####
+####                                            ####
+##################################################*/
+
+
 
 @media screen and (min-width:440px)and (max-width: 520px) {
 
-    .venus-orbit,
+
     .venus-spin {
         margin-top: -97px;
         margin-left: -97px;
@@ -209,7 +225,7 @@
         margin-top: -217px;
     }
 
-    .solar-system {
+    #home .home-div-main .home-div .pic-div .solar-system {
         position: relative;
         width: 455px;
         height: 500px;
@@ -324,27 +340,10 @@
 }
 
 
-/* Responsive for SHortintroduction */
-
-@media screen and (min-width:500px)and (max-width: 820px) {
-    /* .sort-intro-child {
-         display: grid;
-         grid-template-columns: max-content;
-        
-        background-color: #EBF1F8;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-    .sort-intro-child-div {
-        height: 120px;
-        width: auto;
-        border-radius: 5px;
-        line-height: 0.5;
-    } */
-}
+/* Responsive for SHortintroduction ===============================
+===================================================================*/
 
 
-/* For screen sizes between 300px to 600px */
 
 @media only screen and (max-width: 800px) {
     .wave1 .sort-intro .marquee-div {
@@ -352,8 +351,20 @@
     }
 }
 
+@media only screen and (min-width: 1023px) {
+    .wave1 .sort-intro .marquee-div {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1023px) {
+    .wave1 .sort-intro .marquee-div {
+        width: 50%;
+    }
+}
+
 @media only screen and (min-width: 300px) and (max-width: 600px) {
-    .sort-intro {
+    .wave1 .sort-intro {
         width: 90%;
         /* Adjust width for smaller screens */
         margin: 0 auto;
@@ -365,13 +376,13 @@
         margin: 0 auto;
     }
 
-    .sort-intro-child {
+    .wave1 .sort-intro .sort-intro-child {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .sort-intro-child-div {
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div {
         width: 90%;
         margin: 15px auto;
         display: flex;
@@ -385,7 +396,7 @@
     }
 
     /* Adjust font sizes or other styles as needed */
-    .institution,
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 .institution,
     .institution11,
     .institution33,
     .institution44 {
@@ -394,7 +405,7 @@
         /* Adjust font sizes for smaller screens */
     }
 
-    .sort-intro-child-div {
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div {
         height: 100px;
     }
 }
@@ -406,7 +417,7 @@
 /* For screen sizes between 600px to 820px */
 
 @media only screen and (min-width: 600px) and (max-width: 820px) {
-    .sort-intro {
+    .wave1 .sort-intro {
         width: 90%;
         /* Adjust width for mid-sized screens */
         margin: 0 auto;
@@ -418,36 +429,33 @@
         margin: 0 auto;
     }
 
-    .sort-intro-child {
+    .wave1 .sort-intro .sort-intro-child {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .sort-intro-child-div {
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div {
         width: 90%;
         margin: 15px auto;
         display: flex;
         flex-direction: row;
-        /* align-items: center;
-        text-align: center; */
     }
 
-    .sort-intro-div-img23 {}
 
-    .sort-intro-div-img23 img {
+
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-img23 img {
         width: 80px;
-        /* Adjust image size */
         margin: 10px;
     }
 
-    .sort-intro-div-descrip234 {
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 {
         /* background-color: #3a4385; */
         padding-left: 10px;
     }
 
     /* Adjust font sizes or other styles as needed */
-    .institution,
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 .institution,
     .institution11,
     .institution33,
     .institution44 {
@@ -456,7 +464,7 @@
         /* Adjust font sizes for mid-sized screens */
     }
 
-    .sort-intro-child-div {
+    .wave1 .sort-intro .sort-intro-child-div {
         height: 106px;
     }
 }
@@ -1869,7 +1877,58 @@
 }
 
 
-@media only screen and (min-width: 300px) and (max-width: 1200px) {
+@media only screen and (min-width: 1023px) {
+    /* .contactpage-div-style .three-div .dootdoot {
+        height: 1150px;
+        height: 80vh;
+        width: 100vw;
+        overflow: hidden;
+
+    }
+
+    .contact-headmain .contactpage-div-style {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 760px !important;
+
+
+    } */
+
+}
+
+@media only screen and (min-width: 1023px) {
+    .contact-headmain .contactpage-div-style {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 700px !important;
+
+
+    }
+
+    .contactpage-div-style .three-div .dootdoot {
+        height: 1150px;
+        height: 150vh;
+        width: 100vw;
+        overflow: hidden;
+
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1023px) {
+    .contact-headmain .contactpage-div-style {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 1100px !important;
+
+
+    }
+
+
+
     .contact-page-form .hnjhgyh img {
         padding-top: 100px;
         margin: 0 auto;
@@ -1900,21 +1959,18 @@
 
     }
 
-    .three-div .dootdoot {
-        height: 1050px;
+    .contactpage-div-style .three-div .dootdoot {
+        height: 1150px;
+        height: 150vh;
         width: 100vw;
+        overflow: hidden;
 
     }
 
     #contact .contact-icon {
-        margin-top: 500px;
+        margin-top: 0px;
     }
 
-    #contact .dootdoot {
-        width: 100vw;
-        height: 1000px;
-        overflow: hidden;
-    }
 
 }
 

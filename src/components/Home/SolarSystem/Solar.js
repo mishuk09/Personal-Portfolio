@@ -1,5 +1,6 @@
 import React from 'react';
 import './Solar.css';
+import '../../Responsive.css';
 import mishuk from '../img/mishuk2.png';
 import javascript from '../img/javascript.png';
 import react from '../img/react.png';

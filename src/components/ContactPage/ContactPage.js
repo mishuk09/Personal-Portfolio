@@ -30,7 +30,7 @@ const ContactPage = () => {
                     <Fade top>
                         {!showContactInfo && (
                             <img
-                                className='w-[450px] px-10 mt-[70px] img-contact-form cursor-pointer'
+                                className='w-[450px] px-10 mt-[70px]  img-contact-form cursor-pointer'
                                 src={contact}
                                 alt=""
                                 onClick={toggleContactInfo}

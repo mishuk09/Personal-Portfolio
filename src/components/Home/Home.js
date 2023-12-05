@@ -35,7 +35,7 @@ const Home = () => {
 
             <div className='home-div-main'>
                 <div className='container   home-div'>
-                    <div className='absolute left-0 mt-5  welcome-img'>
+                    <div className='absolute container  mx-2 mt-5  welcome-img'>
                         <img className=' ' src={welcome} alt="" />
                     </div>
                     {/* whatsapp logo */}
