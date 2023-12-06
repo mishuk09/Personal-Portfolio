@@ -5,6 +5,7 @@ import mishuk from '../img/mishuk2.png';
 import javascript from '../img/javascript.png';
 import react from '../img/react.png';
 import java from '../img/java.png';
+import github from '../img/github.png';
 
 const Solar = () => {
     return (
@@ -29,7 +30,7 @@ const Solar = () => {
             <div class="earth-spin">
                 <div class="orbit moon-orbit"></div>
                 <div class="moon-spin">
-                    <div id="moon"></div>
+                    <div id="moon"><img src={github} alt="" /></div>
                 </div>
 
                 <img id="earth" src={react} alt="" />
