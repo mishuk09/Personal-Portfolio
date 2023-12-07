@@ -2,6 +2,15 @@
 
 /* welcome img reponsive */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
 @media screen and (max-width:1600px) {
     .home-div-main .home-div .welcome-img {
         left: 0px;
@@ -180,6 +189,8 @@
 
 
 
+@media screen and (min-width:520px) {}
+
 @media screen and (min-width:440px)and (max-width: 520px) {
 
 
@@ -225,9 +236,15 @@
         margin-top: -217px;
     }
 
+    #home .home-div-main .home-div .pic-div {
+        height: 500px;
+        width: 100%;
+        background-color: #000000;
+    }
+
     #home .home-div-main .home-div .pic-div .solar-system {
         position: relative;
-        width: 455px;
+        width: 500px;
         height: 500px;
         margin: auto;
         overflow: hidden;
@@ -235,6 +252,8 @@
 }
 
 @media screen and (min-width:300px)and (max-width: 440px) {
+
+
     .solar-system #sun {
         height: 100px;
         width: 100px;
@@ -322,13 +341,23 @@
         margin-top: -166px;
     }
 
-    .solar-system {
+
+    #home .home-div-main .home-div .pic-div {
+        height: 400px;
+        width: 200%;
+        background-color: #000000;
+    }
+
+
+    #home .home-div-main .home-div .pic-div .solar-system {
         position: relative;
-        width: 500px;
+        width: 100%;
         align-items: center;
         text-align: center;
         justify-content: center;
         overflow: hidden;
+
+
     }
 
     .solar-system .mars-spin #mars img {
@@ -380,6 +409,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
     }
 
     .wave1 .sort-intro .sort-intro-child .sort-intro-child-div {
@@ -533,6 +563,8 @@
     .aboutme-main-pic {
         height: 1000px;
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .aboutme-main-pic .mainimg {
@@ -550,7 +582,7 @@
     .aboutme-main-pic .about-section {
         padding-top: 300px;
         height: 1300px;
-        width: 100%;
+        width: 95%;
         border-radius: 5px;
         margin-top: 220px;
         position: absolute;
@@ -596,13 +628,16 @@
         color: #e8e8e8;
         padding-top: 100px;
         margin-left: 10px;
+        margin-right: 10px;
         font-family: "Montserrat", sans-serif;
+
     }
 
     .aboutme-main-pic .about-section h1 {
         font-size: 25px;
         position: absolute;
         margin-top: 20px;
+        margin-left: 10px;
         padding-top: 20px;
         color: #d1abfd;
         font-weight: 700;
@@ -611,6 +646,7 @@
 
     .aboutme-main-pic .about-section .about-para-about {
         margin-top: 75px;
+        margin-left: 10px;
     }
 
     .skills-main-head-div {
@@ -621,6 +657,7 @@
         color: #A0A0A0;
         font-weight: 700;
         font-size: 13px;
+
     }
 
     .yearexperience .years p {
@@ -841,7 +878,7 @@
     .skills-main-head-div .skills .skills-headline {}
 
     .skills-main-head-div .skills .skills-headline h1 {
-        font-size: 20px;
+        font-size: 25px;
         text-align: justify;
         text-justify: inter-word;
 
@@ -973,6 +1010,20 @@
 }
 
 
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .followglinkedin img {
+
+        display: none;
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .skills-introimg img {
+        width: 180px;
+        border-radius: 5px;
+    }
+
+
+}
+
 @media only screen and (min-width: 300px) and (max-width: 1000px) {
 
     .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child {
@@ -1022,7 +1073,7 @@
     .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        height: 1150px;
+        height: 1170px;
         width: 100%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
@@ -1039,10 +1090,6 @@
         width: 100%;
     }
 
-    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .skills-introimg img {
-        width: 293px;
-        border-radius: 5px;
-    }
 
     .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .followglinkedin img {
         width: 305px;
@@ -1136,7 +1183,7 @@
 
     .skills-main-head-div .skillsbar .benest .benext-child2 p {
 
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .skills-main-head-div .skillsbar .benest .benext-child2 {
@@ -1162,7 +1209,20 @@
     }
 
     .skills-main-head-div .skillsbar .benest .benext-child2 button {
-        margin-top: 5px !important;
+        margin-top: -5px !important;
+
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 .benext-child2-button {
+        margin-top: 0px !important;
+        width: 100%;
+
+    }
+
+    .skills-main-head-div .skillsbar .benest .benext-child2 .benext-child2-button button {
+
+        width: 200px;
+
     }
 }
 
@@ -1196,6 +1256,7 @@
     }
 
     .courseDetils2 {
+        margin-top: 5px;
         width: 50%;
     }
 
@@ -1300,13 +1361,16 @@
 }
 
 @media only screen and (min-width:300px) and (max-width:468px) {
-    .certi-div img {
+    .certification-main .certi-div img {
         margin: 0px;
         padding: 13px;
+        width: 80px;
+
     }
 
-    .certi-div img {
-        width: 85px;
+    .certification-main .certi-div {
+        width: 100%;
+
     }
 }
 
@@ -1614,9 +1678,17 @@
 /* ----------------Testimonials  responsive start -------------*/
 
 
+@media only screen and (min-width: 1200px) {
+    .contact-headmain {
+        top: 100px;
+    }
+
+
+}
+
 @media only screen and (min-width: 300px) and (max-width: 1200px) {
     .contact-headmain {
-        top: 1000px;
+        top: 900px;
     }
 
 
@@ -1868,7 +1940,7 @@
 
 @media only screen and (max-width: 1200px) {
     .contact-headmain .container .marquee-div-name .flex h3 {
-        color: #ffffff;
+        /* color: #ffffff; */
         font-family: sans-serif;
         font-weight: 800;
     }
@@ -1926,6 +1998,7 @@
 
 
     }
+
 
 
 

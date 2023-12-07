@@ -21,7 +21,7 @@ const Contact = () => {
 
                 <div className='marquee-div-name mt-[40px] '>
                     <span className='text-blue-500'>Contact</span>
-                    <div className='flex justify-between'> <h3 className='text-black '> Let's Contact With Me</h3>
+                    <div className='flex justify-between fdsafsadfs'> <h1 className=''> Let's Contact With Me</h1>
                     </div>
                     <hr className='text-black h-3 pt-0 mt-0' />
                 </div>

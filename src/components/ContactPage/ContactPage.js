@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Fade } from 'react-reveal';
 import { Zoom } from 'react-reveal';
+import Nav from '../Navbar/Nav';
 
 const ContactPage = () => {
     const [showContactInfo, setShowContactInfo] = useState(false);
@@ -22,6 +23,7 @@ const ContactPage = () => {
 
     return (
         <div className='contactpage-div-style pb-10' >
+            <Nav></Nav>
             <div className='absolute three-div'>
                 <Three></Three>
             </div>

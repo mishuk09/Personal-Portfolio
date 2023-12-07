@@ -82,7 +82,7 @@ const Home = () => {
                     </div>
 
 
-                    <div className='pic-div bg-black'>
+                    <div className='pic-div bg-white  '>
                         <Solar></Solar>
                     </div>
                 </div>

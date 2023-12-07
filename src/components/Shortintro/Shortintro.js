@@ -15,7 +15,7 @@ import { Zoom } from 'react-reveal';
 const Shortintro = () => {
     return (
         <div>
-            <div className='wave1  '>
+        <div className='wave1  '>
 
                 <div className='sort-intro  '>
                     <div className='sort-intro-headline p-1 '>

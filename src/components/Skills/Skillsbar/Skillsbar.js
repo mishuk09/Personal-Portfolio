@@ -105,7 +105,7 @@ const Skillsbar = () => {
                         <p  >Have an idea? Talk to me today! Share your requirements and let's
                             team up for a successful project with simplicity."</p> </Fade  >
 
-                    <Fade bottom> <div className='w-25'>
+                    <Fade bottom> <div className='w-25 benext-child2-button '>
                         <Link to="/contactpage"> <Button>Have a Free Consultation</Button></Link>
                     </div>
                     </Fade>

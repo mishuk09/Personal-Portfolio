@@ -66,7 +66,7 @@ function App() {
       <CssBaseline />
       <div className="App">
 
-        <Nav></Nav>
+      
 
         <div className='darkmode-toggle pt-1'>
           <Switch

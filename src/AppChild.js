@@ -22,6 +22,7 @@ import ContactForm from './components/Contact/ContactForm';
 import { Route, Routes } from 'react-router-dom';
 import ContactPage from './components/ContactPage/ContactPage';
 import ScrollButton from './components/ScrollButton/ScrollButton';
+import Nav from './components/Navbar/Nav';
 
 // import Shortintro from './components/Shortintro/Shortintro';
 
@@ -29,7 +30,7 @@ const AppChild = () => {
     return (
         <div className="App">
 
-
+            <Nav></Nav>
             {/* mouse pointer and particle portion */}
             <ParticleJS></ParticleJS>
             {/* <MousePointer></MousePointer> */}
