@@ -15,11 +15,11 @@ import Nav from '../Navbar/Nav';
 const ContactPage = () => {
     const [showContactInfo, setShowContactInfo] = useState(false);
 
-
-
     const toggleContactInfo = () => {
         setShowContactInfo(!showContactInfo);
     };
+
+
 
     return (
         <div className='contactpage-div-style pb-10' >

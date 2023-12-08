@@ -30,6 +30,15 @@
 
 }
 
+@media screen and (min-width:300px)and (max-width: 640px) {
+
+    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
+
+        text-decoration: none !important;
+
+    }
+}
+
 @media screen and (min-width:640px)and (max-width: 1023px) {
 
 
@@ -88,8 +97,7 @@
     }
 
 
-
-    .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child .navbar-child-child2 {}
+ 
 
 }
 
@@ -156,6 +164,8 @@
         width: 100%;
     }
 
+
+
     #home .home-div-main .home-div .name-div {
         margin-top: 20px;
         padding-left: 18px;
@@ -170,13 +180,12 @@
     }
 
     #home .home-div-main .home-div .pic-div {
-        align-items: center;
         height: 500px;
-        width: 100%;
-        background-color: rgb(25, 25, 36);
-        justify-content: center;
-        text-align: center;
+        width: 100% !important;
+        background-color: #000000;
     }
+
+
 }
 
 
@@ -190,6 +199,63 @@
 
 
 @media screen and (min-width:520px) {}
+
+@media screen and (min-width:520px) {
+
+
+    .venus-spin {
+        margin-top: -97px;
+        margin-left: -97px;
+        width: 186px;
+        height: 186px;
+    }
+
+    #venus {
+        margin-top: -10px;
+        margin-left: -20px;
+        height: 25px;
+        width: 25px;
+        box-shadow: 0 0 34px #3a4385;
+    }
+
+    .earth-orbit,
+    .earth-spin {
+        width: 281px;
+        height: 281px;
+        margin-left: -149px;
+        margin-top: -148px;
+    }
+
+    #earth {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 56px;
+        width: 56px;
+        margin-left: -28px;
+        margin-top: -28px;
+        /* box-shadow: 0 0 34px #08199b; */
+    }
+
+    .mars-orbit,
+    .mars-spin {
+        width: 418px;
+        height: 418px;
+        margin-left: -217px;
+        margin-top: -217px;
+    }
+
+
+
+    #home .home-div-main .home-div .pic-div .solar-system {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+}
 
 @media screen and (min-width:440px)and (max-width: 520px) {
 
@@ -236,15 +302,11 @@
         margin-top: -217px;
     }
 
-    #home .home-div-main .home-div .pic-div {
-        height: 500px;
-        width: 100%;
-        background-color: #000000;
-    }
+
 
     #home .home-div-main .home-div .pic-div .solar-system {
         position: relative;
-        width: 500px;
+        width: 400px;
         height: 500px;
         margin: auto;
         overflow: hidden;
@@ -259,29 +321,29 @@
         width: 100px;
         background-color: #fae20a;
         margin-top: -51px;
-        margin-left: -123px;
+        margin-left: -62px;
         border-radius: 50%;
         box-shadow: 0 0 84px orange;
     }
 
     .solar-system .venus-orbit {
-        margin-top: -67px;
-        margin-left: -137px;
-        width: 130px;
-        height: 130px;
+        margin-top: -72px;
+        margin-left: -83px;
+        width: 140px;
+        height: 140px;
     }
 
     .solar-system .venus-spin {
         margin-top: -67px;
-        margin-left: -138px;
+        margin-left: -80px;
         width: 130px;
         height: 130px;
     }
 
     .solar-system .venus-spin #venus img {
         border-radius: 150%;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
 
 
 
@@ -302,16 +364,17 @@
     .solar-system .earth-orbit {
         width: 210px;
         height: 210px;
-        margin-left: -177px;
+        margin-left: -121px;
         margin-top: -109px;
     }
 
     .solar-system .earth-spin {
         width: 210px;
         height: 210px;
-        margin-left: -177px;
+        margin-left: -121px;
         margin-top: -109px;
     }
+
 
 
 
@@ -326,28 +389,23 @@
         margin-top: -26px;
     }
 
+
+
+
     .solar-system .mars-orbit,
     .mars-spin {
         width: 317px;
         height: 317px;
-        margin-left: -231px;
-        margin-top: -166px;
+        margin-left: -175px;
+        margin-top: -164px;
     }
 
     .solar-system .mars-spin {
         width: 317px;
         height: 317px;
-        margin-left: -231px;
-        margin-top: -166px;
+        margin-left: -175px;
+        margin-top: -164px;
     }
-
-
-    #home .home-div-main .home-div .pic-div {
-        height: 400px;
-        width: 200%;
-        background-color: #000000;
-    }
-
 
     #home .home-div-main .home-div .pic-div .solar-system {
         position: relative;
@@ -356,6 +414,7 @@
         text-align: center;
         justify-content: center;
         overflow: hidden;
+
 
 
     }
@@ -369,8 +428,12 @@
 }
 
 
-/* Responsive for SHortintroduction ===============================
-===================================================================*/
+/*#################################################
+####                                            ####
+####      Short Introduction responsive start        ####
+####                                            ####
+##################################################*/
+
 
 
 
@@ -395,13 +458,13 @@
 @media only screen and (min-width: 300px) and (max-width: 600px) {
     .wave1 .sort-intro {
         width: 90%;
-        /* Adjust width for smaller screens */
+       
         margin: 0 auto;
     }
 
     .sort-intro-head {
         width: 40%;
-        /* Adjust width for smaller screens */
+      
         margin: 0 auto;
     }
 
@@ -421,16 +484,22 @@
 
     .sort-intro-div-img23 img {
         width: 80px;
-        /* Adjust image size */
+       
         margin: 10px;
     }
 
     /* Adjust font sizes or other styles as needed */
+    .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 .institution11 {
+        font-size: 11px;
+
+    }
+
     .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 .institution,
     .institution11,
     .institution33,
     .institution44 {
-        margin: 5px 0;
+        line-height: 1px;
+        /* margin: 5px 0; */
         font-size: 12px;
         /* Adjust font sizes for smaller screens */
     }
@@ -963,7 +1032,22 @@
 
 }
 
-@media only screen and (min-width: 300 px) and (max-width: 1000px) {
+@media only screen and (min-width: 300px) and (max-width: 440px) {
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart .chart-child {
+        display: none;
+
+    }
+
+    .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
     .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
         width: 100%;
         align-items: center;
@@ -984,6 +1068,8 @@
     }
 
 }
+
+
 
 @media only screen and (min-width: 300px) and (max-width:510px) {
     .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {

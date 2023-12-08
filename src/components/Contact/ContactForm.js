@@ -37,14 +37,27 @@ const ContactForm = () => {
             recaptchaValue: value,
         });
     };
-    const form = useRef();
-    const handleSubmit = (e) => {
 
-        //control emial js 
+    const form = useRef();
+
+    const handleSubmit = (e) => {
         e.preventDefault();
 
+    
 
-        // Basic validation - check if required fields are filled
+        emailjs.sendForm('service_p3jakff', 'template_cszjdjo', form.current, 'uELA4WD47qGEFXLdA')
+            .then((result) => {
+                window.alert('Email Sent Successfully');
+                setFormData({
+                    name: '',
+                    email: '',
+                    phoneNumber: '',
+                    subject: '',
+                    message: '',
+                    recaptchaValue: '',  
+                });
+            })
+
         const errors = {};
         if (!formData.name.trim()) {
             errors.name = true;
@@ -58,17 +71,14 @@ const ContactForm = () => {
         setFormErrors(errors);
 
         if (Object.keys(errors).length === 0 && formData.recaptchaValue) {
-            // Form submission logic here
-            console.log('Form submitted:', formData); // For example, logging form data to the console
+            console.log('Form submitted:', formData);
         } else {
-            // Handle the case when reCAPTCHA is not completed or required fields are empty
             console.log('Please fill all required fields and verify reCAPTCHA');
         }
     };
 
 
-
-    //email js control
+    
 
     return (
         <div className="contact-form-container bg-transparent">
@@ -97,11 +107,11 @@ const ContactForm = () => {
                 <div className='phoneinput flex'>
 
                     <input
-                        className='mt-3  w-full  text-white'
+                        className='mt-3 w-full text-white'
                         type="text"
-                        name="phone"
+                        name="phoneNumber"
                         placeholder="Phone"
-                        value={formData.phone}
+                        value={formData.phoneNumber}
                         onChange={handleInputChange}
                         required
                     />

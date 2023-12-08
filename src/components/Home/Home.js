@@ -75,14 +75,14 @@ const Home = () => {
                                 <div className='ps-4 h-5 w-'><a href="https://github.com/mishuk09"><FontAwesomeIcon className='icon-main' icon={faGithub} size="2x" /> </a> </div>
                                 <div className='ps-4 h-5 w-'><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><FontAwesomeIcon className='icon-main' icon={faLinkedin} size="2x" /></a></div>
                                 <div className='ps-4 h-5 w-'><a href="https://www.facebook.com/mishuk0910/" target='blank'> <FontAwesomeIcon className='icon-main' icon={faFacebook} size="2x" /></a></div>
-                                <div className='ps-4 h-5 w-'><a href=""></a><FontAwesomeIcon className='icon-main' icon={faTwitter} size="2x" /></div>
+                                <div className='ps-4 h-5 w-'><a href="https://www.facebook.com/mishuk0910/" target='blank'><FontAwesomeIcon className='icon-main' icon={faTwitter} size="2x" /></a></div>
 
                             </div>
                         </div>
                     </div>
 
 
-                    <div className='pic-div bg-white  '>
+                    <div className='pic-div bg-black'>
                         <Solar></Solar>
                     </div>
                 </div>

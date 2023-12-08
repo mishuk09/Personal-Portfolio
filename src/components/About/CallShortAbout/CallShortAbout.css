@@ -16,7 +16,8 @@
     background-color: #0487FB;
     color: white;
 
-    .email-section h5,p {
+    .email-section h5,
+    p {
         color: #E7F4FD;
 
     }
@@ -77,9 +78,13 @@
 }
 
 .followgithub img {
-    right: 0px;
-    width: 170px;
-    border-radius: 5px;
+    right: 0;
+    padding-right: 7px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .sort-intro-he {

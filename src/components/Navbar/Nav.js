@@ -11,7 +11,7 @@ import './Nav.css';
 
 const Nav = () => {
     const navigation = [
-        { name: 'Home', href: '#home', current: true },
+        { name: 'Home', href: '/#home', current: true },
         { name: 'About', href: '/#about', current: false },
         { name: 'Skills', href: '/#skills', current: false },
         { name: 'Certification', href: '/#certificate', current: false },
