@@ -1,16 +1,13 @@
  .mission-head img {
      width: 250px;
      position: absolute;
-
  }
 
  .mission-parent {
      font-family: "Montserrat", sans-serif;
-
      margin-top: 350px;
      display: flex;
      position: relative;
-     /* background-color: rgb(255, 255, 255); */
  }
 
  .img-title-mission {
@@ -38,9 +35,7 @@
 
  .mission-detils h1 {
      font-size: 30px;
-     /* color: #504848; */
      font-weight: 700;
-
  }
 
  .mission-detils p {
@@ -51,5 +46,4 @@
 
  .mission-detils button {
      margin-top: 20px;
-
  }

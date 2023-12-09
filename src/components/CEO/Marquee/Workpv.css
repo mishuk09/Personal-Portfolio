@@ -3,20 +3,15 @@
 }
 
 .marquee-div-name span {
-
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
-     
-
 }
 
 .marquee-div-name p {
-
     font-family: sans-serif;
     font-size: 30px;
     color: #fff;
     font-weight: 800;
-
 }
 
 .marquee-div {
@@ -34,9 +29,6 @@
 
 .marquee-div img:hover {
     transform: scale(1.2);
-    /* Zoom effect on hover */
     transition: transform 0.4s ease;
-    /* Smooth transition on hover */
     animation-play-state: paused;
-    /* Pausing the marquee on hover */
 }

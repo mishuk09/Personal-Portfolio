@@ -8,7 +8,6 @@ import { Fade } from 'react-reveal';
 const Net = () => {
     return (
         <div>
-
             <div className='container web-service-head pt-5'>
                 <Fade bottom>
                     <div className='container fluid web-service-parents'>
@@ -21,7 +20,6 @@ const Net = () => {
                             <div> <img src={tic} alt="" /><span className='px-2 '>SQL</span></div>
                             <div> <img src={tic} alt="" /><span className='px-2 '>.NET Framework</span></div>
                             <div> <img src={tic} alt="" /><span className='px-2 '>ASP.NET MVC/Core</span></div>
-
                         </div>
                         <div className='mt-5 w-25'>
                             <Link to='/contactpage'>

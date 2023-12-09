@@ -11,14 +11,11 @@ const MapChart = () => {
 
     useEffect(() => {
         am4core.useTheme(am4themes_animated);
-
         let chart = am4core.create('chartdiv', am4maps.MapChart);
         chartRef.current = chart;
 
         if (!chart) return; // Check if chart is valid
-
         chart.geodata = am4geodata_worldLow;
-
         chart.projection = new am4maps.projections.Orthographic();
         chart.panBehavior = 'rotateLongLat';
         chart.deltaLatitude = -20;

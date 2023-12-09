@@ -11,8 +11,6 @@ const Web = () => {
     return (
         <div className='container web-service-head pt-5'>
             <Fade bottom>
-
-
                 <div className='web-service-parents'>
                     <h3 className=''>Web-Development</h3>
                     <p>I specialize in creating fantastic websites that not only look great but also function smoothly. Let's collaborate to turn your concepts into a standout online presence, making your ideas shine on the web!</p>

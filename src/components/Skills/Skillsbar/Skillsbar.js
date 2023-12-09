@@ -1,9 +1,7 @@
 import React from 'react';
 import './Skillsbar.css'
-import tick from '../../Home/img/tick.png';
 import linkedin from '../img/linkedin.gif';
 import Skills from '../img/skills.png';
-// import { AccumulationChartComponent } from '@syncfusion/ej2-react-charts';
 import Chart from '../AcumulationChart/Chart';
 import Barchart from '../Barchart/Barchart';
 import Toolchart from '../ToolsChart/Toolchart';
@@ -17,10 +15,10 @@ import { Fade } from 'react-reveal';
 import Marquee from 'react-fast-marquee';
 
 const Skillsbar = () => {
-
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, []);
+
     return (
         <div className='skillsbar'>
             <div className='skillsbar-div-head mt-2  '>
@@ -71,7 +69,6 @@ const Skillsbar = () => {
                             </div>
                         </Zoom>
                     </div>
-
                     <div className='bar-chart mt-3 '>
                         <div className='pro-barchart'>
                             <Chart></Chart>
@@ -85,18 +82,12 @@ const Skillsbar = () => {
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
             <img className='asasas mx-10' src={benext} alt="" />
             <div className='benest ' data-aos='fade-up'>
-
                 <div className='benext-child'>
-
                 </div>
-
                 <div className='benext-child2 p-4'>
                     <Fade top>
                         <h1>Be my next success story?</h1>

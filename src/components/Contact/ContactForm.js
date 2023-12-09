@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import 'react-phone-number-input/style.css';
-import PhoneInput from 'react-phone-number-input';
 import './Contact.css'; // CSS file for styling
 import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from '@emailjs/browser';
@@ -39,12 +38,8 @@ const ContactForm = () => {
     };
 
     const form = useRef();
-
     const handleSubmit = (e) => {
         e.preventDefault();
-
-    
-
         emailjs.sendForm('service_p3jakff', 'template_cszjdjo', form.current, 'uELA4WD47qGEFXLdA')
             .then((result) => {
                 window.alert('Email Sent Successfully');
@@ -54,10 +49,9 @@ const ContactForm = () => {
                     phoneNumber: '',
                     subject: '',
                     message: '',
-                    recaptchaValue: '',  
+                    recaptchaValue: '',
                 });
             })
-
         const errors = {};
         if (!formData.name.trim()) {
             errors.name = true;
@@ -76,9 +70,6 @@ const ContactForm = () => {
             console.log('Please fill all required fields and verify reCAPTCHA');
         }
     };
-
-
-    
 
     return (
         <div className="contact-form-container bg-transparent">
@@ -137,7 +128,7 @@ const ContactForm = () => {
                 <ReCAPTCHA
                     className="w-ful mt-3"
                     style={{ width: '200px' }}
-                    sitekey="6Lc2eRgpAAAAAMwYZC85iVlVaybjSycxpv75zMBd" // Replace with your actual reCAPTCHA site key
+                    sitekey="6Lc2eRgpAAAAAMwYZC85iVlVaybjSycxpv75zMBd"
                     onChange={handleRecaptchaChange}
 
                 />

@@ -35,7 +35,7 @@ const Barchart = () => {
         const chart = new ApexCharts(chartRef.current, options);
         chart.render();
 
-        // Clean up the chart on unmount
+        
         return () => {
            
             chart.destroy();

@@ -1,13 +1,11 @@
 import React from 'react';
 import '.././Responsive.css';
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import logo from './logo/logo.png';
 import Button from '../OthersComponent/Button/Button';
-import DarkMode from '../DarkMode/DarkMode';
 import { Link } from 'react-router-dom';
-import './Nav.css';
+
 
 const Nav = () => {
     const navigation = [

@@ -9,7 +9,6 @@ class Three extends Component {
         this.vantaRef = React.createRef();
         this.vantaEffect = null;
     }
-
     componentDidMount() {
         this.vantaEffect = DOTS({
             el: this.vantaRef.current,
@@ -23,14 +22,12 @@ class Three extends Component {
             showLines: false,
             color: 0x00ff00, // Set the dots color, using hexadecimal notation
             backgroundColor: 0x000000, // Set the background color, using hexadecimal notation
-            // Any additional parameters you want to pass
+
         });
     }
-
     componentWillUnmount() {
         if (this.vantaEffect) this.vantaEffect.destroy();
     }
-
     render() {
         return (
             <div className='dootdoot'

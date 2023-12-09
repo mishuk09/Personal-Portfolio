@@ -1,14 +1,8 @@
 import React from 'react';
 import './Contact.css';
-import { faGithub, faFacebook, faLinkedin, faTwitch, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import email from './img/email.png';
-import call from './img/call.png';
-import location from './img/location.png';
-import SendMessage from './ContactForm';
-import ContactForm from './ContactForm';
-import { faArrowUpRightFromSquare, faCopyright, faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
-import Three from '../Threejs/Three';
+import { faCopyright } from '@fortawesome/free-solid-svg-icons';
 import ContactPage from '../ContactPage/ContactPage';
 
 

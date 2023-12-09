@@ -10,14 +10,13 @@ const ScrollButton = () => {
             behavior: 'smooth'
         });
     };
-
     const buttonStyle = {
         position: 'fixed',
         bottom: '20px',
         right: '10px',
         zIndex: '999',
         backgroundColor: '#007bff',
-        
+
         borderRadius: '50%',
         padding: '10px',
         cursor: 'pointer'

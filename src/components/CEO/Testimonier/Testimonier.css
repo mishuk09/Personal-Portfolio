@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
 
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +7,6 @@
 }
 
 body {
-
     font-family: "Poppins", sans-serif;
 }
 
@@ -30,8 +25,6 @@ body {
 
 body .testimonial {
     padding: 100px 0;
-    /* background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334); */
-
 }
 
 body .testimonial .row .tabs {
@@ -154,7 +147,6 @@ body .testimonial .row .tabs li figure::after {
     transition: 0.3s;
 }
 
-
 body .testimonial .row .tabs li figure:hover::after {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -166,7 +158,6 @@ body .testimonial .row .tabs.carousel-indicators li.active figure::after {
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
-
 
 body .testimonial .row .carousel>h3 {
     font-size: 20px;
@@ -211,8 +202,6 @@ body .testimonial .row .carousel .carousel-inner .carousel-item .quote-wrapper s
     color: #eee0ff;
     margin-top: 0px;
     padding-top: 0px;
-
-
 }
 
 .name-div-tes {
@@ -223,7 +212,6 @@ body .testimonial .row .carousel .carousel-inner .carousel-item .quote-wrapper p
     font-size: 16px;
     line-height: 1.72222;
     font-weight: 500;
-    /* color: rgba(0, 0, 0, 0.7); */
     color: #eee0ff;
 }
 
@@ -246,18 +234,14 @@ body .testimonial .row .carousel .carousel-inner .carousel-item .quote-wrapper h
 
 body .testimonial .row .carousel .carousel-inner .carousel-item .quote-wrapper h5 {
     margin-top: 15px;
-    /* color: white; */
     color: silver;
     font-size: 20px;
     font-weight: 400;
-
 }
 
 body .testimonial .row .carousel .carousel-inner .carousel-item .quote-wrapper hr {
-
     color: white;
     font-size: 20px;
-
 }
 
 @media only screen and (max-width: 1200px) {

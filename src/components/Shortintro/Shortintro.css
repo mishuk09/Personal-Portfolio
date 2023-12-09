@@ -4,8 +4,6 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-
-
 }
 
 .sort-intro-headline {
@@ -14,11 +12,9 @@
     background-color: #EBF1F8;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-
 }
 
 .sort-intro-headline .sort-intro-head img {
-
     width: 20px;
     align-items: center;
     text-align: center;
@@ -27,40 +23,30 @@
 
 .sort-intro-headline img {
     width: 150px;
-
 }
 
 .sort-intro-img img {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-
 }
 
-/* Define keyframes for the beat animation */
 @keyframes beatAnimation {
     0% {
         transform: scale(1);
-        /* Start scale */
     }
 
     50% {
         transform: scale(1.2);
-        /* Scale up */
     }
 
     100% {
         transform: scale(1);
-        /* Return to normal scale */
     }
 }
 
-/* Apply the animation to the image */
 .sort-intro-img img {
     animation: beatAnimation 2s ease-in-out infinite;
-    
 }
-
-
 
 .wave1 .sort-intro .sort-intro-headline .sort-intro-head {
     padding: 10px;
@@ -73,8 +59,6 @@
     margin-right: auto;
 }
 
-
-
 .linkedin-follow img {
     right: 0;
     padding-right: 7px;
@@ -83,41 +67,30 @@
     justify-content: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
-
-
 
 .sort-intro-child {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
-    
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 
 .sort-intro-child-div {
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 120px;
     width: 365px;
-    /* width: 100%; */
     border-radius: 5px;
     line-height: 0.5;
 }
 
 .sort-intro-child-div .sort-intro-div-img23 {
     width: 120px;
-
 }
 
 .sort-intro-child-div .sort-intro-div-descrip234 {
     width: 250px;
-
-
 }
 
 .sort-intro-div-descrip234 p {
@@ -129,9 +102,6 @@
 .sort-intro-child-div img {
     width: 80px;
     margin: 20px;
-
-
-
 }
 
 .institution {
@@ -159,6 +129,4 @@
     margin-left: 130px;
     color: #504848;
     font-family: "Montserrat", sans-serif;
-
-
 }

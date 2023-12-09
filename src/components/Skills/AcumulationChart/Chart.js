@@ -4,23 +4,6 @@ import ReactApexChart from 'react-apexcharts';
 
 
 const Chart = () => {
-    //const [chartClass, setChartClass] = useState('chart-div');
-
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         if (window.innerWidth >= 600 && window.innerWidth <= 800) {
-    //             setChartClass('chart-div  middle-width');
-    //         } else {
-    //             setChartClass('chart-div');
-    //         }
-    //     };
-
-    //     window.addEventListener('resize', handleResize);
-
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize);
-    //     };
-    // }, []);
 
     const series = [44, 55, 50, 15, 20];
     const options = {
@@ -45,7 +28,7 @@ const Chart = () => {
         <div className="chart">
             <p className='mx-5 mt-2  font-bold'>Most Used Language in Github</p>
 
-            <ReactApexChart className='chart-child' options={options} series={series} type="donut"width={'300'} />
+            <ReactApexChart className='chart-child' options={options} series={series} type="donut" width={'300'} />
 
             <a href="https://github.com/mishuk09" target='blank'><button className='mt-3'>Github</button> </a>
         </div>

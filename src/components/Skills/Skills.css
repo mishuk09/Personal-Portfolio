@@ -1,16 +1,11 @@
  .skills-main-head-div {
-     /* background-color: #ffffff; */
-
      position: relative;
-     /* font-family: "Montserrat", sans-serif; */
-
  }
 
  .skills {
      height: 400px;
      width: 100%;
      margin-top: 400px;
-     /* border: 1px solid black; */
      display: flex;
  }
 
@@ -20,13 +15,9 @@
      padding-right: 25px;
      height: 100%;
      width: 100%;
-
-
  }
 
-
  .skills-headline h1 {
-
      font-size: 30px;
      font-weight: 700;
      font-family: "Montserrat", sans-serif;
@@ -40,9 +31,7 @@
  }
 
  .skills-headline .skills-button {
-
      margin-top: 50px;
-
  }
 
  .skills-img {
@@ -50,7 +39,6 @@
      grid-template-columns: repeat(3, 1fr);
      height: 100%;
      width: 100%;
-     /* background-color: rgb(203, 203, 203); */
  }
 
  .skills .skills-img .js {
@@ -59,7 +47,6 @@
 
  .skills .skills-img .js img {
      margin-left: auto;
-
      width: 150px;
      text-align: center;
  }
@@ -71,6 +58,5 @@
  .react img {
      margin-top: auto;
      margin-left: auto;
-
      width: 150px;
  }

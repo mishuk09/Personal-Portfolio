@@ -13,23 +13,18 @@ import ProjectVideo from './ProjectVideo';
 const Projects = () => {
     return (
         <div >
-
             <div id='project' className='projects-head mt-10'>
                 <div className='projects-head12'>
                     <div className='img-head pt-3'><img src={work} alt="" /><h4>Projects</h4>
                     </div>
-
                     <p className='pt-3 asdsa'>I Have Completed Many Projects Among Theme These Two Projects are More Dynamic</p>
                     <button>CSEHacks</button>
                 </div>
-
                 <div className='project-child'>
                     <div className='project-child-head ps-3 pt-2'>
                         <span>CSEHacks </span> <span>A Learning Website</span>
                     </div>
                     <ProjectVideo></ProjectVideo>
-
-
                 </div>
                 <div className='cerifyby'>
                     <p className='cerifvyp'>Verified by <span>Google PageSpeed Insights</span></p>

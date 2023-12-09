@@ -1,7 +1,6 @@
 .home-div {
     display: flex;
     margin-top: 1px;
-
 }
 
 .welcome-img img {
@@ -13,14 +12,12 @@
     width: 50%;
     background-color: #0E0A1B;
     background-color: #000000;
-
 }
 
 .home-div-main {
     position: relative;
     background-color: #0E0A1B;
     background-color: #000000;
-
 }
 
 #home .home-div-main .home-div .pic-div {
@@ -30,21 +27,16 @@
 }
 
 .name-div {
-
     padding-top: 70px;
     padding-left: 30px;
-
 }
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
-
-
 .name-div22 {
     line-height: 0;
     margin-top: 30px;
     font-family: 'Roboto', sans-serif;
     font-family: "Poppins", sans-serif;
-
 }
 
 .typical {
@@ -62,11 +54,9 @@
 
 .name-div hr {
     color: #a8a7a7;
-
 }
 
 .name-div h1 {
-
     color: hsl(0, 0%, 74%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -74,51 +64,25 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     cursor: pointer;
-
 }
 
 .name-div h1 {
-
     /* background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%); */
     background-image: -webkit-linear-gradient(45deg, hsl(214, 100%, 54%), hsl(34, 100%, 54%));
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 4s infinite linear;
     font-family: "Montserrat", sans-serif;
-
 }
 
-/* @keyframes shine {
-    0% {
-        background-position: 0;
-    }
-
-    60% {
-        background-position: 600px;
-    }
-
-    100% {
-        background-position: 600px;
-    }
-} */
-
-/* .name-div span {
-    font-weight: 700;
-    color: #0487FB;
-} */
 .gradient-line1 {
     height: 5px;
-
-    /* background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 39, 255, 1) 49%, rgba(0, 39, 255, 1) 100%); */
     background: rgb(0, 0, 0);
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(60, 90, 255, 1) 49%, rgba(101, 125, 255, 1) 100%);
 }
 
 .gradient-line0 {
     border-radius: 50%;
-
 }
 
 .gradient-line0 img {
@@ -126,40 +90,30 @@
     box-shadow: 0 0 34px #7b8afd;
     border-radius: 50%;
     background: rgba(123, 138, 253, 0.6);
-    /* Adjust the alpha value (0.8 in this case) as desired */
-
 }
 
 .gradient-line0,
 .coding-icon34 {
     display: inline-block;
-    /* box-shadow: 0 0 34px #7b8afd; */
 }
 
 .coding-icon34 {
     display: block;
-    /* border-radius: 50%; */
-    /* background: rgba(123, 138, 253, 0.6); */
 }
 
 .gradient-line {
     height: 5px;
-    /* background: rgb(0, 39, 255);
-    background: linear-gradient(90deg, rgba(0, 39, 255, 1) 0%, rgba(0, 39, 255, 1) 49%, rgba(0, 0, 0, 1) 100%); */
-
     background: rgb(101, 125, 255);
     background: linear-gradient(90deg, rgba(101, 125, 255, 1) 0%, rgba(60, 90, 255, 1) 49%, rgba(0, 0, 0, 1) 100%);
 }
 
 .social-link {
     display: flex;
-
 }
 
 .name-div .typical {
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
-
 }
 
 .name-div p {
@@ -169,19 +123,14 @@
 .social-link FontAwesomeIcon {
     width: 100px;
     color: #EBF1F8;
-
-
 }
 
 .social-link div img {
     color: white;
-
 }
 
 .social-link .icon-main {
     color: white;
-
-
 }
 
 .icon-div {
@@ -198,55 +147,50 @@
 
 .wave1 img {
     position: absolute;
-
 }
-
-
 
 .wave1 {
     top: 1000px;
 }
 
-/* ==================== */
+
+/*#################################################
+####                                            ####
+####      Short Introduction         css        ####
+####                                            ####
+##################################################*/
+
 .sort-intro {
     height: 400px;
     width: 800px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-
-
 }
 
 .sort-intro-headline {
     display: flex;
     background-color: #EBF1F8;
-
 }
 
 .sort-intro-img img {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-
 }
 
-
 .sort-intro-head {
-
     padding: 10px;
     height: 40px;
     width: 500px;
     background-color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     margin-left: auto;
     margin-right: auto;
     clip-path: polygon(75% 0%, 84% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
 }
 
 .sort-intro-headline .sort-intro-head img {
-
     width: 20px;
     align-items: center;
     text-align: center;
@@ -256,15 +200,12 @@
 .linkedin-follow img {
     right: 0;
     padding-right: 7px;
-
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 
 .sort-intro-headline img {
     width: 150px;
-
 }
 
 .sort-intro-child {
@@ -273,7 +214,6 @@
     grid-gap: 7pxpx;
     background-color: #EBF1F8;
     box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.3);
-
 }
 
 .sort-intro-child-div {
@@ -281,16 +221,11 @@
     width: 365px;
     border-radius: 5px;
     line-height: 0.5;
-
-
 }
 
 .sort-intro-child-div img {
     width: 80px;
     margin: 20px;
-
-
-
 }
 
 .institution {

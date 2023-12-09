@@ -10,16 +10,12 @@ const ColorItem = ({ color, setColor }) => (
 
 const ColorChange = () => {
     const colors = ['#2d3436', '#4834d4', '#be2edd', '#f9ca24', '#6ab04c', '#30336b'];
-
     const setTheme = (color) => {
         document.documentElement.style.setProperty('--primary-background-color', color);
     };
-
     const setColor = (color) => {
         setTheme(color);
     };
-
-
 
     const [isOpen, setIsOpen] = useState(false);
 

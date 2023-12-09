@@ -1,8 +1,6 @@
 import '../Responsive.css';
 import './ContactPage.css'
 import React, { useState } from 'react';
-
-import Navbar from '../Navbar/Navbar';
 import ContactForm from '../Contact/ContactForm';
 import contact from './img/contact.png';
 import Three from '../Threejs/Three';
@@ -14,12 +12,9 @@ import Nav from '../Navbar/Nav';
 
 const ContactPage = () => {
     const [showContactInfo, setShowContactInfo] = useState(false);
-
     const toggleContactInfo = () => {
         setShowContactInfo(!showContactInfo);
     };
-
-
 
     return (
         <div className='contactpage-div-style pb-10' >
@@ -39,7 +34,6 @@ const ContactPage = () => {
                             />
                         )}</Fade>
                     {showContactInfo && (
-
                         <div className='relative w-[100%] bg-transparent contactInfo rounded top-0 left-10 bg-gray-900 p-3 ms-10  '>
                             <div className="flex flex-col items-stretch w-[100%] max-md:w-full pt-4 contact-head-child2 ">
                                 <div className="flex grow flex-col    contact-head-child3  ">
@@ -68,8 +62,6 @@ const ContactPage = () => {
                                                     +91 7069078661
                                                 </div>
                                             </div>
-
-
                                         </div>{" "}
                                     </Fade>
                                     <Fade right>
@@ -85,7 +77,6 @@ const ContactPage = () => {
                                             </div>
                                         </div>{" "}
                                     </Fade  >
-
                                     <Zoom>
                                         <div className="text-white text-justify mt-4   font-bold leading-8 whitespace-nowrap  self-stretch items-center     ">
                                             <iframe
@@ -101,12 +92,9 @@ const ContactPage = () => {
                                             ></iframe>
                                         </div>
                                     </Zoom>
-
-
                                 </div>
                             </div>
                         </div>
-
                     )}
                 </div>
                 <Fade right>

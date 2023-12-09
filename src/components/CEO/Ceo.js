@@ -3,11 +3,8 @@ import './Ceo.css';
 import '../Responsive.css';
 import MapChart from './earth/MapChart';
 import mishuk1 from './img/mishuk2.png';
-import Testimonier from './Testimonier/Testimonier';
 import Workpv from './Marquee/Workpv';
-import Test from './Testimonier/Testimonials';
 import Testimonials from './Testimonier/Testimonials';
-import Wave from './Wave/WaveComponent';
 
 const Ceo = () => {
     return (
@@ -16,15 +13,8 @@ const Ceo = () => {
                 <Workpv></Workpv>
                 <Testimonials></Testimonials>
                 <div className='img-div'>
-
-                    {/* <img className='container' src={download} alt="" /> */}
                     <MapChart className='img'></MapChart>
-                    {/* <Wave></Wave> */}
                 </div>
-
-                {/* <Testimonier></Testimonier> */}
-                {/* <Test></Test> */}
-
             </div>
             <div className='container ceo-parent'>
                 <div className='ceo-img pt-3 px-2'>

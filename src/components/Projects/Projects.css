@@ -1,12 +1,9 @@
 .projects-head {
     font-family: "Montserrat", sans-serif;
-
     position: relative;
     height: 450px;
     width: 100%;
     background-color: #0E0A1B;
-
-    /* background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334); */
 }
 
 .projects-head12 {
@@ -26,7 +23,6 @@
 }
 
 .project-child-head {
-
     height: 50px;
     width: 100%;
     background-color: #131237;
@@ -40,16 +36,11 @@
     font-weight: 700;
     margin-left: 0px;
     padding-left: 0px;
-
-
 }
-
-
 
 .projects-head .asdsa {
     color: white;
     font-weight: 500;
-
 }
 
 .projects-head button {
@@ -58,8 +49,6 @@
     width: 150px;
     border-radius: 20px;
     padding: 5px;
-
-
 }
 
 .img-head {
@@ -68,14 +57,10 @@
     text-align: center;
     justify-content: center;
     color: white;
-
-
 }
 
 .img-head img {
     width: 60px;
-
-
 }
 
 .img-head h4 {
@@ -83,8 +68,6 @@
     font-size: 25px;
     margin-left: 20px;
     font-family: "Montserrat", sans-serif;
-
-
 }
 
 .cerifyby {
@@ -92,16 +75,12 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .sdfsafsd {
-
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .cerifyby img {

@@ -12,7 +12,6 @@ import AOS from 'aos';
 import { Zoom } from 'react-reveal';
 
 
-
 const Service = () => {
     const [activetab, setActivetab] = useState(2);
 
@@ -59,11 +58,9 @@ const Service = () => {
                 <h1>My App/Web Development<br />Services</h1>
             </div>
             <div className='cervice-parents mt-5'>
-
                 <nav>
                     <Zoom>
                         {tabItems.map((item) => (
-
                             <div
                                 data-aos="fade-up"
                                 onClick={() => handleTabClick(item.id)}
@@ -80,11 +77,9 @@ const Service = () => {
                                     </div>
                                 </div>
                             </div>
-
                         ))}
                     </Zoom  >
                 </nav>
-
             </div>
             <div>
                 {activetab === 2 ? <Web /> : activetab === 1 ? <Uiux /> : activetab === 3 ? <Net /> : <Seo />}

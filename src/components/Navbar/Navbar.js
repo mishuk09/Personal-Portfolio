@@ -1,13 +1,10 @@
 import React from 'react';
 import './Navbar.css';
 import logo from './logo/logo.png';
-import { Link, Navigate, Route, Routes, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faHome, faBatteryFull, faCertificate, faCode, faAddressBook, faComment } from '@fortawesome/free-solid-svg-icons'
 import DarkMode from '../DarkMode/DarkMode';
-import Popup from 'reactjs-popup';
-import ContactForm from '../Contact/ContactForm';
-import ContactPage from '../ContactPage/ContactPage';
 import Button from '../OthersComponent/Button/Button';
 
 
@@ -16,7 +13,6 @@ const Navbar = () => {
 
 
     return (
-
         <div className='header'>
             <div className='container navdiv'>
                 <div >
@@ -24,12 +20,10 @@ const Navbar = () => {
                 </div>
                 <div>
                     <nav>
-
                         <div className='homeDiv'>
                             <p><FontAwesomeIcon icon={faHome} /></p>
                             <Link className='link'   >Home</Link>
                         </div>
-
                         <div className='homeDiv'>
                             <p><FontAwesomeIcon icon={faUser} /></p>
                             <Link className='link' >About</Link></div>
@@ -48,17 +42,12 @@ const Navbar = () => {
                         <div className='homeDiv'>
                             <p><FontAwesomeIcon icon={faAddressBook} /></p>
                             <Link className='link' >Contact</Link></div>
-
                     </nav>
                 </div>
                 <div className='nevigate-button'>
-
                     <div>
-
                         <Link to="/contactpage">  <Button>Get Free Consultation</Button></Link>
                     </div>
-
-
                     <div><DarkMode></DarkMode></div>
                 </div>
             </div>

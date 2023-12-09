@@ -14,16 +14,12 @@ const Testimonials = () => {
                 </div>
                 <hr className='text-white h-3 pt-0 mt-0' />
             </div>
-
             <div className='Testimonials-head flex mt-0 py-3'>
-
                 <div className="e-card playing">
                     <div className="image"></div>
-
                     <div className="wave"></div>
                     <div className="wave"></div>
                     <div className="wave"></div>
-
                     <div className="infotop  ">
                         <div className='infotop-img'>
                             <img src={mishuk2} alt="" />
@@ -36,17 +32,14 @@ const Testimonials = () => {
                         <div className='end-section456'>
                             <FontAwesomeIcon className='FontAwesomeIcon123' icon={faEnvelope} />
                             <FontAwesomeIcon className='FontAwesomeIcon123' icon={faPhone} />
-
                         </div>
                     </div>
                 </div>
                 <div className="e-card playing">
                     <div className="image"></div>
-
                     <div className="wave"></div>
                     <div className="wave"></div>
                     <div className="wave"></div>
-
                     <div className="infotop  ">
                         <div className='infotop-img'>
                             <img src={mishuk2} alt="" />
@@ -59,17 +52,14 @@ const Testimonials = () => {
                         <div className='end-section456'>
                             <FontAwesomeIcon className='FontAwesomeIcon123' icon={faEnvelope} />
                             <FontAwesomeIcon className='FontAwesomeIcon123' icon={faPhone} />
-
                         </div>
                     </div>
                 </div>
                 <div className="e-card playing">
                     <div className="image"></div>
-
                     <div className="wave"></div>
                     <div className="wave"></div>
                     <div className="wave"></div>
-
                     <div className="infotop  ">
                         <div className='infotop-img'>
                             <img src={mishuk2} alt="" />
@@ -82,17 +72,14 @@ const Testimonials = () => {
                         <div className='end-section456'>
                             <FontAwesomeIcon className='FontAwesomeIcon123' icon={faEnvelope} />
                             <FontAwesomeIcon className='FontAwesomeIcon123' icon={faPhone} />
-
                         </div>
                     </div>
                 </div>
                 <div className="e-card playing">
                     <div className="image"></div>
-
                     <div className="wave"></div>
                     <div className="wave"></div>
                     <div className="wave"></div>
-
                     <div className="infotop  ">
                         <div className='infotop-img'>
                             <img src={mishuk2} alt="" />

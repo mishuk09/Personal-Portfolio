@@ -2,7 +2,6 @@ import React from 'react';
 import './Shortintro.css'
 import '../Responsive.css';
 import sort from '../Home/img/sort.png'
-import tick from '../Home/img/tick.png';
 import college from '../Home/img/college.svg';
 import expert from '../Home/img/expert.svg';
 import programming from '../Home/img/programming.svg';
@@ -16,7 +15,6 @@ const Shortintro = () => {
     return (
         <div>
         <div className='wave1  '>
-
                 <div className='sort-intro  '>
                     <div className='sort-intro-headline p-1 '>
                         <div className='sort-intro-img ps-1'><img src={sort} alt="" className='jhdsahdf' /></div>
@@ -28,7 +26,6 @@ const Shortintro = () => {
                                 direction='left'
                                 className='marquee-div1'
                                 pauseOnClick={false}
-
                             >
                                 Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
                             </Marquee>
@@ -43,7 +40,6 @@ const Shortintro = () => {
                                         <div className='sort-intro-div-img23'>
                                             <img src={shortintro.img} alt="" />
                                         </div>
-
                                         <div className='sort-intro-div-descrip234  '>
                                             <p className='mt-4 institution'>{shortintro.tittle}</p>
                                             <p className='mt-1 institution11'>  {shortintro.name}</p>
@@ -51,14 +47,9 @@ const Shortintro = () => {
                                             <p className='mt-3 institution44'>  {shortintro.date}</p>
                                         </div>
                                     </div>
-
                                 })
                             }
-
                         </Zoom>
-
-
-
                     </div>
                 </div>
             </div>
@@ -79,7 +70,6 @@ const shortInreo = [
         img: college
 
     },
-
     {
         id: 1,
         tittle: 'Programming',
@@ -89,7 +79,6 @@ const shortInreo = [
         img: expert
 
     },
-
     {
         id: 1,
         tittle: 'Expert',
@@ -99,7 +88,6 @@ const shortInreo = [
         img: programming
 
     },
-
     {
         id: 1,
         tittle: 'Projects',

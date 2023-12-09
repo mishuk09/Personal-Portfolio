@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './Skills.css';
 import github from './img/github.png';
@@ -16,9 +15,7 @@ const Skills = () => {
     return (
         <div id='skills' className='container skills-main-head-div'>
             <div className='skills-div'>
-                {/* Your content here */}
             </div>
-
             <div className='skills'>
                 <div className='skills-headline'>
                     <h1>Technologies / Tools / Skills</h1>
@@ -28,14 +25,10 @@ const Skills = () => {
                     <div className='w-25'> <Link to="/contactpage">
                         <Button className='skills-button'>Ask Your Query</Button>
                     </Link>
-
                     </div>
-
                 </div>
                 <div className='skills-img'>
                     <Bounce left>
-
-
                         <div className='w=5 js'>
                             <img src={javascript} alt="" />
                         </div>
@@ -55,8 +48,6 @@ const Skills = () => {
                     </Bounce>
                 </div>
             </div>
-
-            {/* Bar chart for skills */}
             <Skillsbar />
         </div>
     );
