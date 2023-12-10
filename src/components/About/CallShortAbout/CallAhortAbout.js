@@ -15,8 +15,8 @@ const CallAhortAbout = () => {
         <div>
             <div className='sortabout mt-2  '>
                 <div className='sort-intro-he  p-1 '>
-                    <div className='sort-intro-img ps-1'><img src={about} alt="" className='jhdsahdf' /></div>
-                    {/* <div className='sort-introimg ps-1'><img src={about} alt="" /></div> */}
+                    {/* <div className='sort-intro-img ps-1'><img src={about} alt="" className='jhdsahdf' /></div> */}
+                    <div className='sort-introimg ps-1'><img src={about} alt="" /></div>
                     <div className='w-[50%] short-intro-marquee   rounded bg-blue-400 p-2'>
                         <Marquee
                             speed={40}
@@ -29,8 +29,8 @@ const CallAhortAbout = () => {
                             Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
                         </Marquee>
                     </div>
-                    <div className='linkedin-follow h-8    '><img className=' ' src={followgithub} alt="img" /></div>
-                    {/* <div className=' followgithub   '><img src={followgithub} alt="img" /></div> */}
+                    {/* <div className='linkedin-follow h-8    '><img className=' ' src={followgithub} alt="img" /></div> */}
+                    <div className=' followgithub   '><img src={followgithub} alt="img" /></div>
                 </div>
                 <div className='sort-intro-child-main mt-2'>
                     <Fade top>

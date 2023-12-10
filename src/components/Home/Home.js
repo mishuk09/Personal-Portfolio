@@ -11,6 +11,7 @@ import Shortintro from '../Shortintro/Shortintro';
 import Solar from './SolarSystem/Solar';
 import WhatsApp from '../OthersComponent/Button/WhatsApp';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+import element from './img/element.png';
 
 
 const Home = () => {
@@ -26,6 +27,9 @@ const Home = () => {
                 <div className='container   home-div'>
                     <div className='absolute container  mx-2 mt-5  welcome-img'>
                         <img className=' ' src={welcome} alt="" />
+                    </div>
+                    <div className='absolute container     w-[800px]   element-img'>
+                        <img className='   w-[500px]' src={element} alt="" />
                     </div>
                     {/* whatsapp logo */}
                     <WhatsApp></WhatsApp>
@@ -59,8 +63,9 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='pic-div bg-black'>
+                    <div className='pic-div   bg-black'>
                         <Solar></Solar>
+
                     </div>
                 </div>
             </div>

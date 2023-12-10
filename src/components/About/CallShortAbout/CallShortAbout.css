@@ -78,6 +78,7 @@
 }
 
 .followgithub img {
+    width: 170px;
     right: 0;
     padding-right: 7px;
     align-items: center;
