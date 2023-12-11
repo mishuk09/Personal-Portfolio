@@ -8,6 +8,7 @@ import ContactPage from './components/ContactPage/ContactPage';
 import AppChild from './AppChild';
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import MainComponent from './components/Skeleton/MainComponent';
 
 
 
@@ -32,6 +33,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+     
       <div className="App">
         <div className='darkmode-toggle pt-1'>
           <Switch
@@ -41,8 +43,7 @@ function App() {
             checkedIcon={<WbSunnyIcon className={darkMode ? 'sunny-dark' : ''} />}
           />
         </div>
-
-        <Routes>
+         <Routes>
           <Route path='/' element={<AppChild></AppChild>}></Route>
           <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
         </Routes>

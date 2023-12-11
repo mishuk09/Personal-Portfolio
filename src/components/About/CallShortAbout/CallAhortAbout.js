@@ -30,7 +30,7 @@ const CallAhortAbout = () => {
                         </Marquee>
                     </div>
                     {/* <div className='linkedin-follow h-8    '><img className=' ' src={followgithub} alt="img" /></div> */}
-                    <div className=' followgithub   '><img src={followgithub} alt="img" /></div>
+                    <div className=' followgithub   '><a href="https://github.com/mishuk09"target='blank'><img src={followgithub} alt="img" /></a></div>
                 </div>
                 <div className='sort-intro-child-main mt-2'>
                     <Fade top>

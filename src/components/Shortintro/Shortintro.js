@@ -30,7 +30,7 @@ const Shortintro = () => {
                                 Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
                             </Marquee>
                         </div>
-                        <div className='linkedin-follow h-10    '><img className='pt-[3px]' src={linkedinfollow} alt="img" /></div>
+                        <div className='linkedin-follow h-10    '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><img className='pt-[3px]' src={linkedinfollow} alt="img" /></a></div>
                     </div>
                     <div className='sort-intro-child mt-2'>
                         <Zoom>
