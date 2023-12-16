@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+<!-- Header -->
+<p align="center">
+  <img src="https://github.com/mishuk09/Portfolio/blob/main/Portfolio.PNG" alt="Portfolio Banner">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Title -->
+<h1 align="center">Hi 👋, I'm Mahadi Hasan Mishuk</h1>
+<h3 align="center">Aspiring Computer Engineer | Web Development and DSA Completist| Practicing HTML, CSS, JavaScript, React & Node.JS</h3>
 
-## Available Scripts
+<!-- Profile Views Badge -->
+<p align="left">
+  <img align="left" src="https://komarev.com/ghpvc/?username=your-username&label=Profile%20views&color=0e75b6&style=flat" alt="Your Profile Views" />
+</p>
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+<!-- What I'm Currently Working On -->
+- 🔭 I’m currently working on [CSEHacks](http://mahadiinfo.me/CSE-Hacks/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- About Me -->
+- 🌱 I’m currently learning **React JS**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 👨‍💻 All of my projects are available at [Github](https://github.com/mishuk09)
 
-### `npm test`
+- 📄 Know about my experiences [RESUME](https://drive.google.com/file/d/1ZebBBpfdJ3B8edAajIWJQh7yVPdIQJK2/view?usp=sharing)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Contact Section -->
+<h3 align="left">Contact:</h3>
+<p align="left">
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/mishuk09/" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
+  </a>
+  
+  <!-- GitHub -->
+  <a href="https://github.com/mishuk09" target="_blank">
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="30" width="40" />
+  </a>
+  
+  <!-- Email -->
+  Email: [mishukinfo09@gmail.com](mailto:mishukinfo09@gmail.com)
+  
+  <!-- Contact Number -->
+  Call: +91 7069078661
+</p>
 
-### `npm run build`
+<!-- Languages and Tools Section -->
+<h3 align="left">Languages and Tools:</h3>
+<p align="left">
+  <!-- HTML Icon and Link -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="40" height="40"/>
+  </a>
+  
+  <!-- CSS Icon and Link -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" width="40" height="40"/>
+  </a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <!-- JavaScript Icon and Link -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40"/>
+  </a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <!-- React Icon and Link -->
+  <a href="https://reactjs.org/" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="40" height="40"/>
+  </a>
+  
+  <!-- Add other languages and tools as needed -->
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Portfolio Website
 
-### `npm run eject`
+This is my personal portfolio website created using React. It showcases my skills, projects, certificates, and provides information about me and my services.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Table of Contents
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Overview](#overview)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Overview
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This portfolio website serves as a digital representation of my skills, projects, and experience. It includes various sections such as:
 
-## Learn More
+- **Home**: A brief introduction and welcome.
+- **About**: Information about myself.
+- **Skills**: A list of skills and competencies.
+- **Certificates**: Display of certifications achieved.
+- **Services**: Services or expertise I offer.
+- **Projects**: Showcase of my projects.
+- **Mission**: My mission statement or goals.
+- **CEO**: Information about leadership or founder.
+- **Contact**: Ways to get in touch.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- Material-UI for styling and components
+- React Router for navigation
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository: `git clone https://github.com/your-username/your-portfolio.git`
+2. Navigate to the project directory: `cd your-portfolio`
+3. Install dependencies: `npm install`
 
-### Analyzing the Bundle Size
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To start the development server:
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
