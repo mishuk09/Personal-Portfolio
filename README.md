@@ -7,7 +7,7 @@
 <h1 align="center">Hi 👋, I'm Mahadi Hasan Mishuk</h1>
 <h3 align="center">Aspiring Computer Engineer | Web Development and DSA Completist| Practicing HTML, CSS, JavaScript, React & Node.JS</h3>
 
-<!-- Profile Views Badge -->
+<!-- Profile Views Badge --> 
 <p align="left">
   <img align="left" src="https://komarev.com/ghpvc/?username=your-username&label=Profile%20views&color=0e75b6&style=flat" alt="Your Profile Views" />
 </p>
