@@ -1,6 +1,6 @@
 <!-- Header -->
 <p align="center">
-  <img src="https://github.com/mishuk09/Portfolio/blob/main/Portfolio.PNG" alt="Portfolio Banner">
+  <img src="https://github.com/mishuk09/Personal-Portfolio/blob/main/public/readmemd.PNG" alt="Portfolio Banner">
 </p>
 
 <!-- Title -->
@@ -22,7 +22,7 @@
 
 - 👨‍💻 All of my projects are available at [Github](https://github.com/mishuk09)
 
-- 📄 Know about my experiences [RESUME](https://drive.google.com/file/d/1ZebBBpfdJ3B8edAajIWJQh7yVPdIQJK2/view?usp=sharing)
+- 📄 Know about my experiences [RESUME](https://drive.google.com/file/d/1M7GUL6TCvnL2HwKGXHcx0x5WGvIcpUJH/view?usp=sharing)
 
 <!-- Contact Section -->
 <h3 align="left">Contact:</h3>
