@@ -74,6 +74,10 @@
 
 This is my personal portfolio website created using React. It showcases my skills, projects, certificates, and provides information about me and my services.
 
+**⚠️ Copyright Notice ⚠️**
+
+All content and materials provided in this repository are protected by copyright. Any unauthorized use, reproduction, or distribution without permission is strictly prohibited.
+
 ## Table of Contents
 
 - [Overview](#overview)
