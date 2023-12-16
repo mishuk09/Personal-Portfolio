@@ -30,7 +30,7 @@ const Skillsbar = () => {
                             gradient={false}
                             pauseOnHover={false}
                             direction='left'
-                            className='marquee-div'
+                            className='marquee-div font-nunito'
                             pauseOnClick={false}
                         >
                             Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
@@ -41,30 +41,31 @@ const Skillsbar = () => {
                 <div className='skills-child-main mt-2 px-3 pt-2'>
                     <p >Last Update:: <span className='lastupdate  '>1 Decembar 2023</span></p>
                     <div className='skills-headline-child'>
-                        <Zoom  >
-                            <div>
+                        <Zoom>
+                            <div className='   hover:bg-blue-600 delay-75'>
                                 <p className='dsahead'>DSA</p>
-                                <p className='dsahead1' >Number of Problem solve</p>
+                                <p className='dsahead1 font-nunito'>Number of Problems Solved</p>
+                                <p className='dsahead'>50</p>
+                            </div>
+                        </Zoom>
+
+                        <Zoom>
+                            <div className='   hover:bg-blue-600 delay-75'>
+                                <p className='dsahead'>Github</p>
+                                <p className='dsahead1 font-nunito'>Total Repositories</p>
                                 <p className='dsahead'>50</p>
                             </div>
                         </Zoom>
                         <Zoom>
-                            <div>
+                            <div className='   hover:bg-blue-600 delay-75'>
                                 <p className='dsahead'>Github</p>
-                                <p className='dsahead1'>Total Repositories</p>
-                                <p className='dsahead'>50</p>
-                            </div>
-                        </Zoom>
-                        <Zoom>
-                            <div>
-                                <p className='dsahead'>Github</p>
-                                <p className='dsahead1'>Total Contributions</p>
+                                <p className='dsahead1 font-nunito'>Total Contributions</p>
                                 <p className='dsahead'>869</p>
                             </div>
                         </Zoom>
                         <Zoom>
-                            <div> <p className='dsahead'>Github</p>
-                                <p className='dsahead1'>Total Commits</p>
+                            <div className='   hover:bg-blue-600 delay-75'> <p className='dsahead'>Github</p>
+                                <p className='dsahead1 font-nunito'>Total Commits</p>
                                 <p className='dsahead'>694</p>
                             </div>
                         </Zoom>
@@ -88,7 +89,7 @@ const Skillsbar = () => {
             <div className='benest ' data-aos='fade-up'>
                 <div className='benext-child'>
                 </div>
-                <div className='benext-child2 p-4'>
+                <div className='benext-child2 font-nunito p-4'>
                     <Fade top>
                         <h1>Be my next success story?</h1>
                     </Fade>

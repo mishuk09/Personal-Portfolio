@@ -36,7 +36,7 @@ const Home = () => {
                     <div className='name-div  mt-5'>
                         <div className='name-div22'>
                             <p className='text-slate-400 font-bold	'	>I'm</p>
-                            <h1>MAHADI HASAN <span>MISHUK</span> </h1>
+                            <h1 className='font-verdina'>MAHADI HASAN <span>MISHUK</span> </h1>
                             <div className='flex   align-items-center justify-center mt-2'>
                                 <div className='gradient-line1 w-[48%] pt-1'> </div>
                                 <div className='gradient-line0 mx-3'>
@@ -45,14 +45,14 @@ const Home = () => {
                                 <div className='gradient-line w-[48%]  '> </div>
                             </div>
                         </div>
-                        <p className='typical mt-4'>
+                        <p className='typical mt-4 font-nunito'>
                             <Typical
                                 steps={steps}
                                 loop={Infinity}
                                 wrapper="span"
                             />
                         </p>
-                        <p className=' text-slate-400	'>I am Sincere,responsible,confident,dedicated,down to earth & trustworthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
+                        <p className=' text-slate-400 font-nunito text-justify	'>I am Sincere,responsible,confident,dedicated,down to earth & trust worthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
                         <div className=' icon-div mt-6'>
                             <div> <img src={homelogo} alt="" /></div>
                             <div className='social-link pt-8 '>

@@ -14,8 +14,8 @@ import { Zoom } from 'react-reveal';
 const Shortintro = () => {
     return (
         <div>
-        <div className='wave1  '>
-                <div className='sort-intro  '>
+            <div className='wave1  '>
+                <div className='sort-intro   '>
                     <div className='sort-intro-headline p-1 '>
                         <div className='sort-intro-img ps-1'><img src={sort} alt="" className='jhdsahdf' /></div>
                         <div className='w-[50%] h-10 marquee-div rounded bg-blue-400 p-2'>
@@ -24,7 +24,7 @@ const Shortintro = () => {
                                 gradient={false}
                                 pauseOnHover={false}
                                 direction='left'
-                                className='marquee-div1'
+                                className='marquee-div1 font-nunito'
                                 pauseOnClick={false}
                             >
                                 Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
@@ -34,21 +34,21 @@ const Shortintro = () => {
                     </div>
                     <div className='sort-intro-child mt-2'>
                         <Zoom>
-                            {
-                                shortInreo.map((shortintro) => {
-                                    return <div className=' flex sort-intro-child-div ms-3 mt-3 mb-3   bg-white' key={shortInreo.id}>
+                            {shortInreo.map((shortintro) => {
+                                return (
+                                    <div className='flex sort-intro-child-div ms-3 mt-3 mb-3 transition-transform duration-300 transform hover:-translate-y-1 hover:scale-110 bg-white' key={shortintro.id}>
                                         <div className='sort-intro-div-img23'>
                                             <img src={shortintro.img} alt="" />
                                         </div>
-                                        <div className='sort-intro-div-descrip234  '>
-                                            <p className='mt-4 institution'>{shortintro.tittle}</p>
-                                            <p className='mt-1 institution11'>  {shortintro.name}</p>
-                                            <p className='mt-3 institution33'>  {shortintro.descrip}</p>
-                                            <p className='mt-3 institution44'>  {shortintro.date}</p>
+                                        <div className='sort-intro-div-descrip234'>
+                                            <p className='mt-4 institution font-nunito'>{shortintro.tittle}</p>
+                                            <p className='mt-1 institution11'>{shortintro.name}</p>
+                                            <p className='mt-3 institution33 font-nunito'>{shortintro.descrip}</p>
+                                            <p className='mt-3 institution44 font-nunito'>{shortintro.date}</p>
                                         </div>
                                     </div>
-                                })
-                            }
+                                );
+                            })}
                         </Zoom>
                     </div>
                 </div>

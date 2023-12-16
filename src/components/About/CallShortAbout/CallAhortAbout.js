@@ -13,7 +13,7 @@ import Fade from 'react-reveal/Fade';
 const CallAhortAbout = () => {
     return (
         <div>
-            <div className='sortabout mt-2  '>
+            <div className='sortabout mt-2 font-nunito '>
                 <div className='sort-intro-he  p-1 '>
                     {/* <div className='sort-intro-img ps-1'><img src={about} alt="" className='jhdsahdf' /></div> */}
                     <div className='sort-introimg ps-1'><img src={about} alt="" /></div>
@@ -23,7 +23,7 @@ const CallAhortAbout = () => {
                             gradient={false}
                             pauseOnHover={false}
                             direction='left'
-                            className='marquee-div'
+                            className='marquee-div font-nunito'
                             pauseOnClick={false}
                         >
                             Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
