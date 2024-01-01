@@ -12,13 +12,18 @@ module.exports = {
         lato: ['Lato', 'sans-serif'],
         sans: ['Inter', 'sans-serif'],
       },
+       
+      test: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '6px',
+      },
+      screens: {
+        'xs': '360px',
+        'sm': '640px',
+
+      },
     },
-    test: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '6px',
-    }
   },
   plugins: [],
-}
-
+};

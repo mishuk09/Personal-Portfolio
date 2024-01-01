@@ -33,7 +33,7 @@ const Home = () => {
                     </div>
                     {/* whatsapp logo */}
                     <WhatsApp></WhatsApp>
-                    <div className='name-div  mt-5'>
+                    <div className='name-div    mt-5'>
                         <div className='name-div22'>
                             <p className='text-slate-400 font-bold	'	>I'm</p>
                             <h1 className='font-verdina'>MAHADI HASAN <span>MISHUK</span> </h1>
@@ -52,11 +52,11 @@ const Home = () => {
                                 wrapper="span"
                             />
                         </p>
-                        <p className=' text-slate-400 font-nunito text-justify	'>I am Sincere,responsible,confident,dedicated,down to earth & trust worthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
+                        <p className=' text-slate-400 font-nunito xs:pe-4 sm:pe-0 text-justify	'>I am Sincere,responsible,confident,dedicated,down to earth & trust worthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
                         <div className=' icon-div mt-6'>
                             <div> <img src={homelogo} alt="" /></div>
-                            <div className='social-link pt-8 '>
-                                <div className='ps-4 h-5 w-'><a href="https://github.com/mishuk09"><FontAwesomeIcon className='icon-main' icon={faGithub} size="2x" /> </a> </div>
+                            <div className='social-link relative pt-8 '>
+                                <div className='ps-4 h-5 w-'><a href="https://github.com/mishuk09" target='blank'><FontAwesomeIcon className='icon-main' icon={faGithub} size="2x" /> </a> </div>
                                 <div className='ps-4 h-5 w-'><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><FontAwesomeIcon className='icon-main' icon={faLinkedin} size="2x" /></a></div>
                                 <div className='ps-4 h-5 w-'><a href="https://www.facebook.com/mishuk0910/" target='blank'> <FontAwesomeIcon className='icon-main' icon={faFacebook} size="2x" /></a></div>
                                 <div className='ps-4 h-5 w-'><a href="https://www.facebook.com/mishuk0910/" target='blank'><FontAwesomeIcon className='icon-main' icon={faTwitter} size="2x" /></a></div>

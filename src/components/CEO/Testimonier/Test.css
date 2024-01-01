@@ -97,18 +97,16 @@
 .infotop .end-section456 {
     height: 50px;
     width: 100%;
-    background-color: #cccccc;
+    /* background-color: #cccccc; */
     position: absolute;
     bottom: 0;
     left: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    
 }
 
 .infotop .end-section456 .FontAwesomeIcon123 {
-    color: rgb(2, 2, 26);
+    /* color: rgb(2, 2, 26); */
     margin: 5px;
 }
 

@@ -16,7 +16,7 @@ const ContactForm = () => {
         recaptchaValue: '', // Captcha value will be stored here
     });
 
-    const [formErrors, setFormErrors] = useState({
+    const [  setFormErrors] = useState({
         name: false,
         email: false,
         phoneNumber: false,

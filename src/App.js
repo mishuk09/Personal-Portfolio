@@ -8,7 +8,6 @@ import ContactPage from './components/ContactPage/ContactPage';
 import AppChild from './AppChild';
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
-// import MainComponent from './components/Skeleton/MainComponent';
 
 
 

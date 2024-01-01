@@ -17,7 +17,7 @@ const ContactPage = () => {
     };
 
     return (
-        <div className='contactpage-div-style pb-10' >
+        <div id='contact' className='contactpage-div-style pb-10' >
             <Nav></Nav>
             <div className='absolute three-div'>
                 <Three></Three>

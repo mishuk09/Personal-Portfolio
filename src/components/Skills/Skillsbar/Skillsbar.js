@@ -36,7 +36,7 @@ const Skillsbar = () => {
                             Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
                         </Marquee>
                     </div>
-                    <div className='  followglinkedin   '><img className=' ' src={linkedin} alt="" /> </div>
+                    <div className='  followglinkedin   '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><img className=' ' src={linkedin} alt="" /></a> </div>
                 </div>
                 <div className='skills-child-main mt-2 px-3 pt-2'>
                     <p >Last Update:: <span className='lastupdate  '>1 Decembar 2023</span></p>
@@ -85,7 +85,7 @@ const Skillsbar = () => {
                     </div>
                 </div>
             </div>
-            <img className='asasas mx-10' src={benext} alt="" />
+            <img className='asasas xs:mx-2 sm:mx-10 mx-10' src={benext} alt="" />
             <div className='benest ' data-aos='fade-up'>
                 <div className='benext-child'>
                 </div>

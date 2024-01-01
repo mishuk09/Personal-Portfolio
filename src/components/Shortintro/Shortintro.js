@@ -7,9 +7,10 @@ import expert from '../Home/img/expert.svg';
 import programming from '../Home/img/programming.svg';
 import projects from '../Home/img/projects.svg';
 import linkedinfollow from '../Home/img/linkedinfollow.gif'
-import { Animation } from 'react-ui-ox-anim';
 import Marquee from 'react-fast-marquee';
 import { Zoom } from 'react-reveal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Shortintro = () => {
     return (
@@ -93,7 +94,7 @@ const shortInreo = [
         tittle: 'Projects',
         name: 'Learning Website',
         descrip: 'Like GeekforGeek',
-        date: <a href="www.csehacks.com" target='_blank'><Animation animations={'swirve'}>CSEHAcks</Animation></a>,
+        date: <a className='no-underline' href="www.csehacks.com" target='_blank'>CSEHacks<FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} beat /> </a>,
         img: projects
     }
 

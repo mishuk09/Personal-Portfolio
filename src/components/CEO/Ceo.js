@@ -8,8 +8,8 @@ import Testimonials from './Testimonier/Testimonials';
 
 const Ceo = () => {
     return (
-        <div className='ceo-head-parant'>
-            <div className='ceo'>
+        <div className='ceo-head-parant  '>
+            <div className='ceo bg-black'>
                 <Workpv></Workpv>
                 <Testimonials></Testimonials>
                 <div className='img-div'>
@@ -22,12 +22,12 @@ const Ceo = () => {
                 </div>
                 <div className='ceo-detils'>
                     <div className='h3-span'>
-                        <h3>CEO of CSEHacks</h3>
+                        <h3>Author of CSEHacks</h3>
                         <span>Learning Website</span>
                     </div>
                     <p >I am  Here to Introduce Our Learning website. This site specially Design for Computer Engineering student .We are try to give a easy and enjoyable learning. Your valuable comment  will give us more inspiration to go ahead.</p>
                     <h5> -Mahadi Hasan Mishuk </h5>
-                    <a href="http://mahadiinfo.me/Portfolio/" target='blank'><button>Go To Website</button></a>
+                    <a href="https://github.com/mishuk09" target='blank'><button>Go To Website</button></a>
                 </div>
             </div>
 

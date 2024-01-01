@@ -15,6 +15,7 @@ import cisco from './img/cisco.png';
 import coursera from './img/coursera.png';
 import greatelearning from './img/greatelearning.png';
 import infosys from './img/Infosys.png';
+import gatelogo from './img/gatelogo.png';
 import { Slide } from 'react-reveal';
 
 
@@ -27,12 +28,12 @@ const Certificate = () => {
                 <img src={certificate} alt="" />
                 <h1>Certificate</h1>
             </div>
-            <div className="certi-div">
+            <div className="certi-div bg-slate-300">
                 <div className="certi-div1"><img src={cisco} alt="" className="img1" /></div>
                 <div className="certi-div3"><img src={infosys} alt="" className="img3" /></div>
                 <div className="certi-div4"><img src={coursera} alt="" className="img4" />
                 </div>
-                <div className="certi-div5"><img src={greatelearning} alt="" className="img5" /></div>
+                <div className="certi-div5 "><img src={gatelogo} alt="" className="img5" /></div>
             </div>
             <div id="slideshow">
                 <div className="entire-content">

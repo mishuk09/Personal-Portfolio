@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const Workpv = () => {
-    const [isPaused, setIsPaused] = useState(false);
+    const [  setIsPaused] = useState(false);
 
     const handleMouseOver = () => {
         setIsPaused(true);

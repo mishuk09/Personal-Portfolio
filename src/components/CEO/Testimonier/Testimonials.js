@@ -1,8 +1,12 @@
 import React from 'react';
 import './Test.css';
 import mishuk2 from '../img/mishuk2.png';
+import rku from '../img/rku.png';
+import fiverr from '../img/fiverr.webp';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 const Testimonials = () => {
@@ -25,13 +29,20 @@ const Testimonials = () => {
                             <img src={mishuk2} alt="" />
                         </div>
                         <div className="text-content">
-                            <p>Mahadi Hasan Mishuk</p>
+                            <p>Shivangi Patel</p>
                             <p className="name">Assistance Professor</p>
                         </div>
                         <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
-                        <div className='end-section456'>
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faEnvelope} />
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faPhone} />
+                        <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
+                            <div>
+                                <a href="https://rku.ac.in/" target='blank'> <img className='w-10 hover:scale-125 duration-300' src={rku} alt="" /></a>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faEnvelope} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faPhone} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faLinkedin} />
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -45,13 +56,20 @@ const Testimonials = () => {
                             <img src={mishuk2} alt="" />
                         </div>
                         <div className="text-content">
-                            <p>Mahadi Hasan Mishuk</p>
+                            <p>Shalini Jha</p>
                             <p className="name">Assistance Professor</p>
                         </div>
                         <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
-                        <div className='end-section456'>
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faEnvelope} />
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faPhone} />
+                        <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
+                            <div>
+                                <a href="https://rku.ac.in/" target='blank'> <img className='w-10 hover:scale-125 duration-300' src={rku} alt="" /></a>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faEnvelope} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faPhone} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faLinkedin} />
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -65,13 +83,20 @@ const Testimonials = () => {
                             <img src={mishuk2} alt="" />
                         </div>
                         <div className="text-content">
-                            <p>Mahadi Hasan Mishuk</p>
-                            <p className="name">Assistance Professor</p>
+                            <p>Md Nur Islam</p>
+                            <p className="name">Graphic Designer</p>
                         </div>
                         <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
-                        <div className='end-section456'>
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faEnvelope} />
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faPhone} />
+                        <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
+                            <div>
+                                <a href="https://rku.ac.in/" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faEnvelope} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faPhone} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faLinkedin} />
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -85,13 +110,19 @@ const Testimonials = () => {
                             <img src={mishuk2} alt="" />
                         </div>
                         <div className="text-content">
-                            <p>Mahadi Hasan Mishuk</p>
+                            <p>Nikunj Vatt</p>
                             <p className="name">Assistance Professor</p>
                         </div>
                         <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
-                        <div className='end-section456'>
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faEnvelope} />
-                            <FontAwesomeIcon className='FontAwesomeIcon123' icon={faPhone} />
+                        <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
+                            <div>
+                                <a href="https://rku.ac.in/" target='blank'> <img className='w-10 hover:scale-125 duration-300' src={rku} alt="" /></a>
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faEnvelope} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faPhone} />
+                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faLinkedin} />
+                            </div>
 
                         </div>
                     </div>

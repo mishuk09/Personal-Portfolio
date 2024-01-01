@@ -24,6 +24,7 @@ const Projects = () => {
                     <div className='project-child-head ps-3 pt-2'>
                         <span>CSEHacks </span> <span>A Learning Website</span>
                     </div>
+                    Coming soon....
                     <ProjectVideo></ProjectVideo>
                 </div>
                 <div className='cerifyby'>
