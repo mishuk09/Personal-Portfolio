@@ -37,7 +37,7 @@ const Shortintro = () => {
                         <Zoom>
                             {shortInreo.map((shortintro) => {
                                 return (
-                                    <div className='flex sort-intro-child-div ms-3 mt-3 mb-3 transition-transform duration-300 transform hover:-translate-y-1 hover:scale-110 bg-white' key={shortintro.id}>
+                                    <div className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white' key={shortintro.id}>
                                         <div className='sort-intro-div-img23'>
                                             <img src={shortintro.img} alt="" />
                                         </div>

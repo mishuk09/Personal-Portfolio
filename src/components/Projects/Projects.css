@@ -15,7 +15,7 @@
     margin: 0 auto;
     margin-top: 60px;
     height: 380px;
-    width: 650px;
+    width: auto;
     background-color: white;
     position: relative;
     border-radius: 10px;
@@ -65,13 +65,13 @@
 
 .img-head h4 {
     font-weight: 700;
-    font-size: 25px;
+    font-size: 40px;
     margin-left: 20px;
     font-family: "Montserrat", sans-serif;
 }
 
 .cerifyby {
-    margin-top: 20px;
+    margin-top: 70px;
     text-align: center;
     align-items: center;
     justify-content: center;

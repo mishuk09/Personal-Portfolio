@@ -14,7 +14,7 @@ const Testimonials = () => {
         <div id='testimonials' className='container'>
             <div className='Testimonials-name-div mt-[80px] mb-0 '>
                 <span className='text-blue-500'>What People Say</span>
-                <div className='flex justify-between'> <p> Testimonials</p>  <button className='text-white rounded-full bg-blue-500 w-40 h-10'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></button>
+                <div className='flex justify-between'> <p className='text-5xl'> Testimonials</p>  <button className='text-white rounded-full bg-blue-500 w-40 h-10'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></button>
                 </div>
                 <hr className='text-white h-3 pt-0 mt-0' />
             </div>

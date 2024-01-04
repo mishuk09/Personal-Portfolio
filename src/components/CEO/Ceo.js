@@ -2,7 +2,7 @@ import React from 'react';
 import './Ceo.css';
 import '../Responsive.css';
 import MapChart from './earth/MapChart';
-import mishuk1 from './img/mishuk2.png';
+import mm from './img/mm.png';
 import Workpv from './Marquee/Workpv';
 import Testimonials from './Testimonier/Testimonials';
 
@@ -18,9 +18,9 @@ const Ceo = () => {
             </div>
             <div className='container ceo-parent'>
                 <div className='ceo-img pt-3 px-2'>
-                    <img src={mishuk1} alt="" />
+                    <img src={mm} alt="" />
                 </div>
-                <div className='ceo-detils'>
+                <div className='ceo-detils'>    
                     <div className='h3-span'>
                         <h3>Author of CSEHacks</h3>
                         <span>Learning Website</span>
