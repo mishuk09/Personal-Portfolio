@@ -13,7 +13,6 @@ import eight from './img/eight.jpg';
 import nine from './img/nine.jpg';
 import cisco from './img/cisco.png';
 import coursera from './img/coursera.png';
-import greatelearning from './img/greatelearning.png';
 import infosys from './img/Infosys.png';
 import gatelogo from './img/gatelogo.png';
 import { Slide } from 'react-reveal';

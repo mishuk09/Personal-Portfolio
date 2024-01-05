@@ -13,7 +13,7 @@ const Web = () => {
             <Fade bottom>
                 <div className='web-service-parents'>
                     <h3 className=''>Web-Development</h3>
-                    <p>I specialize in creating fantastic websites that not only look great but also function smoothly. Let's collaborate to turn your concepts into a standout online presence, making your ideas shine on the web!</p>
+                    <p className='text-justify'>I specialize in creating fantastic websites that not only look great but also function smoothly. Let's collaborate to turn your concepts into a standout online presence, making your ideas shine on the web!</p>
                     <div className='tic '>
                         <div> <img src={tic} alt="" /><span className='px-2 '>HTML</span></div>
                         <div> <img src={tic} alt="" /><span className='px-2 '>CSS</span></div>
@@ -21,13 +21,13 @@ const Web = () => {
                         <div> <img src={tic} alt="" /><span className='px-2 '>REACT JS</span></div>
                         <div> <img src={tic} alt="" /><span className='px-2 '>NODE JS</span></div>
                     </div>
-                    <div className='mt-5 w-25'>
+                    <div className='mt-5 w-25   '>
                         <Link to='/contactpage'>
                             <Button>Get Your First Website</Button>
                         </Link>
                     </div>
                 </div>
-                <div className='web-service-parents2'>
+                <div className='web-service-parents2 xs:mt-6'>
                     <img src={webimg} alt="" />
                 </div>
             </Fade>

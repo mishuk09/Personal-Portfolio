@@ -11,7 +11,7 @@ const Uiux = () => {
             <Fade bottom>
                 <div className='container fluid web-service-parents'>
                     <h3 className=''>UI/UX Design & Development</h3>
-                    <p> As a designer and developer, I craft exceptional websites that seamlessly blend wonderfull visuals with flawless functionality. <br />
+                    <p className='text-justify'> As a designer and developer, I craft exceptional websites that seamlessly blend wonderfull visuals with flawless functionality. <br />
                         I will convert your designs into high-quality websites, ensuring they capture attention and provide an exceptional user experience. I handle the entire process, merging design aesthetics with robust development.
                     </p>
                     <div className='tic '>
@@ -26,7 +26,7 @@ const Uiux = () => {
                         </Link>
                     </div>
                 </div>
-                <div className='web-service-parents2'>
+                <div className='web-service-parents2 xs:mt-20'>
                     <img src={uiux} alt="" />
                 </div>
             </Fade>

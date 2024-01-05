@@ -3,29 +3,30 @@
 ####     Home responsive start                  ####
 ####                                            ####
 ##################################################*/
- 
+
  @media screen and (max-width:1600px) {
      .home-div-main .home-div .welcome-img {
          left: 0px;
          margin-left: 0px;
      }
  }
- 
+
  @media screen and (max-width:550px) {
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child {
          display: none;
      }
+
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 {
          width: 50%;
      }
  }
- 
+
  @media screen and (min-width:300px)and (max-width: 640px) {
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
          text-decoration: none !important;
      }
  }
- 
+
  @media screen and (min-width:640px)and (max-width: 1023px) {
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
          padding-left: 7px !important;
@@ -34,9 +35,11 @@
          margin-right: 0px;
          text-decoration: none !important;
      }
+
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child .navbar-child-child2 {
          display: none;
      }
+
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 {
          text-align: center;
          align-items: center;
@@ -44,16 +47,17 @@
          width: 100%;
      }
  }
- 
+
  @media screen and (min-width:300px)and (max-width: 640px) {
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
          text-decoration: none !important;
      }
+
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-child-child .navbar-child-child2 {
          display: none;
      }
  }
- 
+
  @media screen and (min-width:1023px) {
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 .navbar-head-child2 .navbar-head-child3 a {
          padding-left: 15px !important;
@@ -62,26 +66,29 @@
          margin-right: 0px;
          text-decoration: none !important;
      }
+
      .nav-nav-nav .navbar-head-parants .navbar-head-child .navbar-head-child1 {
          text-align: center;
          align-items: center;
          justify-content: space-between;
      }
  }
- 
+
  @media screen and (max-width: 880px) {
-     .no-underline {
+     .nounderline {
          display: none;
      }
  }
- 
+
  @media screen and (min-width:768px)and (max-width: 1023px) {
      #home .home-div-main .home-div {
          display: inline;
      }
+
      #home .home-div-main .name-div {
          width: 100%;
      }
+
      #home .home-div-main .home-div .pic-div {
          align-items: center;
          height: 500px;
@@ -91,44 +98,51 @@
          text-align: center;
      }
  }
- 
+
  @media screen and (min-width:300px)and (max-width: 768px) {
      #home .home-div-main .home-div {
          display: inline;
      }
+
      #home .home-div-main .home-div .welcome-img {
          margin-top: 10px;
      }
+
      #home .home-div-main .home-div .welcome-img img {
          width: 250px;
      }
+
      #home .home-div-main .name-div {
          width: 100%;
      }
+
      #home .home-div-main .home-div .name-div {
          margin-top: 20px;
          padding-left: 18px;
      }
+
      #home .home-div-main .name-div p {
          word-wrap: break-word;
          font-size: 14px;
          width: 100%;
          font-family: "Montserrat", sans-serif;
      }
+
      #home .home-div-main .home-div .pic-div {
          height: 500px;
          width: 100% !important;
          background-color: #000000;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####       Solar system responsive start        ####
 ####                                            ####
 ##################################################*/
- 
+
  @media screen and (min-width:520px) {}
- 
+
  @media screen and (min-width:520px) {
      .venus-spin {
          margin-top: -97px;
@@ -136,6 +150,7 @@
          width: 186px;
          height: 186px;
      }
+
      #venus {
          margin-top: -10px;
          margin-left: -20px;
@@ -143,6 +158,7 @@
          width: 25px;
          box-shadow: 0 0 34px #3a4385;
      }
+
      .earth-orbit,
      .earth-spin {
          width: 281px;
@@ -150,6 +166,7 @@
          margin-left: -149px;
          margin-top: -148px;
      }
+
      #earth {
          position: absolute;
          top: 0;
@@ -160,6 +177,7 @@
          margin-top: -28px;
          /* box-shadow: 0 0 34px #08199b; */
      }
+
      .mars-orbit,
      .mars-spin {
          width: 418px;
@@ -167,6 +185,7 @@
          margin-left: -217px;
          margin-top: -217px;
      }
+
      #home .home-div-main .home-div .pic-div .solar-system {
          position: relative;
          width: 500px;
@@ -176,7 +195,7 @@
          overflow: hidden;
      }
  }
- 
+
  @media screen and (min-width:440px)and (max-width: 520px) {
      .venus-spin {
          margin-top: -97px;
@@ -184,6 +203,7 @@
          width: 186px;
          height: 186px;
      }
+
      #venus {
          margin-top: -10px;
          margin-left: -20px;
@@ -191,6 +211,7 @@
          width: 25px;
          box-shadow: 0 0 34px #3a4385;
      }
+
      .earth-orbit,
      .earth-spin {
          width: 281px;
@@ -198,6 +219,7 @@
          margin-left: -149px;
          margin-top: -148px;
      }
+
      #earth {
          position: absolute;
          top: 0;
@@ -207,6 +229,7 @@
          margin-left: -28px;
          margin-top: -28px;
      }
+
      .mars-orbit,
      .mars-spin {
          width: 418px;
@@ -214,6 +237,7 @@
          margin-left: -217px;
          margin-top: -217px;
      }
+
      #home .home-div-main .home-div .pic-div .solar-system {
          position: relative;
          width: 400px;
@@ -222,7 +246,7 @@
          overflow: hidden;
      }
  }
- 
+
  @media screen and (min-width:300px)and (max-width: 440px) {
      .solar-system #sun {
          height: 100px;
@@ -233,38 +257,45 @@
          border-radius: 50%;
          box-shadow: 0 0 84px orange;
      }
+
      .solar-system .venus-orbit {
          margin-top: -72px;
          margin-left: -83px;
          width: 140px;
          height: 140px;
      }
+
      .solar-system .venus-spin {
          margin-top: -67px;
          margin-left: -80px;
          width: 130px;
          height: 130px;
      }
+
      .solar-system .venus-spin #venus img {
          border-radius: 150%;
          width: 25px;
          height: 25px;
      }
+
      .solar-system .venus-spin #venus {
          box-shadow: none;
      }
+
      .solar-system .earth-orbit {
          width: 210px;
          height: 210px;
          margin-left: -121px;
          margin-top: -109px;
      }
+
      .solar-system .earth-spin {
          width: 210px;
          height: 210px;
          margin-left: -121px;
          margin-top: -109px;
      }
+
      #earth {
          position: absolute;
          top: 0;
@@ -274,6 +305,7 @@
          margin-left: -24px;
          margin-top: -26px;
      }
+
      .solar-system .mars-orbit,
      .mars-spin {
          width: 317px;
@@ -281,12 +313,14 @@
          margin-left: -175px;
          margin-top: -164px;
      }
+
      .solar-system .mars-spin {
          width: 317px;
          height: 317px;
          margin-left: -175px;
          margin-top: -164px;
      }
+
      #home .home-div-main .home-div .pic-div .solar-system {
          position: relative;
          width: 100%;
@@ -295,61 +329,69 @@
          justify-content: center;
          overflow: hidden;
      }
+
      .solar-system .mars-spin #mars img {
          border-radius: 50%;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####      Short Introduction responsive start        ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (max-width: 800px) {
      .wave1 .sort-intro .marquee-div {
          display: none;
      }
  }
- 
+
  @media only screen and (min-width: 1023px) {
      .wave1 .sort-intro .marquee-div {
          width: 50%;
      }
  }
- 
+
  @media only screen and (min-width: 800px) and (max-width: 1023px) {
      .wave1 .sort-intro .marquee-div {
          width: 50%;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 600px) {
      .wave1 .sort-intro {
          width: 90%;
          margin: 0 auto;
      }
+
      .sort-intro-head {
          width: 40%;
          margin: 0 auto;
      }
+
      .wave1 .sort-intro .sort-intro-child {
          display: flex;
          flex-direction: column;
          align-items: center;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div {
          width: 90%;
          margin: 15px auto;
          display: flex;
          flex-direction: row;
      }
+
      .sort-intro-div-img23 img {
          width: 80px;
          margin: 10px;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 .institution11 {
          font-size: 11px;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 .institution,
      .institution11,
      .institution33,
@@ -357,38 +399,45 @@
          line-height: 1px;
          font-size: 12px;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div {
          height: 100px;
      }
  }
- 
+
  @media only screen and (min-width: 600px) and (max-width: 820px) {
      .wave1 .sort-intro {
          width: 90%;
          margin: 0 auto;
      }
+
      .sort-intro-head {
          width: 50%;
          margin: 0 auto;
      }
+
      .wave1 .sort-intro .sort-intro-child {
          display: flex;
          flex-direction: column;
          align-items: center;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div {
          width: 90%;
          margin: 15px auto;
          display: flex;
          flex-direction: row;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-img23 img {
          width: 80px;
          margin: 10px;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 {
          padding-left: 10px;
      }
+
      .wave1 .sort-intro .sort-intro-child .sort-intro-child-div .sort-intro-div-descrip234 .institution,
      .institution11,
      .institution33,
@@ -396,45 +445,50 @@
          margin: 5px 0;
          font-size: 14px;
      }
+
      .wave1 .sort-intro .sort-intro-child-div {
          height: 106px;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####      About responsive start                ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (min-width: 300px) and (max-width: 600px) {
      .aboutme-main-pic .about-section .yearexperience {
          display: grid;
          grid-template-columns: repeat(2, 1fr);
          grid-gap: 5px;
      }
+
      .about-section .yearexperience .years11 {
          border: none;
          border-radius: 5px;
          height: 80px;
      }
+
      .about-section .yearexperience .years {
          border: none;
          border-radius: 5px;
          height: 80px;
      }
+
      .about-section .yearexperience .years1 {
          border: none;
          border-radius: 5px;
          height: 80px;
      }
  }
- 
+
  @media (max-width: 1000px) {
      .aboutme-main-pic .about-section .callabout .sortabout .sort-intro-he .short-intro-marquee {
          display: none;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 400px) {
      .aboutme-main-pic .about-section {
          padding-top: 300px;
@@ -447,7 +501,7 @@
          background-color: #01001f;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 600px) {
      .aboutme-main-pic {
          height: 1000px;
@@ -455,16 +509,19 @@
          margin-left: auto;
          margin-right: auto;
      }
+
      .aboutme-main-pic .mainimg {
          position: relative;
          top: 220px;
          width: 300px;
          margin: 0 auto;
      }
+
      .shortabout {
          top: 400px;
          padding-top: 400px;
      }
+
      .aboutme-main-pic .about-section {
          padding-top: 300px;
          height: 1300px;
@@ -474,24 +531,30 @@
          position: absolute;
          background-color: #01001f;
      }
+
      .callabout .sortabout {
          width: 100%;
          left: 0;
          padding-top: 20px;
      }
+
      .callabout .sortabout .sort-intro-he .sort-introimg img {
          width: 50%;
      }
+
      .callabout .sortabout .sort-intro-he .followgithub img {
          display: none;
          width: 80%;
      }
+
      .callabout .sortabout .sort-intro-he .sort-intro-head11 {
          display: none;
      }
+
      .callabout .sortabout .sort-intro-child-main {
          display: inline;
      }
+
      .about-section .about-detils {
          color: #e8e8e8;
          display: none;
@@ -499,6 +562,7 @@
          margin-left: 10px;
          font-family: "Montserrat", sans-serif;
      }
+
      .about-section .about-detilsold {
          align-items: center;
          text-align: center;
@@ -509,6 +573,7 @@
          margin-right: 10px;
          font-family: "Montserrat", sans-serif;
      }
+
      .aboutme-main-pic .about-section h1 {
          font-size: 25px;
          position: absolute;
@@ -519,48 +584,57 @@
          font-weight: 700;
          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      }
+
      .aboutme-main-pic .about-section .about-para-about {
          margin-top: 75px;
          margin-left: 10px;
      }
+
      .skills-main-head-div {
          top: 500px;
      }
+
      .yearexperience .years11 p {
          color: #A0A0A0;
          font-weight: 700;
          font-size: 13px;
      }
+
      .yearexperience .years p {
          color: #A0A0A0;
          font-weight: 700;
          font-size: 13px;
      }
+
      .yearexperience .years1 p {
          color: #A0A0A0;
          font-weight: 700;
          font-size: 13px;
      }
+
      .aboutme-main-pic.about-section .about-detils {
          font-size: 13px;
      }
  }
- 
+
  @media only screen and (min-width: 600px) and (max-width: 820px) {
      .aboutme-main-pic {
          height: 1000px;
          width: 100%;
      }
+
      .aboutme-main-pic .mainimg {
          position: relative;
          top: 220px;
          width: 300px;
          margin: 0 auto;
      }
+
      .shortabout {
          top: 400px;
          padding-top: 400px;
      }
+
      .aboutme-main-pic .about-section {
          padding-top: 300px;
          padding-left: 10px;
@@ -572,24 +646,30 @@
          position: absolute;
          background-color: #01001f;
      }
+
      .callabout .sortabout {
          width: 100%;
          left: 0;
          padding-top: 20px;
      }
+
      .callabout .sortabout .sort-intro-he .sort-introimg img {
          width: 40%;
      }
+
      .callabout .sortabout .sort-intro-he .followgithub img {
          display: none;
          width: 50%;
      }
+
      .callabout .sortabout .sort-intro-he .sort-intro-head11 {
          display: none;
      }
+
      .callabout .sortabout .sort-intro-child-main {
          display: inline;
      }
+
      .about-section .about-detils {
          color: #e8e8e8;
          display: none;
@@ -597,12 +677,14 @@
          margin-left: 30px;
          font-family: "Montserrat", sans-serif;
      }
+
      .about-section .about-detilsold {
          color: #e8e8e8;
          padding-top: 100px;
          margin-left: 30px;
          font-family: "Montserrat", sans-serif;
      }
+
      .aboutme-main-pic .about-section h1 {
          font-size: 25px;
          position: absolute;
@@ -612,22 +694,27 @@
          font-weight: 700;
          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      }
+
      .aboutme-main-pic .about-section .about-para-about {
          margin-top: 75px;
      }
+
      .aboutme-main-pic .about-section .yearexperience {
          display: grid;
          grid-template-columns: repeat(2, 1fr);
          grid-gap: 5px;
      }
+
      .about-section .yearexperience .years11 {
          border: none;
          border-radius: 5px;
      }
+
      .about-section .yearexperience .years {
          border: none;
          border-radius: 5px;
      }
+
      .aboutme-main-pic .about-section .about-detils {
          color: #e8e8e8;
          font-size: 13px;
@@ -635,6 +722,7 @@
          margin-top: 20px;
          font-family: "Montserrat", sans-serif;
      }
+
      .about-section button {
          background-color: white;
          padding: 5px;
@@ -646,13 +734,14 @@
          margin-right: auto;
      }
  }
- 
+
  @media only screen and (min-width: 800px) and (max-width: 1200px) {
      .callabout .sortabout {
          width: 100%;
          left: 0;
          padding-top: 20px;
      }
+
      .aboutme-main-pic .about-section {
          padding-left: 10px;
          padding-right: 10px;
@@ -663,9 +752,11 @@
          position: absolute;
          background-color: #01001f;
      }
+
      .skills-main-head-div {
          top: 300px;
      }
+
      .about-section .about-detils {
          display: none;
          color: #e8e8e8;
@@ -673,6 +764,7 @@
          margin-left: 30px;
          font-family: "Montserrat", sans-serif;
      }
+
      .about-section .about-detilsold {
          color: #e8e8e8;
          padding-top: 220px;
@@ -680,100 +772,114 @@
          font-family: "Montserrat", sans-serif;
      }
  }
- 
+
  @media only screen and (min-width: 1200px) {
      .about-detilsold {
          display: none;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####      Skills   responsive start             ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (min-width: 300px) and (max-width: 600px) {
      .skills-main-head-div {
          top: 600px;
      }
+
      .skills-main-head-div .skills {
          display: inline;
      }
+
      .skills-main-head-div .skills .skills-img {
          margin-top: 30px;
      }
+
      .skills-main-head-div .skills .skills-headline h1 {
          font-size: 25px;
          text-align: justify;
          text-justify: inter-word;
      }
+
      .skills-main-head-div .skills .skills-headline p {
          text-align: justify;
          text-justify: inter-word;
      }
+
      .skills-main-head-div .skills .skills-headline div {
          width: 200px;
      }
  }
- 
+
  @media only screen and (min-width: 820px) {
      .skills-main-head-div .skills .skills-headline div {
          width: 200px;
      }
  }
- 
+
  @media only screen and (min-width: 600px) and (max-width: 820px) {
      .skills-main-head-div {
          top: 600px;
      }
+
      .skills-main-head-div .skills {
          display: inline;
      }
+
      .skills-main-head-div .skills .skills-img {
          margin-top: 30px;
      }
+
      .skills-main-head-div .skills .skills-headline {
          text-align: center;
          align-items: center;
          justify-content: center;
      }
+
      .skills-main-head-div .skills .skills-headline h1 {
          text-align: justify;
          text-justify: inter-word;
      }
+
      .skills-main-head-div .skills .skills-headline p {
          text-align: justify;
          text-justify: inter-word;
      }
+
      .skills-main-head-div .skills .skills-headline div {
          width: 200px;
          margin-left: 0px;
          padding-left: 0px;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####      Skills-Bar responsive start           ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (max-width: 820px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .gfhdg {
          display: none;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 440px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart .chart-child {
          display: none;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
          text-align: center;
          align-items: center;
          justify-content: center;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 1000px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
          width: 100%;
@@ -782,7 +888,7 @@
          justify-content: center;
      }
  }
- 
+
  @media only screen and (min-width: 510px) and (max-width: 1000px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
          width: 450px;
@@ -791,7 +897,7 @@
          justify-content: center;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width:510px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
          width: 320px;
@@ -799,58 +905,69 @@
          text-align: center;
          justify-content: center;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart a {
          margin-left: 15%;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .language-barchart {
          margin-top: 20px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 600px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .followglinkedin img {
          display: none;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .skills-introimg img {
          width: 180px;
          border-radius: 5px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 1000px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child {
          display: grid;
          grid-template-columns: repeat(2, 1fr);
          grid-gap: 5px;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child div {
          height: 80px;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child div .dsahead {
          font-weight: 700;
          color: white;
          font-size: 12px;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .skills-headline-child div .dsahead1 {
          font-weight: 700;
          font-size: 12px;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart {
          display: grid;
          grid-template-columns: repeat(1, 1fr);
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart .chart-child {
          text-align: center;
          align-items: center;
          justify-content: center;
          margin: auto 0;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart a {
          margin-left: 0px;
      }
+
      .certification-main {
          top: 500px;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main {
          border-bottom-left-radius: 5px;
          border-bottom-right-radius: 5px;
@@ -858,19 +975,23 @@
          width: 100%;
          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .language-barchart {
          display: grid;
          grid-template-columns: repeat(1, 1fr);
          grid-gap: 5px;
          width: 100%;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .language-barchart .bar-chart-child {
          width: 100%;
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-bar-head .followglinkedin img {
          width: 305px;
          border-radius: 5px;
      }
+
      .skills-bar-head11 {
          padding: 10px;
          height: 40px;
@@ -884,12 +1005,13 @@
          clip-path: polygon(75% 0%, 84% 50%, 75% 100%, 0% 100%, 5% 50%, 0% 0%);
      }
  }
+
  /*#################################################
 ####                                            ####
 ####     Have An IDEA responsive start          ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (min-width: 300px) and (max-width: 820px) {
      .certification-main {
          background-color: #13111c;
@@ -897,11 +1019,12 @@
          margin-top: 377px;
          position: relative;
      }
+
      .certification-main {
          top: 600px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 1200px) {
      .certification-main {
          background-color: #13111c;
@@ -909,21 +1032,25 @@
          margin-top: 377px;
          position: relative;
      }
+
      .certification-main {
          top: 600px;
      }
  }
- 
+
  @media only screen and (min-width: 500px) and (max-width: 800px) {
      .skills-main-head-div .skillsbar .benest .benext-child2 h1 {
          font-size: 16px;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 p {
          font-size: 12px;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 {
          font-size: 12px;
      }
+
      .skills-main-head-div .skillsbar .asasas {
          width: 250px;
          margin-top: 150px;
@@ -931,76 +1058,89 @@
          margin-left: 10px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 500px) {
      .skills-main-head-div .skillsbar .benest .benext-child2 h1 {
          font-size: 16px;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 p {
          font-size: 13px;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 {
          font-size: 12px;
      }
+
      .skills-main-head-div .skillsbar .asasas {
          width: 200px;
          margin-top: 150px;
          left: 0px;
          margin-left: -35px !important;
      }
+
      .skills-main-head-div .skillsbar .benest {
          line-height: 1;
          height: 150px;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 {
          padding-top: 10px !important;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 button {
          margin-top: -5px !important;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 .benext-child2-button {
          margin-top: 0px !important;
          width: 100%;
      }
+
      .skills-main-head-div .skillsbar .benest .benext-child2 .benext-child2-button button {
          width: 200px;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####     Certification  responsive start        ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (min-width:300px) and (max-width:1000px) {
      .certificate-description {
          padding-left: 50px;
          display: flex;
          flex-wrap: wrap;
      }
+
      .courseDetils1 {
          width: 50%;
      }
+
      .courseDetils2 {
          margin-top: 5px;
          width: 50%;
      }
+
      .courseDetils3 {
          width: 50%;
          margin-top: 10px;
      }
+
      .courseDetils4 {
          width: 50%;
          margin-top: 10px;
      }
  }
- 
+
  @media only screen and (min-width:700px) {
      #certificate .certificate-flex-box {
          display: none;
      }
  }
- 
+
  @media only screen and (min-width:300px) and (max-width:700px) {
      .certification-main #slideshow {
          display: none;
@@ -1009,15 +1149,19 @@
          width: 48%;
          box-sizing: border-box;
      }
+
      #certificate .certificate-flex-box {
          overflow-x: auto;
      }
+
      #certificate .certificate-flex-box .shad12 {
          width: 300px;
      }
+
      #certificate .certificate-flex-box .shad12 img {
          width: 100%;
      }
+
      .entire-content {
          margin: auto;
          width: 169px;
@@ -1025,6 +1169,7 @@
          position: relative;
          padding-top: 65px;
      }
+
      .content-carrousel figure {
          width: 117%;
          height: 116px;
@@ -1032,194 +1177,232 @@
          overflow: hidden;
          position: absolute;
      }
+
      .certificate-description {
          display: flex;
          flex-wrap: wrap;
      }
+
      .certificate-description {
          padding-left: 50px;
          display: flex;
          flex-wrap: wrap;
      }
+
      .courseDetils1 {
          width: 100%;
      }
+
      .courseDetils2 {
          width: 100%;
      }
+
      .courseDetils3 {
          width: 100%;
          margin-top: 10px;
      }
+
      .courseDetils4 {
          width: 50%;
          margin-top: 10px;
      }
  }
- 
+
  @media only screen and (min-width:468px) and (max-width:768px) {
      .certi-div img {
          margin: 0px;
          padding: 21px;
      }
+
      .certi-div img {
          width: 124px;
      }
  }
- 
+
  @media only screen and (min-width:300px) and (max-width:468px) {
      .certification-main .certi-div img {
          margin: 0px;
          padding: 13px;
          width: 80px;
      }
+
      .certification-main .certi-div {
          width: 100%;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####      Service       responsive start        ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (min-width: 300px) and (max-width: 1200px) {
      .container-head-main {
          top: 600px;
      }
+
      .projects-head {
          top: 700px;
      }
  }
- 
+
  @media only screen and (min-width: 768px) and (max-width: 1023px) {
      .container-head-main .cervice-parents .service-child {
          height: 90px;
      }
+
      .container-head-main .cervice-parents .service-child img {
          width: 70px;
      }
+
      .container-head-main .cervice-parents .service-child-2 {
          font-size: 17px;
          padding-top: 5px !important;
          line-height: 1;
      }
+
      .container-head-main .cervice-parents .service-child-2 h3 {
          font-size: 16px;
          padding-top: 0px !important;
      }
+
      .container-head-main .cervice-parents .service-child-2 p {
          font-size: 12px;
      }
+
      .web-service-head .web-service-parents h3 {
          font-size: 20px;
          font-weight: 700;
      }
+
      .web-service-head .web-service-parents p {
          font-size: 15px;
      }
+
      .web-service-head .web-service-parents .tic {
          font-size: 13px;
      }
+
      .web-service-head .web-service-parents2 img {
          width: 350px;
          margin-left: auto;
          margin-right: auto;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 768px) {
      .container-head-main .cervice-parents nav {
          display: grid;
          grid-template-columns: repeat(1, 1fr);
          grid-gap: 5px;
      }
+
      .container-head-main .cervice-parents .service-child {
          height: 90px;
      }
+
      .container-head-main .cervice-parents .service-child img {
          width: 70px;
      }
+
      .container-head-main .cervice-parents .service-child-2 {
          font-size: 17px;
          padding-top: 5px !important;
          line-height: 1;
      }
+
      .container-head-main .cervice-parents .service-child-2 h3 {
          font-size: 16px;
          padding-top: 0px !important;
      }
+
      .container-head-main .cervice-parents .service-child-2 p {
          font-size: 12px;
      }
+
      .container-head-main .web-service-head {
          display: inline;
      }
+
      .web-service-head .web-service-parents h3 {
          font-size: 20px;
          font-weight: 700;
      }
+
      .web-service-head .web-service-parents p {
          font-size: 15px;
      }
+
      .web-service-head .web-service-parents .tic {
          font-size: 13px;
      }
+
      .web-service-head .web-service-parents2 img {
          width: 350px;
          margin-left: auto;
          margin-right: auto;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####     Project responsive start               ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (min-width: 1000px) and (max-width: 1200px) {
      .mission-parent {
          top: 800px;
      }
+
      .ceo-head-parant {
          margin-top: 1000px;
      }
+
      .mission-parent .img-title-mission .mission-detils {
          margin-top: 10px;
      }
  }
- 
+
  @media only screen and (min-width: 670px) and (max-width: 1000px) {
      .mission-parent {
          top: 800px;
      }
+
      .ceo-head-parant {
          margin-top: 1000px;
      }
+
      .mission-parent .img-title-mission .mission-detils {
          margin-top: 10px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 670px) {
      .mission-parent {
          top: 700px;
      }
+
      .ceo-head-parant {
          margin-top: 1000px;
      }
+
      .projects-head .project-child {
          width: 90%;
          height: 300px;
      }
+
      .projects-head .cerifyby .cerifvyp {
          margin-top: 100px;
      }
+
      .mission-parent .img-title-mission .mission-detils {
          margin-left: 10px;
          padding-right: 10px;
          margin-top: 10px;
      }
+
      .mission-parent .img-title-mission .mission-detils div {
          margin-left: auto;
          margin-right: auto;
@@ -1227,38 +1410,42 @@
          align-items: center;
          justify-content: center;
      }
+
      .mission-parent .img-title-mission {
          display: inline;
      }
+
      .mission-parent .img-title-mission .mission-head-img {
          margin-left: auto;
          margin-right: auto;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####     CEO  responsive start                  ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (min-width: 1200px) {
      .contact-headmain {
          top: 100px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 1200px) {
      .contact-headmain {
          top: 900px;
      }
  }
- 
+
  @media only screen and (min-width: 768px) and (max-width: 1023px) {
      .ceo-head-parant .ceo .Testimonials-head {
          flex-wrap: wrap;
          overflow: auto;
          overflow-x: scroll;
      }
+
      .ceo-head-parant .ceo .Testimonials-head .e-card {
          margin: 5px auto;
          background: transparent;
@@ -1270,12 +1457,13 @@
          overflow: hidden;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 768px) {
      .ceo-head-parant .ceo .Testimonials-head {
          flex-wrap: wrap;
          overflow: auto;
      }
+
      .ceo-head-parant .ceo .Testimonials-head .e-card {
          margin: 5px auto;
          background: transparent;
@@ -1287,24 +1475,25 @@
          overflow: hidden;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 768px) {
      .container .marquee-div-name div button {
          display: none;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 768px) {
      .container .Testimonials-name-div button {
          display: none;
      }
  }
- 
+
  @media only screen and (min-width: 1023px) and (max-width: 1200px) {
      .ceo-head-parant .ceo-parent .ceo-detils {
          margin-left: 20px;
          line-height: 1.2;
      }
+
      .ceo-head-parant .ceo {
          background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
          height: 1580px;
@@ -1312,6 +1501,7 @@
          margin-top: -100px;
          position: absolute;
      }
+
      .ceo-head-parant .ceo-parent {
          border-radius: 5px;
          position: absolute;
@@ -1325,7 +1515,7 @@
          display: flex;
      }
  }
- 
+
  @media only screen and (min-width: 768px) and (max-width: 1023px) {
      .ceo-head-parant .ceo-parent {
          border-radius: 5px;
@@ -1339,20 +1529,25 @@
          box-shadow: 2px 2px 2px 2px #333;
          display: flex;
      }
+
      .ceo-head-parant .ceo-parent .ceo-img img {
          width: 150px;
          top: 20%;
      }
+
      .ceo-head-parant .ceo-parent .ceo-detils {
          margin-left: 20px;
          line-height: 1.2;
      }
+
      .ceo-head-parant .ceo-parent .ceo-detils .h3-span h3 {
          font-size: 20px;
      }
+
      .ceo-head-parant .ceo-parent .ceo-detils .h3-span span {
          font-size: 12px;
      }
+
      .ceo-head-parant .ceo {
          background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
          height: 1550px;
@@ -1360,11 +1555,12 @@
          margin-top: -100px;
          position: absolute;
      }
+
      .ceo-head-parant .ceo .img-div {
          margin-top: 70px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 768px) {
      .ceo-head-parant .ceo-parent {
          border-radius: 5px;
@@ -1378,14 +1574,17 @@
          box-shadow: 2px 2px 2px 2px #333;
          display: flex;
      }
+
      .ceo-head-parant .ceo-parent {
          display: inline;
      }
+
      .ceo-head-parant .ceo-parent .ceo-img {
          text-align: center;
          align-items: center;
          justify-content: center;
      }
+
      .ceo-head-parant .ceo-parent .ceo-img img {
          width: 100px;
          margin-left: auto;
@@ -1394,6 +1593,7 @@
          top: 3px;
          float: left;
      }
+
      .ceo-head-parant .ceo-parent .ceo-detils {
          line-height: 1;
          width: 100%;
@@ -1401,15 +1601,19 @@
          position: relative;
          float: left;
      }
+
      .ceo-head-parant .ceo-parent .ceo-detils .h3-span h3 {
          font-size: 16px;
      }
+
      .ceo-head-parant .ceo-parent .ceo-detils .h3-span span {
          font-size: 10px;
      }
+
      .ceo-head-parant .ceo-parent .ceo-detils p {
          font-size: 12px;
      }
+
      .ceo-head-parant .ceo {
          background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
          height: 1630px;
@@ -1417,23 +1621,25 @@
          margin-top: -170px;
          position: absolute;
      }
+
      .ceo-head-parant .ceo .img-div {
          margin-top: 100px;
      }
  }
+
  /*#################################################
 ####                                            ####
 ####     Contact  responsive start              ####
 ####                                            ####
 ##################################################*/
- 
+
  @media only screen and (max-width: 1200px) {
      .contact-headmain .container .marquee-div-name .flex h3 {
          font-family: sans-serif;
          font-weight: 800;
      }
  }
- 
+
  @media only screen and (min-width: 1023px) {
      .contact-headmain .contactpage-div-style {
          overflow: hidden;
@@ -1441,6 +1647,7 @@
          width: 100%;
          height: 700px !important;
      }
+
      .contactpage-div-style .three-div .dootdoot {
          height: 1150px;
          height: 150vh;
@@ -1448,7 +1655,7 @@
          overflow: hidden;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 1023px) {
      .contact-headmain .contactpage-div-style {
          overflow: hidden;
@@ -1456,18 +1663,22 @@
          width: 100%;
          height: 1100px !important;
      }
+
      .contact-page-form .hnjhgyh img {
          padding-top: 100px;
          margin: 0 auto;
      }
+
      .contact-page-form {
          display: inline;
      }
+
      .contact-page-form .contactform {
          margin-top: 50px;
          width: 100%;
          position: relative;
      }
+
      .contact-page-form .hnjhgyh .contactInfo {
          left: 0;
          position: relative;
@@ -1475,29 +1686,33 @@
          padding-left: 0px;
          margin: 0 auto;
      }
+
      .contact-page-form .hnjhgyh .contactInfo .iframe-map {
          width: 90%;
      }
+
      .contactpage-div-style .three-div .dootdoot {
          height: 1150px;
          height: 150vh;
          width: 100vw;
          overflow: hidden;
      }
+
      #contact .contact-icon {
          margin-top: 0px;
      }
  }
- 
+
  @media only screen and (min-width: 300px) and (max-width: 768px) {
      .contact-headmain .contact-head-main .self-stretch .contact-email-form {
          display: inline;
      }
+
      .contact-headmain .contact-head-main {
          height: 1400px;
      }
  }
- 
+
  @media only screen and (min-width: 964px) {
      .contact-headmain .contact-head-main .contact-head-child .contact-head-child1 .contact-email-form .contact-head-child2 .contact-head-child3 .iframe-map {
          width: 80%;

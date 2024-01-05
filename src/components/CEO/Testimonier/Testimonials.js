@@ -32,7 +32,7 @@ const Testimonials = () => {
                             <p>Shivangi Patel</p>
                             <p className="name">Assistance Professor</p>
                         </div>
-                        <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
+                        <p className='detils-p  '>Updating...</p>
                         <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                             <div>
                                 <a href="https://rku.ac.in/" target='blank'> <img className='w-10 hover:scale-125 duration-300' src={rku} alt="" /></a>
@@ -59,7 +59,7 @@ const Testimonials = () => {
                             <p>Shalini Jha</p>
                             <p className="name">Assistance Professor</p>
                         </div>
-                        <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
+                        <p className='detils-p  '>Updating...</p>
                         <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                             <div>
                                 <a href="https://rku.ac.in/" target='blank'> <img className='w-10 hover:scale-125 duration-300' src={rku} alt="" /></a>
@@ -86,7 +86,7 @@ const Testimonials = () => {
                             <p>Md Nur Islam</p>
                             <p className="name">Graphic Designer</p>
                         </div>
-                        <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
+                        <p className='detils-p  '>Updating...</p>
                         <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                             <div>
                                 <a href="https://rku.ac.in/" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
@@ -113,7 +113,7 @@ const Testimonials = () => {
                             <p>Nikunj Vatt</p>
                             <p className="name">Assistance Professor</p>
                         </div>
-                        <p className='detils-p  '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dignissimos similique nobis velit doloribus ex hic excepturi, exercitationem quas obcaecati reiciendis corporis fugit odit voluptatem, quasi porro rem assumenda facere.</p>
+                        <p className='detils-p  '>Updating...</p>
                         <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                             <div>
                                 <a href="https://rku.ac.in/" target='blank'> <img className='w-10 hover:scale-125 duration-300' src={rku} alt="" /></a>

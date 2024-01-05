@@ -52,7 +52,7 @@ const Home = () => {
                                 wrapper="span"
                             />
                         </p>
-                        <p className=' text-slate-400 font-nunito xs:pe-4 sm:pe-0 text-justify	'>I am Sincere,responsible,confident,dedicated,down to earth & trust worthly.Currently I am studying about Web-development as well as Softwer Engineering.</p>
+                        <p className=' text-slate-400 font-nunito xs:pe-4 sm:pe-0 text-justify	'>I am sincere, responsible, confident, dedicated, down-to-earth, and trustworthy. Currently, I am studying web development as well as software engineering</p>
                         <div className=' icon-div mt-6'>
                             <div> <img src={homelogo} alt="" /></div>
                             <div className='social-link relative pt-8 '>

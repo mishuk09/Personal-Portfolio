@@ -8,8 +8,6 @@ import ContactPage from './components/ContactPage/ContactPage';
 import AppChild from './AppChild';
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
-import ImageViewer from './components/Projects/ImgViewer';
-// import ImgViewer from './components/Projects/ImgViewer';
 
 
 
@@ -48,9 +46,7 @@ function App() {
 
         <Routes>
 
-          {/* Imgviewer ROUTES  */}
 
-          {/* <Route path='/imgview' element={<ImageViewer />}></Route> */}
           <Route path='/' element={<AppChild></AppChild>}></Route>
           <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
         </Routes>

@@ -11,7 +11,7 @@ import { Fade } from 'react-reveal';
 const Mission = () => {
     return (
         <div>
-            <div className='mission-parent'>
+            <div className=' mission-parent  '>
                 <div className='mission-head'>
                     <img className='mission-head-img1' src={map} alt="" />
                 </div>
@@ -24,9 +24,10 @@ const Mission = () => {
                             <h1>My Mission and Vission</h1>
                             <p className=''>I'm Mahadi Hasan Mishuk and my mission is simple create websites that blend creativity and functionality. I'm dedicated to making your digital vision a reality with clear communication, cutting-edge tech, and a user-first mindset. Let's build something amazing together!</p>
                         </Fade>
-                        <div className='w-50'>
-                            <Link to="/contactpage"> <Button  >Take The First Step</Button></Link>
+                        <div className='w-100 xs:w-100 lg:w-50'>
+                            <Link to="/contactpage"> <Button   >Take The First Step</Button></Link>
                         </div>
+
                     </div>
                 </div>
 

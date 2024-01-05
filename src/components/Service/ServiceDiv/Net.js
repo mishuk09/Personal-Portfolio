@@ -12,7 +12,7 @@ const Net = () => {
                 <Fade bottom>
                     <div className='container fluid web-service-parents'>
                         <h3 className=''>.NET Development</h3>
-                        <p>I specialize in creating fantastic Windows Application that not only look great but also function smoothly. Let's collaborate to turn your concepts into a standout online presence, making your ideas shine on the web! <br />
+                        <p className='text-justify'>I specialize in creating fantastic Windows Application that not only look great but also function smoothly. Let's collaborate to turn your concepts into a standout online presence, making your ideas shine on the web! <br />
                             I handle the entire process, merging design aesthetics with robust development.
                         </p>
                         <div className='tic '>
@@ -27,7 +27,7 @@ const Net = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className='web-service-parents2'>
+                    <div className='web-service-parents2 xs:mt-20'>
                         <img src={net} alt="" />
                     </div>
                 </Fade>

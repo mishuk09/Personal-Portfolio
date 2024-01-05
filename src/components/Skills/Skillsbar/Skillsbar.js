@@ -98,7 +98,7 @@ const Skillsbar = () => {
                             team up for a successful project with simplicity."</p> </Fade  >
 
                     <Fade bottom> <div className='w-25 benext-child2-button '>
-                        <Link to="/contactpage"> <Button>Have a Free Consultation</Button></Link>
+                        <Link to="/contactpage"> <Button>Write Your Query</Button></Link>
                     </div>
                     </Fade>
                 </div>

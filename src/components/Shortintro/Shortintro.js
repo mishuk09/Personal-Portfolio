@@ -91,10 +91,10 @@ const shortInreo = [
     },
     {
         id: 1,
-        tittle: 'Projects',
+        tittle: 'Projects', 
         name: 'Learning Website',
         descrip: 'Like GeekforGeek',
-        date: <a className='no-underline' href="www.csehacks.com" target='_blank'>CSEHacks<FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} beat /> </a>,
+        date: <a className='nounderline' href="www.csehacks.com" target='_blank'>CSEHacks<FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} beat /> </a>,
         img: projects
     }
 
