@@ -10,33 +10,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare, faFileImage } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
-
 import Dialog from '@mui/material/Dialog';
 import Slide from '@mui/material/Slide';
-import Splide from './Splide';
-import MySlider from './Splide';
-
 import '@splidejs/splide/dist/css/themes/splide-default.min.css'; // Import Splide styles
-import MySplideComponent from './Splide';
+import ImageGallery from './ImageGallery';
 
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
-
 const Projects = () => {
-
     const [open, setOpen] = React.useState(false);
-
     const handleClickOpen = () => {
         setOpen(true);
     };
-
     const handleClose = () => {
         setOpen(false);
     };
-
 
     return (
         <div >
@@ -47,26 +38,18 @@ const Projects = () => {
                     <p className='pt-3 asdsa'>I Have Completed Many Projects Among Theme These Two Projects are More Dynamic</p>
                     <button>CSEHacks</button>
                 </div>
-
                 <div className='flex items-start text-center justify-center gap-3 '>
                     <div>
                         <div className='project-child overflow-hidden'>
                             <div className='project-child-head ps-3 pt-2'>
                                 <span>Plexus </span> <span>A Degital Marketing Website</span>
                             </div>
-
                             <ProjectVideo></ProjectVideo>
-
                         </div>
                         <div className='flex gap-2 text-center items-center justify-center mt-4'>
                             <a className='no-underline' href='https://plexus.org.in/' target='blank' > <div className='h-auto py-2 px-3 w-auto text-xs  hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>Live Preview <FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} /></div></a>
 
-
-
-
                             <React.Fragment>
-
-
                                 <button className='h-auto py-2 px-3 w-auto text-xs  bg-blue-500 text-white rounded text-center flex items-center justify-center' variant="outlined" onClick={handleClickOpen}>
                                     <div >
                                         Screenshot <FontAwesomeIcon className='ms-2' icon={faFileImage} />
@@ -78,66 +61,12 @@ const Projects = () => {
                                     keepMounted
                                     onClose={handleClose}
                                     aria-describedby="alert-dialog-slide-description"
-                                >
-                                    {/* <Splide
-                                        options={{
-                                            perPage: 5,
-                                            arrows: true,
-                                            pagination: false,
-                                            gap: 20,
-                                            speed: 800,
-                                            rewind: true,
-                                            breakpoints: {
-                                                200: {
-                                                    perPage: 3,
-                                                },
-                                                650: {
-                                                    perPage: 3,
-                                                },
-                                                801: {
-                                                    perPage: 5,
-                                                },
-                                                1150: {
-                                                    perPage: 5,
-                                                },
-                                            },
-                                        }}
-                                        className="custom-splide explore-closet-slider  pb-10"
-                                    >
-
-                                    </Splide> */}
-
-                                    <MySplideComponent />
-
+                                >                                   
+                                    <ImageGallery />
                                 </Dialog>
                             </React.Fragment>
-
-
-
-
                             <Link className='no-underline' to='#' > <div className='h-auto py-2 px-3 w-auto text-xs hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>Github <FontAwesomeIcon className='ms-2' icon={faGithub} /></div></Link>
-
                         </div>
-                        {/* <div className='flex gap-2 text-center items-center justify-center mt-4'>
-                            <a className='no-underline' href='https://plexus.org.in/' target='blank' >
-                                <div className='h-auto py-2 px-3 w-auto text-xs  hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>
-                                    Live Preview <FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} />
-                                </div>
-                            </a>
-                            
-
-                            <button className='no-underline' onClick={() => setShowViewer(!showViewer)}>
-                                <div className='h-auto py-2 px-3 w-auto text-xs hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>
-                                    Screenshot <FontAwesomeIcon className='ms-2' icon={faFileImage} />
-                                </div>
-                            </button>
-
-                            <Link className='no-underline' to='#'>
-                                <div className='h-auto py-2 px-3 w-auto text-xs hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>
-                                    Github <FontAwesomeIcon className='ms-2' icon={faGithub} />
-                                </div>
-                            </Link>
-                        </div> */}
                     </div>
                     <div>
                         <div className='project-child overflow-hidden'>
