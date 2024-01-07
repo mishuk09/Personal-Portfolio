@@ -121,3 +121,32 @@ To start the development server:
 
 ```bash
 npm start
+
+
+
+#    "@amcharts/amcharts5-geodata": "^5.1.1",
+
+#     "@amcharts/amcharts5-fonts": "^5.0.1",
+#     "@amcharts/amcharts5": "^5.5.7",
+# "@react-email/components": "0.0.12",
+#     "@react-email/link": "0.0.7",
+#     "@react-spring/web": "^9.7.3",
+#     "@splidejs/react-splide": "^0.7.12",
+# "@splidejs/splide": "^4.1.4",
+# "@syncfusion/ej2-react-charts": "^23.1.44",
+#     "@testing-library/user-event": "^13.5.0",
+#     "jquery": "^3.7.1",
+#     "mdb-react-ui-kit": "^7.0.0",
+#     "react-charts": "^2.1.0",
+#  "react-image-gallery": "^1.3.0",
+#     "react-images-viewer": "^1.7.1",
+#     "react-owl-carousel": "^2.3.3",
+#     "react-player": "^2.13.0",
+#     "react-simple-image-viewer": "^1.2.2",
+
+#   "react-typed": "^1.2.0",
+#     "react-typical": "^0.1.3",
+#      "reactjs-popup": "^2.0.6",
+#       "swiper": "^11.0.4",
+
+#        "vercel": "^32.6.1",

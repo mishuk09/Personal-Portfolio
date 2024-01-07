@@ -3,7 +3,7 @@ import './ContactPage.css'
 import React, { useState } from 'react';
 import ContactForm from '../Contact/ContactForm';
 import contact from './img/contact.png';
-import Three from '../Threejs/Three';
+// import Three from '../Threejs/Three';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Fade } from 'react-reveal';
@@ -17,10 +17,10 @@ const ContactPage = () => {
     };
 
     return (
-        <div id='contact' className='contactpage-div-style pb-10' >
+        <div id='contact'  className='contactpage-div-style bg-black pb-10' >
             <Nav></Nav>
             <div className='absolute three-div'>
-                <Three></Three>
+                {/* <Three></Three> */}
             </div>
             <div className='container contact-page-form relative flex pt-7 mt-[65px]'>
                 <div className='hnjhgyh'>

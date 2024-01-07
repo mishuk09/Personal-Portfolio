@@ -16,7 +16,7 @@ const ContactForm = () => {
         recaptchaValue: '', // Captcha value will be stored here
     });
 
-    const [  setFormErrors] = useState({
+    const [setFormErrors] = useState({
         name: false,
         email: false,
         phoneNumber: false,
@@ -72,12 +72,12 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="contact-form-container bg-transparent">
+        <div className="contact-form-container    ">
             <div className='how-can  mb-5'> <h3>How Can I Help You?</h3></div>
             <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                 <div className='name-email flex w-full'>
                     <input
-                        className='w-full  text-white'
+                        className='w-full focus:outline-none bg-slate-900 text-white'
                         type="text"
                         name="name"
                         placeholder="Name"
@@ -86,7 +86,7 @@ const ContactForm = () => {
                         required
                     />
                     <input
-                        className='ms-3 w-full   text-white'
+                        className='ms-3 w-full focus:outline-none bg-slate-900  text-white'
                         type="email"
                         name="email"
                         placeholder="Email"
@@ -98,7 +98,7 @@ const ContactForm = () => {
                 <div className='phoneinput flex'>
 
                     <input
-                        className='mt-3 w-full text-white'
+                        className='mt-3 w-full focus:outline-none bg-slate-900 text-white'
                         type="text"
                         name="phoneNumber"
                         placeholder="Phone"
@@ -107,7 +107,7 @@ const ContactForm = () => {
                         required
                     />
                     <input
-                        className='mt-3 ms-3 w-full   text-white'
+                        className='mt-3 ms-3 w-full focus:outline-none bg-slate-900  text-white'
                         type="text"
                         name="subject"
                         placeholder="Subject"
@@ -117,7 +117,7 @@ const ContactForm = () => {
                     />
                 </div>
                 <textarea
-                    className='mt-3 w-full text-area   text-white'
+                    className='mt-3 w-full text-area focus:outline-none bg-slate-900  text-white'
                     name="message"
                     placeholder="Your Message"
                     value={formData.message}
@@ -133,7 +133,7 @@ const ContactForm = () => {
 
                 />
 
-                <button type="submit">Send</button>
+                <button className='bg-slate-900' type="submit">Send</button>
             </form>
         </div>
     );

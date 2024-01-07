@@ -8,7 +8,6 @@ import programming from '../Home/img/programming.svg';
 import projects from '../Home/img/projects.svg';
 import linkedinfollow from '../Home/img/linkedinfollow.gif'
 import Marquee from 'react-fast-marquee';
-import { Zoom } from 'react-reveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,23 +33,23 @@ const Shortintro = () => {
                         <div className='linkedin-follow h-10    '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><img className='pt-[3px]' src={linkedinfollow} alt="img" /></a></div>
                     </div>
                     <div className='sort-intro-child mt-2'>
-                        <Zoom>
-                            {shortInreo.map((shortintro) => {
-                                return (
-                                    <div className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white' key={shortintro.id}>
-                                        <div className='sort-intro-div-img23'>
-                                            <img src={shortintro.img} alt="" />
-                                        </div>
-                                        <div className='sort-intro-div-descrip234'>
-                                            <p className='mt-4 institution font-nunito'>{shortintro.tittle}</p>
-                                            <p className='mt-1 institution11'>{shortintro.name}</p>
-                                            <p className='mt-3 institution33 font-nunito'>{shortintro.descrip}</p>
-                                            <p className='mt-3 institution44 font-nunito'>{shortintro.date}</p>
-                                        </div>
+
+                        {shortInreo.map((shortintro) => {
+                            return (
+                                <div className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white' key={shortintro.id}>
+                                    <div className='sort-intro-div-img23'>
+                                        <img src={shortintro.img} alt="" />
                                     </div>
-                                );
-                            })}
-                        </Zoom>
+                                    <div className='sort-intro-div-descrip234'>
+                                        <p className='mt-4 institution font-nunito'>{shortintro.tittle}</p>
+                                        <p className='mt-1 institution11'>{shortintro.name}</p>
+                                        <p className='mt-3 institution33 font-nunito'>{shortintro.descrip}</p>
+                                        <p className='mt-3 institution44 font-nunito'>{shortintro.date}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+
                     </div>
                 </div>
             </div>
@@ -91,7 +90,7 @@ const shortInreo = [
     },
     {
         id: 1,
-        tittle: 'Projects', 
+        tittle: 'Projects',
         name: 'Learning Website',
         descrip: 'Like GeekforGeek',
         date: <a className='nounderline' href="www.csehacks.com" target='_blank'>CSEHacks<FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} beat /> </a>,

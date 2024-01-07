@@ -3,7 +3,7 @@ import React from 'react';
 class ProjectVideo extends React.Component {
     render() {
         return (
-            <div className='projectvideo' >
+            <div className='projectvideo  ' >
                 <iframe
                     className='rounded-b-lg  '
                     width="100%"
