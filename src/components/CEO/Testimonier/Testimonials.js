@@ -137,7 +137,7 @@ const Testimonials = () => {
             </div>
 
             <div className='px-5 mb-10 relative  '>
-                <div className=' grid grid-flow-col auto-cols-max gap-3 mt-4 overflow-x-auto md:overflow-x-hidden' ref={interviewRef}>
+                <div className=' grid grid-flow-col auto-cols-max gap-3 mt-4 xs:overflow-x-auto md:overflow-hidden' ref={interviewRef}>
 
                     <div className="e-card playing">
                         <div className="image"></div>
@@ -219,7 +219,7 @@ const Testimonials = () => {
                             <p className='detils-p  '> Updating...</p>
                             <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                                 <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
+                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
                                 </div>
 
 
@@ -288,7 +288,7 @@ const Testimonials = () => {
                             <p className='detils-p  '>Updating...</p>
                             <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                                 <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
+                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
                                 </div>
                                 <div>
                                     <React.Fragment>
@@ -352,7 +352,7 @@ const Testimonials = () => {
                             <p className='detils-p  '>Updating...</p>
                             <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                                 <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
+                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
                                 </div>
 
 
@@ -421,7 +421,7 @@ const Testimonials = () => {
                             <p className='detils-p  '>Updating...</p>
                             <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                                 <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
+                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
                                 </div>
 
 
@@ -473,74 +473,7 @@ const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="e-card playing">
-                        <div className="image"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="infotop  ">
-                            <div className='infotop-img'>
-                                <img src={bd} alt="" />
-                            </div>
-                            <div className="text-content">
-                                <p>Bhoomi Dangar</p>
-                                <p className="name">Assistant Professor</p>
-                            </div>
-                            <p className='detils-p  '>Updating...</p>
-                            <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
-                                <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
-                                </div>
 
-
-                                <div>
-
-
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenBd}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faEnvelope} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openBd}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseBd}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="bhoomiahir321@gmail.com" />
-                                                <CopyToClipboard text="+91 82002 45406" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenBd}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faPhone} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openBd}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseBd}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="bhoomiahir321@gmail.com" />
-                                                <CopyToClipboard text="+91 82002 45406" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <a href="https://www.linkedin.com/in/bhoomi-dangar-32b625147/" target='blank'><FontAwesomeIcon className='FontAwesomeIcon123 me-2 hover:text-blue-500 text-slate-200' icon={faLinkedin} /></a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
 
 
                 </div>

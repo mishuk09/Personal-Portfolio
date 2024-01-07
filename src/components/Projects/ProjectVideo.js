@@ -7,7 +7,7 @@ class ProjectVideo extends React.Component {
                 <iframe
                     className='rounded-b-lg  '
                     width="100%"
-                    height="330"
+                    height="400"
                     src="https://plexus.org.in/"
                     title="YouTube video player"
                     frameBorder="0"
