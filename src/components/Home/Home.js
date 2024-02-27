@@ -40,7 +40,7 @@ const Home = () => {
                             <div className='flex   align-items-center justify-center mt-2'>
                                 <div className='gradient-line1 w-[48%] pt-1'> </div>
                                 <div className='gradient-line0 mx-3'>
-                                    <FontAwesomeIcon icon={faCode} className='    coding-icon34 text-white' size='1xl' beat />
+                                    <FontAwesomeIcon icon={faCode} className='coding-icon34 text-white' size='2xl' beat />
                                 </div>
                                 <div className='gradient-line w-[48%]  '> </div>
                             </div>

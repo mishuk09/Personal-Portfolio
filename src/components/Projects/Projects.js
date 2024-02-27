@@ -63,36 +63,6 @@ const Projects = () => {
                     <div className='w-[400px] h-full'>
                         <div className='project-child overflow-hidden'>
                             <div className='project-child-head ps-3 pt-2'>
-                                <span>Plexus </span> <span>A Degital Marketing Website</span>
-                            </div>
-                            <ProjectVideo></ProjectVideo>
-                        </div>
-                        <div className='flex gap-2    text-center items-center justify-center mt-4'>
-                            <a className='no-underline' href="https://plexus.org.in/" target='blank'>
-                                <button className='h-auto py-2 px-3 w-auto text-xs  hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>Live <FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} /></button>
-                            </a>
-                            <React.Fragment>
-                                <button className='h-auto py-2 px-3 w-auto text-xs  bg-blue-500 text-white rounded text-center flex items-center justify-center' variant="outlined" onClick={handleClickOpen}>
-                                    <div >
-                                        Screenshot <FontAwesomeIcon className='ms-2' icon={faFileImage} />
-                                    </div>
-                                </button>
-                                <Dialog
-                                    open={open}
-                                    TransitionComponent={Transition}
-                                    keepMounted
-                                    onClose={handleClose}
-                                    aria-describedby="alert-dialog-slide-description"
-                                >
-                                    <ImageGallery />
-                                </Dialog>
-                            </React.Fragment>
-                            <a className='no-underline' href='https://github.com/mishuk09/Digital_marketing/blob/main/README.md' target='blank' > <button className='h-auto py-2 px-3 w-auto text-xs hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>Github <FontAwesomeIcon className='ms-2' icon={faGithub} /></button></a>
-                        </div>
-                    </div>
-                    <div className='w-[400px] h-full'>
-                        <div className='project-child overflow-hidden'>
-                            <div className='project-child-head ps-3 pt-2'>
                                 <span>CSEHacks </span> <span>A Learning Website</span>
                             </div>
                             {/* <ProjectVideo></ProjectVideo> */}
@@ -121,6 +91,38 @@ const Projects = () => {
                             <a className='no-underline' href='https://github.com/mishuk09' target='blank' > <button className='h-auto py-2 px-3 w-auto text-xs hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>Github <FontAwesomeIcon className='ms-2' icon={faGithub} /></button></a>
                         </div>
                     </div>
+                    <div className='w-[400px] h-full'>
+                        <div className='project-child overflow-hidden'>
+                            <div className='project-child-head ps-3 pt-2'>
+                                <span>Plexus </span> <span>A Degital Marketing Website</span>
+                            </div>
+                            <ProjectVideo></ProjectVideo>
+                        </div>
+                        <div className='flex gap-2    text-center items-center justify-center mt-4'>
+                            <a className='no-underline' href="https://plexus.org.in/" target='blank'>
+                                <button className='h-auto py-2 px-3 w-auto text-xs  hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>Live <FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} /></button>
+                            </a>
+                            <React.Fragment>
+                                <button className='h-auto py-2 px-3 w-auto text-xs  bg-blue-500 text-white rounded text-center flex items-center justify-center' variant="outlined" onClick={handleClickOpen}>
+                                    <div >
+                                        Screenshot <FontAwesomeIcon className='ms-2' icon={faFileImage} />
+                                    </div>
+                                </button>
+                                <Dialog
+                                    open={open}
+                                    TransitionComponent={Transition}
+                                    keepMounted
+                                    
+                                    onClose={handleClose}
+                                    aria-describedby="alert-dialog-slide-description"
+                                >
+                                    <ImageGallery />
+                                </Dialog>
+                            </React.Fragment>
+                            <a className='no-underline' href='https://github.com/mishuk09/Digital_marketing/blob/main/README.md' target='blank' > <button className='h-auto py-2 px-3 w-auto text-xs hover:bg-blue-600 bg-blue-500 text-white rounded text-center flex items-center justify-center'>Github <FontAwesomeIcon className='ms-2' icon={faGithub} /></button></a>
+                        </div>
+                    </div>
+
                     <div className='w-[400px] h-full'>
                         <div className='project-child overflow-hidden'>
                             <div className='project-child-head ps-3 pt-2'>

@@ -36,7 +36,9 @@ const Shortintro = () => {
 
                         {shortInreo.map((shortintro) => {
                             return (
-                                <div className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white' key={shortintro.id}>
+                                <div
+                                    key={shortintro.id}
+                                    className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white' key={shortintro.id}>
                                     <div className='sort-intro-div-img23'>
                                         <img src={shortintro.img} alt="" />
                                     </div>
@@ -71,7 +73,7 @@ const shortInreo = [
 
     },
     {
-        id: 1,
+        id: 2,
         tittle: 'Programming',
         name: 'JS,React,Node Js,Java.',
         descrip: 'Web-Development & DSA',
@@ -80,7 +82,7 @@ const shortInreo = [
 
     },
     {
-        id: 1,
+        id: 3,
         tittle: 'Expert',
         name: 'Web-Development',
         descrip: 'UI/UX & Front-End',
@@ -89,7 +91,7 @@ const shortInreo = [
 
     },
     {
-        id: 1,
+        id: 4,
         tittle: 'Projects',
         name: 'Learning Website',
         descrip: 'Like GeekforGeek',
