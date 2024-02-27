@@ -18,13 +18,14 @@ import gatelogo from './img/gatelogo.png';
 import { Slide } from 'react-reveal';
 import Shortintro from '../Shortintro/Shortintro';
 import wave from './img/wave.svg';
+import Achivement from './Achivement';
 
 
 
 const Certificate = () => {
     return (
 
-        <div id="certificate" className="  certification-main  ">
+        <div id="certificate" className="  certification-main    ">
             <div className='certificate-img pt-3 pb-3'>
                 <img src={certificate} alt="" />
                 <h1>Certificate</h1>
@@ -95,10 +96,10 @@ const Certificate = () => {
                 </Slide>
 
             </div>
-            <div className='wave1'>
+            {/* <div className='wave1 '>
                 <img className=' img645' src={wave} alt="" />
-                <Shortintro></Shortintro>
-            </div>
+                <Achivement/>
+            </div> */}
         </div >
 
     );

@@ -15,7 +15,7 @@ const Shortintro = () => {
     return (
         <div>
             <div className='wave1  '>
-                <div className='sort-intro   '>
+                <div className='sort-intro'>
                     <div className='sort-intro-headline p-1 '>
                         <div className='sort-intro-img ps-1'><img src={sort} alt="" className='jhdsahdf' /></div>
                         <div className='w-[50%] h-10 marquee-div rounded bg-blue-400 p-2'>
@@ -30,7 +30,7 @@ const Shortintro = () => {
                                 Tech Enthusiast B.Tech in Computer Engineering, Mastering JS, React, Node.js, and Java Since 2021...
                             </Marquee>
                         </div>
-                        <div className='linkedin-follow h-10    '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><img className='pt-[3px]' src={linkedinfollow} alt="img" /></a></div>
+                        <div className='linkedin-follow h-10 '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><img className='pt-[3px]' src={linkedinfollow} alt="img" /></a></div>
                     </div>
                     <div className='sort-intro-child mt-2'>
 

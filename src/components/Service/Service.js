@@ -53,7 +53,7 @@ const Service = () => {
 
 
     return (
-        <div id="service" className='container container-head-main'>
+        <div id="service" className='container container-head-main '>
             <div className='service-head'>
                 <h1>My App/Web Development<br />Services</h1>
             </div>

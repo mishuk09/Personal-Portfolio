@@ -69,8 +69,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className=''>
-                <img className=' ' src={wave} alt="" />
+            <div className='wave1'>
+                <img className=' img645' src={wave} alt="" />
                 <Shortintro></Shortintro>
             </div>
         </div>
