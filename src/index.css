@@ -1359,10 +1359,10 @@ code {
 
 .projects-head {
   font-family: "Montserrat", sans-serif;
-  position: relative;
+  
   height: 450px;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: #e6e6e6;
 }
 
 .projects-head12 {
@@ -1398,20 +1398,11 @@ code {
 }
 
 
-/* .projects-head button {
-  color: white;
-  background-color: #0487FB;
-  width: 150px;
- 
-  padding: 5px;
-} */
-
 .img-head {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  color: white;
 }
 
 .img-head img {
