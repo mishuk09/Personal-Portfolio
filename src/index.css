@@ -1359,8 +1359,7 @@ code {
 
 .projects-head {
   font-family: "Montserrat", sans-serif;
-  
-  height: 450px;
+  height: 850px;
   width: 100%;
   background-color: #e6e6e6;
 }
@@ -1484,7 +1483,7 @@ code {
 
 .mission-parent {
   font-family: "Montserrat", sans-serif;
-  margin-top: 350px;
+  margin-top: 100px;
   display: flex;
   position: relative;
 }

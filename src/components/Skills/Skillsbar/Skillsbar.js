@@ -20,7 +20,7 @@ const Skillsbar = () => {
     }, []);
 
     return (
-        <div className='skillsbar'>
+        <div className='  skillsbar'>
             <div className='skillsbar-div-head mt-2  '>
                 <div className='skills-bar-head p-2 '>
                     <div className='skills-introimg ps-1 '><img src={Skills} alt="" /></div>
@@ -55,10 +55,10 @@ const Skillsbar = () => {
                         </Zoom>
                     </div>
                     <div className='bar-chart mt-3 '>
-                        <div className='pro-barchart'>
+                        <div className='hidden md:block pro-barchart'>
                             <Chart></Chart>
                         </div>
-                        <div className='language-barchart ps-2'>
+                        <div className=' language-barchart ps-2'>
                             <div className='bar-chart-child'>
                                 <Barchart></Barchart>
                             </div>

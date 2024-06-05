@@ -25,7 +25,7 @@ const Chart = () => {
     };
 
     return (
-        <div className="chart">
+        <div className="chart  hidden md:block">
             <p className='mx-5 mt-2  font-bold'>Most Used Language in Github</p>
 
             <ReactApexChart className='chart-child' options={options} series={series} type="donut" width={'300'} />

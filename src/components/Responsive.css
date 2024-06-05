@@ -870,13 +870,17 @@
 
  @media only screen and (min-width: 300px) and (max-width: 440px) {
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart .chart-child {
-         display: none;
+         /* display: none; */
      }
 
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart .pro-barchart .chart {
          text-align: center;
          align-items: center;
          justify-content: center;
+         /* display: none; */
+     }
+     .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart {
+        /* display: none; */
      }
  }
 
@@ -971,7 +975,7 @@
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main {
          border-bottom-left-radius: 5px;
          border-bottom-right-radius: 5px;
-         height: 1170px;
+         height: 870px;
          width: 100%;
          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      }
@@ -1239,11 +1243,17 @@
 
  @media only screen and (min-width: 300px) and (max-width: 1200px) {
      .container-head-main {
-         top: 600px;
+         top: 350px;
+     }
+
+     #project {
+         margin-top: 400px;
      }
 
      .projects-head {
-         top: 700px;
+
+         height: 1550px;
+
      }
  }
 
@@ -1381,11 +1391,11 @@
 
  @media only screen and (min-width: 300px) and (max-width: 670px) {
      .mission-parent {
-         top: 700px;
+         top: 0px;
      }
 
      .ceo-head-parant {
-         margin-top: 1000px;
+         margin-top: 300px;
      }
 
      .projects-head .project-child {
@@ -1435,7 +1445,7 @@
 
  @media only screen and (min-width: 300px) and (max-width: 1200px) {
      .contact-headmain {
-         top: 900px;
+         top: 200px;
      }
  }
 

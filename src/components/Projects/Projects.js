@@ -14,6 +14,7 @@ const Projects = () => {
             imgSrc: shoes,
             title: 'Animado - Comprehensive Animation Studio',
             subtitle: 'Educational',
+            label: 'New',
             screenshotLink: 'path/to/screenshot1.png',
             githubLink: 'https://github.com/user/project1',
             liveLink: 'https://project1.live'
@@ -23,6 +24,7 @@ const Projects = () => {
             imgSrc: shoes,
             title: 'Clothify - Online Clothing Store',
             subtitle: 'E-commerce',
+            label: 'Featured',
             screenshotLink: 'path/to/screenshot2.png',
             githubLink: 'https://github.com/user/project2',
             liveLink: 'https://project2.live'
@@ -32,6 +34,7 @@ const Projects = () => {
             imgSrc: shoes,
             title: 'ShoeMart - E-commerce Shoe Platform',
             subtitle: 'E-commerce',
+            label: 'Popular',
             screenshotLink: 'path/to/screenshot3.png',
             githubLink: 'https://github.com/user/project3',
             liveLink: 'https://project3.live'
@@ -41,6 +44,7 @@ const Projects = () => {
             imgSrc: shoes,
             title: 'ShoeMart - E-commerce Shoe Platform',
             subtitle: 'E-commerce',
+            label: 'Popular',
             screenshotLink: 'path/to/screenshot3.png',
             githubLink: 'https://github.com/user/project3',
             liveLink: 'https://project3.live'
@@ -49,7 +53,7 @@ const Projects = () => {
 
     return (
         <div>
-            <div id='project' className='projects-head mt-10'>
+            <div id='project' className='projects-head mt-20'>
                 <div className='projects-head12'>
                     <div className='img-head pt-3'>
                         <img src={work} alt="Projects" />
@@ -62,25 +66,26 @@ const Projects = () => {
                 <div className='container mt-10 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {
                         projectsData.map((project) => (
-                            <div key={project.id} className='project-card-item border rounded-sm shadow-lg mb-4'>
+                            <div key={project.id} className='relative project-card-item border rounded shadow-lg   overflow-hidden'>
                                 <img src={project.imgSrc} alt={project.title} className='w-full h-48 object-cover rounded-sm' />
                                 <div className='bg-white text-black'>
                                     <div className='px-3 py-3 leading-tight'>
                                         <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
                                         <h6 className='text-[10px] font-semibold'>{project.subtitle}</h6>
                                     </div>
-                                    <div className='flex  font-semibold justify-around pb-3'>
-                                        <a href={project.screenshotLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 text-black no-underline  '>
+                                    <div className='flex font-semibold justify-around pb-3'>
+                                        <a href={project.screenshotLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
                                             Screenshot
                                         </a>
-                                        <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 text-black no-underline  '>
+                                        <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
                                             <FontAwesomeIcon icon={faGithub} />
                                         </a>
-                                        <a href={project.liveLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 text-black no-underline  '>
+                                        <a href={project.liveLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
                                             Live Preview
                                         </a>
                                     </div>
                                 </div>
+                              
                             </div>
                         ))
                     }

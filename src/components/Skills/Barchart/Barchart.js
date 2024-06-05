@@ -43,7 +43,7 @@ const Barchart = () => {
     }, []);
 
     return (
-        <div ref={chartRef}></div>
+        <div className='' ref={chartRef}></div>
     );
 };
 

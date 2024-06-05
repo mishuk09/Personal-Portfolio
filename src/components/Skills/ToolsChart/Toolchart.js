@@ -43,7 +43,7 @@ const Toolchart = () => {
     }, []);
 
     return (
-        <div ref={chartRef}></div>
+        <div className='' ref={chartRef}></div>
     );
 };
 
