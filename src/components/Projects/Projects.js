@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Projects = () => {
-    // projectsData.js
+
     const projectsData = [
         {
             id: 1,
@@ -74,9 +74,9 @@ const Projects = () => {
                                         <h6 className='text-[10px] font-semibold'>{project.subtitle}</h6>
                                     </div>
                                     <div className='flex font-semibold justify-around pb-3'>
-                                        <a href={project.screenshotLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
+                                        <div href={project.screenshotLink} target='_blank' rel='noopener noreferrer' className='border cursor-pointer text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
                                             Screenshot
-                                        </a>
+                                        </div>
                                         <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
                                             <FontAwesomeIcon icon={faGithub} />
                                         </a>
@@ -85,7 +85,7 @@ const Projects = () => {
                                         </a>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         ))
                     }
