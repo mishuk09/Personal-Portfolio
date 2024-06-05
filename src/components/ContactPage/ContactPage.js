@@ -1,13 +1,11 @@
-import '../Responsive.css';
+// import '../Responsive.css';
 import './ContactPage.css'
 import React, { useState } from 'react';
 import ContactForm from '../Contact/ContactForm';
 import contact from './img/contact.png';
-// import Three from '../Threejs/Three';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { Fade } from 'react-reveal';
-import { Zoom } from 'react-reveal';
+import { Fade, Zoom } from 'react-reveal';
 import Nav from '../Navbar/Nav';
 
 const ContactPage = () => {
@@ -17,8 +15,8 @@ const ContactPage = () => {
     };
 
     return (
-        <div id='contact'  className='contactpage-div-style bg-black pb-10' >
-            <Nav></Nav>
+        <div id='contact' className='contactpage-div-style bg-black pb-10'>
+            <Nav />
             <div className='absolute three-div'>
                 {/* <Three></Three> */}
             </div>
@@ -27,58 +25,46 @@ const ContactPage = () => {
                     <Fade top>
                         {!showContactInfo && (
                             <img
-                                className='w-[450px] px-10 mt-[70px]  img-contact-form cursor-pointer'
+                                className='w-[450px] md:w-[350px] lg:w-[450px] px-10 mt-[70px] img-contact-form cursor-pointer'
                                 src={contact}
                                 alt=""
                                 onClick={toggleContactInfo}
                             />
-                        )}</Fade>
+                        )}
+                    </Fade>
                     {showContactInfo && (
-                        <div className='relative w-[100%] bg-transparent contactInfo rounded top-0 left-10 bg-gray-900 p-3 ms-10  '>
-                            <div className="flex flex-col items-stretch w-[100%] max-md:w-full pt-4 contact-head-child2 ">
-                                <div className="flex grow flex-col    contact-head-child3  ">
+                        <div className='relative w-[100%] bg-transparent contactInfo rounded top-0 md:left-10 lg:left-0 bg-gray-900 p-3 md:ms-10'>
+                            <div className="flex flex-col items-stretch w-full pt-4 contact-head-child2">
+                                <div className="flex-grow flex flex-col items-stretch">
                                     <Fade top>
-                                        <div className="self-stretch flex justify-between gap-4  ">
-                                            <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600 '><FontAwesomeIcon icon={faEnvelope} color='white' /> </div>
-                                            {" "}
-                                            <div className="flex grow basis-[0%] mt-1 leading-3	 flex-col items-stretch   max-md:max-w-full">
-                                                <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap max-md:max-w-full">
-                                                    Email
-                                                </div>{" "}
-                                                <div className="text-white mt-0 text-justify text-sm leading-8 whitespace-nowrap   max-md:max-w-full">
-                                                    mishukinfo09@gmail.com
-                                                </div>
+                                        <div className="flex justify-between gap-4">
+                                            <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600'><FontAwesomeIcon icon={faEnvelope} color='white' /></div>
+                                            <div className="flex-grow mt-1 leading-3 flex flex-col items-stretch">
+                                                <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap">Email</div>
+                                                <div className="text-white mt-0 text-justify text-sm leading-8 whitespace-nowrap">mishukinfo09@gmail.com</div>
                                             </div>
-                                        </div>{" "}
+                                        </div>
                                     </Fade>
                                     <Fade left>
-                                        <div className="flex    justify-between gap-4 mt-3 self-start  ">
-                                            <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600 '>  <FontAwesomeIcon icon={faPhone} color='white' /> </div>{" "}
-                                            <div className="flex grow basis-[0%] leading-3 flex-col items-stretch  ">
-                                                <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap">
-                                                    Call
-                                                </div>{" "}
-                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap  ">
-                                                    +91 7069078661
-                                                </div>
+                                        <div className="flex justify-between gap-4 mt-3 self-start">
+                                            <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600'><FontAwesomeIcon icon={faPhone} color='white' /></div>
+                                            <div className="flex-grow leading-3 flex flex-col items-stretch">
+                                                <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap">Call</div>
+                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap">+91 7069078661</div>
                                             </div>
-                                        </div>{" "}
+                                        </div>
                                     </Fade>
                                     <Fade right>
-                                        <div className="flex    justify-between gap-4 mt-3 self-start  ">
-                                            <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600  '> <FontAwesomeIcon icon={faLocationDot} color='white' className='  ' /> </div>{" "}
-                                            <div className="flex grow basis-[0%] leading-3 flex-col items-stretch  ">
-                                                <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap">
-                                                    Location
-                                                </div>{" "}
-                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap  ">
-                                                    Rk university Rajkot,Gujarat,India.
-                                                </div>
+                                        <div className="flex justify-between gap-4 mt-3 self-start">
+                                            <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600'><FontAwesomeIcon icon={faLocationDot} color='white' className='  ' /></div>
+                                            <div className="flex-grow leading-3 flex flex-col items-stretch">
+                                                <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap">Location</div>
+                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap">Rk university Rajkot, Gujarat, India.</div>
                                             </div>
-                                        </div>{" "}
-                                    </Fade  >
+                                        </div>
+                                    </Fade>
                                     <Zoom>
-                                        <div className="text-white text-justify mt-4   font-bold leading-8 whitespace-nowrap  self-stretch items-center     ">
+                                        <div className="text-white text-justify mt-4 font-bold leading-8 whitespace-nowrap self-stretch items-center">
                                             <iframe
                                                 className='rounded iframe-map'
                                                 title="Google Map"
@@ -98,8 +84,8 @@ const ContactPage = () => {
                     )}
                 </div>
                 <Fade right>
-                    <div className='w-[50%]  contactform absolute    right-0  '>
-                        <ContactForm></ContactForm>
+                    <div className='w-full md:w-1/2 lg:w-[50%] contactform absolute right-0'>
+                        <ContactForm />
                     </div>
                 </Fade>
             </div>
