@@ -1,5 +1,5 @@
 import React from 'react';
-import './Certificate.css';
+import '../../index.css'
 import '../Responsive.css';
 import certificate from './img/certificate.png';
 import one from './img/one.jpg';
@@ -16,9 +16,6 @@ import coursera from './img/coursera.png';
 import infosys from './img/Infosys.png';
 import gatelogo from './img/gatelogo.png';
 import { Slide } from 'react-reveal';
-import Shortintro from '../Shortintro/Shortintro';
-import wave from './img/wave.svg';
-import Achivement from './Achivement';
 
 
 
@@ -53,6 +50,8 @@ const Certificate = () => {
                 </div>
             </div>
             <div className='flex certificate-flex-box py-2'>
+                <div className="shad12"> <img src={nine} alt="" /> </div>
+                <div className="shad12"><img src={eight} alt="" /> </div>
                 <div className="shad12"> <img src={one} alt="" /> </div>
                 <div className="shad12"> <img src={two} alt="" /> </div>
                 <div className="shad12"> <img src={three} alt="" /> </div>
@@ -60,8 +59,7 @@ const Certificate = () => {
                 <div className="shad12"> <img src={five} alt="" /> </div>
                 <div className="shad12"> <img src={six} alt="" /> </div>
                 <div className="shad12"> <img src={seven} alt="" /> </div>
-                <div className="shad12"><img src={eight} alt="" /> </div>
-                <div className="shad12"> <img src={nine} alt="" /> </div>
+
             </div>
 
             <div className=" container pt-0 mt-5 mb-5 certificate-description">

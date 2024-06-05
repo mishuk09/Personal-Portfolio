@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Service.css';
+import '../../index.css'
 import ui from './img/ui.png';
 import we from './img/we.png';
 import ne from './img/ne.png';

@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css'
+import '../../index.css'
 import '../Responsive.css';
 import aboutmepic from './img/aboutmepic.png'
 import CallAhortAbout from './CallShortAbout/CallAhortAbout';

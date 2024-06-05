@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import 'react-phone-number-input/style.css';
-import './Contact.css'; // CSS file for styling
+import '../../index.css'
 import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from '@emailjs/browser';
 import '../Responsive.css';

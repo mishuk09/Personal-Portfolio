@@ -1,5 +1,5 @@
 import React from 'react';
-import './Mission.css';
+import '../../index.css';
 import missionimg from './img/missionimg.png';
 import map from './img/map.webp';
 import { Link } from 'react-router-dom';

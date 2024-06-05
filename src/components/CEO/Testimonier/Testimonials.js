@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './Test.css';
+import '../../../index.css'
 import mishuk2 from '../img/mishuk2.png';
 import rku from '../img/rku.png';
 import fiverr from '../img/fiverr.webp';

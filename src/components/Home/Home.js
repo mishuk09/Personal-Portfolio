@@ -1,5 +1,6 @@
 import React from 'react';
-import './Home.css';
+import '../../index.css'
+// import './Home.css';
 import '../Responsive.css';
 import { faGithub, faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -63,7 +64,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='pic-div   bg-black'>
+                    <div className='pic-div   '>
                         <Solar></Solar>
 
                     </div>

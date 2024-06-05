@@ -565,7 +565,7 @@
 
      .about-section .about-detilsold {
          align-items: center;
-         text-align: center;
+         /* text-align: center; */
          justify-content: center;
          color: #e8e8e8;
          padding-top: 100px;
@@ -1034,7 +1034,7 @@
      }
 
      .certification-main {
-         top: 600px;
+         top: 350px;
      }
  }
 
@@ -1566,7 +1566,7 @@
          border-radius: 5px;
          position: absolute;
          left: 50%;
-         margin-top: 1450px;
+         margin-top: 1520px;
          transform: translate(-50%, -50%);
          height: 230px;
          width: 100%;
@@ -1616,7 +1616,7 @@
 
      .ceo-head-parant .ceo {
          background-image: linear-gradient(to top, #0e0a1b, #151221, #1a1827, #211d2d, #272334);
-         height: 1630px;
+         height: 1700px;
          width: 100%;
          margin-top: -170px;
          position: absolute;

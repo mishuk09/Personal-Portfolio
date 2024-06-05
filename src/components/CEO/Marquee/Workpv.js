@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Workpv.css';
+import '../../../index.css'
 import Marquee from "react-fast-marquee";
 import sihh from '../img/sihh.png';
 import ahms from '../img/ahms.png';
@@ -34,7 +34,7 @@ const Workpv = () => {
                 gradient={false}
                 pauseOnHover={false}
                 direction='left'
-                className='marquee-div'
+                className='marquee-div-w'
                 pauseOnClick={false}
                 onMouseEnter={handleMouseOver}
                 onMouseLeave={handleMouseOut}

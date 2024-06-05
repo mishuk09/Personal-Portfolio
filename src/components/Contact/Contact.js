@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.css';
+import '../../index.css';
 import { faGithub, faFacebook, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopyright } from '@fortawesome/free-solid-svg-icons';
@@ -15,14 +15,14 @@ const Contact = () => {
 
                 <div className='marquee-div-name mt-[40px] '>
                     <span className='text-blue-500'>Contact</span>
-                    <div className='flex justify-between fdsafsadfs'> <h1 className=''> Let's Contact With Me</h1>
+                    <div className='flex justify-between fdsafsadfs'> <h1 > Let's Contact With Me</h1>
                     </div>
                     <hr className='text-black h-3 pt-0 mt-0' />
                 </div>
             </div>{" "}
 
             <ContactPage></ContactPage>
-            <div className="bg-slate-950 contact-icon flex w-full flex-col items-center pt-3   pb-3 px-1 max-md:max-w-full">
+            <div className="  contact-icon flex w-full flex-col items-center pt-3   pb-3 px-1 max-md:max-w-full">
                 <div className="flex w-[100%] max-w-full text-center flex-col items-center">
                     <div className="text-white text-justify text-1xl font-bold   whitespace-nowrap">
                         Follow Me

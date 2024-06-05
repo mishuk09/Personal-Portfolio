@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './Projects.css';
+import '../../index.css'
 import work from './img/work.png';
 import ProjectVideo from './ProjectVideo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -112,7 +112,7 @@ const Projects = () => {
                                     open={open}
                                     TransitionComponent={Transition}
                                     keepMounted
-                                    
+
                                     onClose={handleClose}
                                     aria-describedby="alert-dialog-slide-description"
                                 >

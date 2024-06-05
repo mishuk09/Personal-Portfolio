@@ -1,5 +1,5 @@
 import React from 'react';
-import './Skillsbar.css'
+import '../../../index.css'
 import linkedin from '../img/linkedin.gif';
 import Skills from '../img/skills.png';
 import Chart from '../AcumulationChart/Chart';
@@ -24,7 +24,7 @@ const Skillsbar = () => {
             <div className='skillsbar-div-head mt-2  '>
                 <div className='skills-bar-head p-2 '>
                     <div className='skills-introimg ps-1 '><img src={Skills} alt="" /></div>
-                    <div className='w-[60%]  gfhdg rounded bg-blue-400 p-2'>
+                    <div className='w-[60%]   skills-marque   rounded   p-2'>
                         <Marquee
                             speed={40}
                             gradient={false}
@@ -42,32 +42,16 @@ const Skillsbar = () => {
                     <p >Last Update:: <span className='lastupdate  '>1 Decembar 2023</span></p>
                     <div className='skills-headline-child'>
                         <Zoom>
-                            <div className='   hover:bg-blue-600 delay-75'>
-                                <p className='dsahead'>DSA</p>
-                                <p className='dsahead1 font-nunito'>Number of Problems Solved</p>
-                                <p className='dsahead'>50</p>
-                            </div>
-                        </Zoom>
+                            {
+                                itemsskill.map((item) => (
+                                    <div key={item.id} className='      '>
+                                        <p className='dsahead'>{item.title}</p>
+                                        <p className='dsahead1 font-nunito'> {item.description}</p>
+                                        <p className='dsahead'>{item.no}</p>
+                                    </div>
+                                ))
+                            }
 
-                        <Zoom>
-                            <div className='   hover:bg-blue-600 delay-75'>
-                                <p className='dsahead'>Github</p>
-                                <p className='dsahead1 font-nunito'>Total Repositories</p>
-                                <p className='dsahead'>50</p>
-                            </div>
-                        </Zoom>
-                        <Zoom>
-                            <div className='   hover:bg-blue-600 delay-75'>
-                                <p className='dsahead'>Github</p>
-                                <p className='dsahead1 font-nunito'>Total Contributions</p>
-                                <p className='dsahead'>869</p>
-                            </div>
-                        </Zoom>
-                        <Zoom>
-                            <div className='   hover:bg-blue-600 delay-75'> <p className='dsahead'>Github</p>
-                                <p className='dsahead1 font-nunito'>Total Commits</p>
-                                <p className='dsahead'>694</p>
-                            </div>
                         </Zoom>
                     </div>
                     <div className='bar-chart mt-3 '>
@@ -108,3 +92,30 @@ const Skillsbar = () => {
 };
 
 export default Skillsbar;
+
+const itemsskill = [
+    {
+        id: 1,
+        title: 'DSA',
+        description: 'Number of Problems Solved',
+        no: '50'
+    },
+    {
+        id: 2,
+        title: 'Github',
+        description: 'Total Repositories',
+        no: '70'
+    },
+    {
+        id: 3,
+        title: 'Github',
+        description: 'Total Contributions',
+        no: '869'
+    },
+    {
+        id: 4,
+        title: 'Github',
+        description: 'Total Commits',
+        no: '670'
+    }
+];

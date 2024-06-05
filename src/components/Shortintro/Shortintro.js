@@ -1,5 +1,5 @@
 import React from 'react';
-import './Shortintro.css'
+import '../../index.css'
 import '../Responsive.css';
 import sort from '../Home/img/sort.png'
 import college from '../Home/img/college.svg';
@@ -18,7 +18,7 @@ const Shortintro = () => {
                 <div className='sort-intro'>
                     <div className='sort-intro-headline p-1 '>
                         <div className='sort-intro-img ps-1'><img src={sort} alt="" className='jhdsahdf' /></div>
-                        <div className='w-[50%] h-10 marquee-div rounded bg-blue-400 p-2'>
+                        <div className='w-[50%] h-10 marquee-div rounded   p-2'>
                             <Marquee
                                 speed={40}
                                 gradient={false}

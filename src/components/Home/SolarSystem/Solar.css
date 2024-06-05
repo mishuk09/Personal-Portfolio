@@ -1,7 +1,4 @@
-html,
-body {
-    background-color: #121215;
-}
+
 
 .solar-system {
     position: relative;
@@ -10,7 +7,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    background-color: #000000;
+    background-color: var(--primary-color);
 }
 
 .orbit {

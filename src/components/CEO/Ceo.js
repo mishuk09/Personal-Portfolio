@@ -9,11 +9,11 @@ import Testimonials from './Testimonier/Testimonials';
 const Ceo = () => {
     return (
         <div className='ceo-head-parant  '>
-            <div className='ceo bg-black'>
+            <div className='ceo  '>
                 <Workpv></Workpv>
                 <Testimonials></Testimonials>
                 <div className='img-div'>
-                    {/* <MapChart className='img'></MapChart> */}
+                    <MapChart className='img'></MapChart>
                 </div>
             </div>
             <div className='container ceo-parent'>

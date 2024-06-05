@@ -6,6 +6,7 @@ import javascript from '../img/javascript.png';
 import react from '../img/react.png';
 import java from '../img/java.webp';
 import github from '../img/github.png';
+ 
 
 const Solar = () => {
     return (

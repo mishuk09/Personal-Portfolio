@@ -1,5 +1,6 @@
 import React from 'react';
-import './CallShortAbout.css';
+import '../../../index.css'
+ 
 import '../../Responsive.css';
 import about from '../img/about.png'
 import followgithub from '../img/followgithub.gif'
@@ -17,7 +18,7 @@ const CallAhortAbout = () => {
                 <div className='sort-intro-he  p-1 '>
                     {/* <div className='sort-intro-img ps-1'><img src={about} alt="" className='jhdsahdf' /></div> */}
                     <div className='sort-introimg ps-1'><img src={about} alt="" /></div>
-                    <div className='w-[50%] short-intro-marquee   rounded bg-blue-400 p-2'>
+                    <div className='w-[50%] short-intro-marquee   rounded  p-2'>
                         <Marquee
                             speed={40}
                             gradient={false}

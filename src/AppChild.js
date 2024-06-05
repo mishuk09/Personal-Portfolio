@@ -13,6 +13,7 @@ import Ceo from './components/CEO/Ceo';
 import Contact from './components/Contact/Contact';
 import ScrollButton from './components/ScrollButton/ScrollButton';
 import Nav from './components/Navbar/Nav';
+import CardComponent from './components/Projects/CardComponent';
 
 const AppChild = () => {
     return (
@@ -26,6 +27,7 @@ const AppChild = () => {
             <Skills></Skills>
             <Certificate></Certificate>
             <Service></Service>
+            {/* <CardComponent /> */}
             <Projects></Projects>
             <Mission></Mission>
             <Ceo></Ceo>
