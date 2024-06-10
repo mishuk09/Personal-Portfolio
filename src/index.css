@@ -475,9 +475,6 @@ code {
 
 
 
-
-
-
 .sortabout {
   width: 68%;
   margin-left: auto;
@@ -1353,6 +1350,25 @@ code {
 
 
 
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  /* Adjust the height of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+  /* Make the scrollbar thumb rounded */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 
 

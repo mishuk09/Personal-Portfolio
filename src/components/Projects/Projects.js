@@ -5,9 +5,17 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css'; // Import Spli
 import shoes from './img/shoes.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import p1 from './img/p1.png';
+import p2 from './img/p2.png';
+import p3 from './img/p3.png';
+import p4 from './img/p4.png';
+import p5 from './img/p5.png';
+import p6 from './img/p6.png';
+import p7 from './img/p7.png';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const projectsData = [
         {
@@ -16,28 +24,24 @@ const Projects = () => {
             title: 'Animado - Comprehensive Animation Studio',
             subtitle: 'Educational',
             label: 'New',
-            screenshotLink: 'path/to/screenshot1.png',
-            githubLink: 'https://github.com/user/project1',
+            screenshotLink: shoes, // Assuming this is the correct image path
+            githubLink: 'https://github.com/mishuk09/Digital_marketing',
             liveLink: 'https://project1.live',
             screenshots: [
-                'path/to/screenshot1_1.png',
-                'path/to/screenshot1_2.png',
-                'path/to/screenshot1_3.png',
+                p1, p2, p3
             ]
         },
         {
             id: 2,
-            imgSrc: shoes,
-            title: 'Clothify - Online Clothing Store',
-            subtitle: 'E-commerce',
+            imgSrc: p1,
+            title: 'Plexus - Digital Marketing Service',
+            subtitle: 'Agency',
             label: 'Featured',
-            screenshotLink: 'path/to/screenshot2.png',
+            screenshotLink: shoes, // Assuming this is the correct image path
             githubLink: 'https://github.com/user/project2',
-            liveLink: 'https://project2.live',
+            liveLink: 'https://plexus.org.in/',
             screenshots: [
-                'path/to/screenshot2_1.png',
-                'path/to/screenshot2_2.png',
-                'path/to/screenshot2_3.png',
+                p1, p2, p3, p4, p5, p6, p7,
             ]
         },
         {
@@ -46,31 +50,18 @@ const Projects = () => {
             title: 'ShoeMart - E-commerce Shoe Platform',
             subtitle: 'E-commerce',
             label: 'Popular',
-            screenshotLink: 'path/to/screenshot3.png',
+            screenshotLink: shoes, // Assuming this is the correct image path
             githubLink: 'https://github.com/user/project3',
             liveLink: 'https://project3.live',
             screenshots: [
-                'path/to/screenshot3_1.png',
-                'path/to/screenshot3_2.png',
-                'path/to/screenshot3_3.png',
-            ]
-        },
-        {
-            id: 3,
-            imgSrc: shoes,
-            title: 'ShoeMart - E-commerce Shoe Platform',
-            subtitle: 'E-commerce',
-            label: 'Popular',
-            screenshotLink: 'path/to/screenshot3.png',
-            githubLink: 'https://github.com/user/project3',
-            liveLink: 'https://project3.live',
-            screenshots: [
-                'path/to/screenshot3_1.png',
-                'path/to/screenshot3_2.png',
-                'path/to/screenshot3_3.png',
+                p1, p2, p3
             ]
         },
     ];
+
+    const handleImageClick = (imgSrc) => {
+        setSelectedImage(imgSrc);
+    };
 
     return (
         <div>
@@ -95,7 +86,7 @@ const Projects = () => {
                                         <h6 className='text-[10px] font-semibold'>{project.subtitle}</h6>
                                     </div>
                                     <div className='flex font-semibold justify-around pb-3'>
-                                        <div onClick={() => setSelectedProject(project)} className='border cursor-pointer text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
+                                        <div onClick={() => { setSelectedProject(project); setSelectedImage(project.screenshots[0]); }} className='border cursor-pointer text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
                                             Screenshot
                                         </div>
                                         <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
@@ -114,7 +105,7 @@ const Projects = () => {
 
             {selectedProject && (
                 <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'>
-                    <div className='bg-white rounded-lg overflow-hidden w-full max-w-2xl'>
+                    <div className='bg-white rounded-lg overflow-hidden w-full max-w-3xl'>
                         <div className='relative'>
                             <button
                                 onClick={() => setSelectedProject(null)}
@@ -122,22 +113,21 @@ const Projects = () => {
                             >
                                 &times;
                             </button>
-                            <img
-                                src={selectedProject.screenshots[0]}
-                                alt={selectedProject.title}
-                                className='w-full h-64 object-cover'
-                            />
-                            <div className='flex overflow-x-auto py-2'>
+                            <div className='w-full h-96'> {/* Fixed dimensions for the image box */}
+                                <img
+                                    src={selectedImage}
+                                    alt={selectedProject.title}
+                                    className='w-full h-full object-cover'
+                                />
+                            </div>
+                            <div className='flex overflow-x-auto pt-2 pb-3 custom-scrollbar'>
                                 {selectedProject.screenshots.map((imgSrc, index) => (
                                     <img
                                         key={index}
                                         src={imgSrc}
                                         alt={`${selectedProject.title} screenshot ${index + 1}`}
-                                        className='h-20 object-cover mx-2 cursor-pointer'
-                                        onClick={() => setSelectedProject({
-                                            ...selectedProject,
-                                            screenshots: [imgSrc, ...selectedProject.screenshots.filter(src => src !== imgSrc)]
-                                        })}
+                                        className='h-10 md:h-20 border-1 object-cover mx-2 cursor-pointer'
+                                        onClick={() => handleImageClick(imgSrc)}
                                     />
                                 ))}
                             </div>
