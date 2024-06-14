@@ -9,7 +9,7 @@ const ColorItem = ({ color, setColor }) => (
 );
 
 const ColorChange = () => {
-    const colors = ['#be185d', '#22d3ee', '#16a34a', '#b91c1c', '#a855f7', '#059669'];
+    const colors = ['#be185d', '#a855f7', '#16a34a', '#fb923c', '#22d3ee', '#059669'];
     const [isOpen, setIsOpen] = useState(false);
 
     const setColor = (color) => {

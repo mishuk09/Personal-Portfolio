@@ -6,12 +6,7 @@
   --primary-background-color: #ffffff;
   --color-changer: #0487fb;
   --primary-color: #121215;
-  --color-changer-h: 14;
-  /* Hue value */
-  --color-changer-s: 100%;
-  /* Saturation value */
-  --color-changer-l: 60%;
-  /* Lightness value */
+
 }
 
 body {
