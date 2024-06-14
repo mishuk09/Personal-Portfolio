@@ -1,5 +1,5 @@
 import React from 'react';
-import './Chart.css'
+import '../../../index.css'
 import ReactApexChart from 'react-apexcharts';
 
 
@@ -30,7 +30,7 @@ const Chart = () => {
 
             <ReactApexChart className='chart-child' options={options} series={series} type="donut" width={'300'} />
 
-            <a href="https://github.com/mishuk09" target='blank'><button className='mt-3'>Github</button> </a>
+            <a href="https://github.com/mishuk09" target='blank'><button className='mt-3 github-btn'>Github</button> </a>
         </div>
     );
 };

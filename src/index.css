@@ -6,7 +6,12 @@
   --primary-background-color: #ffffff;
   --color-changer: #0487fb;
   --primary-color: #121215;
-
+  --color-changer-h: 14;
+  /* Hue value */
+  --color-changer-s: 100%;
+  /* Saturation value */
+  --color-changer-l: 60%;
+  /* Lightness value */
 }
 
 body {
@@ -124,12 +129,14 @@ code {
 
 .gradient-line1 {
   height: 5px;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(60, 90, 255, 1) 49%, rgba(101, 125, 255, 1) 100%);
+  background: linear-gradient(to right,
+      rgba(0, 1, 1, 1),
+      var(--color-changer));
 }
 
 .gradient-line0 {
   border-radius: 50%;
+
 }
 
 .gradient-line0 img {
@@ -142,6 +149,7 @@ code {
 .gradient-line0,
 .coding-icon34 {
   display: inline-block;
+  color: var(--color-changer);
 }
 
 .coding-icon34 {
@@ -150,8 +158,10 @@ code {
 
 .gradient-line {
   height: 5px;
-  background: rgb(101, 125, 255);
-  background: linear-gradient(90deg, rgba(101, 125, 255, 1) 0%, rgba(60, 90, 255, 1) 49%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(to left,
+      rgba(0, 1, 1, 1),
+      var(--color-changer));
+
 }
 
 .social-link {
@@ -177,7 +187,7 @@ code {
 }
 
 .social-link .icon-main {
-  color: white;
+  color: var(--color-changer);
 }
 
 .icon-div {
@@ -494,7 +504,7 @@ code {
 
 .sort-intro-child11:hover {
   transition: 0.5s;
-  background-color: #0487FB;
+  background-color: var(--color-changer);
   color: white;
 }
 
@@ -546,7 +556,7 @@ code {
 
 .circle1 .icon {
   width: 20px;
-  color: #0487FB;
+  color: var(--color-changer);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -714,7 +724,7 @@ code {
 }
 
 .about-section .resume button {
-  background-color: #0487FB;
+  background-color: var(--color-changer);
   color: white;
   font-weight: 500;
 }
@@ -798,8 +808,35 @@ code {
 ===       Skillsbar           =====
 =================================== */
 
+.whatsapplogo {
+  color: var(--color-changer);
+}
+
+.goto-top {
+  background-color: var(--color-changer);
+}
+
+.chart a button {
+
+  border-radius: 20px;
+  width: 100px;
+  padding: 5px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.chart a {
+  margin-top: 20px;
+  margin-left: 30%;
+}
 
 
+
+
+.github-btn {
+  background-color: var(--color-changer);
+}
 
 .skillsbar {
   margin-top: 170px;
@@ -1254,6 +1291,11 @@ code {
 /* ================================
 ===       Service           =====
 =================================== */
+
+
+
+
+
 
 
 
@@ -1832,6 +1874,112 @@ code {
 
 
 
+
+
+
+/* ================================
+===          ceo               =====
+=================================== */
+
+
+
+
+
+
+
+.ceo {
+  /* background-color: #0E0A1B; */
+  height: 1600px;
+  width: 100%;
+  margin-top: 100px;
+  position: absolute;
+  background-color: var(--primary-color);
+}
+
+.img-div {
+  margin-top: 90px;
+}
+
+.ceo-parent {
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  margin-top: 1680px;
+  transform: translate(-50%, -50%);
+  height: 230px;
+  width: 400px;
+  background-color: #1E1E1E;
+  box-shadow: 2px 2px 2px 2px #333;
+  display: flex;
+}
+
+.ceo-parent img {
+  position: absolute;
+}
+
+.ceo-img {
+  width: 30%;
+}
+
+.ceo-img img {
+  width: 200px;
+  border: 1px solid rgb(146, 144, 144);
+  border-radius: 5px;
+}
+
+.ceo-detils {
+  color: rgb(163, 165, 167);
+  width: 100%;
+}
+
+.ceo-detils h3 {
+  margin-top: 24px;
+  color: white;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ceo-detils span {
+  color: #0487FB;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ceo-detils p {
+  margin-bottom: 0px;
+  margin-top: 15px;
+  color: #CCCCCC;
+  font-size: 15px;
+}
+
+.ceo-detils button {
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  width: 200px;
+  background-color: var(--color-changer);
+  color: white;
+}
+
+.ceo-detils h5 {
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.h3-span {
+  line-height: 0.2;
+}
+
+
+
+
+
+
+
+
+
+
 /* ================================
 ===       Contact              =====
 =================================== */
@@ -1913,7 +2061,7 @@ textarea {
   padding: 8px;
   border-radius: 5px;
   border: none;
-  border: 2px solid #007bff;
+  border: 2px solid var(--color-changer);
   background-color: #131237;
   color: white;
   cursor: pointer;
@@ -1923,8 +2071,8 @@ textarea {
   padding: 8px;
   border-radius: 5px;
   border: none;
-  border: 2px solid #007bff;
-  background-color: #007bff;
+  border: 2px solid var(--color-changer);
+  background-color: var(--color-changer);
   transition: 0.5s;
   color: white;
   cursor: pointer;

@@ -15,7 +15,7 @@ const ScrollButton = () => {
         bottom: '20px',
         right: '10px',
         zIndex: '999',
-        backgroundColor: '#007bff',
+       
 
         borderRadius: '50%',
         padding: '10px',
@@ -24,7 +24,7 @@ const ScrollButton = () => {
 
     return (
         <div>
-            <button style={buttonStyle} onClick={() => {
+            <button className='goto-top' style={buttonStyle} onClick={() => {
                 scrollToTop();
                 setScrollActive(!scrollActive);
             }}>

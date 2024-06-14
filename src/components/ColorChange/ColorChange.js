@@ -9,14 +9,10 @@ const ColorItem = ({ color, setColor }) => (
 );
 
 const ColorChange = () => {
-    const colors = ['#2d3436', '#4834d4', '#be2edd', '#f9ca24', '#6ab04c', '#30336b'];
+    const colors = ['#be185d', '#22d3ee', '#16a34a', '#b91c1c', '#a855f7', '#059669'];
     const [isOpen, setIsOpen] = useState(false);
 
     const setColor = (color) => {
-        setTheme(color);
-    };
-
-    const setTheme = (color) => {
         document.documentElement.style.setProperty('--color-changer', color);
     };
 
@@ -25,7 +21,7 @@ const ColorChange = () => {
             <button className='app-logo' onClick={() => setIsOpen((prevState) => !prevState)}>
                 <FontAwesomeIcon icon={faGear} spin />
             </button>
-            <h3>Choose Color</h3>
+            <h3 className='text-black'>Choose Color</h3>
             <div className='color-list'>
                 {colors.map((color, index) => (
                     <ColorItem key={index} setColor={setColor} color={color} />

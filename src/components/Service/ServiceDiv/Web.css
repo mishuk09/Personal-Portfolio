@@ -50,7 +50,7 @@
 
 .web-service-parents button {
     border-radius: 20px;
-    background-color: #0487FB;
+    background-color: var(--color-changer);
     padding: 7px;
     width: 200px;
     color: white;

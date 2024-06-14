@@ -32,7 +32,7 @@ const Home = () => {
                     <div className='absolute container     w-[800px]   element-img'>
                         <img className='   w-[500px]' src={element} alt="" />
                     </div>
-                    {/* whatsapp logo */}
+                  
                     <WhatsApp></WhatsApp>
                     <div className='name-div    mt-5'>
                         <div className='name-div22'>
@@ -41,7 +41,7 @@ const Home = () => {
                             <div className='flex   align-items-center justify-center mt-2'>
                                 <div className='gradient-line1 w-[48%] pt-1'> </div>
                                 <div className='gradient-line0 mx-3'>
-                                    <FontAwesomeIcon icon={faCode} className='coding-icon34 text-white' size='2xl' beat />
+                                    <FontAwesomeIcon icon={faCode} className='coding-icon34  ' size='xl' beat />
                                 </div>
                                 <div className='gradient-line w-[48%]  '> </div>
                             </div>

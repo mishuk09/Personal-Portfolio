@@ -12,17 +12,21 @@ module.exports = {
         lato: ['Lato', 'sans-serif'],
         sans: ['Inter', 'sans-serif'],
       },
-       
-      test: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '6px',
-      },
       screens: {
         'xs': '360px',
         'sm': '640px',
-
       },
+      colors: {
+        'primary-background-color': 'var(--primary-background-color)',
+        'color-changer': 'var(--color-changer)',
+        'primary-color': 'var(--primary-color)',
+      },
+      spacing: {
+        '6px': '6px',
+      },
+      display: ['responsive', 'group-hover', 'group-focus'],
+      flexDirection: ['responsive', 'group-hover', 'group-focus'],
+      gap: ['responsive', 'group-hover', 'group-focus'],
     },
   },
   plugins: [],

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Ceo.css';
+import '../../index.css';
 import '../Responsive.css';
 import MapChart from './earth/MapChart';
 import mm from './img/mm.png';
