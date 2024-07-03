@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import ParticleJS from './components/ParticlesJS/ParticleJS';
 import ColorChange from './components/ColorChange/ColorChange';

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import '../../../index.css'
-import mishuk2 from '../img/mishuk2.png';
 import rku from '../img/rku.png';
 import fiverr from '../img/fiverr.webp';
 import nurvai from '../img/nurvai.jpg';
@@ -11,7 +10,7 @@ import nv from '../img/nv.jpeg';
 import Dialog from '@mui/material/Dialog';
 import Slide from '@mui/material/Slide';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faCopy, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCopy, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -131,7 +130,8 @@ const Testimonials = () => {
         <div id='testimonials' className='container'>
             <div className='Testimonials-name-div mt-[80px] mb-0 '>
                 <span className='text-blue-500'>What People Say</span>
-                <div className='flex justify-between'> <p className='text-5xl'> Testimonials</p>  <button className='text-white rounded-full bg-blue-500 w-40 h-10'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></button>
+                <div className='flex justify-between'> <p className='text-5xl'> Testimonials</p>
+                    {/* <button className='text-white rounded-full bg-blue-500 w-40 h-10'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></button> */}
                 </div>
                 <hr className='text-white h-3 pt-0 mt-0' />
             </div>

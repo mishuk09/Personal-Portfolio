@@ -7,7 +7,6 @@ const Button = (props) => {
         backgroundColor: theme,
         color: 'white',
 
-        // Add any other styles you need
     };
 
     return (

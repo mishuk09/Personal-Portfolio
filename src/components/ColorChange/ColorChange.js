@@ -14,6 +14,7 @@ const ColorChange = () => {
 
     const setColor = (color) => {
         document.documentElement.style.setProperty('--color-changer', color);
+        document.documentElement.style.setProperty('--sun-changer', color);
     };
 
     return (

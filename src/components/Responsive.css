@@ -251,11 +251,11 @@
      .solar-system #sun {
          height: 100px;
          width: 100px;
-         background-color: #fae20a;
+         background-color: var(--color-changer);
          margin-top: -51px;
          margin-left: -62px;
          border-radius: 50%;
-         box-shadow: 0 0 84px orange;
+         box-shadow: 0 0 84px var(--color-changer);
      }
 
      .solar-system .venus-orbit {
@@ -879,8 +879,9 @@
          justify-content: center;
          /* display: none; */
      }
+
      .skills-main-head-div .skillsbar .skillsbar-div-head .skills-child-main .bar-chart {
-        /* display: none; */
+         /* display: none; */
      }
  }
 
@@ -1593,6 +1594,13 @@
          text-align: center;
          align-items: center;
          justify-content: center;
+
+     }
+
+     .ceo-img img {
+         width: 200px;
+         border: 1px solid rgb(146, 144, 144);
+         border-radius: 100%;
      }
 
      .ceo-head-parant .ceo-parent .ceo-img img {

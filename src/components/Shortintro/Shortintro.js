@@ -38,7 +38,7 @@ const Shortintro = () => {
                             return (
                                 <div
                                     key={shortintro.id}
-                                    className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white' key={shortintro.id}>
+                                    className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white'  >
                                     <div className='sort-intro-div-img23'>
                                         <img src={shortintro.img} alt="" />
                                     </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../../index.css'
- 
 import '../../Responsive.css';
 import about from '../img/about.png'
 import followgithub from '../img/followgithub.gif'

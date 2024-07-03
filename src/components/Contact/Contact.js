@@ -28,10 +28,10 @@ const Contact = () => {
                         Follow Me
                     </div>{" "}
                     <div className="   text-center    footer-logo flex     mt-3 ">
-                        <div className='ps-3 ms-0 '><a href="https://github.com/mishuk09"><FontAwesomeIcon className='icon-main' color='white' icon={faGithub} size="2x" /> </a> </div>
-                        <div className='ps-3 ms-0 '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><FontAwesomeIcon className='icon-main' color='white' icon={faLinkedin} size="2x" /></a></div>
-                        <div className='ps-3 ms-0 '><a href="https://www.facebook.com/mishuk0910/" target='blank'> <FontAwesomeIcon className='icon-main' color='white' icon={faFacebook} size="2x" /></a></div>
-                        <div className='ps-3 ms-0 '><a href="https://www.facebook.com/mishuk0910"><FontAwesomeIcon className='icon-main' icon={faTwitter} color='white' size="2x" /></a></div>
+                        <div className='ps-3 ms-0 '><a href="https://github.com/mishuk09"><FontAwesomeIcon className='icon-main' icon={faGithub} size="2x" /> </a> </div>
+                        <div className='ps-3 ms-0 '><a href="https://www.linkedin.com/in/mishuk09/" target='blank'><FontAwesomeIcon className='icon-main' icon={faLinkedin} size="2x" /></a></div>
+                        <div className='ps-3 ms-0 '><a href="https://www.facebook.com/mishuk0910/" target='blank'> <FontAwesomeIcon className='icon-main' icon={faFacebook} size="2x" /></a></div>
+                        <div className='ps-3 ms-0 '><a href="https://www.facebook.com/mishuk0910"><FontAwesomeIcon className='icon-main' icon={faTwitter} size="2x" /></a></div>
 
                     </div>{" "}
                     <div className=" text-slate-200  text-center  w-[100%]    self-stretch whitespace-nowrap mt-2">

@@ -28,7 +28,7 @@
     height: 3rem;
     position: absolute;
     border: none;
-    background-color: rgb(185, 179, 172);
+    background-color: var(--color-changer);
     left: 0;
     top: 50%;
     transform: translate(-100%, -50%);

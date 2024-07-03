@@ -5,6 +5,7 @@
 :root {
   --primary-background-color: #ffffff;
   --color-changer: #0487fb;
+  --sun-changer: #fae20a;
   --primary-color: #121215;
 
 }
@@ -24,6 +25,38 @@ code {
 .btn-bg-color {
   background-color: var(--color-changer);
 }
+
+
+
+
+
+
+
+
+
+
+.darkmode-toggle {
+  background-color: var(--color-changer);
+
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  right: 0px;
+  z-index: 999;
+  bottom: 180px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+
+
+}
+
+.sunny-dark {
+  color: rgb(26, 6, 6);
+}
+
+
+
+
 
 
 
@@ -1716,7 +1749,8 @@ code {
   top: 0;
   margin-left: -50%;
   margin-top: -70%;
-  background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+  background-color: var(--color-changer);
+  /* background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb); */
 }
 
 .icon {
@@ -1914,6 +1948,7 @@ code {
 
 .ceo-img {
   width: 30%;
+
 }
 
 .ceo-img img {
@@ -1986,7 +2021,9 @@ code {
 
 
 
-
+.icon-main {
+  color: var(--color-changer);
+}
 
 
 .contact-headmain {

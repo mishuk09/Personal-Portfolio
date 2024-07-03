@@ -10,7 +10,6 @@ const WhatsApp = () => {
         right: '15px',
         bottom: '50px',
         transform: 'translate(0, -50%)',
-
     };
 
     return (

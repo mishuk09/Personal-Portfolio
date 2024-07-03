@@ -18,7 +18,7 @@ const Ceo = () => {
             </div>
             <div className='container ceo-parent'>
                 <div className='ceo-img pt-3 px-2'>
-                    <img src={mm} alt="" />
+                    <img src={mm}  alt="" />
                 </div>
                 <div className='ceo-detils'>
                     <div className='h3-span'>
