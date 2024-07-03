@@ -43,55 +43,80 @@ const CopyToClipboard = ({ text }) => {
 };
 
 const Testimonials = () => {
-    // Separate states and functions for each dialog
-    const [openNurvai, setOpenNurvai] = useState(false);
-    const [openSp, setOpenSp] = useState(false);
-    const [openSl, setOpenSl] = useState(false);
-    const [openNv, setOpenNv] = useState(false);
-    const [openBd, setOpenBd] = useState(false);
+    const testimonialsData = [
+        {
+            name: "Md Nur Islam",
+            position: "Graphic Designer",
+            details: "For done my project, 100% I am fully satisfied for his creativity with experience. So, I think it's my ethical responsibility to recommend ! Highly recommended anyone to create your extremely surprising website!",
+            image: nurvai,
+            links: {
+                fiverr: "https://www.fiverr.com/adipnur",
+                linkedin: "https://www.linkedin.com/in/nur-alam-890863159/",
+                email: "nuralam.ne@gmail.com",
+                phone: "+880 1744-883106"
+            }
+        },
+        {
+            name: "Shivangi Patel",
+            position: "Assistant Professor",
+            details: "Updating...",
+            image: sp,
+            links: {
+                fiverr: "https://www.fiverr.com/adipnur",
+                linkedin: "https://www.linkedin.com/in/shivangi-patel-65823b123/",
+                email: "shivangi.patel@rku.ac.in",
+                phone: "+91 90333 36835"
+            }
+        },
+        {
+            name: "Shalini Jha",
+            position: "Assistant Professor",
+            details: "Updating...",
+            image: sl,
+            links: {
+                fiverr: "https://www.fiverr.com/adipnur",
+                linkedin: "https://www.linkedin.com/in/shalini-jha-771338165/",
+                email: "jhashalu1@gmail.com",
+                phone: "+91 87807 61370"
+            }
+        },
+        {
+            name: "Vadher Nikunj",
+            position: "Assistant Professor",
+            details: "Updating...",
+            image: nv,
+            links: {
+                fiverr: "https://www.fiverr.com/adipnur",
+                linkedin: "https://www.linkedin.com/in/vadher-nikunj-876b34177/",
+                email: "vadhernknj19@gmail.com",
+                phone: "+91 99784 46077"
+            }
+        },
+        {
+            name: "Bhoomi Dangar",
+            position: "Assistant Professor",
+            details: "Updating...",
+            image: bd,
+            links: {
+                fiverr: "https://www.fiverr.com/adipnur",
+                linkedin: "https://www.linkedin.com/in/bhoomi-dangar-32b625147/",
+                email: "bhoomiahir321@gmail.com",
+                phone: "+91 82002 45406"
+            }
+        }
+    ];
 
+    const [dialogData, setDialogData] = useState({ open: false, email: "", phone: "" });
 
-    const handleClickOpenNurvai = () => {
-        setOpenNurvai(true);
-    };
-
-    const handleCloseNurvai = () => {
-        setOpenNurvai(false);
+    const handleClickOpen = (email, phone) => {
+        setDialogData({ open: true, email, phone });
     };
 
-    const handleClickOpenSp = () => {
-        setOpenSp(true);
+    const handleClose = () => {
+        setDialogData({ open: false, email: "", phone: "" });
     };
-
-    const handleCloseSp = () => {
-        setOpenSp(false);
-    };
-    const handleClickOpenSl = () => {
-        setOpenSl(true);
-    };
-
-    const handleCloseSl = () => {
-        setOpenSl(false);
-    };
-    const handleClickOpenNv = () => {
-        setOpenNv(true);
-    };
-
-    const handleCloseNv = () => {
-        setOpenNv(false);
-    };
-    const handleClickOpenBd = () => {
-        setOpenBd(true);
-    };
-
-    const handleCloseBd = () => {
-        setOpenBd(false);
-    };
-    // ... (similar functions for other cards)
-
 
     const interviewRef = useRef(null);
-
 
     const scroll = (scrollOffset) => {
         if (interviewRef.current) {
@@ -115,7 +140,6 @@ const Testimonials = () => {
         }
     };
 
-
     // Easing function for smooth scroll animation
     const easeInOutQuad = (t, b, c, d) => {
         t /= d / 2;
@@ -124,371 +148,88 @@ const Testimonials = () => {
         return (-c / 2) * (t * (t - 2) - 1) + b;
     };
 
-
-
     return (
         <div id='testimonials' className='container'>
             <div className='Testimonials-name-div mt-[80px] mb-0 '>
                 <span className='text-blue-500'>What People Say</span>
-                <div className='flex justify-between'> <p className='text-5xl'> Testimonials</p>
-                    {/* <button className='text-white rounded-full bg-blue-500 w-40 h-10'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></button> */}
+                <div className='flex justify-between'>
+                    <p className='text-5xl'> Testimonials</p>
                 </div>
                 <hr className='text-white h-3 pt-0 mt-0' />
             </div>
 
-            <div className='px-5 mb-10 relative  '>
-                <div className=' grid grid-flow-col auto-cols-max gap-3 mt-4 xs:overflow-x-auto md:overflow-hidden' ref={interviewRef}>
-
-                    <div className="e-card playing">
-                        <div className="image"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="infotop  ">
-                            <div className='infotop-img'>
-                                <img src={nurvai} alt="" />
-                            </div>
-                            <div className="text-content">
-                                <p>Md Nur Islam</p>
-                                <p className="name">Graphic Designer</p>
-                            </div>
-                            <p className='detils-p  '>For done my project, 100% I am fully satisfied for his creativity with experience. So, I think it's my ethical responsibility to recommend ! Highly recommended anyone to create your extremely surprising website!</p>
-                            <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
-                                <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="" /></a>
+            <div className='px-5 mb-10 relative'>
+                <div className='grid grid-flow-col auto-cols-max gap-3 mt-4 xs:overflow-x-auto md:overflow-hidden' ref={interviewRef}>
+                    {testimonialsData.map((testimonial, index) => (
+                        <div key={index} className="e-card playing">
+                            <div className="image"></div>
+                            <div className="wave"></div>
+                            <div className="wave"></div>
+                            <div className="wave"></div>
+                            <div className="infotop">
+                                <div className='infotop-img'>
+                                    <img src={testimonial.image} alt={testimonial.name} />
                                 </div>
-                                <div>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenNurvai}>
-                                            <div >
+                                <div className="text-content">
+                                    <p>{testimonial.name}</p>
+                                    <p className="name">{testimonial.position}</p>
+                                </div>
+                                <p className='detils-p'>{testimonial.details}</p>
+                                <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
+                                    <div>
+                                        <a href={testimonial.links.fiverr} target='blank'>
+                                            <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="Fiverr" />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <React.Fragment>
+                                            <button variant="outlined" onClick={() => handleClickOpen(testimonial.links.email, testimonial.links.phone)}>
                                                 <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faEnvelope} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openNurvai}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseNurvai}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="nuralam.ne@gmail.com" />
-                                                <CopyToClipboard text="+880 1744-883106" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenNurvai}>
-                                            <div >
+                                            </button>
+                                            <Dialog
+                                                open={dialogData.open}
+                                                TransitionComponent={Transition}
+                                                keepMounted
+                                                onClose={handleClose}
+                                                aria-describedby="alert-dialog-slide-description"
+                                            >
+                                                <div className='bg-slate-800 p-3 text-slate-300 flex flex-col justify-center'>
+                                                    <CopyToClipboard text={dialogData.email} />
+                                                    <CopyToClipboard text={dialogData.phone} />
+                                                </div>
+                                            </Dialog>
+                                        </React.Fragment>
+                                        <React.Fragment>
+                                            <button variant="outlined" onClick={() => handleClickOpen(testimonial.links.email, testimonial.links.phone)}>
                                                 <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faPhone} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openNurvai}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseNurvai}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="nuralam.ne@gmail.com" />
-                                                <CopyToClipboard text="+880 1744-883106" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <a href="https://www.linkedin.com/in/nur-alam-890863159/" target='blank'><FontAwesomeIcon className='FontAwesomeIcon123 me-2 hover:text-blue-500 text-slate-200' icon={faLinkedin} /></a>
+                                            </button>
+                                            <Dialog
+                                                open={dialogData.open}
+                                                TransitionComponent={Transition}
+                                                keepMounted
+                                                onClose={handleClose}
+                                                aria-describedby="alert-dialog-slide-description"
+                                            >
+                                                <div className='bg-slate-800 p-3 text-slate-300 flex flex-col justify-center'>
+                                                    <CopyToClipboard text={dialogData.email} />
+                                                    <CopyToClipboard text={dialogData.phone} />
+                                                </div>
+                                            </Dialog>
+                                        </React.Fragment>
+                                        <a href={testimonial.links.linkedin} target='blank'>
+                                            <FontAwesomeIcon className='FontAwesomeIcon123 text-slate-200 hover:text-blue-500 duration-200' icon={faLinkedin} />
+                                        </a>
+                                    </div>
                                 </div>
-
-
                             </div>
                         </div>
-                    </div>
-                    <div className="e-card playing">
-                        <div className="image"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="infotop  ">
-                            <div className='infotop-img'>
-                                <img src={sp} alt="" />
-                            </div>
-                            <div className="text-content">
-                                <p>Shivangi Patel</p>
-                                <p className="name">Assistant Professor</p>
-                            </div>
-                            <p className='detils-p  '> Updating...</p>
-                            <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
-                                <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
-                                </div>
-
-
-                                <div>
-
-
-
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenSp}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faEnvelope} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openSp}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseSp}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="shivangi.patel@rku.ac.in " />
-                                                <CopyToClipboard text="+91 90333 36835" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenSp}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faPhone} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openSp}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseSp}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="shivangi.patel@rku.ac.in" />
-                                                <CopyToClipboard text="+91 90333 36835" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <a href="https://www.linkedin.com/in/shivangi-patel-65823b123/" target='blank'><FontAwesomeIcon className='FontAwesomeIcon123 me-2 hover:text-blue-500 text-slate-200' icon={faLinkedin} /></a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="e-card playing">
-                        <div className="image"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="infotop  ">
-                            <div className='infotop-img'>
-                                <img src={sl} alt="" />
-                            </div>
-                            <div className="text-content">
-                                <p>Shalini Jha</p>
-                                <p className="name">Assistant Professor</p>
-                            </div>
-                            <p className='detils-p  '>Updating...</p>
-                            <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
-                                <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
-                                </div>
-                                <div>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenSl}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faEnvelope} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openSl}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseSl}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="jhashalu1@gmail.com" />
-                                                <CopyToClipboard text="+91 87807 61370" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenSl}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faPhone} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openSl}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseSl}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="jhashalu1@gmail.com" />
-                                                <CopyToClipboard text="+91 87807 61370" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <a href="https://www.linkedin.com/in/shalini-jha-771338165/" target='blank'><FontAwesomeIcon className='FontAwesomeIcon123 me-2 hover:text-blue-500 text-slate-200' icon={faLinkedin} /></a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="e-card playing">
-                        <div className="image"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="infotop  ">
-                            <div className='infotop-img'>
-                                <img src={nv} alt="" />
-                            </div>
-                            <div className="text-content">
-                                <p>Vadher Nikunj</p>
-                                <p className="name">Assistant Professor</p>
-                            </div>
-                            <p className='detils-p  '>Updating...</p>
-                            <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
-                                <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
-                                </div>
-
-
-                                <div>
-
-                                    {/* <button onClick={sendEmail}><FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200' icon={faEnvelope} /></button> */}
-
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenNv}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faEnvelope} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openNv}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseNv}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="vadhernknj19@gmail.com" />
-                                                <CopyToClipboard text="+91 99784 46077" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenNv}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faPhone} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openNv}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseNv}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="vadhernknj19@gmail.com" />
-                                                <CopyToClipboard text="+91 99784 46077" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <a href="https://www.linkedin.com/in/vadher-nikunj-876b34177/" target='blank'><FontAwesomeIcon className='FontAwesomeIcon123 me-2 hover:text-blue-500 text-slate-200' icon={faLinkedin} /></a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="e-card playing">
-                        <div className="image"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="wave"></div>
-                        <div className="infotop  ">
-                            <div className='infotop-img'>
-                                <img src={bd} alt="" />
-                            </div>
-                            <div className="text-content">
-                                <p>Bhoomi Dangar</p>
-                                <p className="name">Assistant Professor</p>
-                            </div>
-                            <p className='detils-p  '>Updating...</p>
-                            <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
-                                <div>
-                                    <a href="https://www.fiverr.com/adipnur" target='blank'> <img className='w-8 hover:scale-125 duration-300' src={rku} alt="" /></a>
-                                </div>
-
-
-                                <div>
-
-
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenBd}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faEnvelope} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openBd}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseBd}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="bhoomiahir321@gmail.com" />
-                                                <CopyToClipboard text="+91 82002 45406" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <React.Fragment>
-                                        <button className='' variant="outlined" onClick={handleClickOpenBd}>
-                                            <div >
-                                                <FontAwesomeIcon className='FontAwesomeIcon123 me-2 text-slate-200 hover:text-blue-500 duration-200' icon={faPhone} />
-                                            </div>
-                                        </button>
-                                        <Dialog
-                                            open={openBd}
-                                            TransitionComponent={Transition}
-                                            keepMounted
-                                            onClose={handleCloseBd}
-                                            aria-describedby="alert-dialog-slide-description"
-                                        >
-                                            <div className='bg-slate-800 p-3 text-slate-300 flex flex-col   justify-center'>
-                                                <CopyToClipboard text="bhoomiahir321@gmail.com" />
-                                                <CopyToClipboard text="+91 82002 45406" />
-                                            </div>
-                                        </Dialog>
-                                    </React.Fragment>
-                                    <a href="https://www.linkedin.com/in/bhoomi-dangar-32b625147/" target='blank'><FontAwesomeIcon className='FontAwesomeIcon123 me-2 hover:text-blue-500 text-slate-200' icon={faLinkedin} /></a>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
+                    ))}
                 </div>
-
-                <button
-                    className='absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-200 text-black p-2 rounded-full'
-                    onClick={() => scroll(-500)}
-                >
-                    {'<'}
+                <button className='leftArrow1 bg-slate-800 px-1 py-2 rounded-lg hover:bg-slate-700 duration-300' onClick={() => scroll(-interviewRef.current.clientWidth)}>
+                    &lt;
                 </button>
-                <button
-                    className='absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-200 text-black p-2 rounded-full'
-                    onClick={() => scroll(500)}
-                >
-                    {'>'}
+                <button className='rightArrow1 bg-slate-800 px-1 py-2 rounded-lg hover:bg-slate-700 duration-300' onClick={() => scroll(interviewRef.current.clientWidth)}>
+                    &gt;
                 </button>
             </div>
         </div>

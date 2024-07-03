@@ -5,7 +5,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from '@emailjs/browser';
 import '../Responsive.css';
 
-
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -16,7 +15,7 @@ const ContactForm = () => {
         recaptchaValue: '', // Captcha value will be stored here
     });
 
-    const [setFormErrors] = useState({
+    const [formErrors, setFormErrors] = useState({
         name: false,
         email: false,
         phoneNumber: false,
@@ -40,18 +39,7 @@ const ContactForm = () => {
     const form = useRef();
     const handleSubmit = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_p3jakff', 'template_cszjdjo', form.current, 'uELA4WD47qGEFXLdA')
-            .then((result) => {
-                window.alert('Email Sent Successfully');
-                setFormData({
-                    name: '',
-                    email: '',
-                    phoneNumber: '',
-                    subject: '',
-                    message: '',
-                    recaptchaValue: '',
-                });
-            })
+
         const errors = {};
         if (!formData.name.trim()) {
             errors.name = true;
@@ -65,15 +53,29 @@ const ContactForm = () => {
         setFormErrors(errors);
 
         if (Object.keys(errors).length === 0 && formData.recaptchaValue) {
-            console.log('Form submitted:', formData);
+            emailjs.sendForm('service_p3jakff', 'template_cszjdjo', form.current, 'uELA4WD47qGEFXLdA')
+                .then((result) => {
+                    window.alert('Email Sent Successfully');
+                    setFormData({
+                        name: '',
+                        email: '',
+                        phoneNumber: '',
+                        subject: '',
+                        message: '',
+                        recaptchaValue: '',
+                    });
+                })
+                .catch((error) => {
+                    console.error('Failed to send email:', error);
+                });
         } else {
             console.log('Please fill all required fields and verify reCAPTCHA');
         }
     };
 
     return (
-        <div className="contact-form-container    ">
-            <div className='how-can  mb-5'> <h3>How Can I Help You?</h3></div>
+        <div className="contact-form-container">
+            <div className='how-can mb-5'> <h3>How Can I Help You?</h3></div>
             <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                 <div className='name-email flex w-full'>
                     <input
@@ -86,7 +88,7 @@ const ContactForm = () => {
                         required
                     />
                     <input
-                        className='ms-3 w-full focus:outline-none bg-slate-900  text-white'
+                        className='ms-3 w-full focus:outline-none bg-slate-900 text-white'
                         type="email"
                         name="email"
                         placeholder="Email"
@@ -96,7 +98,6 @@ const ContactForm = () => {
                     />
                 </div>
                 <div className='phoneinput flex'>
-
                     <input
                         className='mt-3 w-full focus:outline-none bg-slate-900 text-white'
                         type="text"
@@ -107,7 +108,7 @@ const ContactForm = () => {
                         required
                     />
                     <input
-                        className='mt-3 ms-3 w-full focus:outline-none bg-slate-900  text-white'
+                        className='mt-3 ms-3 w-full focus:outline-none bg-slate-900 text-white'
                         type="text"
                         name="subject"
                         placeholder="Subject"
@@ -117,22 +118,19 @@ const ContactForm = () => {
                     />
                 </div>
                 <textarea
-                    className='mt-3 w-full text-area focus:outline-none bg-slate-900  text-white'
+                    className='mt-3 w-full text-area focus:outline-none bg-slate-900 text-white'
                     name="message"
                     placeholder="Your Message"
                     value={formData.message}
                     onChange={handleInputChange}
                     required
                 ></textarea>
-
                 <ReCAPTCHA
                     className="w-ful mt-3"
                     style={{ width: '200px' }}
                     sitekey="6Lc2eRgpAAAAAMwYZC85iVlVaybjSycxpv75zMBd"
                     onChange={handleRecaptchaChange}
-
                 />
-
                 <button className='bg-slate-900' type="submit">Send</button>
             </form>
         </div>
