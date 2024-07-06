@@ -1696,6 +1696,21 @@ code {
 
 
 
+.leftArrow1, .rightArrow1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.leftArrow1 {
+  left: 10px; /* Adjust as needed */
+}
+
+.rightArrow1 {
+  right: 10px; /* Adjust as needed */
+}
+
+
 
 
 

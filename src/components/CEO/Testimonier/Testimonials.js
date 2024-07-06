@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import '../../../index.css'
+import '../../../index.css';
 import rku from '../img/rku.png';
 import fiverr from '../img/fiverr.webp';
 import nurvai from '../img/nurvai.jpg';
@@ -27,7 +27,7 @@ const CopyToClipboard = ({ text }) => {
                 setCopied(true);
                 setTimeout(() => {
                     setCopied(false);
-                }, 2000);
+                }, 1000);
             })
             .catch((err) => {
                 console.error('Unable to copy to clipboard: ', err);
@@ -50,7 +50,8 @@ const Testimonials = () => {
             details: "For done my project, 100% I am fully satisfied for his creativity with experience. So, I think it's my ethical responsibility to recommend ! Highly recommended anyone to create your extremely surprising website!",
             image: nurvai,
             links: {
-                fiverr: "https://www.fiverr.com/adipnur",
+                link: "https://www.fiverr.com/adipnur",
+                img: fiverr,
                 linkedin: "https://www.linkedin.com/in/nur-alam-890863159/",
                 email: "nuralam.ne@gmail.com",
                 phone: "+880 1744-883106"
@@ -62,7 +63,8 @@ const Testimonials = () => {
             details: "Updating...",
             image: sp,
             links: {
-                fiverr: "https://www.fiverr.com/adipnur",
+                img: rku,
+                link: "https://soe.rku.ac.in/btech-computer-engineering-faculty.php",
                 linkedin: "https://www.linkedin.com/in/shivangi-patel-65823b123/",
                 email: "shivangi.patel@rku.ac.in",
                 phone: "+91 90333 36835"
@@ -74,7 +76,8 @@ const Testimonials = () => {
             details: "Updating...",
             image: sl,
             links: {
-                fiverr: "https://www.fiverr.com/adipnur",
+                img: rku,
+                link: "https://soe.rku.ac.in/btech-computer-engineering-faculty.php",
                 linkedin: "https://www.linkedin.com/in/shalini-jha-771338165/",
                 email: "jhashalu1@gmail.com",
                 phone: "+91 87807 61370"
@@ -86,19 +89,22 @@ const Testimonials = () => {
             details: "Updating...",
             image: nv,
             links: {
-                fiverr: "https://www.fiverr.com/adipnur",
+                img: rku,
+                link: "https://soe.rku.ac.in/btech-computer-engineering-faculty.php",
                 linkedin: "https://www.linkedin.com/in/vadher-nikunj-876b34177/",
                 email: "vadhernknj19@gmail.com",
                 phone: "+91 99784 46077"
             }
         },
         {
+
             name: "Bhoomi Dangar",
             position: "Assistant Professor",
             details: "Updating...",
             image: bd,
             links: {
-                fiverr: "https://www.fiverr.com/adipnur",
+                img: rku,
+                fiverr: "https://soe.rku.ac.in/btech-computer-engineering-faculty.php",
                 linkedin: "https://www.linkedin.com/in/bhoomi-dangar-32b625147/",
                 email: "bhoomiahir321@gmail.com",
                 phone: "+91 82002 45406"
@@ -177,8 +183,8 @@ const Testimonials = () => {
                                 <p className='detils-p'>{testimonial.details}</p>
                                 <div className='end-section456 px-1 items-center bg-slate-800 flex flex-row justify-between'>
                                     <div>
-                                        <a href={testimonial.links.fiverr} target='blank'>
-                                            <img className='w-8 hover:scale-125 duration-300' src={fiverr} alt="Fiverr" />
+                                        <a href={testimonial.links.link} target='blank'>
+                                            <img className='w-8 hover:scale-125 duration-300' src={testimonial.links.img} alt="Fiverr" />
                                         </a>
                                     </div>
                                     <div>
@@ -192,6 +198,11 @@ const Testimonials = () => {
                                                 keepMounted
                                                 onClose={handleClose}
                                                 aria-describedby="alert-dialog-slide-description"
+                                                BackdropProps={{
+                                                    style: {
+                                                        backgroundColor: 'rgba(0, 0, 0, 0.1)' // Adjust the opacity as needed
+                                                    }
+                                                }}
                                             >
                                                 <div className='bg-slate-800 p-3 text-slate-300 flex flex-col justify-center'>
                                                     <CopyToClipboard text={dialogData.email} />
@@ -209,6 +220,11 @@ const Testimonials = () => {
                                                 keepMounted
                                                 onClose={handleClose}
                                                 aria-describedby="alert-dialog-slide-description"
+                                                BackdropProps={{
+                                                    style: {
+                                                        backgroundColor: 'rgba(0, 0, 0, 0.1)' // Adjust the opacity as needed
+                                                    }
+                                                }}
                                             >
                                                 <div className='bg-slate-800 p-3 text-slate-300 flex flex-col justify-center'>
                                                     <CopyToClipboard text={dialogData.email} />
@@ -225,10 +241,10 @@ const Testimonials = () => {
                         </div>
                     ))}
                 </div>
-                <button className='leftArrow1 bg-slate-800 px-1 py-2 rounded-lg hover:bg-slate-700 duration-300' onClick={() => scroll(-interviewRef.current.clientWidth)}>
+                <button className='leftArrow1 bg-slate-400 px-1 py-2 rounded-lg hover:bg-slate-700 duration-300' onClick={() => scroll(-interviewRef.current.clientWidth)}>
                     &lt;
                 </button>
-                <button className='rightArrow1 bg-slate-800 px-1 py-2 rounded-lg hover:bg-slate-700 duration-300' onClick={() => scroll(interviewRef.current.clientWidth)}>
+                <button className='rightArrow1 bg-slate-400 px-1 py-2 rounded-lg hover:bg-slate-700 duration-300' onClick={() => scroll(interviewRef.current.clientWidth)}>
                     &gt;
                 </button>
             </div>
