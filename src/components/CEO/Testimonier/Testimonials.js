@@ -170,7 +170,7 @@ const Testimonials = () => {
                         <div key={index} className="e-card playing">
                             <div className="image"></div>
                             <div className="wave"></div>
-                            <div className="wave"></div>
+                            <div className="wave"></div>    
                             <div className="wave"></div>
                             <div className="infotop">
                                 <div className='infotop-img'>
