@@ -1696,18 +1696,21 @@ code {
 
 
 
-.leftArrow1, .rightArrow1 {
+.leftArrow1,
+.rightArrow1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .leftArrow1 {
-  left: 10px; /* Adjust as needed */
+  left: 10px;
+  /* Adjust as needed */
 }
 
 .rightArrow1 {
-  right: 10px; /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
 }
 
 
@@ -2032,6 +2035,28 @@ code {
 
 
 
+
+
+
+
+.error-message {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ffdddd;
+  color: #d8000c;
+  padding: 10px 20px;
+  border: 1px solid #d8000c;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.error-message.show {
+  opacity: 1;
+}
 
 
 

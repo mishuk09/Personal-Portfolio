@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import 'react-phone-number-input/style.css';
-import '../../index.css'
+import '../../index.css';
 import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from '@emailjs/browser';
 import '../Responsive.css';
@@ -21,6 +21,17 @@ const ContactForm = () => {
         phoneNumber: false,
     });
 
+    const [recaptchaError, setRecaptchaError] = useState(false);
+
+    useEffect(() => {
+        if (recaptchaError) {
+            const timer = setTimeout(() => {
+                setRecaptchaError(false);
+            }, 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [recaptchaError]);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -34,6 +45,7 @@ const ContactForm = () => {
             ...formData,
             recaptchaValue: value,
         });
+        setRecaptchaError(false); // Clear the error when reCAPTCHA is filled
     };
 
     const form = useRef();
@@ -69,6 +81,9 @@ const ContactForm = () => {
                     console.error('Failed to send email:', error);
                 });
         } else {
+            if (!formData.recaptchaValue) {
+                setRecaptchaError(true); // Show reCAPTCHA error if not filled
+            }
             console.log('Please fill all required fields and verify reCAPTCHA');
         }
     };
@@ -131,6 +146,7 @@ const ContactForm = () => {
                     sitekey="6Lc2eRgpAAAAAMwYZC85iVlVaybjSycxpv75zMBd"
                     onChange={handleRecaptchaChange}
                 />
+                {recaptchaError && <p className={`error-message ${recaptchaError ? 'show' : ''}`}>Please fill the reCAPTCHA</p>}
                 <button className='bg-slate-900' type="submit">Send</button>
             </form>
         </div>
