@@ -55,7 +55,7 @@ const Projects = () => {
             label: 'New',
             screenshotLink: shoes, // Assuming this is the correct image path
             githubLink: 'https://github.com/mishuk09/Learning-Website/',
-            liveLink: 'https://csehacks.live',
+            liveLink: 'https://csehacks.tech',
             screenshots: [
                 c1, c2, c3, c4, c5, c6, c7, c8, c9, c10
             ]
@@ -93,8 +93,8 @@ const Projects = () => {
             subtitle: 'E-commerce',
             label: 'Popular',
             screenshotLink: shoes, // Assuming this is the correct image path
-            githubLink: 'https://github.com/user/project3',
-            liveLink: 'https://project3.live',
+            githubLink: 'https://github.com/mishuk09/sneaker',
+            liveLink: 'https://sneaker-git-master-mishuk09s-projects.vercel.app/',
             screenshots: [
                 a1, a2, a3, a5, a6, a7
             ]
