@@ -16,7 +16,7 @@ const About = () => {
                 <p className='about-detilsold'>Aspiring computer engineer with a strong foundation in programming and web development. Seeking opportunities to apply my skills in creating innovative web solutions, leveraging proficiency in HTML, CSS, JavaScript, React, and Node.js. Dedicated to continuous learning.</p>
                 <div className='callabout'><CallAhortAbout></CallAhortAbout></div>
                 <p className='about-detils font-nunito'>Aspiring computer engineer with a strong foundation in programming and web development. Seeking opportunities to apply my skills in creating innovative web solutions, leveraging proficiency in HTML, CSS, JavaScript, React, and Node.js. Dedicated to continuous learning.</p>
-                <div className='resume'><a href="https://drive.google.com/file/d/1GCKtF3-dGljVRoWS1aTkSo9KGTqEO1h5/view?usp=sharing" target='blank'><button>Resume <FontAwesomeIcon icon={faDownload} /></button></a>  </div>
+                <div className='resume'><a href="https://drive.google.com/file/d/1Txy0Rr9J45bGdm6C4qmlmi2KgzjSBTjw/view?usp=sharing" target='blank'><button>Resume <FontAwesomeIcon icon={faDownload} /></button></a>  </div>
                 <div className='yearexperience font-verdina  '>
                     <div className='years11 pt-3'>
                         <h3> 1+</h3>

@@ -41,6 +41,12 @@ import a5 from './img/a5.png';
 import a6 from './img/a6.png';
 import a7 from './img/a7.png';
 
+import m1 from './img/m1.png';
+import m2 from './img/m2.png';
+import m3 from './img/m3.png';
+import m4 from './img/m4.png';
+import m5 from './img/m5.png';
+
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -60,21 +66,9 @@ const Projects = () => {
                 c1, c2, c3, c4, c5, c6, c7, c8, c9, c10
             ]
         },
+
         {
             id: 2,
-            imgSrc: p1,
-            title: 'Plexus - Digital Marketing Service',
-            subtitle: 'Agency',
-            label: 'Featured',
-            screenshotLink: shoes, // Assuming this is the correct image path
-            githubLink: 'https://github.com/user/project2',
-            liveLink: 'https://plexus.org.in/',
-            screenshots: [
-                p1, p2, p3, p4, p5, p6, p7,
-            ]
-        },
-        {
-            id: 3,
             imgSrc: x1,
             title: 'ShoeMart - E-commerce Shoe Platform',
             subtitle: 'E-commerce',
@@ -84,6 +78,19 @@ const Projects = () => {
             liveLink: 'https://ecommerce-five-nu-53.vercel.app/',
             screenshots: [
                 x1, x2, x3, x4, x6, x7, x8, x9
+            ]
+        },
+        {
+            id: 3,
+            imgSrc: p1,
+            title: 'Plexus - Digital Marketing Service',
+            subtitle: 'Agency',
+            label: 'Featured',
+            screenshotLink: shoes, // Assuming this is the correct image path
+            githubLink: 'https://github.com/user/project2',
+            liveLink: 'https://plexus.org.in/',
+            screenshots: [
+                p1, p2, p3, p4, p5, p6, p7,
             ]
         },
         {
@@ -97,6 +104,19 @@ const Projects = () => {
             liveLink: 'https://sneaker-git-master-mishuk09s-projects.vercel.app/',
             screenshots: [
                 a1, a2, a3, a5, a6, a7
+            ]
+        },
+        {
+            id: 5,
+            imgSrc: m5,
+            title: 'Donations Collections Website',
+            subtitle: 'Donations Website',
+            label: 'Popular',
+            screenshotLink: shoes, // Assuming this is the correct image path
+            githubLink: 'https://github.com/mishuk09/Donation',
+            liveLink: 'https://bolsofra8.web.app/',
+            screenshots: [
+                m1, m2, m3, m4, m5 
             ]
         },
     ];

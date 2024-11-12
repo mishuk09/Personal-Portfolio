@@ -18,7 +18,7 @@ const Ceo = () => {
             </div>
             <div className='container ceo-parent'>
                 <div className='ceo-img pt-3 px-2'>
-                    <img src={mm}  alt="" />
+                    <img src={mm} alt="" />
                 </div>
                 <div className='ceo-detils'>
                     <div className='h3-span'>
@@ -27,7 +27,7 @@ const Ceo = () => {
                     </div>
                     <p >I am  Here to Introduce Our Learning website. This site specially Design for Computer Engineering student .We are try to give a easy and enjoyable learning. Your valuable comment  will give us more inspiration to go ahead.</p>
                     <h5> -Mahadi Hasan Mishuk </h5>
-                    <a href="https://github.com/mishuk09" target='blank'><button>Go To Website</button></a>
+                    <a href="https://csehacks.tech/" target='blank'><button>Go To Website</button></a>
                 </div>
             </div>
 

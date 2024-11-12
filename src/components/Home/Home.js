@@ -13,6 +13,7 @@ import Solar from './SolarSystem/Solar';
 import WhatsApp from '../OthersComponent/Button/WhatsApp';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import element from './img/element.png';
+import Upwork from '../OthersComponent/Button/Upwork';
 
 
 const Home = () => {
@@ -32,8 +33,9 @@ const Home = () => {
                     <div className='absolute container     w-[800px]   element-img'>
                         <img className='   w-[500px]' src={element} alt="" />
                     </div>
-                  
+
                     <WhatsApp></WhatsApp>
+                    <Upwork />
                     <div className='name-div    mt-5'>
                         <div className='name-div22'>
                             <p className='text-slate-400 font-bold	'	>I'm</p>

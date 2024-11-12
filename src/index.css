@@ -531,7 +531,7 @@ code {
 }
 
 .sort-intro-child11:hover {
-  transition: 0.5s;
+  transition: 0.1ms;
   background-color: var(--color-changer);
   color: white;
 }
