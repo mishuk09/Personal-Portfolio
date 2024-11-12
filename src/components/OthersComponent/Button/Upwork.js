@@ -5,7 +5,7 @@ const Upwork = () => {
     const style = {
         position: 'fixed',
         zIndex: 999,
-        right: '13px',
+        right: '10px',
         bottom: '95px',
         transform: 'translate(0, -50%)',
     };
