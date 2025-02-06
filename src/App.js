@@ -8,6 +8,8 @@ import ContactPage from './components/ContactPage/ContactPage';
 import AppChild from './AppChild';
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import DesingDev from './components/Design-Dev/DesingDev';
+import Dashboard from './components/Projects/Dashboard';
 
 
 
@@ -43,11 +45,10 @@ function App() {
           />
         </div>
 
-
         <Routes>
-
-
           <Route path='/' element={<AppChild></AppChild>}></Route>
+          <Route path='/designdev' element={<DesingDev />}></Route>
+          <Route path='/workprogress' element={<Dashboard />}></Route>
           <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
         </Routes>
       </div>

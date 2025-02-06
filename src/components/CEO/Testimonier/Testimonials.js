@@ -157,9 +157,9 @@ const Testimonials = () => {
     return (
         <div id='testimonials' className='container'>
             <div className='Testimonials-name-div mt-[80px] mb-0 '>
-                <span className='text-blue-500'>What People Say</span>
+                <span className='text-blue-500 font-[Montserrat] text-[17px]'>What People Say</span>
                 <div className='flex justify-between'>
-                    <p className='text-5xl'> Testimonials</p>
+                    <p className='font-sans text-2xl md:text-3xl text-white font-extrabold'> Testimonials</p>
                 </div>
                 <hr className='text-white h-3 pt-0 mt-0' />
             </div>
@@ -170,7 +170,7 @@ const Testimonials = () => {
                         <div key={index} className="e-card playing">
                             <div className="image"></div>
                             <div className="wave"></div>
-                            <div className="wave"></div>    
+                            <div className="wave"></div>
                             <div className="wave"></div>
                             <div className="infotop">
                                 <div className='infotop-img'>

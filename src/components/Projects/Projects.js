@@ -46,6 +46,7 @@ import m2 from './img/m2.png';
 import m3 from './img/m3.png';
 import m4 from './img/m4.png';
 import m5 from './img/m5.png';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 const Projects = () => {
@@ -116,9 +117,22 @@ const Projects = () => {
             githubLink: 'https://github.com/mishuk09/Donation',
             liveLink: 'https://bolsofra8.web.app/',
             screenshots: [
-                m1, m2, m3, m4, m5 
+                m1, m2, m3, m4, m5
             ]
-        },
+        }
+        // {
+        //     id: 6,
+        //     imgSrc: m5,
+        //     title: 'Donations Collections Website',
+        //     subtitle: 'Donations Website',
+        //     label: 'Popular',
+        //     screenshotLink: shoes, // Assuming this is the correct image path
+        //     githubLink: 'https://github.com/mishuk09/Donation',
+        //     liveLink: 'https://bolsofra8.web.app/',
+        //     screenshots: [
+        //         m1, m2, m3, m4, m5 
+        //     ]
+        // },
     ];
 
     const handleImageClick = (imgSrc) => {
@@ -128,14 +142,19 @@ const Projects = () => {
     return (
         <div>
             <div id='project' className='projects-head mt-20'>
-                <div className='projects-head12'>
-                    <div className='img-head pt-3'>
-                        <img src={work} alt="Projects" />
-                        <h4 className='text-black'>Projects</h4>
+                
+                <div className='marquee-div-name container mt-[40px] pt-10 mb-10'>
+                    <span className='text-blue-600'>What I have done</span>
+                    <div className='flex justify-between'>
+                        <p className="text-black text-2xl md:text-3xl font-bold hidden md:flex"> Projects's and worksample</p>
+                        <p className="text-black text-2xl md:text-3xl font-bold flex md:hidden"> Projects's</p>
+                        <div className='text-black flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 duration-75 transition-all w-20 h-8 md:w-40 md:h-10'>
+                            <a href='/designdev' className='text-white hidden md:flex'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></a>
+                            <a href='/designdev' className='text-white flex md:hidden'>More</a>
+                        </div>
+
                     </div>
-                    <p className='pt-3 text-black pb-2 xs:text-sm sm:text-[16px]'>
-                        I have completed many projects. Here are three of the most dynamic ones.
-                    </p>
+                    <hr className='text-black h-3 pt-0 mt-0' />
                 </div>
                 <div className='container mt-10 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {

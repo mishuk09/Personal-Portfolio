@@ -143,7 +143,7 @@ const ContactForm = () => {
                 <ReCAPTCHA
                     className="w-ful mt-3"
                     style={{ width: '200px' }}
-                    sitekey="6Le0CjQqAAAAABDw4iqC94H1SNP6m_waDcOxML97"
+                    sitekey="6Lc2eRgpAAAAAMwYZC85iVlVaybjSycxpv75zMBd"
                     onChange={handleRecaptchaChange}
                 />
                 {recaptchaError && <p className={`error-message ${recaptchaError ? 'show' : ''}`}>Please fill the reCAPTCHA</p>}

@@ -1645,17 +1645,7 @@ code {
   display: flex;
 }
 
-.marquee-div-name span {
-  font-family: "Montserrat", sans-serif;
-  font-size: 17px;
-}
-
-.marquee-div-name p {
-  font-family: sans-serif;
-  font-size: 40px;
-  color: #fff;
-  font-weight: 800;
-}
+ 
 
 .marquee-div-w {
   width: 100%;
@@ -1723,17 +1713,7 @@ code {
   grid-gap: 10px;
 }
 
-.Testimonials-name-div p {
-  font-family: sans-serif;
-  font-size: 40px;
-  color: white;
-  font-weight: 800;
-}
-
-.Testimonials-name-div span {
-  font-family: "Montserrat", sans-serif;
-  font-size: 17px;
-}
+/*   */
 
 @media (max-width: 768px) {
   .Testimonials-head {
@@ -2187,3 +2167,22 @@ textarea {
 /* ================================
 ===       Workprove           =====
 =================================== */
+
+
+
+
+
+
+
+/* ================================
+===       What is  do            =====
+=================================== */
+
+
+
+
+.dev-design {
+  background-color: #271f2c;
+  
+
+}
