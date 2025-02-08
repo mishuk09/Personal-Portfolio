@@ -64,7 +64,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchLatestTask = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/fetch-all-tasks");
+                const response = await fetch("https://portfolio-backend-q5fr.onrender.com/api/fetch-all-tasks");
                 if (!response.ok) throw new Error("Failed to fetch latest task");
 
                 const data = await response.json();
