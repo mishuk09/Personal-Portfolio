@@ -13,6 +13,7 @@ const Dashboard = () => {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [task, setTask] = useState('');
+    const [alltask, setAlltask] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -20,7 +21,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchStatusAndTime = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/status-time");
+                const response = await fetch("https://portfolio-backend-q5fr.onrender.com/api/status-time");
                 const data = await response.json();
 
                 setIsActive(data.status === true); // Set the active status (true/false)
@@ -44,11 +45,30 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchLatestTask = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/fetch-latest-task");
+                const response = await fetch("https://portfolio-backend-q5fr.onrender.com/api/fetch-latest-task");
                 if (!response.ok) throw new Error("Failed to fetch latest task");
 
                 const data = await response.json();
                 setTask(data);
+            } catch (err) {
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchLatestTask();
+    }, []);
+
+    //fetch all task
+    useEffect(() => {
+        const fetchLatestTask = async () => {
+            try {
+                const response = await fetch("http://localhost:5000/api/fetch-all-tasks");
+                if (!response.ok) throw new Error("Failed to fetch latest task");
+
+                const data = await response.json();
+                setAlltask(data);
             } catch (err) {
                 setError(err.message);
             } finally {
@@ -267,18 +287,24 @@ const Dashboard = () => {
                             </div>
 
                         </motion.div>
-                        <div className="bg-white  p-3 rounded-lg shadow-md">
+                        <div className="bg-white p-3 rounded-lg shadow-md">
                             <h2 className="text-xl font-semibold text-gray-500 flex text-center justify-center items-center gap-2">
-                                🛠️ Tech Stack & Tools
+                                ✅ Completed Till Now
                             </h2>
-                            <div className="mt-3 text-gray-700 text-sm space-y-2">
-                                <p>🚀 <strong>Frontend:</strong> React.js, Tailwind CSS</p>
-                                <p>⚙️ <strong>Backend:</strong> Node.js, Express.js</p>
-                                <p>🗄️ <strong>Database:</strong> MongoDB</p>
-                                <p>🛠️ <strong>Tools:</strong> VS Code,Github</p>
-                                <p>🌍 <strong>Hosting:</strong> Hostinger</p>
+                            <div className="mt-3 text-gray-700 text-sm space-y-2 max-h-44 overflow-y-auto custom-scrollbar">
+                                {alltask.map((taskall) => (
+                                    <p
+                                        key={taskall.id}
+                                        className="flex items-center gap-1 p-1 me-2 bg-gray-100 rounded-lg shadow-sm hover:bg-gray-200 transition duration-200"
+                                    >
+                                        ✔️ <span className="font-medium">{taskall.task}</span>
+                                    </p>
+                                ))}
                             </div>
                         </div>
+
+
+
                         <div className="bg-white  p-3 rounded-lg shadow-md">
                             <h2 className="text-xl font-semibold text-gray-500 flex text-center justify-center items-center gap-2">
                                 ⏳ Percentage of Complession

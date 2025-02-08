@@ -29,5 +29,7 @@ module.exports = {
       gap: ['responsive', 'group-hover', 'group-focus'],
     },
   },
-  plugins: [],
+  plugins: [
+    // require('tailwind-scrollbar'),
+  ],
 };

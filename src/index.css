@@ -1645,7 +1645,7 @@ code {
   display: flex;
 }
 
- 
+
 
 .marquee-div-w {
   width: 100%;
@@ -2183,6 +2183,30 @@ textarea {
 
 .dev-design {
   background-color: #271f2c;
-  
 
+
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+   /* Adjust the scrollbar width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  /* Scrollbar track color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #a0aec0;
+  /* Scrollbar thumb color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+  /* Darker shade on hover */
 }
