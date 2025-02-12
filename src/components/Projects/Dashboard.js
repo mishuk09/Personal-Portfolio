@@ -62,7 +62,7 @@ const Dashboard = () => {
 
     //fetch all task
     useEffect(() => {
-        const fetchLatestTask = async () => {
+        const fetchallTask = async () => {
             try {
                 const response = await fetch("https://portfolio-backend-q5fr.onrender.com/api/fetch-all-tasks");
                 if (!response.ok) throw new Error("Failed to fetch latest task");
@@ -76,8 +76,9 @@ const Dashboard = () => {
             }
         };
 
-        fetchLatestTask();
+        fetchallTask();
     }, []);
+
     return (
         <>
             <Nav />
@@ -217,7 +218,12 @@ const Dashboard = () => {
                             </h2>
 
                             <div className="mt-3  text-gray-700 text-base ">
-                                {loading && <p className="text-gray-500">Loading...</p>}
+                                {loading && (
+                                    <div className="flex items-center space-x-2 text-gray-500">
+                                        <span className="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full"></span>
+                                        <p className="text-sm mt-3 leading-none">Please wait...</p>
+                                    </div>
+                                )}
                                 {error && <p className="text-red-500">{error}</p>}
 
                                 {task && (
@@ -287,11 +293,21 @@ const Dashboard = () => {
                             </div>
 
                         </motion.div>
-                        <div className="bg-white p-3 rounded-lg shadow-md">
+                        <div className="bg-white p-3 min-h-[250px] rounded-lg shadow-md">
                             <h2 className="text-xl font-semibold text-gray-500 flex text-center justify-center items-center gap-2">
                                 ✅ Completed Till Now
                             </h2>
                             <div className="mt-3 text-gray-700 text-sm space-y-2 max-h-44 overflow-y-auto custom-scrollbar">
+                                {loading && (
+                                    <div className="flex items-center space-x-2 text-gray-500">
+                                        <span className="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full"></span>
+                                        <p className="text-sm mt-3 leading-none">Please wait...</p>
+                                    </div>
+                                )}
+
+
+
+                                {error && <p className="text-red-500">{error}</p>}
                                 {alltask.map((taskall) => (
                                     <p
                                         key={taskall.id}
