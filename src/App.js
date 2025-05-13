@@ -10,6 +10,8 @@ import Brightness4Icon from "@mui/icons-material/Brightness4";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import DesingDev from './components/Design-Dev/DesingDev';
 import Dashboard from './components/Projects/Dashboard';
+import ThesisPapers from './components/Thesis/ThesisPapers';
+import Nav from './components/Navbar/Nav';
 
 
 
@@ -34,7 +36,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
+      <Nav />
       <div className="App">
         <div className='darkmode-toggle pt-1'>
           <Switch
@@ -48,6 +50,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AppChild></AppChild>}></Route>
           <Route path='/designdev' element={<DesingDev />}></Route>
+          <Route path='/thesis' element={<ThesisPapers />}></Route>
           <Route path='/workprogress' element={<Dashboard />}></Route>
           <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
         </Routes>

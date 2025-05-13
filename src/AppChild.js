@@ -16,7 +16,7 @@ import Nav from './components/Navbar/Nav';
 const AppChild = () => {
     return (
         <div className="App">
-            <Nav></Nav>
+            
             <ParticleJS></ParticleJS>
             <ScrollButton></ScrollButton>
             <ColorChange></ColorChange>

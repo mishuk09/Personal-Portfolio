@@ -14,7 +14,7 @@ const WhatsApp = () => {
 
     return (
         <div style={style}>
-            <ReactWhatsapp number="+91 7069089661" message="Hello! I'm a web developer working on React development. How can I help you?" >
+            <ReactWhatsapp number="+88 01740106176" message="Hello! I'm a Full Stack Developer. How can I help you?" >
                 <FontAwesomeIcon icon={faWhatsapp} size="2x" className='whatsapplogo' beat />
 
             </ReactWhatsapp>

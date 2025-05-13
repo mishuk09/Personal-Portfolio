@@ -115,13 +115,14 @@ const Dashboard = () => {
                             </h2>
                             <div className="flex justify-center space-x-2 mt-3">
                                 <a
-                                    href="https://github.com/mishuk09/Ecommerce-MERN-Task-FrontEnd"
+                                    href="https://lightseagreen-salamander-626777.hostingersite.com/"
                                     target="blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center no-underline justify-center border border-gray-500 py-1 px-2 w-40 rounded-lg hover:bg-gray-100 transition"
                                 >
-                                    <img src={github} className="w-5 h-5" alt="GitHub Logo" />
-                                    <span className="ml-2 text-sm">GitHub</span>
+                                    {/* <img src={github} className="w-5 h-5" alt="GitHub Logo" /> */}
+                                    🌍
+                                    <span className="ml-2 text-sm">Admin Web</span>
                                 </a>
                                 <a
                                     href="https://e-commerce-4103d.web.app"
@@ -129,7 +130,7 @@ const Dashboard = () => {
                                     rel="noopener noreferrer"
                                     className="flex items-center no-underline justify-center border border-gray-500 py-1 px-2 w-40 rounded-lg hover:bg-gray-100 transition"
                                 >
-                                    🌍 <span className="ml-2 text-sm">Live Demo</span>
+                                    🌍 <span className="ml-2 text-sm">User Web</span>
                                 </a>
                             </div>
 
