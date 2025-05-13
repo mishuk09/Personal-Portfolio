@@ -1,10 +1,10 @@
- 
+
 import underline from './img/underimg.png';
 
 const DesingDev = () => {
     return (
         <div >
-           
+
 
             <div className=' px-3 md:p-0 relative  flex flex-col items-center bg-gray-100'>
                 {/* Wallet Connect Section */}
@@ -40,7 +40,7 @@ const DesingDev = () => {
                             <p className="mt-2 text-gray-600">
                                 Dive into my academic research and final year thesis project.
                             </p>
-                            <a href="thesis" className="mt-4 inline-block no-underline px-6 py-2 bg-purple-600 text-white font-medium rounded-lg  hover:bg-purple-700 transition">
+                            <a href="rku" className="mt-4 inline-block no-underline px-6 py-2 bg-purple-600 text-white font-medium rounded-lg  hover:bg-purple-700 transition">
                                 View Thesis
                             </a>
                         </div>

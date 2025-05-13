@@ -37,15 +37,15 @@ const Certificate = () => {
             <div id="slideshow">
                 <div className="entire-content">
                     <div className="content-carrousel">
-                        <figure className="shadow"> <img src={one} alt="" /> </figure>
-                        <figure className="shadow"> <img src={two} alt="" /> </figure>
-                        <figure className="shadow"> <img src={three} alt="" />  </figure>
-                        <figure className="shadow"> <img src={four} alt="" /> </figure>
-                        <figure className="shadow"> <img src={five} alt="" /> </figure>
-                        <figure className="shadow"> <img src={six} alt="" />  </figure>
-                        <figure className="shadow"> <img src={seven} alt="" /> </figure>
-                        <figure className="shadow"><img src={eight} alt="" /> </figure>
-                        <figure className="shadow"> <img src={nine} alt="" /> </figure>
+                        <figure className="shadow-certificate"> <img src={one} alt="" /> </figure>
+                        <figure className="shadow-certificate"> <img src={two} alt="" /> </figure>
+                        <figure className="shadow-certificate"> <img src={three} alt="" />  </figure>
+                        <figure className="shadow-certificate"> <img src={four} alt="" /> </figure>
+                        <figure className="shadow-certificate"> <img src={five} alt="" /> </figure>
+                        <figure className="shadow-certificate"> <img src={six} alt="" />  </figure>
+                        <figure className="shadow-certificate"> <img src={seven} alt="" /> </figure>
+                        <figure className="shadow-certificate"><img src={eight} alt="" /> </figure>
+                        <figure className="shadow-certificate"> <img src={nine} alt="" /> </figure>
                     </div>
                 </div>
             </div>

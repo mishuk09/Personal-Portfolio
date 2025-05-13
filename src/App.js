@@ -12,6 +12,8 @@ import DesingDev from './components/Design-Dev/DesingDev';
 import Dashboard from './components/Projects/Dashboard';
 import ThesisPapers from './components/Thesis/ThesisPapers';
 import Nav from './components/Navbar/Nav';
+import SingleCertificate from './components/Certificate/SingleCertificate';
+import InternshipDetails from './components/Internship/InternshipDetails';
 
 
 
@@ -50,7 +52,9 @@ function App() {
         <Routes>
           <Route path='/' element={<AppChild></AppChild>}></Route>
           <Route path='/designdev' element={<DesingDev />}></Route>
-          <Route path='/thesis' element={<ThesisPapers />}></Route>
+          <Route path='/rku' element={<ThesisPapers />}></Route>
+          <Route path='/certifications' element={<SingleCertificate />}></Route>
+          <Route path='/riseuplabs' element={<InternshipDetails />}></Route>
           <Route path='/workprogress' element={<Dashboard />}></Route>
           <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>
         </Routes>
