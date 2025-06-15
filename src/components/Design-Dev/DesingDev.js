@@ -82,7 +82,7 @@ const DesingDev = () => {
                             <p className="mt-2 text-gray-600">
                                 Browse the certifications I’ve earned along my learning journey.
                             </p>
-                            <a href="certifications" className="mt-4 inline-block no-underline px-6 py-2 bg-yellow-500 text-white font-medium rounded-lg  hover:bg-yellow-600 transition">
+                            <a href="riseuplabs" className="mt-4 inline-block no-underline px-6 py-2 bg-yellow-500 text-white font-medium rounded-lg  hover:bg-yellow-600 transition">
                                 View Certifications
                             </a>
                         </div>

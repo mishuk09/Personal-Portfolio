@@ -53,17 +53,19 @@ const SingleCertificate = () => {
                     📚 A curated list of certifications organized by organization
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-
                     {certificates.map((org, index) => (
                         <div key={index} className="mb-12">
                             <h2 className="text-2xl font-bold text-gray-700 mb-6 border-b pb-2 border-gray-300">
                                 {org.organization}
                             </h2>
-                            <div className=" ">
+                            <div className="space-y-6"> {/* Optional spacing between multiple certs */}
                                 {org.certificates.map((cert, idx) => (
-                                    <a href={org.href} target="_blank" rel="noopener noreferrer" 
+                                    <a
+                                        href={cert.href} // ✅ corrected from org.href to cert.href
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         key={idx}
-                                        className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 border"
+                                        className="block p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 border"
                                     >
                                         <h3 className="text-xl font-semibold text-gray-800 mb-2">
                                             {cert.title}
@@ -75,6 +77,7 @@ const SingleCertificate = () => {
                         </div>
                     ))}
                 </div>
+
             </div>
 
         </div>

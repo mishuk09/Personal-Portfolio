@@ -18,7 +18,7 @@ const InternshipDetails = () => {
                 </div>
 
                 {/* Company Info with Logo Background */}
-                <div className="relative bg-gray-950 rounded-2xl shadow-md p-8 md:p-8 mb-12 overflow-hidden transition hover:shadow-lg">
+                <div className="relative bg-gray-950 rounded-2xl shadow-md p-3 md:p-8 mb-12 overflow-hidden transition hover:shadow-lg">
                     {/* Logo Background */}
                     <div className="absolute inset-0 opacity-30">
                         <img
@@ -30,17 +30,24 @@ const InternshipDetails = () => {
 
                     {/* Company Text Content */}
                     <div className="relative">
-                        <h2 className="text-3xl font-bold text-red-600 mb-2">
+                        <h2 className="text-3xl font-bold text-white md:text-red-600 mb-2">
                             🏢 Riseup Labs
                         </h2>
                         <p className="text-gray-500 text-md mb-4">
                             🌐 <a href="https://riseuplabs.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.riseuplabs.com</a>
                         </p>
-                        <ul className="text-gray-200 space-y-2">
-                            <li><span className="font-semibold">Role:</span> Software Engineering Intern</li>
-                            <li><span className="font-semibold">Duration:</span> February 2025 – May 2025</li>
-                            <li><span className="font-semibold">Location:</span> Remote (Uttara,Bangladesh)</li>
-                        </ul>
+                        <div className="text-gray-100 space-y-1 px-2">
+                            <p>
+                                <span className="font-semibold">Role:</span> Software Engineering Intern
+                            </p>
+                            <p>
+                                <span className="font-semibold">Duration:</span> February 2025 – May 2025
+                            </p>
+                            <p>
+                                <span className="font-semibold">Location:</span> Remote (Uttara, Bangladesh)
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
