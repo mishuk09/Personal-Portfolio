@@ -18,11 +18,11 @@ const WorkProgressDashboard = () => {
                 {/* Association Tabs */}
                 <div className="mb-6">
                     <p className="text-gray-700 font-medium mb-2">Associated With:</p>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 border-b border-gray-300 pb-2">
                         {/* MMU Button */}
                         <button
                             onClick={() => setActiveTab('mmu')}
-                            className={`flex flex-row items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'mmu'
+                            className={`flex flex-row items-center justify-center gap-2 px-2 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'mmu'
                                 ? 'bg-blue-500 text-white'
                                 : 'bg-blue-800 text-white hover:bg-blue-600 border border-blue-900'
                                 }`}
@@ -30,7 +30,7 @@ const WorkProgressDashboard = () => {
                             <img
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNb0p97Wg1afbSHTtcsDrV2AMbikCiNWDyxQ&s"
                                 alt="MMU Logo"
-                                className="w-10 h-10 rounded-full"
+                                className="w-6 h-6 rounded-full"
                             />
                             <span className="whitespace-nowrap">MMU</span>
                         </button>
@@ -38,7 +38,7 @@ const WorkProgressDashboard = () => {
                         {/* Riseup Labs Button */}
                         <button
                             onClick={() => setActiveTab('riseuplabs')}
-                            className={`flex flex-row items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'riseuplabs'
+                            className={`flex flex-row items-center justify-center gap-2 px-2 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'riseuplabs'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-red-800 text-white hover:bg-red-700 border border-red-800'
                                 }`}
@@ -46,7 +46,7 @@ const WorkProgressDashboard = () => {
                             <img
                                 src="https://riseuplabs.com/wp-content/themes/rul/images/riseuplabs.svg"
                                 alt="Riseup Labs Logo"
-                                className="w-10 h-10 rounded-full"
+                                className="w-6 h-6 rounded-full"
                             />
                             <span className="whitespace-nowrap">Riseup Labs</span>
                         </button>
@@ -54,7 +54,7 @@ const WorkProgressDashboard = () => {
                         {/* RKU Button */}
                         <button
                             onClick={() => setActiveTab('rku')}
-                            className={`flex flex-row items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'rku'
+                            className={`flex flex-row items-center justify-center gap-2 px-2 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === 'rku'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-red-500 text-white hover:bg-red-600 border border-red-600'
                                 }`}
@@ -62,7 +62,7 @@ const WorkProgressDashboard = () => {
                             <img
                                 src="https://cdn.universitykart.com//Content/upload/admin/qnb1w1c1.bcm.png"
                                 alt="RKU Logo"
-                                className="w-10 h-10 rounded-full "
+                                className="w-6 h-6 rounded-full "
                             />
                             <span className="whitespace-nowrap">RKU</span>
                         </button>

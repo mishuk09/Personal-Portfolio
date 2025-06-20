@@ -17,7 +17,7 @@ const Mmu = () => {
     useEffect(() => {
         const fetchStatusAndTime = async () => {
             try {
-                const response = await fetch("https://portfolio-backend-q5fr.onrender.com/api/status-time");
+                const response = await fetch("https://mmu-task-backend.onrender.com/api/status-time");
                 const data = await response.json();
 
                 setIsActive(data.status === true); // Set the active status (true/false)
@@ -41,7 +41,7 @@ const Mmu = () => {
     useEffect(() => {
         const fetchLatestTask = async () => {
             try {
-                const response = await fetch("https://portfolio-backend-q5fr.onrender.com/api/fetch-latest-task");
+                const response = await fetch("https://mmu-task-backend.onrender.com/api/fetch-latest-task");
                 if (!response.ok) throw new Error("Failed to fetch latest task");
 
                 const data = await response.json();
@@ -60,7 +60,7 @@ const Mmu = () => {
     useEffect(() => {
         const fetchallTask = async () => {
             try {
-                const response = await fetch("https://portfolio-backend-q5fr.onrender.com/api/fetch-all-tasks");
+                const response = await fetch("https://mmu-task-backend.onrender.com/api/fetch-all-tasks");
                 if (!response.ok) throw new Error("Failed to fetch latest task");
 
                 const data = await response.json();
@@ -109,41 +109,25 @@ const Mmu = () => {
 
                 <div className="bg-white w-full   p-3 rounded-lg shadow-md border border-gray-200">
                     <h2 className="text-gray-500 text-base font-semibold flex flex-col text-center items-center">
-                        📦 Projects Name <span className="flex text-gray-700 text-xl mt-2 text-center items-center">Advanching Green Processing  of Biodegradable Fertilizers with AI</span>
+                        📦 Projects Name <span className="flex text-gray-700  mt-2 text-center items-center">Advanching Green Processing  of Biodegradable Fertilizers with AI</span>
                     </h2>
-                    <div className="flex justify-center space-x-2 mt-3">
-                        <a
-                            href="https://lightseagreen-salamander-626777.hostingersite.com/"
-                            target="blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center no-underline justify-center border border-gray-500 py-1 px-2 w-40 rounded-lg hover:bg-gray-100 transition"
-                        >
-                            {/* <img src={github} className="w-5 h-5" alt="GitHub Logo" /> */}
-                            🌍
-                            <span className="ml-2 text-sm">Admin Web</span>
-                        </a>
-                        <a
-                            href="https://e-commerce-4103d.web.app"
-                            target="blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center no-underline justify-center border border-gray-500 py-1 px-2 w-40 rounded-lg hover:bg-gray-100 transition"
-                        >
-                            🌍 <span className="ml-2 text-sm">User Web</span>
-                        </a>
+                    <div className="flex justify-center space-x-2 mt-3  h-24 overflow-y-auto custom-scrollbar ">
+                        <p className='w-full text-justify text-sm px-1'><span className='font-semibold text-lg'> T</span>he agricultural  sector is a vital contributor to Malaysia’s economy but faces challenges in balancing productivity with environmental sustainability. Fertilizer use, particularly urea, is crucial for crop yields due to its high nitrogen content and solubility. However, manufacturing of fertilizers, particularly those containing nitrogen compounds, is a significant source of ammonia (NH₃) release, which is harmful to humans, animals, and plants. The granulation process in urea fertilizer production emits ammonia gas to the environment. This research focuses on advancing biodegradable fertilizer production towards a sustainable and environmentally friendly process. Advanced artificial intelligence methods, including Random Forest and the Particle Swarm Optimization algorithm, will be employed to develop accurate ammonia release prediction models. A lab-scale size fluidized bed granulation system will be used in this research. The models will identify optimal production parameters to reduce ammonia gas release effectively, predicting and minimizing ammonia emissions during urea fertilizer production. Additionally, the study will assess Malaysian farmers' awareness and willingness to adopt environmentally friendly fertilizers, offering recommendations to promote sustainable agricultural practices. The research aligns with Islamic teachings, which prohibit environmental destruction, as emphasized in Quranic verses such as Al-Qasas 77 and Al-A’raf 56. It also supports the United Nations Sustainable Development Goal (SDG) 12 on responsible consumption and production. Through innovative solutions and awareness initiatives, this study aims to contribute to sustainable agriculture while protecting the environment.</p>
+
                     </div>
 
-                    <p className="text-xl font-bold text-gray-900 mt-4">⌛ 3 Months</p>
+                    <p className=" font-semibold text-gray-900 mt-4">⌛ Min 12 Month - Max 36 Month</p>
 
                     <div className="flex items-center">
                         <p>
                             <img
-                                src={riseuplabs}
+                                src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAXVBMVEUCTqEjSZYCTqECTqECTaFHcEwCTaECTqECTqECTqECTqECTqECTaECTqECTqECTqECTqECTaACTqECTqHsGyPsHCTsHCMCTqHsHCQCTqHsHCTsHCTrHCPsHCQCTqHr2qXIAAAAH3RSTlN6DaFDTwA62reTWtFjxP8tIP/67SXO/4Os5PHjgGCNaOOdLAAAARBJREFUeAF90QUWgzAQRdFJyo+WSF3Z/zIbP/WHc3GIGF9NHBw5IZU2DD3izE7rmc3IrVxuFq+IjjX1HXu+YviCVb9hjEVZxVVCO7AnE2qWUPUzY4WyMCCrN1xtuUMpGOt6W1BsRwa0prqdRk+ulnG3Pxz2u6y14xPuDiWGfuWZNu0qAfuKJ6xdLDvPBeuZh9plvNCGNumd8yg6XhPGhmdXI5wq3p7OnNurbIFrtj0gBh7dOBX30+n+/BHJj8+1oBWc3J6ts2fC1o0UVZXgx2DDkWCe/0RDxo9e+oUAW16lvPcz2oLsy5kqo04I72LDc0Ooo7ChIIL7QBoIqH8IPz/hOaMMnNBjRiuFkgZN4cjMAxxBIhydv7jrAAAAAElFTkSuQmCC'
                                 alt="Rise Up Labs Logo"
                                 className="w-6 h-6 rounded-full mr-2"
                             />
                         </p>
                         <p className="text-green-600">
-                            Associated with <a href="https://riseuplabs.com/" target="blank" className="font-semibold ms-2">Rise Up Labs</a>
+                            Associated with <a href="https://www.mmu.edu.my/" target="blank" className="font-semibold ms-2">Multimedia University</a>
                         </p>
                     </div>
                 </div>
@@ -170,7 +154,7 @@ const Mmu = () => {
 
             {/* live sections */}
 
-            <div className="grid grid-cols-1 lg:grid-cols-[repeat(1,_1fr)_repeat(2,_0.7fr)]  gap-2 pb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 pb-10">
                 <motion.div
                     className="bg-white  p-3 rounded-lg shadow-md"
                     initial={{ opacity: 0, y: -10 }}
@@ -285,15 +269,7 @@ const Mmu = () => {
 
 
 
-                <div className="bg-white  p-3 rounded-lg shadow-md">
-                    <h2 className="text-xl font-semibold text-gray-500 flex text-center justify-center items-center gap-2">
-                        ⏳ Percentage of Complession
-                    </h2>
-                    {/* Inline divs for progress */}
-                    <div className="mt-3 flex justify-between items-center text-sm font-medium">
-                        <PieAnimation />
-                    </div>
-                </div>
+
 
 
             </div>
@@ -306,7 +282,7 @@ export default Mmu;
 
 const ProfileCard = ({ name, role, image, link }) => {
     return (
-        <div className="flex items-center bg-white shadow-md rounded-lg p-4 w-full ">
+        <div className="flex items-center bg-white shadow-md rounded-lg p-3 w-full ">
             <div className="flex-shrink-0 ">
                 <img
                     src={image}
