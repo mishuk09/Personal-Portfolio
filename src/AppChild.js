@@ -10,15 +10,12 @@ import Projects from './components/Projects/Projects';
 import Mission from './components/Mission/Mission';
 import Ceo from './components/CEO/Ceo';
 import Contact from './components/Contact/Contact';
-import ScrollButton from './components/ScrollButton/ScrollButton';
-import Nav from './components/Navbar/Nav';
 
 const AppChild = () => {
     return (
         <div className="App">
             
             <ParticleJS></ParticleJS>
-            <ScrollButton></ScrollButton>
             <ColorChange></ColorChange>
             <Home></Home>
             <About></About>

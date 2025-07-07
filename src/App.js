@@ -14,6 +14,9 @@ import ThesisPapers from './components/Thesis/ThesisPapers';
 import Nav from './components/Navbar/Nav';
 import SingleCertificate from './components/Certificate/SingleCertificate';
 import InternshipDetails from './components/Internship/InternshipDetails';
+import ScrollButton from './components/ScrollButton/ScrollButton';
+import Upwork from './components/OthersComponent/Button/Upwork';
+import ProjectAll from './components/Projects/ProjectAll';
 
 
 
@@ -39,6 +42,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Nav />
+      <ScrollButton />
+      <Upwork />
+
+
       <div className="App">
         <div className='darkmode-toggle pt-1'>
           <Switch
@@ -54,6 +61,8 @@ function App() {
           <Route path='/designdev' element={<DesingDev />}></Route>
           <Route path='/rku' element={<ThesisPapers />}></Route>
           <Route path='/certifications' element={<SingleCertificate />}></Route>
+          <Route path='/myprojects' element={<ProjectAll />}></Route>
+
           <Route path='/riseuplabs' element={<InternshipDetails />}></Route>
           <Route path='/workprogress' element={<Dashboard />}></Route>
           <Route path='/contactpage' element={<ContactPage></ContactPage>}></Route>

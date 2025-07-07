@@ -1,8 +1,7 @@
 import mishuk from './img/mishuk.png';
-import riseuplabs from './img/riseuplabs.svg';
 import { motion } from "framer-motion";
-import PieAnimation from "./img/PieAnimation";
 import { useEffect, useState } from 'react';
+import AddsurveyData from './Mmu/AddsurveyData';
 
 const Mmu = () => {
     const [isActive, setIsActive] = useState(false);
@@ -273,6 +272,13 @@ const Mmu = () => {
 
 
             </div>
+
+            {/* survey section */}
+            <div>
+                <AddsurveyData />
+
+            </div>
+
         </div>
     );
 };
