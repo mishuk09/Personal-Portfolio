@@ -2,6 +2,7 @@ import mishuk from './img/mishuk.png';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import AddsurveyData from './Mmu/AddsurveyData';
+import SurveyDashboard from './Mmu/SurveyDashboard ';
 
 const Mmu = () => {
     const [isActive, setIsActive] = useState(false);
@@ -275,7 +276,8 @@ const Mmu = () => {
 
             {/* survey section */}
             <div>
-                <AddsurveyData />
+                {/* <AddsurveyData /> */}
+                <SurveyDashboard />
 
             </div>
 
