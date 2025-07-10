@@ -1,6 +1,7 @@
 import { Add } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import AddsurveyData from "./AddsurveyData";
+import SurveyAuth from "./SurveyAuth";
 
 const SurveyDashboard = () => {
     const [data, setData] = useState([]);
@@ -24,7 +25,8 @@ const SurveyDashboard = () => {
         <>
             {modal && (
                 <div className=" fixed  inset-0 bg-gray-800 bg-opacity-50 h-screen flex items-center justify-center z-50">
-                    <AddsurveyData onClose={() => setModal(false)} />
+                    {/* <AddsurveyData onClose={() => setModal(false)} /> */}
+                    <SurveyAuth onClose={() => setModal(false)} />
                 </div>
             )}
             <div className="p-6 md:p-10 bg-gray-100 min-h-screen">
