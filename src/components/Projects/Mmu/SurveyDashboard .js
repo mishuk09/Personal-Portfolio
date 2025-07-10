@@ -24,7 +24,7 @@ const SurveyDashboard = () => {
     return (
         <>
             {modal && (
-                <div className=" fixed  inset-0 bg-gray-800 bg-opacity-50 h-screen flex items-center justify-center z-50">
+                <div className=" fixed  inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
                     {/* <AddsurveyData onClose={() => setModal(false)} /> */}
                     <SurveyAuth onClose={() => setModal(false)} />
                 </div>

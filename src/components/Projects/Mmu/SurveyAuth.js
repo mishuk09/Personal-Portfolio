@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import SurveyDashboard from "./SurveyDashboard ";
+import AddsurveyData from "./AddsurveyData";
 
-const SurveyAuth = () => {
+const SurveyAuth = ({ onClose }) => {
     const [authenticated, setAuthenticated] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -38,12 +38,11 @@ const SurveyAuth = () => {
 
         <>
             {authenticated ? (
-                <SurveyDashboard />
+                <AddsurveyData onClose={onClose} />
             ) : (
-                <div className="h-auto relative flex items-center rounded justify-center bg-gray-100 px-4">
+                <div className="h-auto relative flex items-center rounded justify-center bg-gray-100 p-4">
 
-
-
+                    <button className="absolute right-2 top-2 text-blue-600 hover:underline" onClick={onClose}>X</button>
                     <form
                         onSubmit={handleLogin}
                         className="bg-white shadow-md rounded-xl p-8 m-6 w-full max-w-sm"
