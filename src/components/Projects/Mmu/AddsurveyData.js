@@ -136,6 +136,7 @@ const AddsurveyData = ({ onClose }) => {
                                 <label key={opt} className="flex items-center space-x-1 text-gray-600">
                                     <input
                                         type="radio"
+                                        required
                                         name={item.key}
                                         value={opt}
                                         checked={formData.demographics[item.key] === opt}
@@ -159,6 +160,7 @@ const AddsurveyData = ({ onClose }) => {
                                 <label key={score} className="flex items-center space-x-1">
                                     <input
                                         type="radio"
+                                        required
                                         name={`question-${i}`}
                                         value={score}
                                         checked={formData.awareness[`question-${i}`] === `${score}`}
@@ -182,6 +184,7 @@ const AddsurveyData = ({ onClose }) => {
                                     <input
                                         type="radio"
                                         name={`question2-${i}`}
+                                        required
                                         value={score}
                                         checked={formData.readiness[`question2-${i}`] === `${score}`}
                                         onChange={() => handleRatingChange2(i, `${score}`)}
