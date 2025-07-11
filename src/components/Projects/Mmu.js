@@ -275,7 +275,7 @@ const Mmu = () => {
             </div>
 
             {/* survey section */}
-            <div>
+            <div className='mt-10'>
                 {/* <AddsurveyData /> */}
                 <SurveyDashboard />
 

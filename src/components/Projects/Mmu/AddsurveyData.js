@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 const AddsurveyData = ({ onClose }) => {
+    const [img, setImg] = useState(null);
+
     const [formData, setFormData] = useState({
         demographics: {},
         awareness: {},
@@ -26,6 +28,7 @@ const AddsurveyData = ({ onClose }) => {
         "I believe the use of chemical fertilizers has long-term negative effects on soil health.",
         "I have heard about green fertilizers from agricultural officers, extension workers, or government programs."
     ];
+
     const questions2 = [
         "I am ready to use green fertilizer on my farm.",
         "I believe green fertilizer is cost-effective.",
@@ -45,7 +48,6 @@ const AddsurveyData = ({ onClose }) => {
         "Do you have any suggestions to help promote the use of green fertilizer among local farmers?",
         "What role do you think the government, cooperatives, or agricultural agencies should play in promoting green fertilizer?"
     ];
-
 
     const handleDemographicChange = (key, value) => {
         setFormData(prev => ({
@@ -90,30 +92,43 @@ const AddsurveyData = ({ onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const submissionData = new FormData();
+
+        submissionData.append("demographics", JSON.stringify(formData.demographics));
+        submissionData.append("awareness", JSON.stringify(formData.awareness));
+        submissionData.append("readiness", JSON.stringify(formData.readiness));
+        submissionData.append("textAnswers", JSON.stringify(formData.textAnswers));
+
+        if (img) {
+            submissionData.append("images", img); // backend expects "images"
+        }
+
         try {
             const response = await fetch("http://localhost:5000/api/survey", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
+                body: submissionData
             });
 
             if (response.ok) {
                 alert("Survey submitted successfully!");
-                setFormData({ demographics: {}, awareness: {}, readiness: {}, textAnswers: {} });
+                setFormData({
+                    demographics: {},
+                    awareness: {},
+                    readiness: {},
+                    textAnswers: {}
+                });
+                setImg(null);
             } else {
                 alert("Submission failed.");
             }
         } catch (error) {
-            console.error(error);
+            console.error("Error submitting form:", error);
             alert("An error occurred while submitting the survey.");
         }
     };
 
     return (
         <div className="relative max-w-5xl mx-auto p-6 bg-white rounded shadow">
-            {/* Close button OUTSIDE form */}
             <button
                 onClick={onClose}
                 className="absolute top-4 right-4 text-red-600 hover:text-gray-800 z-50"
@@ -121,19 +136,15 @@ const AddsurveyData = ({ onClose }) => {
                 ✖
             </button>
 
-            <form onSubmit={handleSubmit} className="relative h-[500px] overflow-y-auto mt-10 space-y-2">
+            <form onSubmit={handleSubmit} className="relative h-[500px] overflow-y-auto mt-10 space-y-6">
 
-                <h2 className="text-2xl font-bold text-blue-900 mb-4">Section A: Demographic Information</h2>
+                <h2 className="text-2xl font-bold text-blue-900">Section A: Demographic Information</h2>
                 {demographicItems.map((item, i) => (
-                    <div key={i} className="flex flex-col border-b  pb-1 border-gray-200 md:flex-row md:items-start md:gap-1">
-                        <label className="w-full md:w-1/5 font-semibold text-gray-700">
-                            {item.label}
-                        </label>
-
-                        <div className="w-full md:w-2/3 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-1">
-
+                    <div key={i} className="flex flex-col md:flex-row md:items-start gap-2 border-b pb-2">
+                        <label className="md:w-1/4 font-medium text-gray-700">{item.label}</label>
+                        <div className="flex flex-wrap gap-3">
                             {item.options.map(opt => (
-                                <label key={opt} className="flex items-center space-x-1 text-gray-600">
+                                <label key={opt} className="flex items-center gap-1 text-sm text-gray-600">
                                     <input
                                         type="radio"
                                         required
@@ -141,23 +152,22 @@ const AddsurveyData = ({ onClose }) => {
                                         value={opt}
                                         checked={formData.demographics[item.key] === opt}
                                         onChange={() => handleDemographicChange(item.key, opt)}
-                                        className="form-radio text-blue-600"
+                                        className="form-radio"
                                     />
-                                    <span className="text-sm">{opt}</span>
+                                    {opt}
                                 </label>
                             ))}
                         </div>
                     </div>
                 ))}
 
-                <h2 className="text-2xl pt-8 pb-2   border-b  font-bold text-blue-900">🌿 Rating Questions Set 1</h2>
+                <h2 className="text-xl font-bold text-blue-900">🌿 Rating Questions Set 1</h2>
                 {questions.map((q, i) => (
-                    <div key={i} className="flex flex-col md:flex-row md:items-center justify-between border-b pb-1">
-                        {/* Question */}
-                        <div className="md:w-2/3 text-gray-800 font-medium">{i + 1}. {q}</div>
-                        <div className="md:w-1/3 flex justify-start md:justify-end gap-4 mt-3 md:mt-0">
+                    <div key={i} className="border-b pb-2">
+                        <p className="text-gray-700 font-medium">{i + 1}. {q}</p>
+                        <div className="flex gap-4 mt-1">
                             {[1, 2, 3, 4, 5].map(score => (
-                                <label key={score} className="flex items-center space-x-1">
+                                <label key={score} className="flex items-center gap-1">
                                     <input
                                         type="radio"
                                         required
@@ -165,48 +175,47 @@ const AddsurveyData = ({ onClose }) => {
                                         value={score}
                                         checked={formData.awareness[`question-${i}`] === `${score}`}
                                         onChange={() => handleRatingChange(i, `${score}`)}
-                                        className="form-radio text-blue-600"
+                                        className="form-radio"
                                     />
-                                    <span>{score}</span>
+                                    {score}
                                 </label>
                             ))}
                         </div>
                     </div>
                 ))}
 
-                <h2 className="text-2xl pt-8 pb-6 font-bold text-blue-900">🌿 Rating Questions Set 2</h2>
+                <h2 className="text-xl font-bold text-blue-900">🌿 Rating Questions Set 2</h2>
                 {questions2.map((q, i) => (
-                    <div key={i} className="flex flex-col md:flex-row md:items-center justify-between border-b pb-1">
-                        <label className="md:w-2/3 text-gray-800 font-medium">{i + 1}. {q}</label>
-                        <div className="md:w-1/3 flex justify-start md:justify-end gap-4 mt-3 md:mt-0">
+                    <div key={i} className="border-b pb-2">
+                        <p className="text-gray-700 font-medium">{i + 1}. {q}</p>
+                        <div className="flex gap-4 mt-1">
                             {[1, 2, 3, 4, 5].map(score => (
-                                <label key={score} className="flex items-center space-x-1">
+                                <label key={score} className="flex items-center gap-1">
                                     <input
                                         type="radio"
-                                        name={`question2-${i}`}
                                         required
+                                        name={`question2-${i}`}
                                         value={score}
                                         checked={formData.readiness[`question2-${i}`] === `${score}`}
                                         onChange={() => handleRatingChange2(i, `${score}`)}
-                                        className="form-radio text-blue-600"
+                                        className="form-radio"
                                     />
-                                    <span>{score}</span>
+                                    {score}
                                 </label>
                             ))}
                         </div>
                     </div>
                 ))}
 
-                <h2 className="text-2xl pt-8 pb-6 font-bold text-blue-900">📝 Written Response</h2>
+                <h2 className="text-xl font-bold text-blue-900">📝 Open-ended Questions</h2>
                 {openEndedQuestions.map((q, i) => (
-                    <div key={i} className='space-y-6'>
-                        <label className="block font-medium text-gray-800 mb-1">
+                    <div key={i} className="mb-4 p-1">
+                        <label className="block font-medium text-gray-700 mb-1">
                             {i + 1}. {q}
                         </label>
                         <textarea
                             rows={3}
-                            className="w-full min-h-10 max-h-12 p-2  bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-
+                            className="w-full p-1 h-10 border border-gray-300 bg-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                             placeholder="Type your answer..."
                             value={formData.textAnswers[`text-${i}`] || ""}
                             onChange={(e) => handleTextChange(i, e.target.value)}
@@ -214,7 +223,19 @@ const AddsurveyData = ({ onClose }) => {
                     </div>
                 ))}
 
-                <div className="text-center">
+                <div>
+                    <label className="block text-sm font-medium text-gray-700">Upload Image</label>
+                    <input
+                        type="file"
+                        name="image"
+                        accept="image/*"
+                        onChange={(e) => setImg(e.target.files[0] || null)}
+                        required
+                        className="mt-1 block w-full p-1 bg-gray-300 text-sm border border-gray-300 rounded"
+                    />
+                </div>
+
+                <div className="text-center mt-6">
                     <button type="submit" className="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800">
                         Submit
                     </button>
