@@ -129,11 +129,11 @@ const SurveyDashboard = () => {
 
                 {/* Modal for image preview */}
                 {isModalOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                         <div className="bg-white p-4 rounded-lg relative max-w-lg w-full">
                             <button
                                 onClick={closeModal}
-                                className="absolute top-2 right-2 text-red-500 text-lg font-bold"
+                                className="absolute top-1 right-2 text-sm text-red-500   "
                             >
                                 ✖
                             </button>
