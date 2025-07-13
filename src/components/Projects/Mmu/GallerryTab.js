@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 const GalleryTab = () => {
     const [images, setImages] = useState([]);
     const [tabIndex, setTabIndex] = useState(0);
-    const [newImageUrl, setNewImageUrl] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,13 +18,7 @@ const GalleryTab = () => {
         fetchData();
     }, []);
 
-    const handleAddImage = (e) => {
-        e.preventDefault();
-        if (newImageUrl.trim() !== "") {
-            setImages([...images, { imgUrl: newImageUrl }]);
-            setNewImageUrl("");
-        }
-    };
+    
 
     return (
         <div className="p-2 md:p-4 mt-10 max-w-7xl mx-auto">
