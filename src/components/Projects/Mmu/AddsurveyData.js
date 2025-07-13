@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const AddsurveyData = ({ onClose }) => {
     const [img, setImg] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const [formData, setFormData] = useState({
         demographics: {},
@@ -91,6 +92,7 @@ const AddsurveyData = ({ onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
 
         const submissionData = new FormData();
 
@@ -104,7 +106,7 @@ const AddsurveyData = ({ onClose }) => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/survey", {
+            const response = await fetch("https://survey-backend-3ppk.onrender.com/api/survey", {
                 method: "POST",
                 body: submissionData
             });
@@ -118,6 +120,7 @@ const AddsurveyData = ({ onClose }) => {
                     textAnswers: {}
                 });
                 setImg(null);
+                setLoading(false);
             } else {
                 alert("Submission failed.");
             }
@@ -163,7 +166,7 @@ const AddsurveyData = ({ onClose }) => {
 
                 <h2 className="text-xl font-bold text-blue-900">🌿 Rating Questions Set 1</h2>
                 {questions.map((q, i) => (
-                    <div key={i} className="border-b pb-2">
+                    <div key={i} className="flex flex-col md:flex-row md:items-center justify-between border-b  leading-3">
                         <p className="text-gray-700 font-medium">{i + 1}. {q}</p>
                         <div className="flex gap-4 mt-1">
                             {[1, 2, 3, 4, 5].map(score => (
@@ -186,9 +189,9 @@ const AddsurveyData = ({ onClose }) => {
 
                 <h2 className="text-xl font-bold text-blue-900">🌿 Rating Questions Set 2</h2>
                 {questions2.map((q, i) => (
-                    <div key={i} className="border-b pb-2">
+                    <div key={i} className="flex flex-col md:flex-row md:items-center justify-between border-b leading-3">
                         <p className="text-gray-700 font-medium">{i + 1}. {q}</p>
-                        <div className="flex gap-4 mt-1">
+                        <div className="flex gap-4 ">
                             {[1, 2, 3, 4, 5].map(score => (
                                 <label key={score} className="flex items-center gap-1">
                                     <input
@@ -209,8 +212,8 @@ const AddsurveyData = ({ onClose }) => {
 
                 <h2 className="text-xl font-bold text-blue-900">📝 Open-ended Questions</h2>
                 {openEndedQuestions.map((q, i) => (
-                    <div key={i} className="mb-4 p-1">
-                        <label className="block font-medium text-gray-700 mb-1">
+                    <div key={i} className="  p-1">
+                        <label className="block font-medium text-gray-700  ">
                             {i + 1}. {q}
                         </label>
                         <textarea
@@ -236,9 +239,40 @@ const AddsurveyData = ({ onClose }) => {
                 </div>
 
                 <div className="text-center mt-6">
-                    <button type="submit" className="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800">
-                        Submit
+                    <button
+                        type="submit"
+                        disabled={loading}
+                        className="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800 flex items-center justify-center gap-2"
+                    >
+                        {loading ? (
+                            <>
+                                <svg
+                                    className="animate-spin h-5 w-5 text-white"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <circle
+                                        className="opacity-25"
+                                        cx="12"
+                                        cy="12"
+                                        r="10"
+                                        stroke="currentColor"
+                                        strokeWidth="4"
+                                    ></circle>
+                                    <path
+                                        className="opacity-75"
+                                        fill="currentColor"
+                                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                    ></path>
+                                </svg>
+                                Submitting...
+                            </>
+                        ) : (
+                            "Submit"
+                        )}
                     </button>
+
                 </div>
             </form>
         </div>

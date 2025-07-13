@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AddsurveyData from "./AddsurveyData";
 import SurveyAuth from "./SurveyAuth";
+import GallerryTab from "./GallerryTab";
 
 const SurveyDashboard = () => {
     const [data, setData] = useState([]);
@@ -24,7 +25,7 @@ const SurveyDashboard = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await fetch("http://localhost:5000/get/surveys");
+                const response = await fetch("https://survey-backend-3ppk.onrender.com/get/surveys");
                 const result = await response.json();
                 setData(result);
             } catch (err) {
@@ -45,11 +46,11 @@ const SurveyDashboard = () => {
                 </div>
             )}
 
-            <div className="p-2 sm:py-6 bg-gray-100 min-h-screen">
+            <div className="pt-10  bg-gray-100  ">
                 <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">📊 Survey Dashboard</h1>
 
                 {/* Summary Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
+                <div className="grid grid-cols-1 md:p-4 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
                     <SummaryCard title="📋 Total Responses" value={data.length} />
                     <SummaryCard title="👨 Male" value={data.filter(d => d.demographics?.gender === "Male").length} />
                     <SummaryCard title="👩 Female" value={data.filter(d => d.demographics?.gender === "Female").length} />
@@ -64,7 +65,7 @@ const SurveyDashboard = () => {
                 </div>
 
                 {/* Table or Loading */}
-                <div className="bg-white p-4 rounded-xl shadow-md overflow-x-auto min-h-[200px] flex items-center justify-center">
+                <div className="bg-white md:m-4  rounded shadow-md overflow-x-auto min-h-[200px] flex items-center justify-center">
                     {loading ? (
                         <div className="text-center">
                             <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-blue-600 border-solid mx-auto mb-2"></div>
@@ -72,10 +73,10 @@ const SurveyDashboard = () => {
                         </div>
                     ) : (
                         <>
-                            <div className="w-full">
-                                <h2 className="text-xl font-semibold text-blue-800 mb-4">🧾 Individual Responses</h2>
-                                <table className="min-w-full text-sm border-collapse">
-                                    <thead className="bg-blue-600 text-white">
+                            <div className="w-full   h-[400px] overflow-y-auto">
+                                <h2 className="text-xl p-2 font-semibold text-blue-800">🧾 Individual Responses</h2>
+                                <table className="min-w-full   text-sm border-collapse">
+                                    <thead className="bg-blue-600 text-white sticky top-0 z-10">
                                         <tr>
                                             <th className="px-4 py-2">#</th>
                                             <th className="px-4 py-2">👤 Age</th>
@@ -130,7 +131,7 @@ const SurveyDashboard = () => {
                 {/* Modal for image preview */}
                 {isModalOpen && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div className="bg-white p-4 rounded-lg relative max-w-lg w-full">
+                        <div className="bg-white p-4 rounded-lg relative max-w-lg w-full max-h-[70vh] overflow-y-auto">
                             <button
                                 onClick={closeModal}
                                 className="absolute top-1 right-2 text-sm text-red-500   "
@@ -142,6 +143,8 @@ const SurveyDashboard = () => {
                     </div>
                 )}
             </div>
+
+            <GallerryTab />
         </>
     );
 };
