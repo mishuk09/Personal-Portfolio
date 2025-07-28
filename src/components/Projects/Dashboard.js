@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Riseuplabs from './Riseuplabs'; // make sure this component exists
 import Mmu from './Mmu';
+import ThesisPapers from '../Thesis/ThesisPapers';
 
 const WorkProgressDashboard = () => {
     const [activeTab, setActiveTab] = useState('mmu');
@@ -85,7 +86,9 @@ const WorkProgressDashboard = () => {
                         </div>
                     )}
                     {activeTab === 'rku' && (
-                        <div className="text-gray-800 text-base">RKU content UPDATING...</div>
+                        <div  >
+                            <ThesisPapers />
+                        </div>
                     )}
                 </div>
             </div>
