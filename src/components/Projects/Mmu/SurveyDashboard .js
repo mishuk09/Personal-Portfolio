@@ -89,40 +89,44 @@ const SurveyDashboard = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {data.map((entry, index) => {
-                                            const awarenessValues = Object.values(entry.awareness || {}).map(Number);
-                                            const readinessValues = Object.values(entry.readiness || {}).map(Number);
-                                            const awarenessAvg = awarenessValues.length
-                                                ? (awarenessValues.reduce((a, b) => a + b, 0) / awarenessValues.length).toFixed(1)
-                                                : "-";
-                                            const readinessAvg = readinessValues.length
-                                                ? (readinessValues.reduce((a, b) => a + b, 0) / readinessValues.length).toFixed(1)
-                                                : "-";
+                                        {[...data]
+                                            .sort(() => Math.random() - 0.5) // This line randomizes the array
+                                            .map((entry, index) => {
+                                                const awarenessValues = Object.values(entry.awareness || {}).map(Number);
+                                                const readinessValues = Object.values(entry.readiness || {}).map(Number);
+                                                const awarenessAvg = awarenessValues.length
+                                                    ? (awarenessValues.reduce((a, b) => a + b, 0) / awarenessValues.length).toFixed(1)
+                                                    : "-";
+                                                const readinessAvg = readinessValues.length
+                                                    ? (readinessValues.reduce((a, b) => a + b, 0) / readinessValues.length).toFixed(1)
+                                                    : "-";
 
-                                            return (
-                                                <tr key={entry._id || index} className="hover:bg-gray-50 border-b">
-                                                    <td className="px-4 py-2">{index + 1}</td>
-                                                    <td className="px-4 py-2">{entry.demographics?.age || "-"}</td>
-                                                    <td className="px-4 py-2">{entry.demographics?.gender || "-"}</td>
-                                                    <td className="px-4 py-2">{entry.demographics?.education || "-"}</td>
-                                                    <td className="px-4 py-2">{awarenessAvg}</td>
-                                                    <td className="px-4 py-2">{readinessAvg}</td>
-                                                    <td className="px-4 py-2">
-                                                        {entry.images?.length > 0 ? (
-                                                            <img
-                                                                src={entry.images[0]}
-                                                                alt="Survey"
-                                                                className="w-6 h-6 object-cover rounded cursor-pointer hover:scale-110 transition-transform duration-200"
-                                                                onClick={() => openModal(entry.images[0])}
-                                                            />
-                                                        ) : (
-                                                            "-"
-                                                        )}
-                                                    </td>
-                                                </tr>
-                                            );
-                                        })}
+                                                return (
+                                                    <tr key={entry._id || index} className="hover:bg-gray-50 border-b">
+                                                        <td className="px-4 py-2">{index + 1}</td>
+                                                        <td className="px-4 py-2">{entry.demographics?.age || "-"}</td>
+                                                        <td className="px-4 py-2">{entry.demographics?.gender || "-"}</td>
+                                                        <td className="px-4 py-2">{entry.demographics?.education || "-"}</td>
+                                                        <td className="px-4 py-2">{awarenessAvg}</td>
+                                                        <td className="px-4 py-2">{readinessAvg}</td>
+                                                        <td className="px-4 py-2">
+                                                            {entry.images?.length > 0 ? (
+                                                                <img
+                                                                    src={entry.images[0]}
+                                                                    alt="Survey"
+                                                                    className="w-6 h-6 object-cover rounded cursor-pointer hover:scale-110 transition-transform duration-200"
+                                                                    onClick={() => openModal(entry.images[0])}
+                                                                />
+                                                            ) : (
+                                                                "-"
+                                                            )}
+                                                        </td>
+                                                    </tr>
+                                                );
+                                            })}
                                     </tbody>
+
+                                   
                                 </table>
                             </div>
                         </>
