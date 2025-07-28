@@ -85,7 +85,7 @@ const WorkProgressDashboard = () => {
                         </div>
                     )}
                     {activeTab === 'rku' && (
-                        <div className="text-gray-800 text-base">RKU content goes here...</div>
+                        <div className="text-gray-800 text-base">RKU content UPDATING...</div>
                     )}
                 </div>
             </div>
