@@ -45,7 +45,7 @@ const SurveyDashboard = () => {
                 </div>
             )}
 
-            <div className="pt-10    ">
+            <div className="pt-2    ">
                 <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">📊 Survey Dashboard</h1>
 
                 {/* Summary Cards */}

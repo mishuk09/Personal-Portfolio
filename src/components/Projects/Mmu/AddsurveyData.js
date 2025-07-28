@@ -233,7 +233,7 @@ const AddsurveyData = ({ onClose }) => {
                         name="image"
                         accept="image/*"
                         onChange={(e) => setImg(e.target.files[0] || null)}
-                        required
+                     
                         className="mt-1 block w-full p-1 bg-gray-300 text-sm border border-gray-300 rounded"
                     />
                 </div>

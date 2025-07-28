@@ -77,10 +77,10 @@ const Mmu = () => {
 
 
     return (
-        <div>
+        <div >
 
             {/* Statistics Section */}
-            <div className="grid grid-cols-1 pb-10 md:grid-cols-3 lg:grid-cols-[1fr_1.5fr_0.5fr] w-full gap-2 lg:gap-3 mb-6">
+            <div className="grid grid-cols-1 pb-10   md:grid-cols-3 lg:grid-cols-[1fr_1.5fr_0.5fr] w-full gap-2 lg:gap-3 mb-6">
 
                 <div className="bg-green-50 p-2 w-full   rounded-lg shadow-md">
                     <div className="flex flex-col justify-center gap-2">
@@ -275,7 +275,7 @@ const Mmu = () => {
             </div>
 
             {/* survey section */}
-            <div className='mt-10'>
+            <div className=' '>
                 {/* <AddsurveyData /> */}
                 <SurveyDashboard />
 

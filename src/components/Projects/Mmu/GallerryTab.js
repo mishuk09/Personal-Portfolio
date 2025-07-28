@@ -29,13 +29,13 @@ const GalleryTab = () => {
 
     return (
         <div className="border border-gray-300 md:p-4 mt-10 pb-10 mb-10 max-w-7xl mx-auto">
-            <h1 className="text-3xl font-bold mb-6 text-center">🖼️ Survey Image Gallery</h1>
+            <h1 className="text-2xl md:text-3xl font-bold mt-6 mb-6 text-center">🖼️ Survey Image Gallery</h1>
 
             {/* Tab Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center items-center w-full gap-2 md:gap-4 mb-6">
+            <div className="flex flex-col p-2 sm:flex-row justify-center items-center w-full gap-2 mb-6">
                 <button
                     className={`w-full sm:w-auto px-5 py-2 rounded-md font-medium transition-all duration-300 ${tabIndex === 0
-                        ? 'bg-blue-700 text-white shadow'
+                        ? 'bg-blue-700 text-white shadow-sm'
                         : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
                         }`}
                     onClick={() => setTabIndex(0)}
@@ -44,7 +44,7 @@ const GalleryTab = () => {
                 </button>
                 <button
                     className={`w-full sm:w-auto px-5 py-2 rounded-md font-medium transition-all duration-300 ${tabIndex === 1
-                        ? 'bg-blue-700 text-white shadow'
+                        ? 'bg-blue-700 text-white shadow-sm'
                         : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
                         }`}
                     onClick={() => setTabIndex(1)}
