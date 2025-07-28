@@ -3,25 +3,32 @@ import React, { useEffect, useState } from 'react';
 const GalleryTab = () => {
     const [images, setImages] = useState([]);
     const [tabIndex, setTabIndex] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
+                setLoading(true);
                 const response = await fetch("https://survey-backend-3ppk.onrender.com/get/surveys");
                 const result = await response.json();
                 setImages(result);
             } catch (err) {
                 console.error("❌ Failed to fetch data", err);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchData();
     }, []);
 
-    
+    // Filter only entries with images
+    const validImages = images.filter(
+        (img) => img.images || img.imgUrl
+    );
 
     return (
-        <div className="p-2 md:p-4 mt-10 max-w-7xl mx-auto">
+        <div className="border border-gray-300 md:p-4 mt-10 pb-10 mb-10 max-w-7xl mx-auto">
             <h1 className="text-3xl font-bold mb-6 text-center">🖼️ Survey Image Gallery</h1>
 
             {/* Tab Buttons */}
@@ -47,28 +54,58 @@ const GalleryTab = () => {
             </div>
 
             {/* Tab Content */}
-            {tabIndex === 0 && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 h-[450px] overflow-y-auto">
-                    {images.map((image, index) => (
-                        <div key={index} className="border rounded shadow hover:shadow-lg transition duration-200">
-                            <img
-                                src={image.images || image.imgUrl}
-                                alt={`Survey ${index}`}
-                                className="w-full h-48 object-cover rounded-t"
-                            />
-                        </div>
-                    ))}
-                    {images.length === 0 && (
-                        <p className="col-span-full text-center text-gray-500 text-lg">🚫 No images found</p>
-                    )}
+            {!loading && tabIndex === 0 && (
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 h-[450px] overflow-y-auto">
+                    {(() => {
+                        const validImageUrls = [];
+
+                        images.forEach((img) => {
+                            if (Array.isArray(img.images)) {
+                                img.images.forEach((url) => {
+                                    if (typeof url === "string" && url.trim() !== "") {
+                                        validImageUrls.push(url);
+                                    }
+                                });
+                            } else if (typeof img.imgUrl === "string" && img.imgUrl.trim() !== "") {
+                                validImageUrls.push(img.imgUrl);
+                            }
+                        });
+
+                        // 🔀 Shuffle the array
+                        for (let i = validImageUrls.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [validImageUrls[i], validImageUrls[j]] = [validImageUrls[j], validImageUrls[i]];
+                        }
+
+                        return validImageUrls.length === 0 ? (
+                            <p className="col-span-full text-center text-gray-500 text-lg">
+                                🚫 No valid images found
+                            </p>
+                        ) : (
+                            validImageUrls.map((url, index) => (
+                                <div
+                                    key={index}
+                                    className="border rounded shadow hover:shadow-lg transition duration-200"
+                                >
+                                    <img
+                                        src={url}
+                                        alt={`Survey ${index}`}
+                                        className="w-full h-48 object-cover rounded-t"
+                                    />
+                                </div>
+                            ))
+                        );
+                    })()}
                 </div>
             )}
 
+
+
+            {/* Form Tab Placeholder */}
             {tabIndex === 1 && (
                 <div className="max-w-7xl mx-auto bg-white border rounded-lg shadow-md p-6 mt-6">
                     <h2 className="text-2xl font-semibold mb-4 text-center">View Form</h2>
-
-
+                    {/* Add form content here if needed */}
                 </div>
             )}
         </div>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AddsurveyData from "./AddsurveyData";
 import SurveyAuth from "./SurveyAuth";
 import GallerryTab from "./GallerryTab";
 
@@ -46,14 +45,16 @@ const SurveyDashboard = () => {
                 </div>
             )}
 
-            <div className="pt-10  bg-gray-100  ">
+            <div className="pt-10    ">
                 <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">📊 Survey Dashboard</h1>
 
                 {/* Summary Cards */}
                 <div className="grid grid-cols-1 md:p-4 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
-                    <SummaryCard title="📋 Total Responses" value={data.length} />
-                    <SummaryCard title="👨 Male" value={data.filter(d => d.demographics?.gender === "Male").length} />
-                    <SummaryCard title="👩 Female" value={data.filter(d => d.demographics?.gender === "Female").length} />
+
+                    <SummaryCard title="📋 Total Responses" value={data.length} loading={loading} />
+                    <SummaryCard title="👨 Male" value={data.filter(d => d.demographics?.gender === "Male").length} loading={loading} />
+                    <SummaryCard title="👩 Female" value={data.filter(d => d.demographics?.gender === "Female").length} loading={loading} />
+
                     <div className="flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm p-6 hover:shadow-md transition">
                         <button
                             className="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200 w-full"
@@ -150,11 +151,17 @@ const SurveyDashboard = () => {
 };
 
 // ✅ SummaryCard Component
-const SummaryCard = ({ title, value }) => (
-    <div className="bg-white h-22 p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow transition">
+const SummaryCard = ({ title, value, loading }) => (
+    <div className="bg-white min-h-22 p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow transition min-h-[80px]">
         <h2 className="text-sm font-medium text-gray-500 text-center">{title}</h2>
-        <p className="text-3xl font-bold text-blue-800 text-center">{value}</p>
+        {loading ? (
+            <div className="mt-3 h-8 w-8 border-2 border-blue-500 border-t-transparent border-r-transparent rounded-full animate-spin ease-linear duration-700"></div>
+        ) : (
+            <p className="text-3xl font-bold text-blue-800 text-center">{value}</p>
+        )}
     </div>
 );
+
+
 
 export default SurveyDashboard;
