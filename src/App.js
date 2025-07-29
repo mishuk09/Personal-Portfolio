@@ -17,6 +17,7 @@ import InternshipDetails from './components/Internship/InternshipDetails';
 import ScrollButton from './components/ScrollButton/ScrollButton';
 import Upwork from './components/OthersComponent/Button/Upwork';
 import ProjectAll from './components/Projects/ProjectAll';
+import Projects from './components/Projects/Projectsssss';
 
 
 
@@ -62,6 +63,8 @@ function App() {
           <Route path='/rku' element={<ThesisPapers />}></Route>
           <Route path='/certifications' element={<SingleCertificate />}></Route>
           <Route path='/myprojects' element={<ProjectAll />}></Route>
+          <Route path='/projects' element={<Projects />}></Route>
+
 
           <Route path='/riseuplabs' element={<InternshipDetails />}></Route>
           <Route path='/workprogress' element={<Dashboard />}></Route>

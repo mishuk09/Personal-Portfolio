@@ -68,7 +68,7 @@ const DesingDev = () => {
                             <p className="mt-2 text-gray-600">
                                 Explore the projects I’ve built, showcasing my skills and expertise.
                             </p>
-                            <a href="myprojects" className="mt-4 inline-block no-underline px-6 py-2 bg-blue-600 text-white font-medium rounded-lg  hover:bg-blue-700 transition">
+                            <a href="projects" className="mt-4 inline-block no-underline px-6 py-2 bg-blue-600 text-white font-medium rounded-lg  hover:bg-blue-700 transition">
                                 View My Projects
                             </a>
                         </div>

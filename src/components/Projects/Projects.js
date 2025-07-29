@@ -1,186 +1,84 @@
-import React, { useState } from 'react';
-import '../../index.css';
-import work from './img/work.png';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css'; // Import Splide styles
-import shoes from './img/shoes.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import p1 from './img/p1.png';
-import p2 from './img/p2.png';
-import p3 from './img/p3.png';
-import p4 from './img/p4.png';
-import p5 from './img/p5.png';
-import p6 from './img/p6.png';
-import p7 from './img/p7.png';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { ExternalLink, Github } from 'lucide-react'; // Lucide icons
 
-import c1 from './img/c1.png';
-import c2 from './img/c2.png';
-import c3 from './img/c3.png';
-import c4 from './img/c4.png';
-import c5 from './img/c5.png';
-import c6 from './img/c6.png';
-import c7 from './img/c7.png';
-import c8 from './img/c8.png';
-import c9 from './img/c9.png';
-import c10 from './img/c10.png';
-
-import x1 from './img/x1.png';
-import x2 from './img/x2.png';
-import x3 from './img/x3.png';
-import x4 from './img/x4.png';
-import x6 from './img/x6.png';
-import x7 from './img/x7.png';
-import x8 from './img/x8.png';
-import x9 from './img/x9.png';
-
-import a1 from './img/a1.png';
-import a2 from './img/a2.png';
-import a3 from './img/a3.png';
-
-import a5 from './img/a5.png';
-import a6 from './img/a6.png';
-import a7 from './img/a7.png';
-
-import m1 from './img/m1.png';
-import m2 from './img/m2.png';
-import m3 from './img/m3.png';
-import m4 from './img/m4.png';
-import m5 from './img/m5.png';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 
 const Projects = () => {
+    const [projectsData, setProjectsData] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const projectsData = [
-        {
-            id: 1,
-            imgSrc: c1,
-            title: 'CSEHacks - A Learning website like GFG,Javatpoint',
-            subtitle: 'Educational',
-            label: 'New',
-            screenshotLink: shoes, // Assuming this is the correct image path
-            githubLink: 'https://github.com/mishuk09/Learning-Website/',
-            liveLink: 'https://csehacks.tech',
-            screenshots: [
-                c1, c2, c3, c4, c5, c6, c7, c8, c9, c10
-            ]
-        },
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const res = await axios.get('http://localhost:5000/api/projects');
+                const formatted = res.data.map((project, index) => ({
+                    id: project._id,
+                    title: project.title,
+                    subtitle: project.title, // or set a separate subtitle if needed
+                    githubLink: project.githubLink,
+                    liveLink: project.liveLink,
+                    screenshots: project.imageUrls,
+                    imgSrc: project.imageUrls[0] || '', // first image as main
+                }));
+                setProjectsData(formatted);
+            } catch (err) {
+                console.error('Failed to fetch projects:', err);
+            }
+        };
 
-        {
-            id: 2,
-            imgSrc: x1,
-            title: 'ShoeMart - E-commerce Shoe Platform',
-            subtitle: 'E-commerce',
-            label: 'Popular',
-            screenshotLink: shoes, // Assuming this is the correct image path
-            githubLink: 'https://github.com/mishuk09/Ecommerce',
-            liveLink: 'https://ecommerce-five-nu-53.vercel.app/',
-            screenshots: [
-                x1, x2, x3, x4, x6, x7, x8, x9
-            ]
-        },
-        {
-            id: 3,
-            imgSrc: p1,
-            title: 'Plexus - Digital Marketing Service',
-            subtitle: 'Agency',
-            label: 'Featured',
-            screenshotLink: shoes, // Assuming this is the correct image path
-            githubLink: 'https://github.com/user/project2',
-            liveLink: 'https://plexus.org.in/',
-            screenshots: [
-                p1, p2, p3, p4, p5, p6, p7,
-            ]
-        },
-        {
-            id: 4,
-            imgSrc: a1,
-            title: 'ShoeMart - E-commerce Shoe Platform',
-            subtitle: 'E-commerce',
-            label: 'Popular',
-            screenshotLink: shoes, // Assuming this is the correct image path
-            githubLink: 'https://github.com/mishuk09/sneaker',
-            liveLink: 'https://sneaker-git-master-mishuk09s-projects.vercel.app/',
-            screenshots: [
-                a1, a2, a3, a5, a6, a7
-            ]
-        },
-        {
-            id: 5,
-            imgSrc: m5,
-            title: 'Donations Collections Website',
-            subtitle: 'Donations Website',
-            label: 'Popular',
-            screenshotLink: shoes, // Assuming this is the correct image path
-            githubLink: 'https://github.com/mishuk09/Donation',
-            liveLink: 'https://bolsofra8.web.app/',
-            screenshots: [
-                m1, m2, m3, m4, m5
-            ]
-        }
-        // {
-        //     id: 6,
-        //     imgSrc: m5,
-        //     title: 'Donations Collections Website',
-        //     subtitle: 'Donations Website',
-        //     label: 'Popular',
-        //     screenshotLink: shoes, // Assuming this is the correct image path
-        //     githubLink: 'https://github.com/mishuk09/Donation',
-        //     liveLink: 'https://bolsofra8.web.app/',
-        //     screenshots: [
-        //         m1, m2, m3, m4, m5 
-        //     ]
-        // },
-    ];
+        fetchProjects();
+    }, []);
 
-    const handleImageClick = (imgSrc) => {
-        setSelectedImage(imgSrc);
+    const handleImageClick = (img) => {
+        setSelectedImage(img);
     };
 
     return (
         <div>
             <div id='project' className='projects-head mt-20'>
-                
                 <div className='marquee-div-name container mt-[40px] pt-10 mb-10'>
                     <span className='text-blue-600'>What I have done</span>
                     <div className='flex justify-between'>
-                        <p className="text-black text-2xl md:text-3xl font-bold hidden md:flex"> Projects's and worksample</p>
-                        <p className="text-black text-2xl md:text-3xl font-bold flex md:hidden"> Projects's</p>
+                        <p className="text-black text-2xl md:text-3xl font-bold hidden md:flex">Projectssss's and worksample</p>
+                        <p className="text-black text-2xl md:text-3xl font-bold flex md:hidden">Projectssss's</p>
                         <div className='text-black flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 duration-75 transition-all w-20 h-8 md:w-40 md:h-10'>
-                            <a href='/designdev' className='text-white hidden md:flex'>See More <FontAwesomeIcon className='ms-1' icon={faArrowUpRightFromSquare} /></a>
+                            <a href='/designdev' className='text-white hidden md:flex'>See More<ExternalLink className="w-4 h-4 ml-1" />
+                            </a>
                             <a href='/designdev' className='text-white flex md:hidden'>More</a>
                         </div>
-
                     </div>
                     <hr className='text-black h-3 pt-0 mt-0' />
                 </div>
+
                 <div className='container mt-10 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-                    {
-                        projectsData.map((project) => (
-                            <div key={project.id} className='relative project-card-item border rounded shadow-lg overflow-hidden'>
-                                <img src={project.imgSrc} alt={project.title} className='w-full  h-48 object-cover rounded-sm' />
-                                <div className='bg-white text-black'>
-                                    <div className='px-3 py-3 leading-tight'>
-                                        <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
-                                        <h6 className='text-[10px] font-semibold'>{project.subtitle}</h6>
+                    {projectsData.map((project) => (
+                        <div key={project.id} className='relative project-card-item border rounded shadow-lg overflow-hidden'>
+                            <img src={project.imgSrc} alt={project.title} className='w-full h-48 object-cover rounded-sm' />
+                            <div className='bg-white text-black'>
+                                <div className='px-3 py-3 leading-tight'>
+                                    <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
+                                    <h6 className='text-[10px] font-semibold'>{project.subtitle}</h6>
+                                </div>
+                                <div className='flex font-semibold justify-around pb-3'>
+                                    <div onClick={() => {
+                                        setSelectedProject(project);
+                                        setSelectedImage(project.screenshots[0]);
+                                    }} className='border cursor-pointer text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
+                                        Screenshot
                                     </div>
-                                    <div className='flex font-semibold justify-around pb-3'>
-                                        <div onClick={() => { setSelectedProject(project); setSelectedImage(project.screenshots[0]); }} className='border cursor-pointer text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
-                                            Screenshot
-                                        </div>
-                                        <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
-                                            <FontAwesomeIcon icon={faGithub} />
-                                        </a>
-                                        <a href={project.liveLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
-                                            Live Preview
-                                        </a>
-                                    </div>
+                                    <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
+                                        <Github className="w-4 h-4" />
+
+                                    </a>
+                                    <a href={project.liveLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
+                                        Live Preview
+                                    </a>
                                 </div>
                             </div>
-                        ))
-                    }
+                        </div>
+                    ))}
                 </div>
             </div>
 
@@ -194,7 +92,7 @@ const Projects = () => {
                             >
                                 &times;
                             </button>
-                            <div className='w-full h-96'> {/* Fixed dimensions for the image box */}
+                            <div className='w-full h-96'>
                                 <img
                                     src={selectedImage}
                                     alt={selectedProject.title}

@@ -6,26 +6,26 @@ import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Certificate from './components/Certificate/Certificate';
 import Service from './components/Service/Service';
-import Projects from './components/Projects/Projects';
 import Mission from './components/Mission/Mission';
 import Ceo from './components/CEO/Ceo';
 import Contact from './components/Contact/Contact';
+import Projects from './components/Projects/Projects';
 
 const AppChild = () => {
     return (
         <div className="App">
-            
-            <ParticleJS></ParticleJS>
-            <ColorChange></ColorChange>
-            <Home></Home>
-            <About></About>
-            <Skills></Skills>
-            <Certificate></Certificate>
-            <Service></Service>
-            <Projects></Projects>
-            <Mission></Mission>
-            <Ceo></Ceo>
-            <Contact></Contact>
+
+            <ParticleJS />
+            <ColorChange />
+            <Home />
+            <About />
+            <Skills />
+            <Certificate />
+            <Service />
+            <Projects />
+            <Mission />
+            <Ceo />
+            <Contact />
         </div>
     );
 };
