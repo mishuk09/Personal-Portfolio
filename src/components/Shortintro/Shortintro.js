@@ -66,21 +66,23 @@ const shortInreo = [
     {
         id: 1,
         tittle: 'Institution',
+        name: 'Multimedia University',
+        descrip: 'Master of Engineering Science',
+        date: '(2025-2027)',
+        img: college
+
+    },
+    
+    {
+        id: 2,
+        tittle: 'Institution',
         name: 'Rk University',
         descrip: 'B Tech Computer Engineering',
         date: '(2021-2025)',
         img: college
 
     },
-    {
-        id: 2,
-        tittle: 'Programming',
-        name: 'JS,React,Node Js,Java.',
-        descrip: 'Web-Development & DSA',
-        date: 'Since 2022',
-        img: expert
-
-    },
+    
     {
         id: 3,
         tittle: 'Expert',
@@ -95,7 +97,7 @@ const shortInreo = [
         tittle: 'Projects',
         name: 'Learning Website',
         descrip: 'Like GeekforGeek',
-        date: <a className='nounderline' href="www.csehacks.com" target='_blank'>CSEHacks<FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} beat /> </a>,
+        date: <a className='nounderline' href="https://blanchedalmond-wombat-378902.hostingersite.com/" target='_blank'>CSEHacks<FontAwesomeIcon className='ms-2' icon={faArrowUpRightFromSquare} beat /> </a>,
         img: projects
     }
 

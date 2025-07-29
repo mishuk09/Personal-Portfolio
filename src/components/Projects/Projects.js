@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { ExternalLink, Github } from 'lucide-react'; // Lucide icons
-
-
+import {  Github } from 'lucide-react';
+import Seemore from './Utills/Seemore';
 
 const Projects = () => {
     const [projectsData, setProjectsData] = useState([]);
@@ -13,15 +12,18 @@ const Projects = () => {
         const fetchProjects = async () => {
             try {
                 const res = await axios.get('http://localhost:5000/api/projects');
-                const formatted = res.data.map((project, index) => ({
+                const sorted = res.data.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt)); // Oldest first
+
+                const formatted = sorted.map((project) => ({
                     id: project._id,
                     title: project.title,
-                    subtitle: project.title, // or set a separate subtitle if needed
+                    subtitle: project.title,
                     githubLink: project.githubLink,
                     liveLink: project.liveLink,
                     screenshots: project.imageUrls,
-                    imgSrc: project.imageUrls[0] || '', // first image as main
+                    imgSrc: project.imageUrls[0] || '',
                 }));
+
                 setProjectsData(formatted);
             } catch (err) {
                 console.error('Failed to fetch projects:', err);
@@ -36,43 +38,56 @@ const Projects = () => {
     };
 
     return (
-        <div>
-            <div id='project' className='projects-head mt-20'>
-                <div className='marquee-div-name container mt-[40px] pt-10 mb-10'>
-                    <span className='text-blue-600'>What I have done</span>
-                    <div className='flex justify-between'>
-                        <p className="text-black text-2xl md:text-3xl font-bold hidden md:flex">Projectssss's and worksample</p>
-                        <p className="text-black text-2xl md:text-3xl font-bold flex md:hidden">Projectssss's</p>
-                        <div className='text-black flex items-center justify-center rounded-full bg-blue-500 hover:bg-blue-600 duration-75 transition-all w-20 h-8 md:w-40 md:h-10'>
-                            <a href='/designdev' className='text-white hidden md:flex'>See More<ExternalLink className="w-4 h-4 ml-1" />
-                            </a>
-                            <a href='/designdev' className='text-white flex md:hidden'>More</a>
-                        </div>
+        <div className=' bg-[#e6e6e6]  mt-[330px] md:mt-10 pt-6 md:pt-16 pb-10 font-[Montserrat]'>
+            <div className='  max-w-7xl mx-auto px-4'>
+                <div className='mb-10'>
+                    <span className='text-blue-600 text-sm md:text-base'>What I have done</span>
+                    <div className='flex justify-between items-center flex-wrap gap-3 mt-2'>
+                        <p className="text-black hidden md:block text-2xl md:text-3xl font-bold">Projects and Work Samples</p>
+                        <p className="text-black md:hidden text-2xl md:text-3xl font-bold">Projects </p>
+                        <Seemore url="/designdev" />
                     </div>
-                    <hr className='text-black h-3 pt-0 mt-0' />
+                    <hr className='mt-3 border-black' />
                 </div>
 
-                <div className='container mt-10 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-                    {projectsData.map((project) => (
-                        <div key={project.id} className='relative project-card-item border rounded shadow-lg overflow-hidden'>
-                            <img src={project.imgSrc} alt={project.title} className='w-full h-48 object-cover rounded-sm' />
-                            <div className='bg-white text-black'>
-                                <div className='px-3 py-3 leading-tight'>
-                                    <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
-                                    <h6 className='text-[10px] font-semibold'>{project.subtitle}</h6>
-                                </div>
-                                <div className='flex font-semibold justify-around pb-3'>
-                                    <div onClick={() => {
-                                        setSelectedProject(project);
-                                        setSelectedImage(project.screenshots[0]);
-                                    }} className='border cursor-pointer text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+                    {projectsData.slice(0, 6).map((project) => (
+                        <div key={project.id} className='bg-white rounded-lg shadow-lg overflow-hidden'>
+                            <img
+                                src={project.imgSrc}
+                                alt={project.title}
+                                loading="lazy"
+                                className='w-full h-48 object-cover'
+                            />
+                            <div className='p-4'>
+                                <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
+                                <p className='text-[10px] font-medium text-gray-600'>{project.subtitle}</p>
+                                <div className='flex justify-between items-center mt-4 text-sm'>
+                                    <button
+                                        onClick={() => {
+                                            setSelectedProject(project);
+                                            setSelectedImage(project.screenshots[0]);
+                                        }}
+                                        className='px-2 py-1 border rounded hover:bg-gray-100 transition'
+                                    >
                                         Screenshot
-                                    </div>
-                                    <a href={project.githubLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
-                                        <Github className="w-4 h-4" />
+                                    </button>
 
+                                    <a
+                                        href={project.githubLink}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        className='flex no-underline items-center gap-1 px-2 py-1 border rounded hover:bg-gray-100 transition'
+                                    >
+                                        <Github className="w-4 h-4" /> GitHub
                                     </a>
-                                    <a href={project.liveLink} target='_blank' rel='noopener noreferrer' className='border text-[12px] px-2 py-1 rounded-sm hover:bg-slate-100 duration-75 text-black no-underline'>
+
+                                    <a
+                                        href={project.liveLink}
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        className='px-2 no-underline py-1 border rounded hover:bg-gray-100 transition'
+                                    >
                                         Live Preview
                                     </a>
                                 </div>
@@ -83,12 +98,18 @@ const Projects = () => {
             </div>
 
             {selectedProject && (
-                <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'>
-                    <div className='bg-white rounded-lg overflow-hidden w-full max-w-3xl'>
+                <div
+                    className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'
+                    onClick={() => setSelectedProject(null)}
+                >
+                    <div
+                        className='bg-white rounded-lg overflow-hidden w-[90%] max-w-3xl'
+                        onClick={(e) => e.stopPropagation()}
+                    >
                         <div className='relative'>
                             <button
                                 onClick={() => setSelectedProject(null)}
-                                className='absolute top-2 right-2 text-slate-500 font-bold text-lg'
+                                className='absolute top-2 right-2 text-slate-600 text-xl font-bold'
                             >
                                 &times;
                             </button>
@@ -99,13 +120,13 @@ const Projects = () => {
                                     className='w-full h-full object-cover'
                                 />
                             </div>
-                            <div className='flex overflow-x-auto pt-2 pb-3 custom-scrollbar'>
+                            <div className='flex overflow-x-auto gap-2 p-3'>
                                 {selectedProject.screenshots.map((imgSrc, index) => (
                                     <img
                                         key={index}
                                         src={imgSrc}
-                                        alt={`${selectedProject.title} screenshot ${index + 1}`}
-                                        className='h-10 md:h-20 border-1 object-cover mx-2 cursor-pointer'
+                                        alt={`Screenshot ${index + 1}`}
+                                        className='h-16 md:h-24 object-cover border cursor-pointer'
                                         onClick={() => handleImageClick(imgSrc)}
                                     />
                                 ))}

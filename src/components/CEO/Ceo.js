@@ -27,7 +27,7 @@ const Ceo = () => {
                     </div>
                     <p >I am  Here to Introduce Our Learning website. This site specially Design for Computer Engineering student .We are try to give a easy and enjoyable learning. Your valuable comment  will give us more inspiration to go ahead.</p>
                     <h5> -Mahadi Hasan Mishuk </h5>
-                    <a href="https://csehacks.tech/" target='blank'><button>Go To Website</button></a>
+                    <a href="https://blanchedalmond-wombat-378902.hostingersite.com/" target='blank'><button>Go To Website</button></a>
                 </div>
             </div>
 

@@ -17,8 +17,7 @@ import InternshipDetails from './components/Internship/InternshipDetails';
 import ScrollButton from './components/ScrollButton/ScrollButton';
 import Upwork from './components/OthersComponent/Button/Upwork';
 import ProjectAll from './components/Projects/ProjectAll';
-import Projects from './components/Projects/Projectsssss';
-
+import Projects from './components/Projects/Projects';
 
 
 function App() {
