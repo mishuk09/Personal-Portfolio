@@ -40,7 +40,7 @@ const Shortintro = () => {
                                     key={shortintro.id}
                                     className='flex sort-intro-child-div ms-3 mt-3 mb-3   duration-300    hover:-translate-y-1  bg-white'  >
                                     <div className='sort-intro-div-img23'>
-                                        <img src={shortintro.img} alt="" />
+                                        <img src={shortintro.img} className='w-full  flex items-center justify-center object-cover' alt="" />
                                     </div>
                                     <div className='sort-intro-div-descrip234'>
                                         <p className='mt-4 institution font-nunito'>{shortintro.tittle}</p>
@@ -69,20 +69,21 @@ const shortInreo = [
         name: 'Multimedia University',
         descrip: 'Master of Engineering Science',
         date: '(2025-2027)',
-        img: college
-
+        // img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/1280px-Flag_of_Malaysia.svg.png'
+        // img: 'https://media.istockphoto.com/id/2129832111/vector/malaysia-flag-button-on-png-or-transparent-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=6N3TyDVos4LsWMv6rUaD8z5RG7rDudByBlXnfSLcyXc='
+        img: 'https://static.vecteezy.com/system/resources/previews/011/571/450/non_2x/circle-flag-of-malaysia-free-png.png'
     },
-    
+
     {
         id: 2,
         tittle: 'Institution',
         name: 'Rk University',
         descrip: 'B Tech Computer Engineering',
         date: '(2021-2025)',
-        img: college
+        img: 'https://img.freepik.com/premium-vector/india-circle-flag_1143296-595.jpg?semt=ais_hybrid&w=740&q=80'
 
     },
-    
+
     {
         id: 3,
         tittle: 'Expert',

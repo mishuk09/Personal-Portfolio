@@ -451,6 +451,10 @@ code {
 
 .sort-intro-child-div .sort-intro-div-img23 {
   width: 120px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
 }
 
 .sort-intro-child-div .sort-intro-div-descrip234 {

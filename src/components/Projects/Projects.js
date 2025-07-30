@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {  Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import Seemore from './Utills/Seemore';
 
 const Projects = () => {
     const [projectsData, setProjectsData] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/projects');
+                const res = await axios.get('https://portfolio-backend-q5fr.onrender.com/api/projects');
                 const sorted = res.data.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt)); // Oldest first
 
                 const formatted = sorted.map((project) => ({
@@ -23,6 +24,7 @@ const Projects = () => {
                     screenshots: project.imageUrls,
                     imgSrc: project.imageUrls[0] || '',
                 }));
+                setLoading(false);
 
                 setProjectsData(formatted);
             } catch (err) {
@@ -50,51 +52,58 @@ const Projects = () => {
                     <hr className='mt-3 border-black' />
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {projectsData.slice(0, 6).map((project) => (
-                        <div key={project.id} className='bg-white rounded-lg shadow-lg overflow-hidden'>
-                            <img
-                                src={project.imgSrc}
-                                alt={project.title}
-                                loading="lazy"
-                                className='w-full h-48 object-cover'
-                            />
-                            <div className='p-4'>
-                                <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
-                                <p className='text-[10px] font-medium text-gray-600'>{project.subtitle}</p>
-                                <div className='flex justify-between items-center mt-4 text-sm'>
-                                    <button
-                                        onClick={() => {
-                                            setSelectedProject(project);
-                                            setSelectedImage(project.screenshots[0]);
-                                        }}
-                                        className='px-2 py-1 border rounded hover:bg-gray-100 transition'
-                                    >
-                                        Screenshot
-                                    </button>
 
-                                    <a
-                                        href={project.githubLink}
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        className='flex no-underline items-center gap-1 px-2 py-1 border rounded hover:bg-gray-100 transition'
-                                    >
-                                        <Github className="w-4 h-4" /> GitHub
-                                    </a>
+                {loading ? (
+                    <div className="flex justify-center items-center h-64">
+                        <p className="text-gray-500">Loading projects...</p>
+                    </div>
+                ) : (
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+                        {projectsData.slice(0, 6).map((project) => (
+                            <div key={project.id} className='bg-white rounded-lg shadow-lg overflow-hidden'>
+                                <img
+                                    src={project.imgSrc}
+                                    alt={project.title}
+                                    loading="lazy"
+                                    className='w-full h-48 object-cover'
+                                />
+                                <div className='p-4'>
+                                    <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
+                                    <p className='text-[10px] font-medium text-gray-600'>{project.subtitle}</p>
+                                    <div className='flex justify-between items-center mt-4 text-sm'>
+                                        <button
+                                            onClick={() => {
+                                                setSelectedProject(project);
+                                                setSelectedImage(project.screenshots[0]);
+                                            }}
+                                            className='px-2 py-1 border rounded hover:bg-gray-100 transition'
+                                        >
+                                            Screenshot
+                                        </button>
 
-                                    <a
-                                        href={project.liveLink}
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        className='px-2 no-underline py-1 border rounded hover:bg-gray-100 transition'
-                                    >
-                                        Live Preview
-                                    </a>
+                                        <a
+                                            href={project.githubLink}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='flex no-underline items-center gap-1 px-2 py-1 border rounded hover:bg-gray-100 transition'
+                                        >
+                                            <Github className="w-4 h-4" /> GitHub
+                                        </a>
+
+                                        <a
+                                            href={project.liveLink}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='px-2 no-underline py-1 border rounded hover:bg-gray-100 transition'
+                                        >
+                                            Live Preview
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
             </div>
 
             {selectedProject && (
@@ -135,6 +144,7 @@ const Projects = () => {
                     </div>
                 </div>
             )}
+
         </div>
     );
 };
