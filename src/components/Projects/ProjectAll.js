@@ -6,6 +6,7 @@ const ProjectAll = () => {
     const [projectsData, setProjectsData] = useState([]);
     const [selectedProject, setSelectedProject] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchProjects = async () => {
@@ -22,6 +23,7 @@ const ProjectAll = () => {
                     screenshots: project.imageUrls,
                     imgSrc: project.imageUrls[0] || '',
                 }));
+                setLoading(false);
 
                 setProjectsData(formatted);
             } catch (err) {
@@ -53,51 +55,77 @@ const ProjectAll = () => {
                     </div>
 
                     {/* Placeholder for projects grid */}
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                        {projectsData.map((project) => (
-                            <div key={project.id} className='bg-white rounded-lg shadow-lg overflow-hidden'>
-                                <img
-                                    src={project.imgSrc}
-                                    alt={project.title}
-                                    loading="lazy"
-                                    className='w-full h-48 object-cover'
-                                />
-                                <div className='p-4'>
-                                    <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
-                                    <p className='text-[10px] font-medium text-gray-600'>{project.subtitle}</p>
-                                    <div className='flex justify-between items-center mt-4 text-sm'>
-                                        <button
-                                            onClick={() => {
-                                                setSelectedProject(project);
-                                                setSelectedImage(project.screenshots[0]);
-                                            }}
-                                            className='px-2 py-1 border rounded hover:bg-gray-100 transition'
-                                        >
-                                            Screenshot
-                                        </button>
+                    {loading ? (
+                        <div className="flex justify-center items-center h-64">
+                            <svg
+                                className="animate-spin h-10 w-10 text-blue-500"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                ></circle>
+                                <path
+                                    className="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                                ></path>
+                            </svg>
+                        </div>
 
-                                        <a
-                                            href={project.githubLink}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className='flex no-underline items-center gap-1 px-2 py-1 border rounded hover:bg-gray-100 transition'
-                                        >
-                                            <Github className="w-4 h-4" /> GitHub
-                                        </a>
+                    ) : (
+                        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+                            {projectsData.map((project) => (
+                                <div key={project.id} className='bg-white rounded-lg shadow-lg overflow-hidden'>
+                                    <img
+                                        src={project.imgSrc}
+                                        alt={project.title}
+                                        loading="lazy"
+                                        className='w-full h-48 object-cover'
+                                    />
+                                    <div className='p-4'>
+                                        <h5 className='text-sm font-semibold truncate' title={project.title}>{project.title}</h5>
+                                        <p className='text-[10px] font-medium text-gray-600'>{project.subtitle}</p>
+                                        <div className='flex justify-between items-center mt-4 text-sm'>
+                                            <button
+                                                onClick={() => {
+                                                    setSelectedProject(project);
+                                                    setSelectedImage(project.screenshots[0]);
+                                                }}
+                                                className='px-2 py-1 border rounded hover:bg-gray-100 transition'
+                                            >
+                                                Screenshot
+                                            </button>
 
-                                        <a
-                                            href={project.liveLink}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className='px-2 no-underline py-1 border rounded hover:bg-gray-100 transition'
-                                        >
-                                            Live Preview
-                                        </a>
+                                            <a
+                                                href={project.githubLink}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                className='flex no-underline items-center gap-1 px-2 py-1 border rounded hover:bg-gray-100 transition'
+                                            >
+                                                <Github className="w-4 h-4" /> GitHub
+                                            </a>
+
+                                            <a
+                                                href={project.liveLink}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                className='px-2 no-underline py-1 border rounded hover:bg-gray-100 transition'
+                                            >
+                                                Live Preview
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    )}
 
                     {selectedProject && (
                         <div

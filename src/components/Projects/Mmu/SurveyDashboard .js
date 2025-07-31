@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SurveyAuth from "./SurveyAuth";
 import GallerryTab from "./GallerryTab";
+import SurveySummary from "./SurveySummary";
 
 const SurveyDashboard = () => {
     const [data, setData] = useState([]);
@@ -126,7 +127,7 @@ const SurveyDashboard = () => {
                                             })}
                                     </tbody>
 
-                                   
+
                                 </table>
                             </div>
                         </>
@@ -150,6 +151,7 @@ const SurveyDashboard = () => {
             </div>
 
             <GallerryTab />
+            <SurveySummary />
         </>
     );
 };
