@@ -63,17 +63,19 @@ const SurveySummary = () => {
         ).length;
     };
 
-
     const countExperienceGroup = (groupLabel) => {
         return data.filter(
-            (d) => d.demographics?.experience?.trim().toLowerCase() === groupLabel.trim().toLowerCase()
+            (d) =>
+                d.demographics?.experience?.trim().toLowerCase() ===
+                groupLabel.trim().toLowerCase()
         ).length;
     };
 
 
+
     return (
         <>
-            <div className="p-4 bg-gray-50 min-h-screen">
+            <div className="p-4 bg-gray-50 ">
                 <h1 className="text-2xl font-bold mb-6 text-center">📋 Summary of Survey - Age Groups</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                     <SummaryCard title="👶 Below 25" value={countAgeGroup("Below 25")} loading={loading} />
@@ -84,7 +86,7 @@ const SurveySummary = () => {
 
                 </div>
             </div>
-            <div className="p-4 bg-gray-50 min-h-screen">
+            <div className="p-4 bg-gray-50 ">
                 <h1 className="text-2xl font-bold mb-6 text-center">📋 Summary - Education Levels</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                     <SummaryCard title="📘 Primary" value={countEducationGroup("Primary")} loading={loading} />
@@ -94,7 +96,7 @@ const SurveySummary = () => {
                 </div>
 
             </div>
-            <div className="p-4 bg-gray-50 min-h-screen">
+            <div className="p-4 bg-gray-50 ">
                 <h1 className="text-2xl font-bold mb-6 text-center">🌾 Farming Type Breakdown</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                     <SummaryCard title="🌿 Mixed Crops" value={countFarmingType("Mixed crops")} loading={loading} />
@@ -106,7 +108,7 @@ const SurveySummary = () => {
 
 
             </div>
-            <div className="p-4 bg-gray-50 min-h-screen">
+            <div className="p-4 bg-gray-50 ">
                 <h1 className="text-2xl font-bold mb-6 text-center">🌾 Farm Size Distribution</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                     <SummaryCard
@@ -138,16 +140,16 @@ const SurveySummary = () => {
 
 
             </div>
-            <div className="p-4 bg-gray-50 min-h-screen">
+            <div className="p-4 bg-gray-50 ">
 
 
                 <h1 className="text-2xl font-bold mb-6 text-center">🌾 Years of Experiences</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                    <SummaryCard title="🌱 Less than 1 Year" value={countExperienceGroup("Less than 1 year")} loading={loading} />
-                    <SummaryCard title="🌿 1–5 Years" value={countExperienceGroup("1–5 years")} loading={loading} />
-                    <SummaryCard title="🌾 5–10 Years" value={countExperienceGroup("5–10 years")} loading={loading} />
-                    <SummaryCard title="🌳 More than 10 Years" value={countExperienceGroup("More than 10 years")} loading={loading} />
 
+                    <SummaryCard title="🟢 Less than 5 years" value={countExperienceGroup("Less than 5 years")} loading={loading} />
+                    <SummaryCard title="🔵 5–10 years" value={countExperienceGroup("5–10 years")} loading={loading} />
+                    <SummaryCard title="🟡 11–20 years" value={countExperienceGroup("11–20 years")} loading={loading} />
+                    <SummaryCard title="🔴 More than 20 years" value={countExperienceGroup("More than 20")} loading={loading} />
 
                 </div>
             </div>
