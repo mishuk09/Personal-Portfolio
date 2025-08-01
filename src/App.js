@@ -18,6 +18,9 @@ import ScrollButton from './components/ScrollButton/ScrollButton';
 import Upwork from './components/OthersComponent/Button/Upwork';
 import Projects from './components/Projects/Projects';
 import ProjectAll from './components/Projects/ProjectAll';
+import ProtectedRoute from './components/Utills/ProtectedRoute';
+import Summary from './components/Projects/Mmu/Summary';
+import SurveySummary from './components/Projects/Mmu/SurveySummary';
 
 
 function App() {
@@ -63,6 +66,11 @@ function App() {
           <Route path='/certifications' element={<SingleCertificate />}></Route>
           <Route path='/projectsall' element={<ProjectAll />}></Route>
           <Route path='/projects' element={<Projects />}></Route>
+
+          <Route path='/summary' element={<ProtectedRoute>
+            <SurveySummary />
+          </ProtectedRoute>}></Route>
+
 
 
           <Route path='/riseuplabs' element={<InternshipDetails />}></Route>

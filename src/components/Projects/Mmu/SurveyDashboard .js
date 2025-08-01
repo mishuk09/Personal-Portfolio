@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SurveyAuth from "./SurveyAuth";
 import GallerryTab from "./GallerryTab";
 import SurveySummary from "./SurveySummary";
+import Summary from "./Summary";
 
 const SurveyDashboard = () => {
     const [data, setData] = useState([]);
@@ -10,6 +11,7 @@ const SurveyDashboard = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
+    const [showLoginModal, setShowLoginModal] = useState(false);
 
     const openModal = (imgUrl) => {
         setSelectedImage(imgUrl);
@@ -45,6 +47,11 @@ const SurveyDashboard = () => {
                     <SurveyAuth onClose={() => setModal(false)} />
                 </div>
             )}
+            {showLoginModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
+                    <Summary onClose={() => setShowLoginModal(false)} />
+                </div>
+            )}
 
             <div className="pt-2    ">
                 <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">📊 Survey Dashboard</h1>
@@ -56,12 +63,19 @@ const SurveyDashboard = () => {
                     <SummaryCard title="👨 Male" value={data.filter(d => d.demographics?.gender === "Male").length} loading={loading} />
                     <SummaryCard title="👩 Female" value={data.filter(d => d.demographics?.gender === "Female").length} loading={loading} />
 
-                    <div className="flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                    <div className="flex flex-col gap-2 items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm p-3 hover:shadow-md transition">
                         <button
                             className="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200 w-full"
                             onClick={() => setModal(true)}
                         >
                             ➕ Add Survey
+                        </button>
+                        <button
+                            className="bg-green-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-green-600 transition duration-200 w-full"
+                            onClick={() => setShowLoginModal(true)}
+
+                        >
+                            Summary
                         </button>
                     </div>
                 </div>
@@ -151,7 +165,7 @@ const SurveyDashboard = () => {
             </div>
 
             <GallerryTab />
-            <SurveySummary />
+           
         </>
     );
 };
