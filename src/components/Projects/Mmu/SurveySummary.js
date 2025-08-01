@@ -155,7 +155,7 @@ const SurveySummary = () => {
                 </div>
 
                 {/* Tab Content */}
-                <div className="mt-6 bg-white p-6 rounded-lg shadow text-gray-800">
+                <div className="mt-6 bg-white p-6 rounded-lg shadow border-2 border-gray-300 text-gray-800">
                     {activeTab === "age" && (
                         <div>
                             <h3 className="text-xl font-semibold mb-4">🎂 Age Distribution</h3>
@@ -236,25 +236,28 @@ const SurveySummary = () => {
                 </div>
             </div>
 
-            <div className='max-w-7xl mx-auto pt-10 pb-10 px-4'>
-                <div className="flex flex-col items-center justify-center rounded-lg   bg-white shadow-lg   p-6">
-                    <h1 className="text-3xl font-bold mb-6 mt-4">📊 Summary of Awareness & Readiness</h1>
+            <div className="max-w-7xl mx-auto pt-14 pb-14 px-4 ">
+                <div className="flex flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-white shadow p-8">
+                    <h1 className="text-3xl font-bold text-center text-blue-800 mb-6">
+                        📊 Summary of Awareness & Readiness
+                    </h1>
 
-                    <div className="grid grid-cols-1 mt-4 md:grid-cols-2 gap-8">
-                        <div className="border border-gray-300 bg-purple-500  p-6 rounded-lg shadow-md w-64 h-40 flex flex-col items-center justify-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4 w-full max-w-2xl">
+                        {/* Awareness Card */}
+                        <div className="flex flex-col items-center justify-center bg-purple-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
                             <h2 className="text-xl font-semibold mb-2">Awareness</h2>
-                            <p className="text-4xl font-bold text-white">{calculateAverageAwareness()}</p>
+                            <p className="text-4xl font-bold">{calculateAverageAwareness()}</p>
                         </div>
 
-                        <div className="border border-gray-300 bg-green-500  text-white p-6 rounded-lg shadow-md w-64 h-40 flex flex-col items-center justify-center">
+                        {/* Readiness Card */}
+                        <div className="flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
                             <h2 className="text-xl font-semibold mb-2">Readiness</h2>
-                            <p className="text-4xl font-bold text-white">{readinessAverage}</p>
+                            <p className="text-4xl font-bold">{readinessAverage}</p>
                         </div>
                     </div>
-
-
                 </div>
             </div>
+
         </div>
     );
 };
