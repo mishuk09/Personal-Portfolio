@@ -130,11 +130,11 @@ const SurveySummary = () => {
     return (
         <div className='bg-gray-50 '>
 
-            <div className="max-w-7xl mx-auto pt-28 pb-10 px-4">
+            <div className="max-w-7xl mx-auto pt-28 pb-10 ">
                 {/* Title & Description */}
                 <div className="mb-8 text-center">
-                    <h2 className="text-3xl font-bold text-blue-700 mb-2">📝 Survey Summary</h2>
-                    <p className="text-gray-600 text-sm md:text-base font-medium">
+                    <h2 className="text-4xl font-bold text-blue-700 mb-2">📝 Survey Summary</h2>
+                    <p className="text-gray-600  md:text-base font-medium">
                         View a breakdown of the respondent's profile based on age, education,
                         farming type, and more.
                     </p>
@@ -239,7 +239,7 @@ const SurveySummary = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto pt-14 pb-14 px-4 ">
+            <div className="max-w-7xl mx-auto pt-14 pb-14  ">
                 <div className="flex flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-white shadow p-8">
                     <h1 className="text-3xl font-bold text-center text-blue-800 mb-6">
                         📊 Summary of Awareness & Readiness

@@ -28,7 +28,7 @@ const GalleryTab = () => {
     );
 
     return (
-        <div className="border border-gray-300 md:p-4 mt-10 pb-10 mb-10 max-w-7xl mx-auto">
+        <div className="border bg-white rounded border-gray-300 md:p-4 mt-10   max-w-7xl mx-auto">
             <h1 className="text-2xl md:text-3xl font-bold mt-6 mb-6 text-center">🖼️ Survey Image Gallery</h1>
 
             {/* Tab Buttons */}
@@ -80,7 +80,7 @@ const GalleryTab = () => {
                 </div>
             ) : (
                 tabIndex === 0 && (
-                    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 h-[450px] overflow-y-auto">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 border border-gray-300 rounded md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 h-[450px] overflow-y-auto">
                         {(() => {
                             const validImageUrls = [];
 

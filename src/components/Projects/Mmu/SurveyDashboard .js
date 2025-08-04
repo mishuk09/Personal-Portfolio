@@ -56,7 +56,7 @@ const SurveyDashboard = () => {
                 <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">📊 Survey Dashboard</h1>
 
                 {/* Summary Cards */}
-                <div className="grid grid-cols-1 md:p-4 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
+                <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
 
                     <SummaryCard title="📋 Total Responses" value={data.length} loading={loading} />
                     <SummaryCard title="👨 Male" value={data.filter(d => d.demographics?.gender === "Male").length} loading={loading} />
@@ -80,7 +80,7 @@ const SurveyDashboard = () => {
                 </div>
 
                 {/* Table or Loading */}
-                <div className="bg-white md:m-4  rounded shadow-md overflow-x-auto min-h-[200px] flex items-center justify-center">
+                <div className="bg-white   rounded shadow-md overflow-x-auto min-h-[200px] flex items-center justify-center">
                     {loading ? (
                         <div className="text-center">
                             <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-blue-600 border-solid mx-auto mb-2"></div>
@@ -162,9 +162,11 @@ const SurveyDashboard = () => {
                     </div>
                 )}
             </div>
+            <div className="pb-10">
 
-            <GallerryTab />
-           
+                <GallerryTab />
+            </div>
+
         </>
     );
 };
