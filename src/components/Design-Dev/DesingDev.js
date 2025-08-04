@@ -6,7 +6,7 @@ const DesingDev = () => {
         <div >
 
 
-            <div className=' px-3 md:p-0 relative  flex flex-col items-center bg-gray-100'>
+            <div className=' px-3 md:p-0 relative  flex flex-col items-center bg-blue-50'>
                 {/* Wallet Connect Section */}
 
 

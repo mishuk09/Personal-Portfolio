@@ -7,7 +7,7 @@ const WorkProgressDashboard = () => {
     const [activeTab, setActiveTab] = useState('mmu');
 
     return (
-        <div className="px-6 pt-[100px] bg-gray-50 min-h-screen">
+        <div className="px-6 pt-[100px] bg-blue-50 min-h-screen">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-10">

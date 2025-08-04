@@ -21,6 +21,7 @@ import ProjectAll from './components/Projects/ProjectAll';
 import ProtectedRoute from './components/Utills/ProtectedRoute';
 import Summary from './components/Projects/Mmu/Summary';
 import SurveySummary from './components/Projects/Mmu/SurveySummary';
+import ThesisPlan from './components/Projects/Mmu/ThesisPlan';
 
 
 function App() {
@@ -71,6 +72,9 @@ function App() {
             <SurveySummary />
           </ProtectedRoute>}></Route>
 
+
+
+          <Route path='/thesisplan' element={<ThesisPlan />}></Route>
 
 
           <Route path='/riseuplabs' element={<InternshipDetails />}></Route>

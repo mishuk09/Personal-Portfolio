@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TextZeroResponses from './TextZeroResponses';
 import OpenEndedQuestionsSummary from './FAQComponent';
 import FAQComponent from './FAQComponent';
+import ThesisPlan from './ThesisPlan';
 
 const SummaryCard = ({ title, value, loading }) => (
     <div className="bg-white border-2 border-blue-500 hover:scale-105 duration-200 cursor-pointer p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow-md transition min-h-[88px]">
@@ -128,7 +129,7 @@ const SurveySummary = () => {
 
 
     return (
-        <div className='bg-gray-50 '>
+        <div className='bg-blue-50 '>
 
             <div className="max-w-7xl mx-auto pt-28 pb-10 ">
                 {/* Title & Description */}
@@ -261,7 +262,8 @@ const SurveySummary = () => {
                 </div>
             </div>
             {/* <TextZeroResponses /> */}
-           <FAQComponent/>
+            <FAQComponent />
+            <a href='/thesisplan'>Thesis Plan</a>
 
 
             {/* {loading ? (
