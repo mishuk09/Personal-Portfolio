@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import TextZeroResponses from './TextZeroResponses';
+import OpenEndedQuestionsSummary from './FAQComponent';
+import FAQComponent from './FAQComponent';
 
 const SummaryCard = ({ title, value, loading }) => (
-    <div className="bg-white border-2 border-blue-500 p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow-md transition min-h-[88px]">
+    <div className="bg-white border-2 border-blue-500 hover:scale-105 duration-200 cursor-pointer p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow-md transition min-h-[88px]">
         <h2 className="text-lg font-medium text-gray-500 text-center">{title}</h2>
         {loading ? (
             <div className="mt-3 h-8 w-8 border-2 border-blue-500 border-t-transparent border-r-transparent rounded-full animate-spin"></div>
@@ -257,6 +260,26 @@ const SurveySummary = () => {
                     </div>
                 </div>
             </div>
+            {/* <TextZeroResponses /> */}
+           <FAQComponent/>
+
+
+            {/* {loading ? (
+                <p>Loading...</p>
+            ) : (
+                data.map((survey, index) => (
+                    <div key={index} className="mb-4 p-4 border rounded shadow-sm bg-white">
+                        <h3 className="font-semibold text-blue-600 mb-2">Response #{index + 1}</h3>
+                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                            {Object.entries(survey.textAnswers || {}).map(([key, answer]) => (
+                                <li key={key}>
+                                    <span className="font-medium">{key}:</span> {answer}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))
+            )} */}
 
         </div>
     );

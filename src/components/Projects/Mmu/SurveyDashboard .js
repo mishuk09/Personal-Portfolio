@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import SurveyAuth from "./SurveyAuth";
 import GallerryTab from "./GallerryTab";
-import SurveySummary from "./SurveySummary";
 import Summary from "./Summary";
 
 const SurveyDashboard = () => {
