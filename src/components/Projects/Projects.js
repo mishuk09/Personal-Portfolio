@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Github } from 'lucide-react';
 import Seemore from './Utills/Seemore';
+import LoadingSmall from './Utills/LoadingSmall';
 
 const Projects = () => {
     const [projectsData, setProjectsData] = useState([]);
@@ -55,7 +56,10 @@ const Projects = () => {
 
                 {loading ? (
                     <div className="flex justify-center items-center h-64">
-                        <p className="text-gray-500">Loading projects...</p>
+                        <div className="text-center items-center justify-center flex flex-col p-6">
+                            <LoadingSmall />
+                            <p className="text-sm text-gray-600 mt-2">Loading Projects...</p>
+                        </div>
                     </div>
                 ) : (
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>

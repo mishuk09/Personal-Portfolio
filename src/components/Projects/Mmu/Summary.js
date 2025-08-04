@@ -1,22 +1,22 @@
 // components/SurveyLoginModal.js
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Summary = ({ onClose }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const navigate = useNavigate();
 
     const handleLogin = () => {
         if (email === "mishukinfo09@gmail.com" && password === "mishuk09") {
             localStorage.setItem("isAuthenticated", "true"); // ✅ Set login
             onClose();
-            navigate("/summary");
+            // Use anchor tag navigation by setting href
+            window.location.href = "/summary"; // Equivalent to <a href="/summary">
         } else {
             setError("❌ Invalid credentials");
         }
     };
+
 
 
     return (

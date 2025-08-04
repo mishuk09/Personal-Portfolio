@@ -22,6 +22,7 @@ import ProtectedRoute from './components/Utills/ProtectedRoute';
 import Summary from './components/Projects/Mmu/Summary';
 import SurveySummary from './components/Projects/Mmu/SurveySummary';
 import ThesisPlan from './components/Projects/Mmu/ThesisPlan';
+import FrontPage from './components/Projects/Mmu/FrontPage';
 
 
 function App() {
@@ -71,10 +72,13 @@ function App() {
           <Route path='/summary' element={<ProtectedRoute>
             <SurveySummary />
           </ProtectedRoute>}></Route>
+          <Route path='/thesisplantwo' element={<ProtectedRoute>
+            <ThesisPlan />
+          </ProtectedRoute>}></Route>
 
 
 
-          <Route path='/thesisplan' element={<ThesisPlan />}></Route>
+          <Route path='/thesisplan' element={<FrontPage />}></Route>
 
 
           <Route path='/riseuplabs' element={<InternshipDetails />}></Route>

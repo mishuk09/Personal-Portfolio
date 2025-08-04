@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SurveyAuth from "./SurveyAuth";
 import GallerryTab from "./GallerryTab";
 import Summary from "./Summary";
+import LoadingSmall from "../Utills/LoadingSmall";
 
 const SurveyDashboard = () => {
     const [data, setData] = useState([]);
@@ -82,9 +83,9 @@ const SurveyDashboard = () => {
                 {/* Table or Loading */}
                 <div className="bg-white   rounded shadow-md overflow-x-auto min-h-[200px] flex items-center justify-center">
                     {loading ? (
-                        <div className="text-center">
-                            <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-blue-600 border-solid mx-auto mb-2"></div>
-                            <p className="text-sm text-gray-600">Loading survey data...</p>
+                        <div className="text-center items-center justify-center flex flex-col p-6">
+                            <LoadingSmall />
+                            <p className="text-sm text-gray-600 mt-2">Loading survey data...</p>
                         </div>
                     ) : (
                         <>
@@ -165,6 +166,7 @@ const SurveyDashboard = () => {
             <div className="pb-10">
 
                 <GallerryTab />
+                 
             </div>
 
         </>
@@ -176,7 +178,7 @@ const SummaryCard = ({ title, value, loading }) => (
     <div className="bg-white min-h-22 p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow transition min-h-[80px]">
         <h2 className="text-sm font-medium text-gray-500 text-center">{title}</h2>
         {loading ? (
-            <div className="mt-3 h-8 w-8 border-2 border-blue-500 border-t-transparent border-r-transparent rounded-full animate-spin ease-linear duration-700"></div>
+            <LoadingSmall />
         ) : (
             <p className="text-3xl font-bold text-blue-800 text-center">{value}</p>
         )}

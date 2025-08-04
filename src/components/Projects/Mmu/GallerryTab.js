@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import LoadingSmall from '../Utills/LoadingSmall';
 
 const GalleryTab = () => {
     const [images, setImages] = useState([]);
     const [tabIndex, setTabIndex] = useState(0);
     const [loading, setLoading] = useState(true);
+    const [selectedImage, setSelectedImage] = useState(null); // For storing selected image for modal
+    const [isModalOpen, setIsModalOpen] = useState(false); // To manage modal visibility
 
     useEffect(() => {
         const fetchData = async () => {
@@ -27,8 +30,28 @@ const GalleryTab = () => {
         (img) => img.images || img.imgUrl
     );
 
+    // Shuffle images randomly
+    const shuffleImages = (imageUrls) => {
+        for (let i = imageUrls.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [imageUrls[i], imageUrls[j]] = [imageUrls[j], imageUrls[i]];
+        }
+    };
+
+    // Open modal with the selected image
+    const openModal = (imageUrl) => {
+        setSelectedImage(imageUrl);
+        setIsModalOpen(true);
+    };
+
+    // Close the modal
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedImage(null);
+    };
+
     return (
-        <div className="border bg-white rounded border-gray-300 md:p-4 mt-10   max-w-7xl mx-auto">
+        <div className="border bg-white rounded border-gray-300 md:p-4 mt-10 max-w-7xl mx-auto">
             <h1 className="text-2xl md:text-3xl font-bold mt-6 mb-6 text-center">🖼️ Survey Image Gallery</h1>
 
             {/* Tab Buttons */}
@@ -54,30 +77,11 @@ const GalleryTab = () => {
             </div>
 
             {/* Tab Content */}
-            {/* Tab Content */}
             {loading ? (
-                <div className="flex justify-center items-center h-64">
-                    <svg
-                        className="animate-spin h-10 w-10 text-blue-600"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                    >
-                        <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                        ></circle>
-                        <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                        ></path>
-                    </svg>
-                </div>
+               <div className="text-center items-center justify-center flex flex-col h-64">
+                            <LoadingSmall />
+                            <p className="text-sm text-gray-600 mt-2">Loading survey data...</p>
+                        </div>
             ) : (
                 tabIndex === 0 && (
                     <div className="grid grid-cols-2 sm:grid-cols-2 border border-gray-300 rounded md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 h-[450px] overflow-y-auto">
@@ -96,10 +100,8 @@ const GalleryTab = () => {
                                 }
                             });
 
-                            for (let i = validImageUrls.length - 1; i > 0; i--) {
-                                const j = Math.floor(Math.random() * (i + 1));
-                                [validImageUrls[i], validImageUrls[j]] = [validImageUrls[j], validImageUrls[i]];
-                            }
+                            // Shuffle images before rendering
+                            shuffleImages(validImageUrls);
 
                             return validImageUrls.length === 0 ? (
                                 <p className="col-span-full text-center text-gray-500 text-lg">
@@ -110,11 +112,12 @@ const GalleryTab = () => {
                                     <div
                                         key={index}
                                         className="border rounded shadow hover:shadow-lg transition duration-200"
+                                        onClick={() => openModal(url)} // Open modal on image click
                                     >
                                         <img
                                             src={url}
                                             alt={`Survey ${index}`}
-                                            className="w-full h-48 object-cover rounded-t"
+                                            className="w-full h-48 object-cover rounded-t cursor-pointer"
                                         />
                                     </div>
                                 ))
@@ -124,14 +127,29 @@ const GalleryTab = () => {
                 )
             )}
 
-
-
+            {/* Modal for Image Viewing */}
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex justify-center items-center z-50">
+                    <div className="relative bg-white p-6 rounded-lg max-w-3xl w-full">
+                        <button
+                            className="absolute top-2 right-2  text-gray-700"
+                            onClick={closeModal}
+                        >
+                            X
+                        </button>
+                         <img
+                            src={selectedImage}
+                            alt="Selected Image"
+                            className="w-full h-auto max-h-[80vh] object-contain"
+                        />
+                    </div>
+                </div>
+            )}
 
             {/* Form Tab Placeholder */}
             {tabIndex === 1 && (
                 <div className="max-w-7xl mx-auto bg-white border rounded-lg shadow-md p-6 mt-6">
-                    <h2 className="text-2xl font-semibold mb-4 text-center">  Form updating........</h2>
-                    {/* Add form content here if needed */}
+                    <h2 className="text-2xl font-semibold mb-4 text-center">Form updating........</h2>
                 </div>
             )}
         </div>

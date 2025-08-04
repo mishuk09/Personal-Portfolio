@@ -284,7 +284,7 @@ const FAQComponent = () => {
     };
 
     return (
-        <div className="container mx-auto p-6 max-w-3xl">
+        <div className=" max-w-7xl mx-auto   ">
             <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">
                 Open-ended Questions Summary
             </h1>
@@ -292,7 +292,7 @@ const FAQComponent = () => {
                 {faqs.map((faq, index) => (
                     <div
                         key={index}
-                        className="bg-white border-2 border-blue-500 shadow-sm rounded-lg p-6 transition hover:shadow-lg"
+                        className="bg-white border-2   border-gray-300 shadow-sm rounded-lg p-6 transition hover:shadow-lg"
                     >
                         <button
                             onClick={() => toggleAnswer(index)}

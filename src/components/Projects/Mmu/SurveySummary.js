@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import TextZeroResponses from './TextZeroResponses';
-import OpenEndedQuestionsSummary from './FAQComponent';
 import FAQComponent from './FAQComponent';
-import ThesisPlan from './ThesisPlan';
+import LoadingSmall from '../Utills/LoadingSmall';
 
 const SummaryCard = ({ title, value, loading }) => (
     <div className="bg-white border-2 border-blue-500 hover:scale-105 duration-200 cursor-pointer p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow-md transition min-h-[88px]">
         <h2 className="text-lg font-medium text-gray-500 text-center">{title}</h2>
         {loading ? (
-            <div className="mt-3 h-8 w-8 border-2 border-blue-500 border-t-transparent border-r-transparent rounded-full animate-spin"></div>
+            <LoadingSmall />
         ) : (
             <p className="text-3xl font-bold text-blue-800 text-center">{value}</p>
         )}
@@ -250,38 +248,32 @@ const SurveySummary = () => {
                         {/* Awareness Card */}
                         <div className="flex flex-col items-center justify-center bg-purple-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
                             <h2 className="text-xl font-semibold mb-2">Awareness</h2>
-                            <p className="text-4xl font-bold">{calculateAverageAwareness()}</p>
+                            {loading ? (
+                                <LoadingSmall />
+                            ) : (
+                                <p className="text-4xl font-bold">{calculateAverageAwareness()}</p>
+                            )}
                         </div>
 
                         {/* Readiness Card */}
                         <div className="flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
                             <h2 className="text-xl font-semibold mb-2">Readiness</h2>
-                            <p className="text-4xl font-bold">{readinessAverage}</p>
+                            {loading ? (
+                                <LoadingSmall />
+                            ) : (
+                                <p className="text-4xl font-bold">{readinessAverage}</p>
+                            )}
+
                         </div>
                     </div>
                 </div>
             </div>
             {/* <TextZeroResponses /> */}
             <FAQComponent />
-            <a href='/thesisplan'>Thesis Plan</a>
+            <a href='/thesisplan' className='mt-6 pb-6 no-underline mx-auto flex items-center justify-center border bg-blue-500 border-blue-600 text-white py-2 px-4   hover:bg-blue-600 hover:text-white transition duration-300'>Thesis Plan</a>
 
 
-            {/* {loading ? (
-                <p>Loading...</p>
-            ) : (
-                data.map((survey, index) => (
-                    <div key={index} className="mb-4 p-4 border rounded shadow-sm bg-white">
-                        <h3 className="font-semibold text-blue-600 mb-2">Response #{index + 1}</h3>
-                        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                            {Object.entries(survey.textAnswers || {}).map(([key, answer]) => (
-                                <li key={key}>
-                                    <span className="font-medium">{key}:</span> {answer}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))
-            )} */}
+
 
         </div>
     );
