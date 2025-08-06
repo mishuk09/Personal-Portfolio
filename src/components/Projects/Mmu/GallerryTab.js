@@ -78,10 +78,10 @@ const GalleryTab = () => {
 
             {/* Tab Content */}
             {loading ? (
-               <div className="text-center items-center justify-center flex flex-col h-64">
-                            <LoadingSmall />
-                            <p className="text-sm text-gray-600 mt-2">Loading survey data...</p>
-                        </div>
+                <div className="text-center items-center justify-center flex flex-col h-64">
+                    <LoadingSmall />
+                    <p className="text-sm text-gray-600 mt-2">Loading survey data...</p>
+                </div>
             ) : (
                 tabIndex === 0 && (
                     <div className="grid grid-cols-2 sm:grid-cols-2 border border-gray-300 rounded md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 h-[450px] overflow-y-auto">
@@ -137,7 +137,7 @@ const GalleryTab = () => {
                         >
                             X
                         </button>
-                         <img
+                        <img
                             src={selectedImage}
                             alt="Selected Image"
                             className="w-full h-auto max-h-[80vh] object-contain"

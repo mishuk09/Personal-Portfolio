@@ -1,7 +1,7 @@
 // components/SurveyLoginModal.js
 import { useState } from "react";
 
-const Summary = ({ onClose }) => {
+const SurveyDashboardAuth = ({ onClose }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -18,9 +18,9 @@ const Summary = ({ onClose }) => {
         );
 
         if (isValidUser) {
-            localStorage.setItem("isAuthenticated", "true");
+            localStorage.setItem("isAuthenticatedDashboard", "true");
             onClose();
-            window.location.href = "/summary"; // Redirect to /summary if login is successful
+            window.location.href = "/surveydashboard";
         } else {
             setError("❌ Invalid credentials");
         }
@@ -70,4 +70,4 @@ const Summary = ({ onClose }) => {
     );
 };
 
-export default Summary;
+export default SurveyDashboardAuth;

@@ -2,6 +2,7 @@ import mishuk from './img/mishuk.png';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import SurveyDashboard from './Mmu/SurveyDashboard ';
+import SurveyDashboardAuth from './Mmu/SurveyDashboardAuth';
 
 const Mmu = () => {
     const [isActive, setIsActive] = useState(false);
@@ -11,6 +12,7 @@ const Mmu = () => {
     const [alltask, setAlltask] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [modal, setModal] = useState(false);
 
 
     useEffect(() => {
@@ -77,6 +79,12 @@ const Mmu = () => {
 
     return (
         <div >
+            {
+                modal && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
+                        <SurveyDashboardAuth onClose={() => setModal(false)} />
+                    </div>)
+            }
 
             {/* Statistics Section */}
             <div className="grid grid-cols-1 pb-10   md:grid-cols-3 lg:grid-cols-[1fr_1.5fr_0.5fr] w-full gap-2 lg:gap-3 mb-6">
@@ -275,9 +283,11 @@ const Mmu = () => {
 
 
             {/* survey section */}
-            <div className=' '>
-                {/* <AddsurveyData /> */}
-                <SurveyDashboard />
+            <div className='flex flex-col items-center justify-center bg-white p-4 rounded-lg shadow-md mt-6'>
+               
+                <button onClick={() => setModal(true)} className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200">
+                    Survey Dashboard
+                </button>
 
             </div>
 

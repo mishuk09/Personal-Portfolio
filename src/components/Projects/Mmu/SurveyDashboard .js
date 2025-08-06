@@ -41,7 +41,7 @@ const SurveyDashboard = () => {
     }, []);
 
     return (
-        <>
+        <div className="bg-blue-50">
             {modal && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
                     <SurveyAuth onClose={() => setModal(false)} />
@@ -53,123 +53,125 @@ const SurveyDashboard = () => {
                 </div>
             )}
 
-            <div className="pt-2    ">
-                <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">📊 Survey Dashboard</h1>
+            <div className="  bg-blue-50 pt-32 ">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 className="text-3xl font-bold text-blue-900 text-center mb-8">📊 Survey Dashboard</h1>
 
-                {/* Summary Cards */}
-                <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
+                    {/* Summary Cards */}
+                    <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
 
-                    <SummaryCard title="📋 Total Responses" value={data.length} loading={loading} />
-                    <SummaryCard title="👨 Male" value={data.filter(d => d.demographics?.gender === "Male").length} loading={loading} />
-                    <SummaryCard title="👩 Female" value={data.filter(d => d.demographics?.gender === "Female").length} loading={loading} />
+                        <SummaryCard title="📋 Total Responses" value={data.length} loading={loading} />
+                        <SummaryCard title="👨 Male" value={data.filter(d => d.demographics?.gender === "Male").length} loading={loading} />
+                        <SummaryCard title="👩 Female" value={data.filter(d => d.demographics?.gender === "Female").length} loading={loading} />
 
-                    <div className="flex flex-col gap-2 items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm p-3 hover:shadow-md transition">
-                        <button
-                            className="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200 w-full"
-                            onClick={() => setModal(true)}
-                        >
-                            ➕ Add Survey
-                        </button>
-                        <button
-                            className="bg-green-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-green-600 transition duration-200 w-full"
-                            onClick={() => setShowLoginModal(true)}
+                        <div className="flex flex-col gap-2 items-center justify-center bg-white border border-gray-200 rounded-xl shadow-sm p-3 hover:shadow-md transition">
+                            <button
+                                className="bg-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200 w-full"
+                                onClick={() => setModal(true)}
+                            >
+                                ➕ Add Survey
+                            </button>
+                            <button
+                                className="bg-green-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-green-600 transition duration-200 w-full"
+                                onClick={() => setShowLoginModal(true)}
 
-                        >
-                            Summary
-                        </button>
-                    </div>
-                </div>
-
-                {/* Table or Loading */}
-                <div className="bg-white   rounded shadow-md overflow-x-auto min-h-[200px] flex items-center justify-center">
-                    {loading ? (
-                        <div className="text-center items-center justify-center flex flex-col p-6">
-                            <LoadingSmall />
-                            <p className="text-sm text-gray-600 mt-2">Loading survey data...</p>
+                            >
+                                Summary
+                            </button>
                         </div>
-                    ) : (
-                        <>
-                            <div className="w-full   h-[400px] overflow-y-auto">
-                                <h2 className="text-xl p-2 font-semibold text-blue-800">🧾 Individual Responses</h2>
-                                <table className="min-w-full   text-sm border-collapse">
-                                    <thead className="bg-blue-600 text-white sticky top-0 z-10">
-                                        <tr>
-                                            <th className="px-4 py-2">#</th>
-                                            <th className="px-4 py-2">👤 Age</th>
-                                            <th className="px-4 py-2">⚥ Gender</th>
-                                            <th className="px-4 py-2">🎓 Education</th>
-                                            <th className="px-4 py-2">🌱 Awareness Avg</th>
-                                            <th className="px-4 py-2">🚀 Readiness Avg</th>
-                                            <th className="px-4 py-2">📷 Photo</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {[...data]
-                                            .sort(() => Math.random() - 0.5) // This line randomizes the array
-                                            .map((entry, index) => {
-                                                const awarenessValues = Object.values(entry.awareness || {}).map(Number);
-                                                const readinessValues = Object.values(entry.readiness || {}).map(Number);
-                                                const awarenessAvg = awarenessValues.length
-                                                    ? (awarenessValues.reduce((a, b) => a + b, 0) / awarenessValues.length).toFixed(1)
-                                                    : "-";
-                                                const readinessAvg = readinessValues.length
-                                                    ? (readinessValues.reduce((a, b) => a + b, 0) / readinessValues.length).toFixed(1)
-                                                    : "-";
+                    </div>
 
-                                                return (
-                                                    <tr key={entry._id || index} className="hover:bg-gray-50 border-b">
-                                                        <td className="px-4 py-2">{index + 1}</td>
-                                                        <td className="px-4 py-2">{entry.demographics?.age || "-"}</td>
-                                                        <td className="px-4 py-2">{entry.demographics?.gender || "-"}</td>
-                                                        <td className="px-4 py-2">{entry.demographics?.education || "-"}</td>
-                                                        <td className="px-4 py-2">{awarenessAvg}</td>
-                                                        <td className="px-4 py-2">{readinessAvg}</td>
-                                                        <td className="px-4 py-2">
-                                                            {entry.images?.length > 0 ? (
-                                                                <img
-                                                                    src={entry.images[0]}
-                                                                    alt="Survey"
-                                                                    className="w-6 h-6 object-cover rounded cursor-pointer hover:scale-110 transition-transform duration-200"
-                                                                    onClick={() => openModal(entry.images[0])}
-                                                                />
-                                                            ) : (
-                                                                "-"
-                                                            )}
-                                                        </td>
-                                                    </tr>
-                                                );
-                                            })}
-                                    </tbody>
-
-
-                                </table>
+                    {/* Table or Loading */}
+                    <div className="bg-white   rounded shadow-md overflow-x-auto min-h-[200px] flex items-center justify-center">
+                        {loading ? (
+                            <div className="text-center items-center justify-center flex flex-col p-6">
+                                <LoadingSmall />
+                                <p className="text-sm text-gray-600 mt-2">Loading survey data...</p>
                             </div>
-                        </>
+                        ) : (
+                            <>
+                                <div className="w-full   h-[400px] overflow-y-auto">
+                                    <h2 className="text-xl p-2 font-semibold text-blue-800">🧾 Individual Responses</h2>
+                                    <table className="min-w-full   text-sm border-collapse">
+                                        <thead className="bg-blue-600 text-white sticky top-0 z-10">
+                                            <tr>
+                                                <th className="px-4 py-2">#</th>
+                                                <th className="px-4 py-2">👤 Age</th>
+                                                <th className="px-4 py-2">⚥ Gender</th>
+                                                <th className="px-4 py-2">🎓 Education</th>
+                                                <th className="px-4 py-2">🌱 Awareness Avg</th>
+                                                <th className="px-4 py-2">🚀 Readiness Avg</th>
+                                                <th className="px-4 py-2">📷 Photo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {[...data]
+                                                .sort(() => Math.random() - 0.5) // This line randomizes the array
+                                                .map((entry, index) => {
+                                                    const awarenessValues = Object.values(entry.awareness || {}).map(Number);
+                                                    const readinessValues = Object.values(entry.readiness || {}).map(Number);
+                                                    const awarenessAvg = awarenessValues.length
+                                                        ? (awarenessValues.reduce((a, b) => a + b, 0) / awarenessValues.length).toFixed(1)
+                                                        : "-";
+                                                    const readinessAvg = readinessValues.length
+                                                        ? (readinessValues.reduce((a, b) => a + b, 0) / readinessValues.length).toFixed(1)
+                                                        : "-";
+
+                                                    return (
+                                                        <tr key={entry._id || index} className="hover:bg-gray-50 border-b">
+                                                            <td className="px-4 py-2">{index + 1}</td>
+                                                            <td className="px-4 py-2">{entry.demographics?.age || "-"}</td>
+                                                            <td className="px-4 py-2">{entry.demographics?.gender || "-"}</td>
+                                                            <td className="px-4 py-2">{entry.demographics?.education || "-"}</td>
+                                                            <td className="px-4 py-2">{awarenessAvg}</td>
+                                                            <td className="px-4 py-2">{readinessAvg}</td>
+                                                            <td className="px-4 py-2">
+                                                                {entry.images?.length > 0 ? (
+                                                                    <img
+                                                                        src={entry.images[0]}
+                                                                        alt="Survey"
+                                                                        className="w-6 h-6 object-cover rounded cursor-pointer hover:scale-110 transition-transform duration-200"
+                                                                        onClick={() => openModal(entry.images[0])}
+                                                                    />
+                                                                ) : (
+                                                                    "-"
+                                                                )}
+                                                            </td>
+                                                        </tr>
+                                                    );
+                                                })}
+                                        </tbody>
+
+
+                                    </table>
+                                </div>
+                            </>
+                        )}
+                    </div>
+
+                    {/* Modal for image preview */}
+                    {isModalOpen && (
+                        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                            <div className="bg-white p-4 rounded-lg relative max-w-lg w-full max-h-[70vh] overflow-y-auto">
+                                <button
+                                    onClick={closeModal}
+                                    className="absolute top-1 right-2 text-sm text-red-500   "
+                                >
+                                    ✖
+                                </button>
+                                <img src={selectedImage} alt="Full Survey" className="w-full h-auto rounded" />
+                            </div>
+                        </div>
                     )}
                 </div>
-
-                {/* Modal for image preview */}
-                {isModalOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div className="bg-white p-4 rounded-lg relative max-w-lg w-full max-h-[70vh] overflow-y-auto">
-                            <button
-                                onClick={closeModal}
-                                className="absolute top-1 right-2 text-sm text-red-500   "
-                            >
-                                ✖
-                            </button>
-                            <img src={selectedImage} alt="Full Survey" className="w-full h-auto rounded" />
-                        </div>
-                    </div>
-                )}
             </div>
-            <div className="pb-10">
+            <div className="pb-10  " >
 
                 <GallerryTab />
-                 
+
             </div>
 
-        </>
+        </div>
     );
 };
 

@@ -23,6 +23,8 @@ import Summary from './components/Projects/Mmu/Summary';
 import SurveySummary from './components/Projects/Mmu/SurveySummary';
 import ThesisPlan from './components/Projects/Mmu/ThesisPlan';
 import FrontPage from './components/Projects/Mmu/FrontPage';
+import SurveyDashboard from './components/Projects/Mmu/SurveyDashboard ';
+import ProtectedRouteSurvey from './components/Utills/ProtectedRouteSurvey';
 
 
 function App() {
@@ -76,9 +78,14 @@ function App() {
             <ThesisPlan />
           </ProtectedRoute>}></Route>
 
+          <Route path='/surveydashboard' element={<ProtectedRouteSurvey>
+            <SurveyDashboard />
+          </ProtectedRouteSurvey>}></Route>
+
 
 
           <Route path='/thesisplan' element={<FrontPage />}></Route>
+
 
 
           <Route path='/riseuplabs' element={<InternshipDetails />}></Route>
