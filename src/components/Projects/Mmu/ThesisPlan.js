@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import ThesisDisplay from "./ThesisDisplay";
+import ReviewResult from "./ReviewResult";
 
 const ThesisPlan = () => {
     const [activeTab, setActiveTab] = useState("objectives");
@@ -10,6 +12,8 @@ const ThesisPlan = () => {
         { id: "timeline", label: "📅 Timeline" },
         { id: "expectedOutcomes", label: "✅ Expected Outcomes" },
         { id: "ethicalAlignment", label: "🌱 Ethical & Islamic Alignment" },
+        { id: "literatureReview", label: "🌱 Literature Review" },
+        { id: "reviewResults", label: "🌱 Review Results" },
     ];
 
 
@@ -239,6 +243,17 @@ const ThesisPlan = () => {
                         </div>
                     )}
 
+                    {activeTab === "literatureReview" && (
+                        <div className="">
+                            <ThesisDisplay />
+                        </div>
+                    )}
+
+                    {activeTab === "reviewResults" && (
+                        <div className="">
+                            <ReviewResult />
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
