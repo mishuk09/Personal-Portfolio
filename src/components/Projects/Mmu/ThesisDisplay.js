@@ -144,35 +144,93 @@ const thesisData = [
         "title": "A Modified Particle Swarm Optimization Algorithm for Parameter Estimation of a Biological System",
         "problem_statement": "The paper addresses the challenge of parameter estimation in biological system models, where many parameters lack physical interpretation and accurate estimation is crucial. The authors aim to develop a method to estimate the parameters of nonlinear biological models with high precision.",
         "model_algorithm_used": ["Modified Particle Swarm Optimization (PSO)", "Decomposition Technique"]
+    },
+
+    {
+        "author_name": "Toluwase Oreoluwa Adegoke, Tae-il Moon, and Hyun-Hwoi Ku",
+        "title": "Ammonia emission from sandy loam soil amended with manure compost and urea",
+        "problem_statement": "This study evaluates the effect of different nitrogen (N) application rates on ammonia (NH₃) emission and soil properties when sandy loam soil is amended with manure compost and urea. The investigation seeks to understand the impact of nitrogen application on ammonia volatilization and to determine a strategy for reducing NH₃ emissions and improving soil fertility.",
+        "model_algorithm_used": ["One-way ANOVA", "Duncan's multiple range tests"]
+    },
+    {
+        "author_name": "Christof Ammann and Alex Valach",
+        "title": "Ammonia Emissions from Swiss Agriculture and their Effects on Atmospheric Chemistry and Ecosystems",
+        "problem_statement": "Ammonia (NH3) is a significant atmospheric pollutant due to its contribution to the formation of secondary inorganic aerosols and its impacts on (semi-)natural ecosystems. The primary emission source in Switzerland is livestock agriculture, where NH3 is volatilized from ammonium in animal manure. This discrepancy affects the understanding of NH3 deposition and its adverse impacts on ecosystems such as eutrophication and acidification.",
+        "model_algorithm_used": ["Agrammon emission model", "Swiss Nitrogen Deposition (SND) model", "Critical Load Exceedance approach"]
+    },
+    {
+        "author_name": "Karin Andersson, Sofia Delin, Johanna Pedersen, Sasha D. Hafner, Tavs Nyord",
+        "title": "Ammonia emissions from untreated, separated and digested cattle slurry – Effects of slurry type and application strategy on a Swedish clay soil",
+        "problem_statement": "This study investigates how different slurry types (untreated cattle slurry, separated liquid fraction, and biogas digestate) and application methods (trailing hoses, trailing shoes, acidified slurry application, and slurry injection) affect ammonia emissions.",
+        "model_algorithm_used": ["Wind tunnels", "ALFAM2 Model"]
+    },
+    {
+        "author_name": "Nils Carsten Thomas Ellersiek, Hans-Werner Olfs",
+        "title": "An Incubation System for the Simulation of Ammonia Emissions from Soil Surface-Applied Slurry: Effect of pH and Acid Type",
+        "problem_statement": "This paper develops an incubation system to measure ammonia emissions from liquid organic fertilizers applied to soil surfaces, assessing the impact of pH value and acid type on ammonia emission reduction.",
+        "model_algorithm_used": ["Incubation system", "Statistical analysis using ANOVA"]
+    },
+    {
+        "author_name": "Melina Lamkowsky, Frederic Ang, Miranda P.M. Meuwissen",
+        "title": "Can Dutch dairy farmers finance investments to reduce ammonia emissions?",
+        "problem_statement": "This paper explores whether Dutch dairy farmers can finance investments in technologies to reduce ammonia emissions, which pose a threat to biodiversity in the Netherlands.",
+        "model_algorithm_used": ["Literature review", "Empirical analysis", "Accountancy data analysis"]
+    },
+    {
+        "author_name": "Johanna Pedersen, Tavs Nyord",
+        "title": "Effect of low-dose acidification of slurry digestate on ammonia emissions after field application",
+        "problem_statement": "This study investigates the effect of low-dose acidification of slurry digestate on ammonia emissions after field application, comparing emissions from different application techniques.",
+        "model_algorithm_used": ["Dynamic flux chambers", "ANOVA", "Tukey's test"]
+    },
+    {
+        "author_name": "Rolandas Bleizgys, Arvydas Povilaitis, Juozas Pekarskas, Vilma Naujokienė",
+        "title": "Effectiveness of the Sustainable Manure Pile Model for Ammonia Emission and Soil",
+        "problem_statement": "The study evaluates the effectiveness of a sustainable manure pile model in reducing ammonia emissions and nutrient leaching, assessing its environmental impact.",
+        "model_algorithm_used": ["Experimental setup", "Static chamber measurements", "Soil sampling", "ANOVA"]
+    },
+    {
+        "author_name": "Khadim Dawar, Atif Dawar, Muhammad Tariq, Ishaq Ahmad Mian, Asim Muhammad, Laiba Farid, Shadman Khan, Kashif Khan, Shah Fahad, Subhan Danish, Abdullah Ahmed Al-Ghamdi, Mohamed S. Elshikh, Muhammad Tahzeeb-ul-Hassan",
+        "title": "Enhancing nitrogen use efficiency and yield of maize (Zea mays L.) through Ammonia volatilization mitigation and nitrogen management approaches",
+        "problem_statement": "The study examines the effects of sulfur-coated urea (SCU) and sulfur from gypsum on ammonia (NH₃) emissions, nitrogen use efficiency (NUE), and maize productivity under alkaline calcareous soil conditions.",
+        "model_algorithm_used": ["Field Experiment", "ANOVA", "Fisher LSD test"]
+    },
+    {
+        "author_name": "Peng Xu et al.",
+        "title": "Fertilizer management for global ammonia emission reduction",
+        "problem_statement": "This paper addresses ammonia emissions from crop production, particularly rice, wheat, and maize fields, aiming to develop a machine learning model to estimate global NH₃ emissions and identify emission hotspots.",
+        "model_algorithm_used": ["Machine learning models (random forest)", "AI and data-driven approaches"]
+    },
+    {
+        "author_name": "Chen, Y.; Zhang, L.; Zhao, Y.; Zhang, L.; Zhang, J.; Liu, M.; Zhou, M.; Luo, B.",
+        "title": "High-Resolution Ammonia Emissions from Nitrogen Fertilizer Application in China during 2005–2020",
+        "problem_statement": "The study estimates ammonia emissions from synthetic nitrogen fertilizer in China between 2005 and 2020, focusing on spatial, seasonal, and interannual variations.",
+        "model_algorithm_used": ["Bottom-up method", "Emission factors", "Spatial distribution model"]
+    },
+    {
+        "author_name": "Héctor García-Gómez, Rasmus Einarsson, Mark Theobald, Eduardo Aguilera, Tania Carrasco-Molina, Victoria Gil, Benjamín S. Gimeno, Coralina Hernández, Luis Lassaletta, Isaura Rábago, Hans J.M. van Grinsven, Marta G. Vivanco, Alberto Sanz-Cobena",
+        "title": "Impact of Changing Agricultural Management on the Exceedance of Empirical Critical Loads of Nitrogen in Terrestrial Habitats of Southwestern Europe",
+        "problem_statement": "This study assesses the impact of improved agricultural management on ammonia emissions and nitrogen deposition in southwestern Europe, aiming to reduce eutrophication in ecosystems.",
+        "model_algorithm_used": ["Integrated spatial modeling", "CHIMERE model", "Critical load exceedance methodology"]
+    },
+    {
+        "author_name": "Sasha D. Hafner, Johanna Pedersen, Roland Fuß, et al.",
+        "title": "Improved tools for estimation of ammonia emission from field-applied animal slurry: Refinement of the ALFAM2 model and database",
+        "problem_statement": "This paper presents updates to the ALFAM2 model for more accurate ammonia emission predictions from slurry applied to agricultural fields, introducing a new ammonia sink.",
+        "model_algorithm_used": ["ALFAM2 model", "Bootstrap approach"]
     }
 
 
 ];
-
-// const ThesisCard = ({ data }) => (
-//     <div className="bg-white shadow-lg rounded-lg p-6 my-4 w-full md:w-1/2 lg:w-1/3">
-//         <h2 className="text-2xl font-semibold mb-4 text-blue-600">{data.title}</h2>
-//         <p className="text-gray-700 mb-4 font-semibold">Author(s): {data.author_name}</p>
-//         <p className="text-gray-600 mb-4">{data.problem_statement}</p>
-//         <div>
-//             <p className="font-semibold text-gray-800">Model/Algorithm Used:</p>
-//             <ul className="list-disc pl-5 text-gray-600">
-//                 {data.model_algorithm_used.map((algorithm, index) => (
-//                     <li key={index} className="text-sm">{algorithm}</li>
-//                 ))}
-//             </ul>
-//         </div>
-//     </div>
-// );
+ 
 
 const ThesisDisplay = () => {
     return (
-        <div className="   ">
-            <h1 className="text-4xl font-bold text-center text-blue-700 mb-8">
+        <div className="">
+            <h1 className="text-4xl font-bold text-center text-blue-700 mt-4 mb-8">
                 📚 Thesis Papers Collection
             </h1>
 
-            <div className="overflow-x-auto shadow rounded border border-gray-200">
+            <div className="overflow-x-auto shadow rounded border border-gray-200 h-[600px] overflow-y-auto">
                 <table className="min-w-full text-left text-sm">
                     <thead className="bg-gradient-to-r from-blue-100 to-blue-200 sticky top-0">
                         <tr>
@@ -191,13 +249,15 @@ const ThesisDisplay = () => {
                                     } hover:bg-blue-50 transition duration-200`}
                             >
                                 <td className="px-6 py-3 font-semibold text-gray-800">
-                                   [{index + 1}]  
+                                    [{index + 1}]
                                 </td>
                                 <td className="px-6 py-3 font-medium text-gray-800">
                                     {data.author_name}
                                 </td>
                                 <td className="px-6 py-3 text-gray-700">{data.title}</td>
-                                <td className="px-6 py-3 text-gray-600">{data.problem_statement}</td>
+                                <td className="px-6 py-3 text-gray-600">
+                                    {data.problem_statement}
+                                </td>
                                 <td className="px-6 py-3">
                                     <ul className="list-disc pl-5 text-gray-700">
                                         {data.model_algorithm_used.map((algorithm, idx) => (
@@ -211,6 +271,7 @@ const ThesisDisplay = () => {
                 </table>
             </div>
         </div>
+
 
     );
 };

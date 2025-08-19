@@ -12,8 +12,8 @@ const ThesisPlan = () => {
         { id: "timeline", label: "📅 Timeline" },
         { id: "expectedOutcomes", label: "✅ Expected Outcomes" },
         { id: "ethicalAlignment", label: "🌱 Ethical & Islamic Alignment" },
-        { id: "literatureReview", label: "🌱 Literature Review" },
-        { id: "reviewResults", label: "🌱 Review Results" },
+        { id: "literatureReview", label: "📖 Literature Review" },
+        { id: "reviewResults", label: "📊 Review Results" },
     ];
 
 
