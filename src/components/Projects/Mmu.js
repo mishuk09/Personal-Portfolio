@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import SurveyDashboard from './Mmu/SurveyDashboard ';
 import SurveyDashboardAuth from './Mmu/SurveyDashboardAuth';
+import Summary from './Mmu/Summary';
+import ThesisAuth from './Mmu/ThesisAuth';
 
 const Mmu = () => {
     const [isActive, setIsActive] = useState(false);
@@ -13,6 +15,8 @@ const Mmu = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [modal, setModal] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const [showThesisModal, setShowThesisModal] = useState(false);
 
 
     useEffect(() => {
@@ -78,7 +82,7 @@ const Mmu = () => {
 
 
     return (
-        <div >
+        <div className='pb-6'>
             {
                 modal && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
@@ -86,6 +90,19 @@ const Mmu = () => {
                     </div>)
             }
 
+            {showLoginModal && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
+                    <Summary onClose={() => setShowLoginModal(false)} />
+                </div>
+            )}
+
+            {
+                showThesisModal && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
+                        <ThesisAuth onClose={() => setShowThesisModal(false)} />
+                    </div>
+                )
+            }
             {/* Statistics Section */}
             <div className="grid grid-cols-1 pb-10   md:grid-cols-3 lg:grid-cols-[1fr_1.5fr_0.5fr] w-full gap-2 lg:gap-3 mb-6">
 
@@ -282,13 +299,28 @@ const Mmu = () => {
             </div>
 
 
-            {/* survey section */}
-            <div className='flex flex-col items-center justify-center bg-white p-4 rounded-lg shadow-md mt-6'>
-               
-                <button onClick={() => setModal(true)} className="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-200">
-                    Survey Dashboard
+            {/* Survey Section */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-3 bg-white py-6 px-4 rounded shadow-lg mt-6">
+                <button
+                    onClick={() => setModal(true)}
+                    className="w-full md:w-auto bg-blue-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+                >
+                    📝 Survey Dashboard
                 </button>
 
+                <button
+                    onClick={() => setShowLoginModal(true)}
+                    className="w-full md:w-auto bg-green-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200"
+                >
+                    📊 Survey Summary
+                </button>
+
+                <button
+                    onClick={() => setShowThesisModal(true)}
+                    className="w-full md:w-auto bg-purple-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-purple-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
+                >
+                    🎓 Proposal Defence
+                </button>
             </div>
 
         </div>

@@ -74,9 +74,14 @@ function App() {
           <Route path='/summary' element={<ProtectedRoute>
             <SurveySummary />
           </ProtectedRoute>}></Route>
+
           <Route path='/thesisplantwo' element={<ProtectedRoute>
             <ThesisPlan />
           </ProtectedRoute>}></Route>
+
+          {/* <Route path='/thesisplan' element={<ProtectedRoute>
+            <FrontPage />
+          </ProtectedRoute>}></Route> */}
 
           <Route path='/surveydashboard' element={<ProtectedRouteSurvey>
             <SurveyDashboard />
