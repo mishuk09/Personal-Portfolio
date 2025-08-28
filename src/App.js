@@ -25,6 +25,8 @@ import ThesisPlan from './components/Projects/Mmu/ThesisPlan';
 import FrontPage from './components/Projects/Mmu/FrontPage';
 import SurveyDashboard from './components/Projects/Mmu/SurveyDashboard ';
 import ProtectedRouteSurvey from './components/Utills/ProtectedRouteSurvey';
+import Presentation from './components/Projects/Mmu/Presentation';
+import ThesisSummary from './components/Projects/Mmu/ThesisSummary';
 
 
 function App() {
@@ -79,9 +81,9 @@ function App() {
             <ThesisPlan />
           </ProtectedRoute>}></Route>
 
-          {/* <Route path='/thesisplan' element={<ProtectedRoute>
-            <FrontPage />
-          </ProtectedRoute>}></Route> */}
+          <Route path='/presentation' element={<ProtectedRoute>
+            <ThesisSummary />
+          </ProtectedRoute>}></Route>
 
           <Route path='/surveydashboard' element={<ProtectedRouteSurvey>
             <SurveyDashboard />

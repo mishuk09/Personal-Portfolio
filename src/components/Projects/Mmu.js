@@ -5,6 +5,7 @@ import SurveyDashboard from './Mmu/SurveyDashboard ';
 import SurveyDashboardAuth from './Mmu/SurveyDashboardAuth';
 import Summary from './Mmu/Summary';
 import ThesisAuth from './Mmu/ThesisAuth';
+import Presentation from './Mmu/Presentation';
 
 const Mmu = () => {
     const [isActive, setIsActive] = useState(false);
@@ -17,6 +18,7 @@ const Mmu = () => {
     const [modal, setModal] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showThesisModal, setShowThesisModal] = useState(false);
+    const [showPresentationModal, setShowPresentationModal] = useState(false);
 
 
     useEffect(() => {
@@ -84,6 +86,13 @@ const Mmu = () => {
     return (
         <div className='pb-6'>
             {
+                showPresentationModal && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
+                        <Presentation onClose={() => setShowPresentationModal(false)} />
+                    </div>
+                )
+            }
+            {
                 modal && (
                     <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
                         <SurveyDashboardAuth onClose={() => setModal(false)} />
@@ -103,6 +112,8 @@ const Mmu = () => {
                     </div>
                 )
             }
+
+
             {/* Statistics Section */}
             <div className="grid grid-cols-1 pb-10   md:grid-cols-3 lg:grid-cols-[1fr_1.5fr_0.5fr] w-full gap-2 lg:gap-3 mb-6">
 
@@ -320,6 +331,12 @@ const Mmu = () => {
                     className="w-full md:w-auto bg-purple-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-purple-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200"
                 >
                     🎓 Proposal Defence
+                </button>
+                <button
+                    onClick={() => setShowPresentationModal(true)}
+                    className="w-full md:w-auto bg-yellow-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-yellow-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
+                >
+                    📑 2 Sept Presentation
                 </button>
             </div>
 
