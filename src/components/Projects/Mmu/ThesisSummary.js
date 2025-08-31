@@ -125,6 +125,8 @@ const ThesisSummary = () => {
                 </motion.section>
 
 
+
+
                 {/* Scope */}
                 <motion.section
                     initial={{ opacity: 0, y: 40 }}
@@ -147,6 +149,31 @@ const ThesisSummary = () => {
                     </p>
                 </motion.section>
 
+                {/* Scope */}
+                <motion.section
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="bg-white p-6 md:p-8 rounded-2xl shadow-md"
+                >
+                    <h2 className="flex items-center gap-2 text-2xl font-semibold text-blue-600 mb-3">
+                        <Database className="w-6 h-6 text-green-500" /> Study Scope
+                    </h2>
+                    <ul className="list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
+                        <li>T1➝ USG with bentonite clay and neem oil (without heat)</li>
+                        <li>T2➝ USG with bentonite clay and neem oil (with heat)</li>
+                        <li>T3➝ USG with sulfur and acacia oil</li>
+                    </ul>
+                    <p className="mt-4 text-gray-700 text-justify">
+                        The use of these specific coatings was chosen for their potential to optimize the release of nitrogen from the Urea Super Granules (USG) and reduce nitrate leaching. Bentonite clay is used as a binding agent, which helps to control the release rate of nutrients, while neem oil has been shown to improve the efficiency of nitrogen uptake by plants. The addition of sulfur in T3 is expected to further slow down nutrient release, and acacia oil is used to enhance the binding and release characteristics. By testing these different coating materials and their proportions, the study aims to identify the most effective combinations for minimizing environmental pollution and improving fertilizer efficiency.
+                    </p>
+                    <p className="mt-4">
+                        Goals: Predict nitrate leaching, optimize coating, and guide{" "}
+                        <b>farmers 👨‍🌾</b> and <b>policymakers 🏛️</b>.
+                    </p>
+                </motion.section>
+
+
                 {/* Data */}
                 <motion.section
                     initial={{ opacity: 0, y: 40 }}
@@ -162,7 +189,11 @@ const ThesisSummary = () => {
                         Inputs: Neem/Acacia oil, Clay/Sulfur, Curing time. <br />
                         Output: Nitrate leaching measured over 32 days using spectrophotometry.
                     </p>
+                    <p className="text-gray-700">
+                        The data was collected through the cadmium reduction method, which is used to determine nitrate concentration in the leachate. After the soil columns were saturated and the fertilizers were applied, the leachate was collected at regular intervals (every 8 days) for 32 days. The spectrophotometric analysis of the leachate enabled precise measurement of nitrate levels, allowing the study to track nutrient release over time and evaluate the effectiveness of the different coating treatments.
+                    </p>
                 </motion.section>
+
 
                 {/* Methods & ML Models Section */}
                 <section className="py-12  ">
@@ -198,8 +229,14 @@ const ThesisSummary = () => {
                 </section>
 
 
+
+
                 {/* <MethodologyFlow /> */}
                 <VisualsSection />
+
+
+                
+
                 {/* Results */}
                 <motion.section
                     initial={{ opacity: 0, y: 40 }}
@@ -211,7 +248,7 @@ const ThesisSummary = () => {
                         <Lightbulb className="w-6 h-6 text-green-500" /> Results & Performance
                     </h2>
                     <p className="text-gray-700 mb-4">
-                        RSM performed best overall. RF & M5P also strong. ANN & SVM weaker with small datasets.
+                        RSM performed best overall due to its ability to handle a small number of variables effectively, providing accurate predictions with fewer experimental trials. RF and M5P also showed strong performance. However, ANN and SVM were less accurate, likely due to the smaller dataset used in the study.
                     </p>
 
                     {/* Bar Chart */}
@@ -229,6 +266,9 @@ const ThesisSummary = () => {
                     </div>
                 </motion.section>
 
+
+                
+
                 {/* Conclusion */}
                 <motion.section
                     initial={{ opacity: 0, y: 40 }}
@@ -240,11 +280,12 @@ const ThesisSummary = () => {
                         <CheckCircle className="w-6 h-6 text-white" /> Conclusion
                     </h2>
                     <p className="text-lg leading-relaxed">
-                        RSM proved most effective in predicting and optimizing nitrate leaching.
-                        Findings support <b>sustainable agriculture</b> 🌍 with improved fertilizer efficiency and reduced pollution.
-                        Beneficial for <b>farmers</b>, <b>researchers</b>, and <b>policymakers</b>.
+                        RSM proved most effective in predicting and optimizing nitrate leaching. The optimized parameters for minimum nitrate leaching included a combination of neem/acacia oil, clay/sulfur, and age of the coating, demonstrating significant improvements in fertilizer efficiency and reduced pollution. These findings support <b>sustainable agriculture</b> 🌍, benefiting <b>farmers</b>, <b>researchers</b>, and <b>policymakers</b> by promoting better fertilizer practices and minimizing environmental impact.
                     </p>
                 </motion.section>
+
+
+                
 
                 {/* Call to Action */}
                 <motion.section
@@ -258,10 +299,11 @@ const ThesisSummary = () => {
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-gray-700">
                         <li>👨‍🌾 Farmers ➝ Adopt optimized coatings for better yield.</li>
-                        <li>🔬 Researchers ➝ Apply ML to sustainable agriculture.</li>
-                        <li>🏛️ Policymakers ➝ Use findings to guide regulations.</li>
+                        <li>🔬 Researchers ➝ Apply ML to sustainable agriculture and explore alternative biopolymers or synthetic materials for coatings.</li>
+                        <li>🏛️ Policymakers ➝ Use findings to guide regulations promoting sustainable fertilizer practices.</li>
                     </ul>
                 </motion.section>
+
             </main>
         </div>
     );
