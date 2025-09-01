@@ -20,7 +20,7 @@ export default function VisualsSection() {
     ];
 
     return (
-        <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-12   bg-white shadow rounded">
             <div className="max-w-6xl mx-auto px-6">
                 <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
                     Visuals

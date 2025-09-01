@@ -91,6 +91,10 @@ function App() {
 
 
 
+
+
+
+
           <Route path='/thesisplan' element={<FrontPage />}></Route>
 
 

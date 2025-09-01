@@ -25,21 +25,12 @@ import {
 } from "lucide-react";
 import MethodologyFlow from "./MethodologyFlow";
 import VisualsSection from "./VisualsSection";
+import ModelsSection from "./ModelsSection";
 
 
 
 const ThesisSummary = () => {
     const [modalOpen, setModalOpen] = React.useState(false);
-    // Pie chart data for ML models
-    const modelData = [
-        { name: "RSM", value: 30 },
-        { name: "RF", value: 20 },
-        { name: "M5P", value: 15 },
-        { name: "ANN", value: 10 },
-        { name: "SVM", value: 10 },
-        { name: "REPTree", value: 15 },
-    ];
-    const COLORS = ["#2563eb", "#10b981", "#f59e0b", "#ef4444", "#7c3aed", "#14b8a6"];
 
     // Bar chart data for sample model performance (T1 Coating)
     const perfData = [
@@ -111,19 +102,24 @@ const ThesisSummary = () => {
                             rel="noopener noreferrer"
                             className="text-blue-600 hover:text-blue-700 hover:underline transition"
                         >
-                            Proportional Impact Prediction Model of Coating Material on Nitrate Leaching of Slow-Release Urea Super Granules (USG) Using Machine Learning and RSM Technique
+                            Proportional Impact Prediction Model of Coating Material on
+                            <span className="font-bold bg-yellow-200 text-black px-1 rounded"> Nitrate Leaching</span>
+                            of Slow-Release <span className="font-bold">Urea Super Granules (USG)</span>
+                            Using <span className="font-bold bg-yellow-200 text-black px-1 rounded">Machine Learning</span>
+                            and <span className="font-bold bg-yellow-200 text-black px-1 rounded">RSM Technique</span>
                         </a>
                     </h3>
 
                     {/* Description */}
                     <p className="text-gray-700 leading-relaxed text-justify">
-                        This research introduces machine learning models to predict nitrate leaching
-                        from Urea Super Granules (USG) coated with different materials. The study
-                        emphasizes optimizing coating techniques to reduce leaching, enhance
-                        fertilizer efficiency, and safeguard groundwater from contamination.
+                        This research introduces <span className="font-bold bg-yellow-200 text-black px-1 rounded">machine learning models</span>
+                        to predict <span className="font-bold bg-yellow-200 text-black px-1 rounded">nitrate leaching</span>
+                        from <span className="font-bold">Urea Super Granules (USG)</span> coated with different materials.
+                        The study emphasizes optimizing coating techniques to reduce leaching, enhance
+                        <span className="font-bold"> fertilizer efficiency</span>, and safeguard
+                        <span className="font-bold"> groundwater</span> from contamination.
                     </p>
                 </motion.section>
-
 
 
 
@@ -137,41 +133,80 @@ const ThesisSummary = () => {
                     <h2 className="flex items-center gap-2 text-2xl font-semibold text-blue-600 mb-3">
                         <Database className="w-6 h-6 text-green-500" /> Study Scope
                     </h2>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
-                        {/* <li>T1 ➝ Clay + Neem Oil (no heat)</li> */}
-                        <li>T1➝ USG with bentonite clay and neem oil (without heat)</li>
-                        <li>T2➝ USG with bentonite clay and neem oil (with heat)</li>
-                        <li>T3➝ USG with sulfur and acacia oil</li>
-                    </ul>
-                    <p className="mt-4">
-                        Goals: Predict nitrate leaching, optimize coating, and guide{" "}
-                        <b>farmers 👨‍🌾</b> and <b>policymakers 🏛️</b>.
-                    </p>
-                </motion.section>
 
-                {/* Scope */}
-                <motion.section
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="bg-white p-6 md:p-8 rounded-2xl shadow-md"
-                >
-                    <h2 className="flex items-center gap-2 text-2xl font-semibold text-blue-600 mb-3">
-                        <Database className="w-6 h-6 text-green-500" /> Study Scope
-                    </h2>
                     <ul className="list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
-                        <li>T1➝ USG with bentonite clay and neem oil (without heat)</li>
-                        <li>T2➝ USG with bentonite clay and neem oil (with heat)</li>
-                        <li>T3➝ USG with sulfur and acacia oil</li>
+                        <li>
+                            <span className="font-bold bg-yellow-200 px-1 rounded">T1</span> ➝ USG with{" "}
+                            <span className="relative group font-bold cursor-pointer text-blue-700 hover:underline">
+                                bentonite clay
+                                <span className="absolute left-0 bottom-full mb-1 hidden group-hover:block w-56 bg-gray-900 text-white text-sm rounded-lg px-3 py-2 shadow-lg z-10">
+                                    🟤 Acts as a <strong>binding agent</strong>, helping to coat USG granules effectively.
+                                </span>
+                            </span>{" "}
+                            and{" "}
+                            <span className="relative group font-bold cursor-pointer text-green-700 hover:underline">
+                                neem oil
+                                <span className="absolute left-0 bottom-full mb-1 hidden group-hover:block w-56 bg-gray-900 text-white text-sm rounded-lg px-3 py-2 shadow-lg z-10">
+                                    🌿 Known to <strong>improve nitrogen uptake</strong> and reduce losses.
+                                </span>
+                            </span>{" "}
+                            (without heat)
+                        </li>
+
+                        <li>
+                            <span className="font-bold bg-yellow-200 px-1 rounded">T2</span> ➝ USG with{" "}
+                            <span className="relative group font-bold cursor-pointer text-blue-700 hover:underline">
+                                bentonite clay
+                                <span className="absolute left-0 bottom-full mb-1 hidden group-hover:block w-56 bg-gray-900 text-white text-sm rounded-lg px-3 py-2 shadow-lg z-10">
+                                    🟤 Provides <strong>structural stability</strong> to the coating.
+                                </span>
+                            </span>{" "}
+                            and{" "}
+                            <span className="relative group font-bold cursor-pointer text-green-700 hover:underline">
+                                neem oil
+                                <span className="absolute left-0 bottom-full mb-1 hidden group-hover:block w-56 bg-gray-900 text-white text-sm rounded-lg px-3 py-2 shadow-lg z-10">
+                                    🌿 Helps in <strong>slow release of nitrogen</strong> when heated.
+                                </span>
+                            </span>{" "}
+                            (with heat)
+                        </li>
+
+                        <li>
+                            <span className="font-bold bg-yellow-200 px-1 rounded">T3</span> ➝ USG with{" "}
+                            <span className="relative group font-bold cursor-pointer text-yellow-700 hover:underline">
+                                sulfur
+                                <span className="absolute left-0 bottom-full mb-1 hidden group-hover:block w-56 bg-gray-900 text-white text-sm rounded-lg px-3 py-2 shadow-lg z-10">
+                                    🟡 Used to <strong>slow nutrient release</strong> and enhance efficiency.
+                                </span>
+                            </span>{" "}
+                            and{" "}
+                            <span className="relative group font-bold cursor-pointer text-amber-700 hover:underline">
+                                acacia oil
+                                <span className="absolute left-0 bottom-full mb-1 hidden group-hover:block w-56 bg-gray-900 text-white text-sm rounded-lg px-3 py-2 shadow-lg z-10">
+                                    🟠 Works as a <strong>natural binder</strong>, improving coating adhesion.
+                                </span>
+                            </span>
+                        </li>
                     </ul>
+
                     <p className="mt-4 text-gray-700 text-justify">
-                        The use of these specific coatings was chosen for their potential to optimize the release of nitrogen from the Urea Super Granules (USG) and reduce nitrate leaching. Bentonite clay is used as a binding agent, which helps to control the release rate of nutrients, while neem oil has been shown to improve the efficiency of nitrogen uptake by plants. The addition of sulfur in T3 is expected to further slow down nutrient release, and acacia oil is used to enhance the binding and release characteristics. By testing these different coating materials and their proportions, the study aims to identify the most effective combinations for minimizing environmental pollution and improving fertilizer efficiency.
+                        The use of these specific coatings was chosen for their potential to{" "}
+                        <strong>optimize nitrogen release</strong> from{" "}
+                        <strong>Urea Super Granules (USG)</strong> and{" "}
+                        <strong>reduce nitrate leaching</strong>.
                     </p>
+
                     <p className="mt-4">
-                        Goals: Predict nitrate leaching, optimize coating, and guide{" "}
+                        Goals:{" "}
+                        <span className="font-bold bg-yellow-200 px-1 rounded">Predict nitrate leaching</span>,{" "}
+                        <span className="font-bold">optimize coating</span>, and guide{" "}
                         <b>farmers 👨‍🌾</b> and <b>policymakers 🏛️</b>.
                     </p>
                 </motion.section>
+
+
+
+
 
 
                 {/* Data */}
@@ -184,15 +219,23 @@ const ThesisSummary = () => {
                     <h2 className="flex items-center gap-2 text-2xl font-semibold text-blue-600 mb-3">
                         <Cog className="w-6 h-6 text-green-500" /> Data Collection
                     </h2>
-                    <img onClick={() => setModalOpen(true)} src={dataimg} alt="Data Collection" className="mb-4 h-60 rounded border border-gray-300 cursor-pointer" />
+                    <img
+                        onClick={() => setModalOpen(true)}
+                        src={dataimg}
+                        alt="Data Collection"
+                        className="mb-4 h-60 rounded border border-gray-300 cursor-pointer"
+                    />
                     <p className="mb-4 text-gray-700">
-                        Inputs: Neem/Acacia oil, Clay/Sulfur, Curing time. <br />
-                        Output: Nitrate leaching measured over 32 days using spectrophotometry.
+                        <span className="font-bold bg-yellow-200 px-1 rounded">Inputs</span>: <span className="font-bold">Neem/Acacia oil</span>, <span className="font-bold">Clay/Sulfur</span>, <span className="font-bold">Curing time</span>. <br />
+                        <span className="font-bold bg-yellow-200 px-1 rounded">Output</span>: <span className="font-bold">Nitrate leaching</span> measured over <span className="font-bold bg-yellow-200 px-1 rounded">32 days</span> using <span className="font-bold">spectrophotometry</span>.
                     </p>
                     <p className="text-gray-700">
-                        The data was collected through the cadmium reduction method, which is used to determine nitrate concentration in the leachate. After the soil columns were saturated and the fertilizers were applied, the leachate was collected at regular intervals (every 8 days) for 32 days. The spectrophotometric analysis of the leachate enabled precise measurement of nitrate levels, allowing the study to track nutrient release over time and evaluate the effectiveness of the different coating treatments.
+                        The data was collected through the <span className="font-bold">cadmium reduction method</span>, which is used to determine <span className="font-bold">nitrate concentration</span> in the leachate.
+                        After the soil columns were saturated and the fertilizers were applied, the leachate was collected at regular intervals (<span className="font-bold">every 8 days</span>) for <span className="font-bold">32 days</span>.
+                        The <span className="font-bold">spectrophotometric analysis</span> of the leachate enabled precise measurement of nitrate levels, allowing the study to track nutrient release over time and evaluate the effectiveness of the different coating treatments.
                     </p>
                 </motion.section>
+
 
 
                 {/* Methods & ML Models Section */}
@@ -205,28 +248,33 @@ const ThesisSummary = () => {
 
                         {/* Flowchart */}
                         <MethodologyFlow />
+                        <ModelsSection />
 
-                        {/* Card Grid */}
-                        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mt-3">
+
+                        {/* <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mt-3">
                             {[
-                                { name: "ANN", desc: "Artificial Neural Network" },
-                                { name: "SVM", desc: "Support Vector Machine" },
-                                { name: "RF", desc: "Random Forest" },
-                                { name: "M5P", desc: "M5 Model Tree" },
-                                { name: "REPTree", desc: "Reduced Error Pruning Tree" },
-                                { name: "RSM", desc: "Response Surface Methodology" },
+
+                                { name: "ANN", desc: "Artificial Neural Network", icon: "🤖" },
+                                { name: "SVM", desc: "Support Vector Machine", icon: "📊" },
+                                { name: "RF", desc: "Random Forest", icon: "🌳" },
+                                { name: "M5P", desc: "M5 Model Tree", icon: "🌲" },
+                                { name: "REPTree", desc: "Reduced Error Pruning Tree", icon: "🪵" },
+                                { name: "RSM", desc: "Response Surface Methodology", icon: "📐" },
                             ].map((model, i) => (
                                 <div
                                     key={i}
                                     className="p-4 bg-white rounded shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1"
                                 >
-                                    <h3 className="text-xl font-semibold text-blue-700">{model.name}</h3>
+                                    <h3 className="text-xl font-semibold text-blue-700">
+                                        <span className="mr-2">{model.icon}</span>{model.name}
+                                    </h3>
                                     <p className="mt-2 text-gray-600">{model.desc}</p>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </section>
+
 
 
 
@@ -235,7 +283,9 @@ const ThesisSummary = () => {
                 <VisualsSection />
 
 
-                
+
+
+
 
                 {/* Results */}
                 <motion.section
@@ -247,8 +297,10 @@ const ThesisSummary = () => {
                     <h2 className="flex items-center gap-2 text-2xl font-semibold text-blue-600 mb-3">
                         <Lightbulb className="w-6 h-6 text-green-500" /> Results & Performance
                     </h2>
-                    <p className="text-gray-700 mb-4">
-                        RSM performed best overall due to its ability to handle a small number of variables effectively, providing accurate predictions with fewer experimental trials. RF and M5P also showed strong performance. However, ANN and SVM were less accurate, likely due to the smaller dataset used in the study.
+                    <p className="text-gray-700 mb-6">
+                        <span className="font-bold bg-yellow-200 px-1 rounded">RSM</span> performed best overall due to its ability to handle a small number of variables effectively, providing <span className="font-bold">accurate predictions</span> with fewer experimental trials.
+                        <span className="font-bold bg-yellow-200 px-1 rounded"> RF</span> and <span className="font-bold bg-yellow-200 px-1 rounded">M5P</span> also showed strong performance.
+                        However, <span className="font-bold">ANN</span> and <span className="font-bold">SVM</span> were less accurate, likely due to the <span className="font-bold">smaller dataset</span> used in the study.
                     </p>
 
                     {/* Bar Chart */}
@@ -267,7 +319,7 @@ const ThesisSummary = () => {
                 </motion.section>
 
 
-                
+
 
                 {/* Conclusion */}
                 <motion.section
@@ -280,12 +332,20 @@ const ThesisSummary = () => {
                         <CheckCircle className="w-6 h-6 text-white" /> Conclusion
                     </h2>
                     <p className="text-lg leading-relaxed">
-                        RSM proved most effective in predicting and optimizing nitrate leaching. The optimized parameters for minimum nitrate leaching included a combination of neem/acacia oil, clay/sulfur, and age of the coating, demonstrating significant improvements in fertilizer efficiency and reduced pollution. These findings support <b>sustainable agriculture</b> 🌍, benefiting <b>farmers</b>, <b>researchers</b>, and <b>policymakers</b> by promoting better fertilizer practices and minimizing environmental impact.
+                        <span className="font-bold bg-yellow-200 text-black px-1 rounded">RSM</span> proved most effective in predicting and optimizing
+                        <span className="font-bold bg-yellow-200 text-black px-1 rounded"> minimum nitrate leaching</span>.
+                        The optimized parameters included a combination of <span className="font-bold">neem/acacia oil</span>,
+                        <span className="font-bold">clay/sulfur</span>, and <span className="font-bold">age of the coating</span>,
+                        demonstrating significant improvements in <span className="font-bold">fertilizer efficiency</span> and
+                        <span className="font-bold"> reduced pollution</span>.
+                        These findings support <span className="font-bold">sustainable agriculture</span> 🌍, benefiting
+                        <b> farmers</b>, <b> researchers</b>, and <b> policymakers</b> by promoting better fertilizer practices
+                        and minimizing environmental impact.
                     </p>
                 </motion.section>
 
 
-                
+
 
                 {/* Call to Action */}
                 <motion.section
@@ -298,11 +358,23 @@ const ThesisSummary = () => {
                         <Users className="w-6 h-6 text-green-500" /> Call to Action
                     </h2>
                     <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>👨‍🌾 Farmers ➝ Adopt optimized coatings for better yield.</li>
-                        <li>🔬 Researchers ➝ Apply ML to sustainable agriculture and explore alternative biopolymers or synthetic materials for coatings.</li>
-                        <li>🏛️ Policymakers ➝ Use findings to guide regulations promoting sustainable fertilizer practices.</li>
+                        <li>
+                            👨‍🌾 <span className="font-bold bg-yellow-200 px-1 rounded">Farmers</span> ➝
+                            Adopt <span className="font-bold">optimized coatings</span> for better yield.
+                        </li>
+                        <li>
+                            🔬 <span className="font-bold bg-yellow-200 px-1 rounded">Researchers</span> ➝
+                            Apply <span className="font-bold">ML</span> to <span className="font-bold">sustainable agriculture</span>
+                            and explore <span className="font-bold">alternative biopolymers</span> or <span className="font-bold">synthetic materials</span> for coatings.
+                        </li>
+                        <li>
+                            🏛️ <span className="font-bold bg-yellow-200 px-1 rounded">Policymakers</span> ➝
+                            Use findings to guide <span className="font-bold">regulations</span> promoting
+                            <span className="font-bold"> sustainable fertilizer practices</span>.
+                        </li>
                     </ul>
                 </motion.section>
+
 
             </main>
         </div>
