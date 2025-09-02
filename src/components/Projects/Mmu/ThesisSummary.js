@@ -26,6 +26,8 @@ import {
 import MethodologyFlow from "./MethodologyFlow";
 import VisualsSection from "./VisualsSection";
 import ModelsSection from "./ModelsSection";
+import ComparisonTable from "./ComparisonTable";
+import DatasetTab from "./DatasetTab";
 
 
 
@@ -375,6 +377,10 @@ const ThesisSummary = () => {
                     </ul>
                 </motion.section>
 
+                {/* <PaperComparison /> */}
+                <ComparisonTable />
+
+                <DatasetTab />
 
             </main>
         </div>
