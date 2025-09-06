@@ -217,11 +217,93 @@ const thesisData = [
         "title": "Improved tools for estimation of ammonia emission from field-applied animal slurry: Refinement of the ALFAM2 model and database",
         "problem_statement": "This paper presents updates to the ALFAM2 model for more accurate ammonia emission predictions from slurry applied to agricultural fields, introducing a new ammonia sink.",
         "model_algorithm_used": ["ALFAM2 model", "Bootstrap approach"]
+    },
+
+    // second set of 12
+
+
+    {
+        "author_name": "Cashman, O.; Casey, I.; Sorley, M.; Forrestal, P.; Styles, D.; Wall, D.; Burchill, W.; Humphreys, J.",
+        "title": "Lowering the greenhouse gas and ammonia emissions from grassland-based dairy production",
+        "problem_statement": "Grassland-based dairy systems contribute significantly to greenhouse gas (GHG) and ammonia emissions in Ireland. Rising intensification with high artificial fertilizer nitrogen inputs increases emissions, conflicting with climate targets. The study evaluates how adopting best practices (reduced AFN, clover BFN, improved slurry application, and herd genetics) can lower emissions while maintaining productivity.",
+        "model_algorithm_used": ["Life Cycle Assessment (LCA)", "Mass-flow model for ammonia"]
+    },
+    {
+        "author_name": "Sefeedpari, P.; Pishgar-Komleh, S.H.; Aarnink, A.J.A.",
+        "title": "Model Adaptation and Validation for Estimating Methane and Ammonia Emissions from Fattening Pig Houses: Effect of Manure Management System",
+        "problem_statement": "Methane (CH4) and ammonia (NH3) emissions from pig farming are major environmental concerns. Existing models are limited and costly to validate. This study adapts and validates predictive models to estimate emissions under different manure management systems and evaluate mitigation strategies.",
+        "model_algorithm_used": ["MESPRO model", "ANIPRO model"]
+    },
+    {
+        "author_name": "Aguirre-Villegas, H.A.; Besson, C.; Larson, R.A.",
+        "title": "Modeling ammonia emissions from manure in conventional, organic, and grazing dairy systems and practices to mitigate emissions",
+        "problem_statement": "Livestock manure contributes ~60% of ammonia emissions. Measuring is costly, and results are inconsistent across systems. This study models emissions for representative dairy systems in Wisconsin, compares mitigation strategies, and assesses how functional units affect emission intensity estimates.",
+        "model_algorithm_used": ["Farm-level simulation model", "IPCC Tier 2 emission factors"]
+    },
+    {
+        "author_name": "Chen, H.; Zhou, H.; Sun, Y.; Liu, X.; Wu, Q.; Chi, D.",
+        "title": "Nitrogen-loaded biochar for environmental management: Enhancing nitrogen utilization balance in farmland, mitigating ammonia volatilization, and improving fertilizer efficiency",
+        "problem_statement": "Excess nitrogen fertilizer in rice production causes NH3 volatilization and low fertilizer efficiency. Conventional biochar can increase NH3 losses, while acid-treated biochar is costly. This study tests nitrogen-loaded biochar (NLB) to reduce volatilization, improve soil N balance, and sustain rice yields.",
+        "model_algorithm_used": ["Critical nitrogen dilution curve", "Path analysis model"]
+    },
+    {
+        "author_name": "Mielcarek-Bocheńska, P.; Rzeźnik, W.",
+        "title": "Reducing Ammonia Emissions in Polish Agriculture, the Implementation of the NEC Directive, and the Context of Sustainable Development—Pilot Studies",
+        "problem_statement": "Polish agriculture produces over 96% of national ammonia emissions, mostly from manure and fertilizers. The NEC Directive requires reductions, but farmers’ awareness and adoption of low-emission practices are limited. This study examines farm practices and farmer knowledge about ammonia mitigation.",
+        "model_algorithm_used": ["Survey questionnaire", "Chi-square (χ²) test"]
+    },
+    {
+        "author_name": "Schoof, J.; Fuß, R.; Wulf, S.; Pacholski, A.",
+        "title": "Regionalized ammonia emission abatement by urease inhibitor treatment of urea for agro-environmental conditions of Western Central Europe",
+        "problem_statement": "Urea fertilizer causes high NH3 losses. Urease inhibitors (UIs) are mandated in the EU, but inventories assume 70% abatement without regional calibration. This study derives region-specific abatement factors for Western Central Europe.",
+        "model_algorithm_used": ["Linear mixed-effects model", "Meta-analysis of field data"]
+    },
+    {
+        "author_name": "Wang, Y.; Nemitz, E.; Tomlinson, S.J.; Carnell, E.J.; Yao, L.; Scheffler, J.; Liska, T.; Pearson, C.; Dragosits, U.; Venkataraman, C.; Balasubramanian, S.; Beck, R.; Sutton, M.A.; Vieno, M.",
+        "title": "Response of South Asia PM2.5 pollution to ammonia emission changes and associated impacts on human health",
+        "problem_statement": "South Asia experiences extreme PM2.5 pollution, but the role of NH3 emissions in PM2.5 formation is understudied. This research evaluates how NH3 reductions affect air quality, health, and economic costs.",
+        "model_algorithm_used": ["WRF-EMEP atmospheric model", "Global Exposure Mortality Model (GEMM)"]
+    },
+    {
+        "author_name": "Woo, J.; Song, S.; Kang, S.; Jeon, E.-C.",
+        "title": "Study on Enhanced Methods for Calculating NH₃ Emissions from Fertilizer Application in Agriculture Sector",
+        "problem_statement": "South Korea’s NH3 inventory is based on foreign factors, ignoring crop-specific practices and over-fertilization. This leads to inaccurate emission estimates. The study develops improved inventory methods reflecting local farming systems.",
+        "model_algorithm_used": ["Fertilizer supply-based inventory method", "Nitrogen application-based inventory method"]
+    },
+    {
+        "author_name": "Hu, Y.; Flessa, H.; Vos, C.; Fuß, R.; Schmidhalter, U.",
+        "title": "Successful NH₃ abatement policies and regulations in German agriculture",
+        "problem_statement": "German agriculture emits ~95% of national ammonia, mainly from livestock and fertilizer. EU directives mandate reductions, but progress was slow until recent regulations (DüV 2017/2020, TA-Luft 2021). This study evaluates their effectiveness.",
+        "model_algorithm_used": ["National emission inventory (Thünen Institute)", "Py-GAS-EM scenario model"]
+    },
+    {
+        "author_name": "Adegoke, T.O.; Ku, H.-H.",
+        "title": "Temperature response of ammonia emission from sandy loam soil amended with manure compost and urea",
+        "problem_statement": "Temperature and N application rates jointly affect ammonia volatilization, but few studies analyze their combined effect. This work investigates NH3 emissions from urea and compost treatments across temperatures.",
+        "model_algorithm_used": ["Arrhenius equation", "Dynamic chamber method"]
+    },
+    {
+        "author_name": "dos Santos Diniz, M.H.; Ferreira, F.C.; Ferreira, A.S.",
+        "title": "Temporal change of urea biochemical transformations and temperature sensitivity of ammonia volatilization in soil textural classes in the Brazilian Cerrado",
+        "problem_statement": "Urea AV losses in tropical soils exceed 40%, worsened by high temps and sandy soils. The study analyzes how soil texture, urea dose, and temperature regulate transformations and AV sensitivity (Q10).",
+        "model_algorithm_used": ["Gaussian model for AV peaks", "van’t Hoff equation (Q10)"]
+    },
+    {
+        "author_name": "Cashman, O.; Casey, I.; Humphreys, J.",
+        "title": "The economic performance of grassland-based milk production using best practices to lower greenhouse gas and ammonia emissions",
+        "problem_statement": "Irish dairy farms rely heavily on AFN, increasing GHG and ammonia emissions. Farmers may resist low-emission practices unless profitability is ensured. This study compares intensive vs best-practice systems in terms of economics and productivity.",
+        "model_algorithm_used": ["Whole-farm economic model", "Systems-scale farm experiments"]
     }
 
 
+
+
+
+
+
+
 ];
- 
+
 
 const ThesisDisplay = () => {
     return (
