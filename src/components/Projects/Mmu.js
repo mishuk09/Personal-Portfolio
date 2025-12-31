@@ -6,6 +6,7 @@ import SurveyDashboardAuth from './Mmu/SurveyDashboardAuth';
 import Summary from './Mmu/Summary';
 import ThesisAuth from './Mmu/ThesisAuth';
 import Presentation from './Mmu/Presentation';
+import Roadmap from './Roadmap';
 
 const Mmu = () => {
     const [isActive, setIsActive] = useState(false);
@@ -309,6 +310,7 @@ const Mmu = () => {
 
             </div>
 
+            <Roadmap />
 
             {/* Survey Section */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-3 bg-white py-6 px-4 rounded shadow-lg mt-6">
@@ -338,6 +340,12 @@ const Mmu = () => {
                 >
                     📑 2 Sept Presentation
                 </button>
+                <a
+                    href='/rf'
+                    className="w-full md:w-auto no-underline bg-red-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-red-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
+                >
+                    📑 10 Sept Presentation
+                </a>
             </div>
 
         </div>

@@ -42,6 +42,7 @@ export default function ModelsTabs() {
                             <li className="bg-gray-50 p-3 rounded-lg shadow-sm">⚡ <strong>NSE</strong> (Nash-Sutcliffe Efficiency)</li>
                             <li className="bg-gray-50 p-3 rounded-lg shadow-sm">📐 <strong>WI</strong> (Willmott Index)</li>
                             <li className="bg-gray-50 p-3 rounded-lg shadow-sm">📈 <strong>R²</strong> (Coefficient of Determination)</li>
+                            <li className="bg-gray-50 p-3 rounded-lg shadow-sm">📈 <strong>RSE</strong> (Residual Standard Error)</li>
                         </ul>
 
                         {/* Equations */}
@@ -69,6 +70,11 @@ export default function ModelsTabs() {
                                     <p className="font-medium text-gray-800">R²:</p>
                                     <BlockMath math="R^2 = 1 - \frac{\sum_{i=1}^{n} (y_{\text{obs},i} - y_{\text{pred},i})^2}{\sum_{i=1}^{n} (y_{\text{obs},i} - \overline{y_{\text{obs}}})^2}" />
                                 </div>
+                                <div className="pt-2">
+                                    <p className="font-medium text-gray-800">RSE</p>
+                                    <BlockMath math="RSE = \sqrt{\frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{n-2}}" />
+                                </div>
+
                             </div>
                         </div>
                     </div>

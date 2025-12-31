@@ -86,6 +86,19 @@ const DesingDev = () => {
                                 View Certifications
                             </a>
                         </div>
+                        {/* n8n */}
+                        <div className="  text-center bg-white w-full p-6 rounded-lg     border border-gray-200 hover:shadow-md transition duration-300">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPDcMnpgGkzIFxDpDaHEIFVg_D6nVG5Z0pPA&s" alt="Certifications" className="mx-auto w-16 h-16 rounded-full" />
+                            <h2 className="text-xl font-semibold text-gray-800 flex items-center justify-center gap-2 mt-2">
+                                🤖 N8N Projects
+                            </h2>
+                            <p className="mt-2 text-gray-600">
+                                Browse the Projects I’ve done during work at <a href="https://www.bravonet.my/" target="_blank" rel="noopener noreferrer">BRAVONET</a>.
+                            </p>
+                            <a href="ai-automation" className="mt-4 inline-block no-underline px-6 py-2 bg-sky-500 text-white font-medium rounded-lg  hover:bg-sky-600 transition">
+                                View Projects
+                            </a>
+                        </div>
                     </div>
 
 

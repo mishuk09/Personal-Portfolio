@@ -27,6 +27,8 @@ import SurveyDashboard from './components/Projects/Mmu/SurveyDashboard ';
 import ProtectedRouteSurvey from './components/Utills/ProtectedRouteSurvey';
 import Presentation from './components/Projects/Mmu/Presentation';
 import ThesisSummary from './components/Projects/Mmu/ThesisSummary';
+import RandomForestSteps from './components/Projects/Mmu/RandomForestSteps';
+import Aiagent from './components/Projects/Aiagent';
 
 
 function App() {
@@ -71,7 +73,9 @@ function App() {
           <Route path='/rku' element={<ThesisPapers />}></Route>
           <Route path='/certifications' element={<SingleCertificate />}></Route>
           <Route path='/projectsall' element={<ProjectAll />}></Route>
-          <Route path='/projects' element={<Projects />}></Route>
+          <Route path='/ai-automation' element={<Aiagent />}></Route>
+
+          <Route path='/rf' element={<RandomForestSteps />}></Route>
 
           <Route path='/summary' element={<ProtectedRoute>
             <SurveySummary />

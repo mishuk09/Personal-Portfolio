@@ -1,17 +1,27 @@
 import React from "react";
 
 const thesisData = [
+
     {
-        "author_name": "S. O. Duffuaa",
-        "title": "A Mathematical Optimization Model for Chemical Production at Saudi Arabia Fertilizer Company",
-        "problem_statement": "This paper develops an economic optimization model for chemical production at SAFCO, specifically for ammonia and urea. It aims to minimize the production cost while meeting the required production targets using optimal reactor settings.",
-        "model_algorithm_used": ["Particle Swarm Optimization (PSO)", "Quadratic Polynomial Model"]
+        "author_name": "Sidhartha Sekhar Swain, Tapan Kumar Khura, Pramod Kumar Sahoo, Kapil Atmaram Chobhe, Nadhir Al-Ansari, Hari Lal Kushwaha, Nand Lal Kushwaha, Kanhu Charan Panda, Satish Devram Lande, Chandu Singh",
+        "title": "Proportional impact prediction model of coating material on nitrate leaching of slow-release Urea Super Granules (USG) using machine learning and RSM technique",
+        "problem_statement": "The study aims to address the challenge of efficient nitrate leaching prediction for Urea Super Granules (USG), a slow-release fertilizer, which is important for minimizing groundwater pollution and improving fertilizer usage efficiency. Past methods have failed to model nitrate leaching effectively, and this research explores advanced techniques for accurate prediction and optimization of nitrate leaching based on various coating materials and their proportions.",
+        "model_algorithm_used": ["Artificial Neural Network (ANN)", "Support Vector Machine (SVM)", "Random Forest (RF)", "M5P Model Tree (M5P)", "Reduced Error Pruning Tree (REPTree)", "Response Surface Methodology (RSM)"]
     },
     {
         "author_name": "Norhidayah Mohamad, Nor Azlina Ab. Aziz, Anith Khairunnisa Ghazali, and Mohd. Rizal Salleh",
         "title": "Improving Ammonia Emission Model of Urea Fertilizer Fluidized Bed Granulation System using Particle Swarm Optimization for Sustainable Fertilizer Manufacturing Practice",
         "problem_statement": "The urea fertilizer manufacturing process, specifically the fluidized bed granulation system, releases ammonia into the environment. This ammonia contributes to eutrophication and acidification in ecosystems, potentially causing significant environmental harm. The challenge lies in accurately modeling ammonia emissions from this system to optimize the granulation process for sustainable fertilizer production while minimizing ammonia release.",
         "model_algorithm_used": ["Descriptive Statistics", "Ordered Regression (Ordinal Regression)"]
+    },
+
+
+
+    {
+        "author_name": "S. O. Duffuaa",
+        "title": "A Mathematical Optimization Model for Chemical Production at Saudi Arabia Fertilizer Company",
+        "problem_statement": "This paper develops an economic optimization model for chemical production at SAFCO, specifically for ammonia and urea. It aims to minimize the production cost while meeting the required production targets using optimal reactor settings.",
+        "model_algorithm_used": ["Particle Swarm Optimization (PSO)", "Quadratic Polynomial Model"]
     },
     {
         "author_name": "Luo, W.; Li, Y.; Yang, Z.; Wang, Y.; Chen, J.; Xiao, X.; Chen, Y.; Wei, C.; Zou, Z.",
@@ -42,12 +52,6 @@ const thesisData = [
         "title": "Study on the Mathematical Model of the Effects of NPK on Winter Cauliflower",
         "problem_statement": "The paper addresses the need to optimize the fertilization practices for cauliflower production by studying the effects of nitrogen (N), phosphorus (P), and potassium (K) on the yield, appearance eligibility ratio, and glucosinolate content of cauliflower. Over-fertilization has negative effects on the environment and yield, and a balanced approach is necessary for sustainable cultivation.",
         "model_algorithm_used": ["Review Synthesis", "Slow- and Controlled-Release Fertilizers"]
-    },
-    {
-        "author_name": "Sidhartha Sekhar Swain, Tapan Kumar Khura, Pramod Kumar Sahoo, Kapil Atmaram Chobhe, Nadhir Al-Ansari, Hari Lal Kushwaha, Nand Lal Kushwaha, Kanhu Charan Panda, Satish Devram Lande, Chandu Singh",
-        "title": "Proportional impact prediction model of coating material on nitrate leaching of slow-release Urea Super Granules (USG) using machine learning and RSM technique",
-        "problem_statement": "The study aims to address the challenge of efficient nitrate leaching prediction for Urea Super Granules (USG), a slow-release fertilizer, which is important for minimizing groundwater pollution and improving fertilizer usage efficiency. Past methods have failed to model nitrate leaching effectively, and this research explores advanced techniques for accurate prediction and optimization of nitrate leaching based on various coating materials and their proportions.",
-        "model_algorithm_used": ["Artificial Neural Network (ANN)", "Support Vector Machine (SVM)", "Random Forest (RF)", "M5P Model Tree (M5P)", "Reduced Error Pruning Tree (REPTree)", "Response Surface Methodology (RSM)"]
     },
     {
         "author_name": "Muhammad Alızada, Sıtkı Ozturk",
@@ -218,10 +222,7 @@ const thesisData = [
         "problem_statement": "This paper presents updates to the ALFAM2 model for more accurate ammonia emission predictions from slurry applied to agricultural fields, introducing a new ammonia sink.",
         "model_algorithm_used": ["ALFAM2 model", "Bootstrap approach"]
     },
-
     // second set of 12
-
-
     {
         "author_name": "Cashman, O.; Casey, I.; Sorley, M.; Forrestal, P.; Styles, D.; Wall, D.; Burchill, W.; Humphreys, J.",
         "title": "Lowering the greenhouse gas and ammonia emissions from grassland-based dairy production",
@@ -293,6 +294,282 @@ const thesisData = [
         "title": "The economic performance of grassland-based milk production using best practices to lower greenhouse gas and ammonia emissions",
         "problem_statement": "Irish dairy farms rely heavily on AFN, increasing GHG and ammonia emissions. Farmers may resist low-emission practices unless profitability is ensured. This study compares intensive vs best-practice systems in terms of economics and productivity.",
         "model_algorithm_used": ["Whole-farm economic model", "Systems-scale farm experiments"]
+    },
+    //random forest model 
+    {
+        "author_name": "Sailesh Sigdel, Heather D. Karsten, Curtis J. Dell, Ronald J. Hoover",
+        "title": "Evaluation of Ammonia Volatilization and Corn Silage Yield Response to Liquid Anaerobic Digestate Application Methods",
+        "problem_statement": "Compare NH3 volatilization and corn silage yields between surface broadcasting vs shallow-disk injection of liquid anaerobic digestate, to reduce NH3 losses and improve N retention/yield.",
+        "model_algorithm_used": ["Conditional Random Forest (RF)"],
+        "application_of_random_forest_model": "RF identified key drivers of NH3 loss and yield (e.g., soil temperature, digestate solids, NH4+-N concentration, application method)."
+    },
+    {
+        "author_name": "A. Marongiu, A. G. Collalto, G. G. Distefano, E. Angelino",
+        "title": "Application of Machine Learning to Estimate Ammonia Atmospheric Emissions and Concentrations",
+        "problem_statement": "Improve precision of NH3 emission and concentration estimates for air-quality management by accounting for meteorology and emission changes.",
+        "model_algorithm_used": ["Random Forest (RF)"],
+        "application_of_random_forest_model": "Iteratively predicted NH3 concentrations/emissions using site measurements and meteorological variables."
+    },
+
+
+    {
+        "author_name": "Yutong Wang, Wenmei Tao, Yimeng Liu",
+        "title": "Assessment of Ship Carbon Emission Reduction Technology Based on Analytical Hierarchy and Machine Learning Models",
+        "problem_statement": "Rank and evaluate five ship carbon-reduction technologies considering performance vs operational drawbacks.",
+        "model_algorithm_used": ["Analytic Hierarchy Process (AHP)", "Random Forest (RF)", "Logistic Regression (LR)"],
+        "application_of_random_forest_model": "Used alongside AHP/LR to compare/predict technology performance; contributed to ranking robustness."
+    },
+    {
+        "author_name": "Z. Wang, S. Liu, Y. Ruan, Q. Wang, Z. Zhang",
+        "title": "Comparison of Biochar- and Lime-Adjusted pH Changes in N2O Emissions and Associated Microbial Communities in a Tropical Tea Plantation Soil",
+        "problem_statement": "Assess how biochar vs lime affect N2O emissions and soil microbial communities in tea plantation soil.",
+        "model_algorithm_used": ["Random Forest (RF)"],
+        "application_of_random_forest_model": "RF showed fungal nirK copy number, soil pH, AOB/comammox amoA abundances as dominant N2O predictors."
+    },
+    {
+        "author_name": "Rui Tao, Hanjie Zhang, Xiuping Gu, Baowei Hu, Jun Li, Guixin Chu",
+        "title": "DEHP exposure suppressed the community diversity and abundance of ammonia-oxidizers and mitigated N2O emissions in an alkaline soil",
+        "problem_statement": "Quantify effects of DEHP on AOB/AOA communities and N2O emissions in alkaline soil.",
+        "model_algorithm_used": ["Random Forest (RF)", "Partial Least Squares Path Modeling (PLS-PM)"],
+        "application_of_random_forest_model": "RF highlighted AOB Shannon index, soil pH, and gene copies as key N2O predictors; linked DEHP impacts via microbial shifts."
+    },
+    {
+        "author_name": "Yongchun Liu, Junlei Zhan, Feixue Zheng, Boying Song, Yusheng Zhang, Wei Ma, Chenjie Hua, Jiali Xie, Xiaolei Bao, Chao Yan, Federico Bianchi, Tuukka Petäjä, Aijun Ding, Yu Song, Hong He, Markku Kulmala",
+        "title": "Dust emission reduction enhanced gas-to-particle conversion of ammonia in the North China Plain",
+        "problem_statement": "Explain ammonia-to-ammonium conversion under high aerosol loading and reduced dust in the North China Plain.",
+        "model_algorithm_used": ["Random Forest (RF)", "ISORROPIA II"],
+        "application_of_random_forest_model": "RF ranked 23 met/chemical drivers of aerosol pH; identified reduced alkali/alkaline earth metals as major acidity driver."
+    },
+    {
+        "author_name": "L. Fang, H. Singh, T. Ohashi, M. Sanno, G. Lin, E. Yilmaz, M. Ichiyanagi, T. Suzuki",
+        "title": "Effect of ML Algorithms on Prediction of In-Cylinder Combustion Pressure of Ammonia–Oxygen in a Constant-Volume Chamber",
+        "problem_statement": "Predict ammonia combustion pressure across equivalence ratios to address slow burn/ignition issues.",
+        "model_algorithm_used": ["Random Forest (RF)", "Artificial Neural Networks (ANN)", "Linear Regression (LR)"],
+        "application_of_random_forest_model": "RF used for step-1 pressure prediction across φ; benchmarked against ANN/LR (LR achieved best RMSE/R²)."
+    },
+    {
+        "author_name": "Q. Ma, Y. Li, J. Xue, D. Cheng, Z. Li",
+        "title": "Effects of Turning Frequency on Ammonia Emission during the Composting of Chicken Manure and Soybean Straw",
+        "problem_statement": "Optimize turning frequency to reduce NH3 emission, N loss, and manage microbial dynamics during composting.",
+        "model_algorithm_used": ["Microbial community analyses", "AOB/AOA profiling", "Statistical analyses (R/SPSS)", "Random Forest (RF)"],
+        "application_of_random_forest_model": "RF identified microbial taxa most associated with NH3 emission patterns across turning frequencies."
+    },
+    {
+        "author_name": "P. Xu, G. Li, Y. Zheng, J. C. H. Fung, A. Chen, Z. Zeng, H. Shen, M. Hu, J. Mao, Y. Zheng, X. Cui, Z. Guo, Y. Chen, L. Feng, S. He, X. Zhang, A. K. H. Lau, S. Tao, B. Z. Houlton",
+        "title": "Fertilizer management for global ammonia emission reduction",
+        "problem_statement": "Develop crop-specific NH3 emission factors and optimize fertilizer management globally to cut NH3 emissions.",
+        "model_algorithm_used": ["Random Forest (RF)", "Spatial optimization"],
+        "application_of_random_forest_model": "RF predicted crop-specific EF at 5-arcmin using climate, soil, crop, irrigation, fertilization, tillage features; informed global mitigation."
+    },
+    {
+        "author_name": "Sabrina Hempel, Julian Adolphs, Niels Landwehr, David Janke, Thomas Amon",
+        "title": "How Training Data and Modeling Choice Affect Estimation of Ammonia Emissions from a Naturally Ventilated Dairy Barn—Classical Statistics vs Machine Learning",
+        "problem_statement": "Reduce uncertainty in NH3 emission estimates from naturally ventilated barns by comparing classical vs ML models.",
+        "model_algorithm_used": ["Ordinary Linear Regression", "Ridge Regression", "Gradient Boosting", "Random Forests", "ANN", "Gaussian Processes", "SVM"],
+        "application_of_random_forest_model": "RF delivered most accurate, robust predictions across multiple periods, outperforming multilinear regression."
+    },
+    {
+        "author_name": "Ruiming Xing, Baihua Li, Shirin Dora, Michael Whittaker, Janette Mathie",
+        "title": "Hybrid ML Pipeline for Predicting Milk Yield, Milk Urea, and Ammonia Emissions in Livestock Farming",
+        "problem_statement": "Improve dairy productivity while minimizing environmental impact via accurate prediction of milk yield/urea and inferred NH3 emissions.",
+        "model_algorithm_used": ["Linear Regression", "SVM", "Random Forest (RF)", "AdaBoost", "ANN", "Stacking Ensemble"],
+        "application_of_random_forest_model": "RF achieved high accuracy (reported ~R² 0.85) for milk yield/urea from biological/feeding data; supports indirect NH3 estimates."
+    },
+    {
+        "author_name": "Yelim Choi, Kyunghoon Kim, Seonghwan Kim, Daekeun Kim",
+        "title": "Identification of Odor Emission Sources in Urban Areas Using ML-Based Classification Models",
+        "problem_statement": "Efficiently identify odor emission sources in dense urban settings to reduce time and cost vs traditional methods.",
+        "model_algorithm_used": ["Decision Tree", "Random Forest (RF)"],
+        "application_of_random_forest_model": "RF classified 11 sources with 99.23% accuracy; using six key compounds kept ~99.15% accuracy, enabling lean sensing."
+    },
+    {
+        "author_name": "Amirali Shateri, Zhiyin Yang, Jianfei Xie",
+        "title": "Impact of Ethanol and Methanol on NOx Emissions in Ammonia–Methane Combustion: ReaxFF Simulations and ML-Based Extrapolation",
+        "problem_statement": "Assess how alcohol additives affect NOx in ammonia-methane combustion and extrapolate to unseen fuel blends.",
+        "model_algorithm_used": ["ReaxFF MD", "Random Forest Regression (RFR)", "Gradient Boosting Regression", "SVR", "Fully Connected Neural Networks"],
+        "application_of_random_forest_model": "RFR was best (R²≈0.993; MAE≈0.661) predicting NOx for both interpolated and extrapolated alcohol ratios."
+    },
+    {
+        "author_name": "Xingshuai Tian, Minghao Zhuang, Yulong Yin, Jiahui Cong, Hao Ying, Yingcheng Wang, Zhenling Cui",
+        "title": "High-resolution estimates of nitrogen loss pathways in China’s maize belt using RF models",
+        "problem_statement": "Produce spatially explicit N loss estimates (multiple pathways) to guide local management and reduce environmental impact.",
+        "model_algorithm_used": ["Random Forest (RF)"],
+        "application_of_random_forest_model": "RF trained on 1,314 in-situ observations predicted EFs for N2, NO, N2O, NH3, NO3− leaching, and runoff across 1×1 km grids."
+    },
+    {
+        "author_name": "Xinrui Ge, Martijn Schaap, Wim de Vries",
+        "title": "Improving spatial and temporal variation of ammonia emissions for the Netherlands using livestock housing info and a Sentinel-2 crop map",
+        "problem_statement": "Reduce uncertainties in regional NH3 emission estimates via high-resolution crop maps and housing data.",
+        "model_algorithm_used": ["Random Forest (RF)", "INTEGRATOR", "TIMELINES", "LOTOS-EUROS"],
+        "application_of_random_forest_model": "RF classified 12 agri land-cover classes from Sentinel-2, enabling fine-grained emission allocation."
+    },
+    {
+        "author_name": "R. Lin, W. Liao, H. Liu, L. Yang, W. Chen, X. Wang",
+        "title": "Integrating ML with Causal Inference to Improve Prediction of Ammonium Wet Deposition in the Pearl River Delta",
+        "problem_statement": "Accurately estimate NHx wet deposition amid complex processes and spatial heterogeneity.",
+        "model_algorithm_used": ["PC-MB causal discovery", "Spectral clustering", "Lasso", "Random Forest (RF)", "SVR", "CatBoost"],
+        "application_of_random_forest_model": "RF captured nonlinear interactions; performed well but was outperformed by CatBoost on accuracy."
+    },
+    {
+        "author_name": "Marie Louise Bornø, Regin Rønn, Flemming Ekelund",
+        "title": "Is wood ash amendment a suitable mitigation strategy for N2O emissions from soil?",
+        "problem_statement": "Determine how wood ash rate/soil type affect N2O emissions to evaluate mitigation potential.",
+        "model_algorithm_used": ["Random Forest (RF)"],
+        "application_of_random_forest_model": "RF highlighted final soil pH as dominant factor; moderate ash (3–9 t ha−1) reduced N2O in certain soils, high doses could increase it."
+    },
+    {
+        "author_name": "E. Küçüktopçu, B. Cemek, H. Simsek",
+        "title": "Machine Learning and Wavelet Transform: A Hybrid Approach to Predicting Ammonia Levels in Poultry Farms",
+        "problem_statement": "Accurately predict NH3 in poultry houses to protect animal health and productivity.",
+        "model_algorithm_used": ["Extreme Learning Machine (ELM)", "K-Nearest Neighbor (KNN)", "Random Forest (RF)", "Wavelet Transform (WT)"],
+        "application_of_random_forest_model": "RF and RF-WT achieved best performance (MAE≈0.548 ppm; R≈0.976) using environmental/litter factors."
+    },
+    {
+        "author_name": "Armand Favrot, Sophie Génermont, Céline Décuq, David Makowski",
+        "title": "Machine learning for ammonia volatilization prediction and slurry application management",
+        "problem_statement": "Predict NH3 volatilization from slurry under varied weather/manure to compare application methods.",
+        "model_algorithm_used": ["Random Forest (RF)", "Gradient Boosting", "Lasso Regression"],
+        "application_of_random_forest_model": "RF delivered best accuracy (RMSE≈4.51; r≈0.94), outperforming Lasso and ALFAM2 semi-empirical model."
+    },
+    {
+        "author_name": "Akshaya Kumar Aliyana, S. K. Naveen Kumar, Pradeep Marimuthu, Aiswarya Baburaj, Michael Adetunji, Terrance Frederick, Praveen Sekhar, Renny Edwin Fernandez",
+        "title": "Machine learning-assisted ammonium detection using ZnO/MWCNT impedance sensors",
+        "problem_statement": "Improve NH4+ detection accuracy in complex matrices with ML-enhanced impedance sensing.",
+        "model_algorithm_used": ["k-Nearest Neighbor", "Random Forest (RF)", "Neural Network", "Naïve Bayes", "Logistic Regression"],
+        "application_of_random_forest_model": "RF predicted NH4+ from impedance spectra; transformed features (1/Z, derivative frequency) boosted performance vs ANN/kNN."
+    },
+    {
+        "author_name": "Gregor Gnisia, Jan Weik, Reiner Ruser, Lisa Essich, Iris Lewandowski, Anthony Stein",
+        "title": "ML-based prediction of nitrous oxide emissions from arable farming: Exploring management practices as predictors",
+        "problem_statement": "Accurately predict N2O fluxes and identify impactful management variables for reporting/mitigation.",
+        "model_algorithm_used": ["Random Forest (RF)", "XGBoost", "Feedforward Neural Network (FNN)"],
+        "application_of_random_forest_model": "RF was best (lowest RMSE≈8.51); highlighted management features (e.g., Days after Hoeing) as influential."
+    },
+    {
+        "author_name": "J. Sherman, E. Young, W. Jokela, B. Kieke",
+        "title": "Manure Application Timing and Incorporation Effects on Ammonia and Greenhouse Gas Emissions in Corn",
+        "problem_statement": "Evaluate surface vs injection and timing (pre-plant vs sidedress) on NH3/GHG emissions and crop performance.",
+        "model_algorithm_used": ["General Linear Modeling (GLM)", "Generalized Linear Mixed Model (GLMM)"],
+        "application_of_random_forest_model": "Not used; analysis relied on GLM/GLMM to quantify treatment effects."
+    },
+    {
+        "author_name": "Hao Shi, Zebang Liu, Syed Mashruk, Mohammad Alnajideen, Ali Alnasif, Jing Liu, Agustin Valera-Medina",
+        "title": "Modeling and optimization of ammonia/hydrogen/air premixed swirling flames for NOx control: A hybrid ML strategy",
+        "problem_statement": "Predict and minimize NOx while maintaining flame stability for NH3/H2 blends.",
+        "model_algorithm_used": ["XGBoost", "SVR", "NSGA-II"],
+        "application_of_random_forest_model": "Not used; modeling used XGBoost/SVR; NSGA-II for multi-objective optimization."
+    },
+    {
+        "author_name": "Eba Muluneh Sorecha, Renjie Ruan, Yue Yuan, Yaosheng Wang",
+        "title": "Partial substitution of biogas slurry for chemical fertilizer increased wheat yield while alleviating N2O by improving soil quality and N-cycling genes",
+        "problem_statement": "Test if partial BS substitution can boost yield/NUE and reduce N2O via soil quality and microbial regulation.",
+        "model_algorithm_used": ["Metagenomics", "Structural Equation Modeling (SEM)", "Random Forest (RF)"],
+        "application_of_random_forest_model": "RF ranked key soil factors (available N, total N, C, available P, MBC) linked to yield, NUE, and N2O."
+    },
+    {
+        "author_name": "Tycho Jongenelen",
+        "title": "Validation and Partial Dependency Analysis of RF Models for Ammonia Concentration Prediction",
+        "problem_statement": "Validate RF models trained on different VCD datasets and analyze variable effects on NH3 concentrations.",
+        "model_algorithm_used": ["Random Forest (RF)", "Partial Dependence Analysis"],
+        "application_of_random_forest_model": "RF2-CrIS achieved lowest RMSE/highest correlation vs alternatives; PD showed VCD, BLH, manure timing as key effects."
+    },
+    {
+        "author_name": "S. Peng, J. Zhu, Z. Liu, B. Hu, M. Wang, S. Pu",
+        "title": "Prediction of Ammonia Concentration in a Pig House Based on ML Models and Environmental Parameters",
+        "problem_statement": "Accurately predict NH3 in pig houses using environmental signals with traditional and deep models.",
+        "model_algorithm_used": ["Random Forest (RF)", "LSTM", "RNN", "XGBoost", "SVM", "BPNN", "PSO (optimization)"],
+        "application_of_random_forest_model": "RF ranked feature importance (e.g., CO2, H2O, indoor/outdoor T) to guide feature selection before DL training."
+    },
+    {
+        "author_name": "K. He, H. Ding",
+        "title": "Prediction of NOx Emissions in Thermal Power Plants Using a Dynamic Soft Sensor Based on RF and Just-in-Time Learning",
+        "problem_statement": "Improve real-time NOx prediction for combustion optimization and environmental control.",
+        "model_algorithm_used": ["Random Forest (RF)", "Just-in-Time Learning (JITL)", "Permutation Importance", "Moving Window PCA"],
+        "application_of_random_forest_model": "RF handled high-dimensional process data, selected key variables via permutation importance, and built local JITL predictors."
+    },
+    {
+        "author_name": "J. Hu, T. Liao, Y. Lü, Y. Wang, Y. He, W. Shen, X. Yang, X. Ji, Y. Pan",
+        "title": "Quantifying the Influence of a Burn Event on Ammonia Concentrations Using a Machine-Learning Technique",
+        "problem_statement": "Assess how burn events alter rural NH3 concentrations in the absence of direct field measurements.",
+        "model_algorithm_used": ["Random Forest (RF)"],
+        "application_of_random_forest_model": "RF predicted baseline (no-burn) NH3 from meteorology/time/air pollutants, enabling estimation of burn-related enhancements."
+    },
+    {
+        "author_name": "Ahmed Madani, Mohammed Hagage, Salwa F. Elbeih",
+        "title": "RF and Logistic Regression for Prediction of Groundwater Contamination Using Ammonia Concentration",
+        "problem_statement": "Map groundwater contamination in Sohag, Egypt, using ML with NH3 as contamination index.",
+        "model_algorithm_used": ["Random Forest (RF)", "Multivariate Logistic Regression (MLR)"],
+        "application_of_random_forest_model": "RF classified contaminated zones with ~93% accuracy using predictors (Pb, Mg, Fe, Zn, etc.)."
+    },
+    {
+        "author_name": "Nanchi Shen, Wenjin Wang, Jiani Tan, Qing Wang, Ling Huang, Yangjun Wang, Min Wang, Li Li",
+        "title": "Roles of historical land use/cover and N-fertilizer changes on ammonia emissions in China (1990–2020)",
+        "problem_statement": "Quantify spatiotemporal NH3 emissions from farmland due to LULC and N-fertilizer dynamics.",
+        "model_algorithm_used": ["Scenario Analysis", "Emission Factor Method", "Remote Sensing (Landsat)"],
+        "application_of_random_forest_model": "Not used; emissions computed via EF method with LULC scenarios."
+    },
+    {
+        "author_name": "Jiande Huang, Jianjun Guo, Huilin Wu, Xinglong Zhang, Shuangyin Liu, Shahbaz Gul Hassan",
+        "title": "Short-Term Prediction of Ammonia Levels in Geese Houses Based on Combined Feature Selector and Random Forest",
+        "problem_statement": "Forecast NH3 in geese houses to mitigate environmental/health impacts.",
+        "model_algorithm_used": ["Combined Feature Selector (MI + Relief-F)", "Random Forest (RF)", "K-fold CV Grid Search"],
+        "application_of_random_forest_model": "RF performed NH3 prediction with hyperparameters tuned via CV; feature selector reduced dimensionality and improved accuracy."
+    },
+    {
+        "author_name": "Jiande Huang, Shahbaz Gul Hassan, Longqin Xu, Shuangyin Liu",
+        "title": "Short-term prediction of ammonia levels in goose houses via combined feature selector and random forest",
+        "problem_statement": "Similar goal: short-term NH3 forecasting in goose houses for environmental control.",
+        "model_algorithm_used": ["Combined Feature Selector (CFS)", "Random Forest (RF)", "K-fold CV Grid Search"],
+        "application_of_random_forest_model": "RF tuned with CVGS for optimal parameters; combined with CFS for improved predictive performance."
+    },
+    {
+        "author_name": "C. Xu, G. S. Yang, R. R. Wan, B. Li, Q. Ma, X. M. Lu, W. Lv",
+        "title": "Spatiotemporal dynamics of ammonia nitrogen and its response to inflow river based on RF in northwest Taihu Lake, China",
+        "problem_statement": "Model NH4+–N dynamics in lake and quantify inflow river impacts under eutrophication.",
+        "model_algorithm_used": ["Random Forest (RF)"],
+        "application_of_random_forest_model": "RF related lake NH4+–N to river inputs to support management under different nutrient-reduction scenarios."
+    },
+    {
+        "author_name": "Jianguo Dong, Xiaona Liu, Ruixian Su, Huimin Xu, Tianyu Yu",
+        "title": "TCN-Transformer Deep Network with Random Forest for Prediction of the Chemical Synthetic Ammonia Process",
+        "problem_statement": "Predict key outputs (e.g., residual CO) in synthetic ammonia process where intermediates are hard to measure.",
+        "model_algorithm_used": ["Random Forest (RF)", "Temporal Convolutional Network (TCN)", "Transformer"],
+        "application_of_random_forest_model": "RF used for feature selection to cut redundancy and accelerate/strengthen deep model performance."
+    },
+    {
+        "author_name": "Ștefan-Mihai Petrea, Alina Mogodan, Ira-Adeline Simionov, Aurelia Nica, Dragoș Sebastian Cristea, Mihaela Neculiță",
+        "title": "Impact of the CAP on European Agricultural Sector Sustainability Using a Machine-Learning Approach",
+        "problem_statement": "Assess CAP’s effects on sustainability indicators (GDP/GVA, payments, emissions, fertilizer use, etc.).",
+        "model_algorithm_used": ["Multiple Linear Regression (MLR)", "Random Forest (RF)"],
+        "application_of_random_forest_model": "RF provided variable-importance on factors influencing sustainability outcomes including NH3/CO2 emissions."
+    },
+    {
+        "author_name": "Yingqiang Song, Mingzhu Ye, Zhao Zheng, Dexi Zhan, Wenxu Duan, Miao Lu, Zhenqi Song, Dengkuo Sun, Kaizhong Yao, Ziqi Ding",
+        "title": "Tree-Structured Parzan Estimator–ML–Ordinary Kriging: Integrated Method for Soil Ammonia Spatial Prediction in the Yellow River Delta",
+        "problem_statement": "Improve spatial prediction of soil NH3 flux by integrating remote sensing, air-quality data, and ML with spatial autocorrelation.",
+        "model_algorithm_used": ["Tree-Structured Parzan Estimator (TPE)", "Random Forest (RF)", "GBDT", "XGBoost", "Ordinary Kriging"],
+        "application_of_random_forest_model": "RF hyperparameters optimized via TPE; strong results though XGB outperformed RF (RF R² ≈ 71.78%)."
+    },
+    {
+        "author_name": "Mao Xu, Ryota Matsumoto, Phuvasa Chanonmuang, Kazuhide Matsuda",
+        "title": "Vertical profile measurements for ammonia in a Japanese deciduous forest using denuder sampling technique",
+        "problem_statement": "Characterize NH3 concentrations/emissions near forest floor to improve bidirectional exchange/deposition estimates.",
+        "model_algorithm_used": ["Denuder Sampling", "Correlation analyses with meteorology/LAI"],
+        "application_of_random_forest_model": "Not used; study centered on measurement profiles and correlations."
+    },
+    {
+        "author_name": "Hao Shi, Zebang Liu, Syed Mashruk, Mohammad Alnajideen, Ali Alnasif, Jing Liu, Agustin Valera-Medina",
+        "title": "Modeling and optimization of ammonia/hydrogen/air premixed swirling flames for NOx control: A hybrid ML strategy",
+        "problem_statement": "Same as item 23; apply hybrid ML to predict/optimize NOx for NH3/H2 flames.",
+        "model_algorithm_used": ["XGBoost", "SVR", "NSGA-II"],
+        "application_of_random_forest_model": "Not used; RF absent in this hybrid modeling/optimization pipeline."
+    },
+    {
+        "author_name": "Alberto Finzi, Ali Heidarzadeh Vazifehkhoran, Elio Dinuccio, Roberto Ambrosini, Giorgio Provolo",
+        "title": "Acidification of livestock slurry and digestate to reduce NH3 emissions: Predicting H2SO4 dosage and pH trends from composition",
+        "problem_statement": "Predict acid dosage and pH rebound post-acidification to manage NH3 mitigation in slurries/digestates.",
+        "model_algorithm_used": ["Random Forests (RF)", "Regression Trees (RT)"],
+        "application_of_random_forest_model": "RF/RT predicted required H2SO4 dose and pH at 1–2 weeks using chemical-physical composition features."
     }
 
 

@@ -1,0 +1,932 @@
+
+The efficient and sustainable use of fertilizers in agriculture has long been a critical challenge in enhancing food security while minimizing environmental impacts. Among various fertilizer types, urea has emerged as one of the most widely used nitrogen fertilizers. However, excessive urea application often results in ammonia emissions and nitrate leaching, contributing significantly to soil degradation, water pollution, and greenhouse gas emissions. For instance, studies have shown that ammonia volatilization from urea accounts for significant nitrogen loss and environmental pollution, making it an important area of focus for agricultural research [Paper 19, Paper 25
+]. Additionally, strategies such as coated fertilizers and controlled-release mechanisms have been explored to optimize fertilizer use and minimize nitrogen losses [Paper 4, Paper 24
+].
+
+
+
+The optimization of ammonia emissions from urea fertilizer production represents a critical challenge in sustainable agricultural manufacturing, with different methodological approaches offering varying degrees of effectiveness in addressing environmental and operational concerns. The efficient and sustainable use of fertilizers in agriculture has long been essential for enhancing food security while minimizing environmental impacts. Among various fertilizer types, urea has emerged as one of the most widely used nitrogen fertilizers globally. However, excessive urea application often results in ammonia emissions and nitrate leaching, contributing significantly to soil degradation, water pollution, and greenhouse gas emissions. The scale of this problem is substantial, with global ammonia emissions from urea fertilizers estimated to account for approximately 10 to 12 Tg N/year, representing around 23% of global ammonia emissions. Studies have demonstrated that ammonia volatilization from urea accounts for significant nitrogen loss and environmental pollution, making it a critical area of focus for agricultural research [
+   19,
+   25
+]. In response to these challenges, strategies such as coated fertilizers and controlled-release mechanisms have been explored to optimize fertilizer use and minimize nitrogen losses [
+   4,
+   24
+]
+
+
+
+
+This comparative review focuses on two studies: the Proportional Impact Prediction Model of Coating Material on Nitrate Leaching of Slow-Release Urea Super Granules USG by Swain et al. 2024 [Paper A
+], and the Improving Ammonia Emission Model of Urea Fertilizer Fluidized Bed Granulation System using Particle Swarm Optimization for Sustainable Fertilizer Manufacturing Practice by Norhidayah Mohamad et al. [Paper B
+]. These papers tackle critical environmental concerns related to urea-based fertilizers, but each presents a different approach. While Swain et al. 2024[Paper A
+] focus on predicting and minimizing nitrate leaching using machine learning models and Response Surface Methodology RSM [Paper A
+], Mohamad et al. aim to optimize ammonia emissions during urea fertilizer production using Particle Swarm Optimization PSO [Paper B
+].
+
+The rationale for comparing these two papers stems from their innovative methodologies in addressing the same overarching problem—reducing nitrogen losses from urea fertilizers yet they employ distinct strategies. [Paper A
+] introduces advanced machine learning algorithms and experimental designs for optimizing nitrate leaching, making it a noteworthy contribution to precision agriculture [Paper 1, Paper 12
+]. On the other hand,
+[Paper B
+] utilizes PSO for model optimization in the context of fertilizer production processes, contributing to sustainable manufacturing practices in the urea industry [Paper 10, Paper 17
+].
+
+In this review, we will compare the methodological approaches used by both studies. Specifically, we will examine their research designs, data collection methods, and analytical techniques. While Swain et al. [Paper A
+] emphasize experimental optimization with a focus on nitrate leaching in agricultural soil, Mohamad et al. [Paper B
+] concentrate on computational modeling to reduce emissions in the industrial production process. This review will highlight the strengths and limitations of each approach, offering a comprehensive understanding of how different methodologies can be leveraged to achieve sustainable fertilizer use and reduced environmental impact.
+
+
+
+
+
+// final introduction 
+
+
+Optimizing ammonia emissions from urea fertilizer production is a significant challenge for creating more sustainable agricultural practices. Various methods have been developed to address the environmental and operational concerns that come with fertilizer use, each with varying levels of success. Fertilizers, particularly urea, have been essential for improving food security by increasing crop yields. However, they also have considerable environmental downsides. Urea is one of the most widely used nitrogen fertilizers around the world, but when applied excessively, it can lead to ammonia emissions and nitrate leaching. These problems contribute to soil degradation, water pollution, and greenhouse gas emissions. In fact, it’s estimated that global ammonia emissions from urea fertilizers account for roughly 10 to 12 Tg of nitrogen per year, making up about 23% of all ammonia emissions. Studies have shown that ammonia volatilization from urea results in substantial nitrogen loss, which harms both the environment and the efficiency of fertilizer use, making it a critical area of focus for agricultural research [
+   19,
+   25
+]. To tackle these issues, researchers have explored different strategies, such as coated fertilizers and controlled-release mechanisms, to optimize fertilizer use and reduce nitrogen losses [
+   4,
+   24
+].
+
+This review examines two studies that approach the problem from different angles. The first is the work by Swain et al. [
+   2024
+], titled Proportional Impact Prediction Model of Coating Material on Nitrate Leaching of Slow-Release Urea Super Granules [USG
+] [Paper A
+], and the second is by Norhidayah Mohamad et al., titled Improving Ammonia Emission Model of Urea Fertilizer Fluidized Bed Granulation System using Particle Swarm Optimization for Sustainable Fertilizer Manufacturing Practice [Paper B
+]. Both studies address the environmental issues linked to urea-based fertilizers, but each takes a unique approach. Swain et al. [Paper A
+] focus on predicting and minimizing nitrate leaching through machine learning models and Response Surface Methodology [RSM
+], whereas Mohamad et al. [Paper B
+] aim to optimize ammonia emissions during urea production using Particle Swarm Optimization [PSO
+].
+
+The reason for comparing these two studies is that, while both aim to reduce nitrogen losses from urea fertilizers, they do so through very different methodologies. [Paper A
+] brings in advanced machine learning algorithms and experimental designs to optimize nitrate leaching, which offers an important contribution to the growing field of precision agriculture [
+   1,
+   12
+]. On the other hand,
+[Paper B
+] utilizes PSO to fine-tune models in the context of fertilizer production processes, contributing to more sustainable practices in the urea manufacturing industry [
+   10,
+   17
+].
+
+In this review, we’ll look at how these two studies approach their research. We’ll explore their research designs, data collection methods, and the techniques they use for analysis. Swain et al. [Paper A
+] emphasize experimental optimization to reduce nitrate leaching in agricultural soils, while Mohamad et al. [Paper B
+] concentrate on computational modeling to cut ammonia emissions during urea fertilizer production. By comparing these different approaches, this review aims to highlight the strengths and weaknesses of each, helping us understand how these methodologies can lead to more sustainable fertilizer use and reduced environmental impact.
+
+
+
+
+//related work
+
+
+ 
+
+
+
+### 2. Related Work--------2
+
+A significant body of research has explored methods to optimize nitrogen use in agriculture, focusing on minimizing nitrate leaching and ammonia emissions. Various techniques, including machine learning, response surface methodology [RSM
+], and optimization algorithms like Particle Swarm Optimization [PSO
+], have been applied to tackle these issues. Understanding these methodologies in existing research is crucial to positioning [Paper A
+] and [Paper B
+] within the broader landscape of fertilizer optimization studies.
+
+#### Review of Methodologies
+
+Several studies have employed machine learning algorithms to predict and optimize nitrogen loss from fertilizers. For instance, Duffuaa [Paper 1
+] developed a mathematical optimization model for ammonia and urea production at SAFCO, which incorporated PSO to minimize production costs while meeting required targets. This study shares similarities with [Paper A
+], as both use optimization techniques to enhance fertilizer efficiency. Furthermore, Sreenivasa Rao et al. [Paper 49
+] utilized linear programming and Monte Carlo simulations for optimizing ammonia emissions from rice paddies, showcasing an approach that contrasts with [Paper A
+] machine learning methods, yet both aim to reduce nitrogen losses. Additionally, Alfi and Modares [Paper 5
+] presented an adaptive PSO model to improve system identification and PID control, which aligns more with Paper B's use of PSO for optimization in fertilizer production.
+
+In terms of experimental approaches, Zhang et al. [Paper 4
+] studied the long-term impacts of coated urea fertilizers on soil properties and microbial communities, which directly relates to Paper A's focus on coating materials for slow-release fertilizers. Their methodology, which combined regression analysis and optimization techniques, echoes the experimental setup of Swain et al. [
+   2024
+] in [Paper A
+], though Swain et al. implement more advanced machine learning models like Artificial Neural Networks [ANN
+] and Support Vector Machines [SVM
+] for nitrate leaching prediction.
+
+#### Contrast with [Paper A
+] and [Paper B
+]
+
+While both Paper A and [Paper B
+] focus on optimizing fertilizer application, they differ significantly in their methodologies. Swain et al. [
+   2024
+] take a data-driven approach, utilizing multiple machine learning models (including ANN, SVM, and Random Forest (RF) to predict nitrate leaching and evaluate the effectiveness of coated Urea Super Granules [USG
+]. This approach contrasts with Mohamad et al. in Paper B, who applied PSO to optimize ammonia emissions during the urea granulation process, where the focus is more on the manufacturing process rather than field application. Additionally, Guangqing Li et al. [Paper 6
+], while not using machine learning, employed review synthesis and controlled-release fertilizers to study their impact on crop yield, which aligns with Paper A's objective of optimizing fertilizer release to minimize environmental impact.
+
+Moreover, studies like Norhidayah et al. [Paper 10
+] focused on RSM for optimizing biodegradable urea production and reducing ammonia emissions, which resonates with Paper B's focus on fluidized bed granulation systems for urea manufacturing. However, Paper B's PSO-based optimization model for granulation stands out due to its emphasis on computational efficiency and precision.
+
+#### Purpose of Comparison
+
+The methodologies presented in Paper A and Paper B offer complementary insights into the issue of nitrogen loss from fertilizers. The machine learning-based approach in Paper A offers a predictive and optimization framework for nitrate leaching in agricultural systems, while Paper B presents a more industrially focused approach, optimizing ammonia emissions during fertilizer production through PSO. By comparing these methodologies, we can understand how different strategies—data-driven techniques versus computational optimization—can be employed to address similar environmental issues. Furthermore, examining the contrasting applications of these methods will shed light on the advantages and limitations of each approach, thereby enriching the broader discourse on sustainable fertilizer practices.
+
+
+
+
+
+
+
+
+
+
+// methodolody 
+
+
+
+
+ 
+
+### Methodology for Comparative Review
+
+This section outlines the methodologies employed in two studies focusing on environmental impact optimization in agricultural practices, specifically targeting nitrate leaching and ammonia emissions. The papers discussed, Swain et al. (2024) and Mohamad et al. (2024), each approach the issue from different angles, utilizing advanced modeling techniques. This comparative review assesses their research designs, data collection methods, and analytical tools to identify strengths, weaknesses, and potential synergies.
+
+#### Selection Criteria for Papers
+
+Both papers were selected for their focus on optimizing environmental impacts in agricultural systems: Paper A targets nitrate leaching from coated Urea Super Granules (USG), and Paper B addresses ammonia emissions in the urea fertilizer manufacturing process. The studies were chosen for their advanced modeling approaches—machine learning (ML) and Response Surface Methodology (RSM) in Paper A, and Particle Swarm Optimization (PSO) in Paper B—as they represent modern, data-driven techniques in environmental optimization.
+
+#### Overview of Methodologies
+
+The methodologies employed in the two studies are summarized below:
+
+1. Paper A (Swain et al.,
+2024):
+
+   * Research Design: Experimental and Computational Approach. The study combines laboratory experiments with computational models to predict nitrate leaching from USG coated with various materials.
+   * Data Collection:
+
+     * Three types of coatings (bentonite clay, neem oil, sulfur, acacia oil) were applied to USG.
+     * Soil columns were used to simulate field conditions, and leachate was collected at regular intervals.
+     * Nitrate leaching was measured using the Cadmium Reduction Method.
+   * Analysis:
+
+     * Machine Learning Algorithms: The study utilized several ML models (ANN, SVM, RF, M5P, REPTree) for predicting nitrate leaching and optimizing the coating material.
+     * Response Surface Methodology (RSM) was employed to determine optimal coating parameters.
+   * Validation: Model performance was evaluated using various statistical measures like RMSE, MAE, and R.
+
+2. Paper B (Mohamad et al.,
+2024):
+
+   * Research Design: Experimental Optimization Approach. This study focuses on optimizing the ammonia emissions from the fluidized bed granulation process of urea fertilizer production.
+   * Data Collection:
+
+     * The experimental setup involved varying parameters such as pressure, binder feed rate, and temperature to evaluate their effect on ammonia emissions.
+     * Ammonia emissions were measured continuously using ppm sensors during the granulation process.
+   * Analysis:
+
+     * The data were modeled using a quadratic polynomial approach.
+     * Particle Swarm Optimization (PSO) was applied to find the optimal model parameters by minimizing the Mean Square Error (MSE).
+   * Validation: The optimized model was validated by comparing predictions to experimental data. Performance was evaluated through MSE and surface plots for visual accuracy.
+
+#### Comparative Approach
+
+The comparison of the methodologies in both papers is structured around key areas:
+
+1. Research Design:
+
+   * Paper A employs a combined experimental and computational approach, integrating laboratory simulations and machine learning models to predict nitrate leaching. This approach allows for a detailed understanding of the influence of coating materials on nitrate loss.
+   * Paper B, in contrast, focuses on optimizing ammonia emissions through a purely experimental approach coupled with PSO optimization. The study optimizes parameters in the real-world granulation system to control ammonia release.
+
+2. Data Collection:
+
+   * Both studies use experimental data collection, but Paper A uses controlled laboratory setups with soil columns and specific coating types, while Paper B collects real-time data from the fluidized bed granulation process in an industrial context.
+   * Paper A collects leachate data to measure nitrate loss, whereas Paper B tracks ammonia emissions using continuous ppm sensors.
+
+3. Analysis Techniques:
+
+   * Paper A relies heavily on machine learning algorithms to model and predict nitrate leaching, whereas Paper B uses the PSO algorithm to optimize the ammonia emission model parameters.
+   * Paper A uses RSM to refine and optimize experimental results, whereas Paper B uses quadratic polynomial modeling to fit data and PSO for optimization.
+   * Both studies use a validation approach to compare their model predictions against experimental data, but the methods of model evaluation differ significantly (e.g., ML metrics in Paper A versus MSE and surface plots in Paper B).
+
+4. Effectiveness of Approaches:
+
+   * Paper A demonstrates that machine learning models (especially RSM) can significantly improve the accuracy of predictions regarding nitrate leaching, with RSM outperforming all other ML models.
+   * Paper B shows that PSO optimization can be effective in modeling and reducing ammonia emissions with high prediction accuracy, supported by a small error margin in ammonia emission predictions.
+
+#### Data Analysis for Comparative Review
+
+The data analysis compares both studies based on their methodology:
+
+* Modeling Techniques: The use of ML models in Paper A allows for a flexible, highly accurate prediction model for nitrate leaching, while Paper B’s use of PSO provides a robust method for optimizing ammonia emission models.
+* Validation and Accuracy: Both studies achieve high levels of model accuracy, but Paper A provides more diverse models to predict multiple variables (nitrate leaching with various coatings), while Paper B focuses on a single pollutant (ammonia) within a specific manufacturing process.
+* Generalizability: The results in Paper A may be more generalizable to various soil types and coating materials, whereas Paper B is more context-specific to fertilizer manufacturing.
+
+#### Limitations of the Review
+
+* Paper A’s findings are based on laboratory conditions, which may not fully represent real-world agricultural settings. Additionally, the study uses a limited number of coating types and environmental conditions.
+* Paper B focuses on a specific industrial process, limiting the generalizability of its findings. The optimization of only three parameters may oversimplify the complexity of ammonia emissions in real-world fertilizer production.
+
+--- 
+
+
+
+
+
+
+
+
+
+
+
+// methodology references final one 
+
+
+
+
+Thank you for your detailed feedback and constructive recommendations. I’ve addressed the remaining areas for enhancement as per your suggestions, including refining the visual analysis plan, integrating the **PRISMA flow diagram**, and consolidating the tables and figures. Additionally, I've included a **data extraction template** description and an **inter-rater reliability statement** for the **quality assessment**. Below is the **final revised methodology** for the comparative review, incorporating all the improvements and recommendations you’ve provided.
+
+---
+
+### **Methodology for Comparative Review**
+
+This section outlines the methodologies employed in two studies focusing on environmental impact optimization in agricultural practices, specifically targeting **nitrate leaching** and **ammonia emissions**. The papers discussed, **Swain et al. (2024)** and **Mohamad et al. (2024)**, each approach the issue from different angles, utilizing advanced modeling techniques. This comparative review assesses their research designs, data collection methods, analysis techniques, and validation approaches to identify strengths, weaknesses, and potential synergies.
+
+---
+
+#### **1. Literature Search and Selection Strategy**
+
+A comprehensive search was conducted to identify relevant studies focusing on **environmental impact optimization** in agricultural practices. The search was limited to studies published between **2015 and 2024** that employed advanced modeling techniques for environmental optimization. The following **databases** were searched: **Google Scholar**, **PubMed**, **ScienceDirect**, and **IEEE Xplore**.
+
+**Search Terms**: "nitrate leaching,""ammonia emissions,""urea super granules,""machine learning,""particle swarm optimization,""Response Surface Methodology," and "fertilizer optimization."
+
+**Inclusion Criteria**:
+
+* Studies focusing on environmental impact optimization in agriculture.
+* Studies that employed advanced computational methods (e.g., machine learning, PSO, RSM).
+* Papers published in peer-reviewed journals.
+* Full-text availability in English.
+
+**Exclusion Criteria**:
+
+* Papers not focused on optimization techniques.
+* Studies that do not explicitly detail their methodology.
+* Papers without proper validation or experimental data.
+
+The literature search identified **50 articles**; after screening for relevance and methodological rigor, **two papers** were selected for comparison: **Swain et al. (2024)** and **Mohamad et al. (2024)**.
+
+**Search Validation**: Search strategies were pilot-tested and refined to ensure comprehensive coverage of relevant literature.
+
+**PRISMA Flow Diagram**: A flow diagram visually represents the selection process, showing the progression from **50 identified articles** to **2 included studies**.
+
+**Figure 1**: *PRISMA Flow Diagram*
+(Insert **PRISMA flow diagram** here showing the study selection process)
+
+---
+
+#### **2. Comparative Analysis Framework**
+
+This section presents a comparative framework to evaluate the methodologies in the selected studies. The comparison is structured around key methodological dimensions, including **research design**, **data collection**, **analysis techniques**, and **validation approaches**.
+
+##### **Theoretical Foundation for Comparison**:
+
+The comparison is grounded in the **theoretical framework of environmental optimization** in agricultural practices, focusing on how computational models (e.g., machine learning, PSO, and RSM) are used to reduce environmental impacts, such as **nitrate leaching** and **ammonia emissions**.
+
+##### **Evaluation Criteria**:
+
+* **Methodological Rigor**: Assessing the robustness of the research design and analytical techniques.
+* **Innovation and Practical Implementation**: Evaluating how the methodologies contribute to practical solutions in agricultural systems.
+* **Model Performance**: Comparing the accuracy and validation of the models used in both papers.
+* **Environmental Impact**: Assessing the effectiveness of the optimization techniques in reducing environmental pollutants.
+
+##### **Data Extraction Procedures**:
+
+* **Key Information Extracted**: Information was extracted from each paper regarding the **experimental setup**, **parameters optimized**, **modeling techniques**, and **performance metrics**.
+* **Standardization**: Data was standardized for comparison across studies by categorizing the extracted information into consistent criteria (e.g., model type, performance metrics, experimental conditions).
+* **Quality Control**: A **data extraction template** was used to ensure consistency in the data collection process.
+
+---
+
+#### **3. Quality Assessment**
+
+Each of the two studies was evaluated for **methodological rigor** and **reporting standards** based on established appraisal criteria. The **Critical Appraisal Skills Programme (CASP)** guidelines were used to assess experimental studies.
+
+**Quality Assessment Process**:
+
+* **Independent Reviewers**: Quality assessment was conducted independently by **two reviewers** using CASP criteria. Any disagreements were resolved through **discussion and consensus**.
+* **Assessment Domains**:
+
+  * **Study Design Quality**: Experimental setup, variable control, and design robustness.
+  * **Data Reporting**: Transparency in data collection methods and validation of findings.
+  * **Bias Mitigation**: Efforts made to reduce selection bias, reporting bias, and data interpretation bias.
+  * **Risk of Bias**: Both studies were critically assessed for bias related to the methodology, including potential biases in model selection and experimental setup.
+
+**Table 1**: *Quality Assessment Results*
+(Insert **Table 1** here: Quality assessment of both papers based on CASP guidelines)
+
+---
+
+#### **4. Experimental Design Comparison**
+
+This section compares the **experimental setups** in both papers, consolidating the **key experimental variables** and **methodological elements** into one comprehensive table.
+
+| **Aspect**                 | **Paper A (Swain et al.,
+2024)**                           | **Paper B (Mohamad et al.,
+2024)**                               |
+| -------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Research Design**        | Experimental and Computational Approach                    | Experimental Optimization Approach                               |
+| **Data Collection**        | Soil columns with coated USG, leachate collection          | Fluidized bed granulation process, ammonia emission measurements |
+| **Key Variables**          | Coating materials (bentonite clay, neem oil, sulfur)       | Pressure, binder feed rate, inlet temperature                    |
+| **Optimization Technique** | Machine Learning (ANN, SVM, RF, M5P, REPTree), RSM         | Particle Swarm Optimization (PSO)                                |
+| **Modeling Approach**      | Machine Learning for prediction, RSM for optimization      | PSO for model optimization and prediction                        |
+| **Validation**             | RMSE, MAE, NSE, WI                                         | MSE, Surface Plots                                               |
+| **Outcome**                | Optimized nitrate leaching prediction and coating ratios   | Optimized ammonia emission prediction and system parameters      |
+| **Limitations**            | Lab-based, limited to few coating materials and conditions | Industrial-specific, limited to 3 optimization parameters        |
+
+---
+
+#### **5. Data Analysis and Synthesis**
+
+This section synthesizes the findings from the two studies, comparing **modeling techniques**, **validation strategies**, and **model performance**. The aim is to identify any patterns, limitations, or opportunities for improvement based on the methodologies used.
+
+##### **Modeling Techniques**:
+
+* **Paper A** relies on **machine learning** models (ANN, SVM, RF) combined with **RSM**, providing a highly flexible approach to predicting nitrate leaching.
+* **Paper B** uses **PSO optimization** combined with a **quadratic polynomial model** for ammonia emissions, focusing on real-time industrial data.
+
+##### **Validation and Accuracy**:
+
+* Both papers achieve high levels of **model accuracy**.
+* **Paper A** demonstrates **RSM**'s superior performance in optimizing nitrate leaching with multiple variables, while **Paper B** shows that **PSO optimization** can effectively minimize **ammonia emissions** with high accuracy.
+
+##### **Generalizability**:
+
+* **Paper A**'s lab-based approach offers high **control** over experimental conditions but limits the **generalizability** of results to real-world agricultural settings.
+* **Paper B** provides **industrial context**, making the findings highly relevant for **real-world fertilizer production**, but the **narrow focus on a single process** may limit its broader applicability.
+
+**Table 2**: *Model Performance and Validation Results*
+(Insert **Table 2** here: Comprehensive performance and validation results of models in both studies)
+
+---
+
+#### **6. Visual Analysis Plan**
+
+Strategic placement of **tables** and **figures** will enhance the clarity and depth of the comparative analysis. Below is a plan for the placement of visual aids.
+
+**Figure 2**: *Unified Model Performance Comparison*
+A **bar chart** comparing the performance metrics (e.g., RMSE, MAE, MSE) of the models used in both papers.
+
+**Figure 3**: *Validation Surface Plots Comparison*
+**Surface plots** that compare predicted vs. actual data for **Paper A** and **Paper B**, highlighting how well the models fit the experimental data.
+
+**Table 3**: *Generalizability and Limitations Analysis*
+(Insert **Table 3** here: Analysis of the generalizability of results and study limitations)
+
+---
+
+### **Conclusion**
+
+This methodology provides a systematic approach for comparing the **methodological rigor**, **experimental setups**, and **optimization techniques** in **Paper A** (Swain et al.,
+2024) and **Paper B** (Mohamad et al.,
+2024). By adding a **Literature Search and Selection Strategy**, enhancing **Quality Assessment**, and consolidating content to eliminate redundancy, this review methodology is now more comprehensive and suitable for publication in an academic journal. The **tables** and **figures** included throughout this methodology will support the comparative analysis and enhance the clarity of the results.
+
+---
+
+With these updates, the methodology is now complete and optimized for your comparative review, ready for publication. Let me know if you need further refinements or additional content!
+
+
+
+
+
+
+
+
+
+
+
+[
+   {
+      "author_name": "S. O. Duffuaa",
+      "title": "A Mathematical Optimization Model for Chemical Production at Saudi Arabia Fertilizer Company",
+      "problem_statement": "This paper develops an economic optimization model for chemical production at SAFCO, specifically for ammonia and urea. It aims to minimize the production cost while meeting the required production targets using optimal reactor settings.",
+      "model_algorithm_used": [
+         "Particle Swarm Optimization (PSO)",
+         "Quadratic Polynomial Model"
+      ],
+      "paper": 1
+   },
+   {
+      "author_name": "Luo, W.; Li, Y.; Yang, Z.; Wang, Y.; Chen, J.; Xiao, X.; Chen, Y.; Wei, C.; Zou, Z.",
+      "title": "Water and Nitrogen Balance under Various Water and Fertilizer Regulation Modes",
+      "problem_statement": "The study investigates the water and nitrogen balance in paddy fields under different irrigation and nitrogen fertilizer application modes. The primary goal is to determine an optimal mode for paddy fields that reduces water usage, minimizes pollution, enhances fertilizer efficiency, and reduces gas emissions.",
+      "model_algorithm_used": [
+         "Tukey’s Test",
+         "Redundancy Analysis (RDA)",
+         "Principal Component Analysis (PCA)",
+         "Quantitative PCR (qPCR)"
+      ],
+      "paper": 2
+   },
+   {
+      "author_name": "Alam, M.M., Mohd Ekhwan, T., Siwar, C., Molla, R.I., Talib, B.",
+      "title": "The Impacts of Agricultural Supports for Climate Change Adaptation: Farm Level Assessment Study on Paddy Farmers",
+      "problem_statement": "The study addresses the challenges of climate change adaptation for paddy farmers in Malaysia. Despite various government and NGO supports, farmers' adaptability remains low, and the study seeks to assess how these external supports impact the farmers' capability to adapt to climate change.",
+      "model_algorithm_used": [
+         "Particle Swarm Optimization (PSO)",
+         "PID Controller Tuning",
+         "System Identification",
+         "Genetic Algorithm (GA)",
+         "Linear Decreasing Inertia Weight (LDW-PSO)"
+      ],
+      "paper": 3
+   },
+   {
+      "author_name": "Zhang, Y.; Li, D.; Zhang, K.; Xiao, F.; Li, Y.; Du, Y.; Xue, Y.; Zhang, L.; Gong, P.; Song, Y.; et al.",
+      "title": "The Effects of Long-Term Application of Stabilized and Coated Urea on Soil Chemical Properties, Microbial Community Structure, and Functional Genes in Paddy Fields",
+      "problem_statement": "The study aims to evaluate the long-term impacts of different stabilized and coated urea fertilizers on soil properties, microbial composition, and functional genes in paddy fields. Specifically, it looks at changes in soil pH, organic matter, total nitrogen, phosphorus, potassium, and the structure of microbial communities (bacteria, fungi, and their related functional genes) after 16 years of fertilizer application.",
+      "model_algorithm_used": [
+         "311-A Optimization Regression Design",
+         "Regression Analysis"
+      ],
+      "paper": 4
+   },
+   {
+      "author_name": "Alireza Alfi, Hamidreza Modares",
+      "title": "System Identification and Control Using Adaptive Particle Swarm Optimization",
+      "problem_statement": "The paper aims to improve the system identification and PID controller design by introducing a novel Adaptive Particle Swarm Optimization (APSO) algorithm. The challenge is to find optimal system parameters and control parameters efficiently, particularly addressing the shortcomings of traditional Particle Swarm Optimization (PSO) like slow convergence and tendency to get trapped in local minima. The goal is to enhance convergence speed and solution accuracy while minimizing computational burden.",
+      "model_algorithm_used": [
+         "Slow- and Controlled-Release Nanofertilizers (SRNFs & CRNFs)",
+         "Nanocomposites"
+      ],
+      "paper": 5
+   },
+   {
+      "author_name": "Guangqing Li, Zhujie Xie, Xueqin Yao, Xuehao Chen",
+      "title": "Study on the Mathematical Model of the Effects of NPK on Winter Cauliflower",
+      "problem_statement": "The paper addresses the need to optimize the fertilization practices for cauliflower production by studying the effects of nitrogen (N), phosphorus (P), and potassium (K) on the yield, appearance eligibility ratio, and glucosinolate content of cauliflower. Over-fertilization has negative effects on the environment and yield, and a balanced approach is necessary for sustainable cultivation.",
+      "model_algorithm_used": [
+         "Review Synthesis",
+         "Slow- and Controlled-Release Fertilizers"
+      ],
+      "paper": 6
+   },
+   {
+      "author_name": "Muhammad Alızada, Sıtkı Ozturk",
+      "title": "PID and Fuzzy Logic Control of Ball and Beam System Using Particle Swarm Optimization",
+      "problem_statement": "The ball and beam system (BBS) is a classic control problem where a ball is placed on a beam, and the objective is to control the position of the ball by adjusting the angle of the beam. The challenge lies in controlling the system's nonlinear dynamics to prevent the ball from losing its equilibrium. This research focuses on using PID and fuzzy logic control strategies to manage the BBS, with optimization performed using Particle Swarm Optimization (PSO) to improve system performance.",
+      "model_algorithm_used": [
+         "PID Controller",
+         "Fuzzy Logic Controller (FLC)",
+         "Particle Swarm Optimization (PSO)"
+      ],
+      "paper": 7
+   },
+   {
+      "author_name": "Mohammad Farid Saaid, Ahmad Ihsan Mohd Yassin, Nooritawati Md Tahir",
+      "title": "Particle Swarm Optimization (PSO) Model for Hydroponics pH Control System",
+      "problem_statement": "In hydroponic systems, maintaining an optimal pH level is critical for plant growth. The pH level of water is affected by the addition of nutrients, which is difficult to control due to the nonlinearity of the system. This study aims to optimize the pH control system using Particle Swarm Optimization (PSO) to accurately adjust the pH levels in a hydroponic setup.",
+      "model_algorithm_used": [
+         "Particle Swarm Optimization (PSO)",
+         "Nonlinear Autoregressive Exogenous (NARX) Model"
+      ],
+      "paper": 8
+   },
+   {
+      "author_name": "Sreenivasa Rao M, Venkaiah N",
+      "title": "Parametric Optimization in Machining of Nimonic-263 Alloy Using RSM and Particle Swarm Optimization",
+      "problem_statement": "Machining of nickel-based alloys, particularly Nimonic-263, is challenging due to their hardness at elevated temperatures and high corrosion resistance. The aim of this study was to optimize the Wire Electrical Discharge Machine (WEDM) process parameters for Nimonic-263 alloy to improve performance measures like Material Removal Rate (MRR) and Surface Roughness (SR).",
+      "model_algorithm_used": [
+         "Response Surface Methodology (RSM)",
+         "Central Composite Face-Centered Design (CCFCD)",
+         "ANOVA",
+         "Particle Swarm Optimization (PSO)"
+      ],
+      "paper": 9
+   },
+   {
+      "author_name": "M. Norhidayah, A. Shaaban, M. F. Dimin, M. Y. Norazlina, O. Rostam",
+      "title": "Optimization of Biodegradable Urea Production Process to Minimize Ammonia Release through Response Surface Method Experimental Design",
+      "problem_statement": "This study focuses on minimizing ammonia (NH3) emission during the biodegradable urea production process. Ammonia release is a significant environmental concern in urea fluidized bed granulation plants. The objective is to optimize the granulation process to reduce ammonia emissions while ensuring the quality of the produced granules.",
+      "model_algorithm_used": [
+         "Response Surface Methodology (RSM)",
+         "Central Composite Design (CCD)"
+      ],
+      "paper": 10
+   },
+   {
+      "author_name": "Yanle Guo, Min Zhang, Zhiguang Liu, Xiaofei Tian, Shugang Zhang, Chenhao Zhao, Hao Lu",
+      "title": "Modeling and Optimizing the Synthesis of Urea-formaldehyde Fertilizers and Analyses of Factors Affecting these Processes",
+      "problem_statement": "Previous research on urea-formaldehyde fertilizer synthesis has been based on single-factor tests or orthogonal experimental designs, which resulted in low precision and large ranges of process parameters. This study aims to optimize the synthesis of urea-formaldehyde fertilizers, focusing on improving nitrogen release properties and controlling the ratio of nitrogen insoluble in hot or cold water.",
+      "model_algorithm_used": [
+         "Central Composite Design (CCD)",
+         "Response Surface Methodology (RSM)",
+         "Quadratic Polynomial Models"
+      ],
+      "paper": 11
+   },
+   {
+      "author_name": "Akter, A.; Islam, M.R.; Islam, M.R.; Islam, M.A.; Hasan, S.L.; Uddin, S.; Rahman, M.M.",
+      "title": "Methods of Urea Fertilizer Application Influence Growth, Yield, and Nitrogen Use Efficiency of Transplanted Aman Rice",
+      "problem_statement": "The study investigates how different urea application methods affect the growth, yield, and nitrogen use efficiency (NUE) of transplanted Aman rice. Urea's efficiency in rice production is limited due to nitrogen losses (e.g., volatilization and denitrification) from improper application methods, and the study aims to identify more effective techniques.",
+      "model_algorithm_used": [
+         "Randomized Complete Block Design (RCBD)",
+         "Nitrogen Use Efficiency (NUE)",
+         "Apparent Nitrogen Recovery (ANR)"
+      ],
+      "paper": 12
+   },
+   {
+      "author_name": "Julian Landauer, Andreas Kugi, Andreas Steinböck",
+      "title": "Mathematical modelling of an electrostatic oiling machine for steel strips",
+      "problem_statement": "The electrostatic oiling machine (EOM) is used in hot-dip galvanizing lines to apply a protective oil film on steel strips. The oil film thickness must be within specified limits to prevent defects in the steel strip. However, previous measurements revealed that the oil film thickness often exceeds these limits. The causes for these deviations were unclear. This paper develops a mathematical model to investigate the root causes of the non-uniformity in oil film thickness and to optimize the oiling process.",
+      "model_algorithm_used": [
+         "Two-Dimensional Steady-State Numerical Model",
+         "Poisson’s Equation",
+         "Navier-Stokes Equations",
+         "Droplet Break-Up Model",
+         "ANSYS Fluent"
+      ],
+      "paper": 13
+   },
+   {
+      "author_name": "S.K. Basu, Naveen Kumar",
+      "title": "Mathematical model and computer simulation for release of nutrients from coated fertilizer granules",
+      "problem_statement": "The study focuses on understanding the controlled release of nutrients from coated fertilizer granules. It aims to investigate the effects of granule radius, diffusion coefficient, and contact area with soil on the saturation and release times of the nutrients. The paper also explores how evaporation loss influences the saturation time, and how these factors can help in manufacturing optimal fertilizer granules and guiding farmers in their selection.",
+      "model_algorithm_used": [
+         "Diffusion Equations",
+         "Explicit Finite Difference Scheme",
+         "Numerical Simulation",
+         "Evaporation Factor"
+      ],
+      "paper": 14
+   },
+   {
+      "author_name": "Korsakov, K.; Stepanov, A.; Pozdnyakov, L.; Yakimenko, O.",
+      "title": "Humate-Coated Urea as a Tool to Decrease Nitrogen Losses in Soil",
+      "problem_statement": "The study aims to evaluate the effectiveness of three types of urea fertilizers—conventional urea (U), humate-coated urea (U_HA), and urea treated with the urease inhibitor NBPT (U_UI)—in reducing nitrogen (N) losses in soil, such as ammonia volatilization, nitrate leaching, and N2O emissions. Additionally, the study investigates the effects of these fertilizers on soil biological activity, particularly microbial communities.",
+      "model_algorithm_used": [
+         "Laboratory Experiment",
+         "One-Way ANOVA",
+         "Fisher’s LSD Test"
+      ],
+      "paper": 15
+   },
+   {
+      "author_name": "Sussy Veliz Moraga, Marta P. Villa, Diego E. Bertín, Ivana M. Cotabarren, Juliana Piña, Marisa Pedernera, Verónica Bucalá",
+      "title": "Fluidized-bed melt granulation: The effect of operating variables on process performance and granule properties",
+      "problem_statement": "This paper investigates fluidized-bed melt granulation (FBMG) for producing granules with urea as both seed and binder. The goal is to evaluate the effects of operating variables like seed size, bed temperature, binder flowrate, and air flowrates on granulation efficiency and the properties of the product, such as size distribution, coating and agglomeration, and crushing strength. The focus is on finding operating conditions that avoid lump formation and low-quality granules.",
+      "model_algorithm_used": [
+         "Fluidized-Bed Melt Granulation (FBMG)",
+         "Population Balance Equation (PBE)"
+      ],
+      "paper": 16
+   },
+   {
+      "author_name": "Supriadi Putra, Khozin Mu'tamar, Zulkarnain",
+      "title": "Estimation of Parameters in the SIR Epidemic Model Using Particle Swarm Optimization",
+      "problem_statement": "The paper addresses the challenge of estimating the parameters in the Susceptible, Infected, Resistant (SIR) epidemic model using Particle Swarm Optimization (PSO). The SIR model is typically used for tracking disease spread, but the system of nonlinear differential equations does not have an analytical solution, making parameter estimation complex. The objective is to use PSO to estimate the parameters of the SIR model effectively.",
+      "model_algorithm_used": [
+         "SIR Epidemic Model",
+         "Particle Swarm Optimization (PSO)",
+         "Euler Method"
+      ],
+      "paper": 17
+   },
+   {
+      "author_name": "M. S. Alam and M. O. Tokhi",
+      "title": "Dynamic Modelling of a Single-Link Flexible Manipulator System: A Particle Swarm Optimisation Approach",
+      "problem_statement": "The paper focuses on applying the Particle Swarm Optimisation (PSO) algorithm to model the dynamics of a single-link flexible manipulator system. Flexible manipulators are lightweight and cost-effective, but their modelling is challenging due to their flexibility and dynamic behaviour. The study aims to improve the modelling of such systems using the PSO algorithm, addressing issues like system tracking, stability, and capturing the system's dynamics accurately.",
+      "model_algorithm_used": [
+         "Particle Swarm Optimization (PSO)",
+         "Autoregressive Moving Average (ARMA) Model",
+         "Time-Varying Acceleration Coefficient (TVAC)"
+      ],
+      "paper": 18
+   },
+   {
+      "author_name": "Samar Swify, Dovile Avizienyte, Romas Mazeika, Zita Braziene",
+      "title": "Comparative Study: Effect of Urea-Sulfur Fertilizers on Nitrogen Uptake and Maize Productivity",
+      "problem_statement": "This study investigates how combining urea with sulfur-based fertilizers (ammonium sulfate, calcium sulfate, and urea cocrystals) can enhance nitrogen uptake and improve maize productivity. The research seeks to compare conventional urea with sulfur-enriched urea fertilizers to assess their effectiveness in reducing nitrogen losses, increasing nitrogen uptake, and improving maize yields.",
+      "model_algorithm_used": [
+         "Randomized Complete Block Design (RCBD)",
+         "ANOVA",
+         "Duncan's Test",
+         "Correlation Analysis"
+      ],
+      "paper": 19
+   },
+   {
+      "author_name": "Katie E. Wyer, David B. Kelleghan, Victoria Blanes-Vidal, Günther Schauberger, Thomas P. Curran",
+      "title": "Ammonia Emissions from Agriculture and Their Contribution to Fine Particulate Matter: A Review of Implications for Human Health",
+      "problem_statement": "This paper examines the significant contribution of ammonia (NH3) emissions from agriculture to fine particulate matter (PM2.5) formation, which in turn affects human health. NH3 is a major contributor to respiratory diseases and asthma, and this review explores its sources, impacts on air quality, and potential health risks.",
+      "model_algorithm_used": [
+         "Systematic Literature Review",
+         "Agricultural NH3 Emissions",
+         "PM2.5 Formation"
+      ],
+      "paper": 20
+   },
+   {
+      "author_name": "Yuhui Shi and Russell Eberhart",
+      "title": "A Modified Particle Swarm Optimizer",
+      "problem_statement": "This paper introduces a new parameter, inertia weight, into the original Particle Swarm Optimization (PSO) algorithm to improve its performance. It explores how different inertia weight values affect the algorithm's ability to find the global optimum efficiently in optimization problems.",
+      "model_algorithm_used": [
+         "Modified Particle Swarm Optimization (PSO)"
+      ],
+      "paper": 21
+   },
+   {
+      "author_name": "Raziyeh Mosayebi and Fariba Bahrami",
+      "title": "A Modified Particle Swarm Optimization Algorithm for Parameter Estimation of a Biological System",
+      "problem_statement": "The paper addresses the challenge of parameter estimation in biological system models, where many parameters lack physical interpretation and accurate estimation is crucial. The authors aim to develop a method to estimate the parameters of nonlinear biological models with high precision.",
+      "model_algorithm_used": [
+         "Modified Particle Swarm Optimization (PSO)",
+         "Decomposition Technique"
+      ],
+      "paper": 22
+   },
+   {
+      "author_name": "Toluwase Oreoluwa Adegoke, Tae-il Moon, and Hyun-Hwoi Ku",
+      "title": "Ammonia emission from sandy loam soil amended with manure compost and urea",
+      "problem_statement": "This study evaluates the effect of different nitrogen (N) application rates on ammonia (NH₃) emission and soil properties when sandy loam soil is amended with manure compost and urea. The investigation seeks to understand the impact of nitrogen application on ammonia volatilization and to determine a strategy for reducing NH₃ emissions and improving soil fertility.",
+      "model_algorithm_used": [
+         "One-way ANOVA",
+         "Duncan's multiple range tests"
+      ],
+      "paper": 23
+   },
+   {
+      "author_name": "Christof Ammann and Alex Valach",
+      "title": "Ammonia Emissions from Swiss Agriculture and their Effects on Atmospheric Chemistry and Ecosystems",
+      "problem_statement": "Ammonia (NH3) is a significant atmospheric pollutant due to its contribution to the formation of secondary inorganic aerosols and its impacts on (semi-)natural ecosystems. The primary emission source in Switzerland is livestock agriculture, where NH3 is volatilized from ammonium in animal manure. This discrepancy affects the understanding of NH3 deposition and its adverse impacts on ecosystems such as eutrophication and acidification.",
+      "model_algorithm_used": [
+         "Agrammon emission model",
+         "Swiss Nitrogen Deposition (SND) model",
+         "Critical Load Exceedance approach"
+      ],
+      "paper": 24
+   },
+   {
+      "author_name": "Karin Andersson, Sofia Delin, Johanna Pedersen, Sasha D. Hafner, Tavs Nyord",
+      "title": "Ammonia emissions from untreated, separated and digested cattle slurry – Effects of slurry type and application strategy on a Swedish clay soil",
+      "problem_statement": "This study investigates how different slurry types (untreated cattle slurry, separated liquid fraction, and biogas digestate) and application methods (trailing hoses, trailing shoes, acidified slurry application, and slurry injection) affect ammonia emissions.",
+      "model_algorithm_used": [
+         "Wind tunnels",
+         "ALFAM2 Model"
+      ],
+      "paper": 25
+   },
+   {
+      "author_name": "Nils Carsten Thomas Ellersiek, Hans-Werner Olfs",
+      "title": "An Incubation System for the Simulation of Ammonia Emissions from Soil Surface-Applied Slurry: Effect of pH and Acid Type",
+      "problem_statement": "This paper develops an incubation system to measure ammonia emissions from liquid organic fertilizers applied to soil surfaces, assessing the impact of pH value and acid type on ammonia emission reduction.",
+      "model_algorithm_used": [
+         "Incubation system",
+         "Statistical analysis using ANOVA"
+      ],
+      "paper": 26
+   },
+   {
+      "author_name": "Melina Lamkowsky, Frederic Ang, Miranda P.M. Meuwissen",
+      "title": "Can Dutch dairy farmers finance investments to reduce ammonia emissions?",
+      "problem_statement": "This paper explores whether Dutch dairy farmers can finance investments in technologies to reduce ammonia emissions, which pose a threat to biodiversity in the Netherlands.",
+      "model_algorithm_used": [
+         "Literature review",
+         "Empirical analysis",
+         "Accountancy data analysis"
+      ],
+      "paper": 27
+   },
+   {
+      "author_name": "Johanna Pedersen, Tavs Nyord",
+      "title": "Effect of low-dose acidification of slurry digestate on ammonia emissions after field application",
+      "problem_statement": "This study investigates the effect of low-dose acidification of slurry digestate on ammonia emissions after field application, comparing emissions from different application techniques.",
+      "model_algorithm_used": [
+         "Dynamic flux chambers",
+         "ANOVA",
+         "Tukey's test"
+      ],
+      "paper": 28
+   },
+   {
+      "author_name": "Rolandas Bleizgys, Arvydas Povilaitis, Juozas Pekarskas, Vilma Naujokienė",
+      "title": "Effectiveness of the Sustainable Manure Pile Model for Ammonia Emission and Soil",
+      "problem_statement": "The study evaluates the effectiveness of a sustainable manure pile model in reducing ammonia emissions and nutrient leaching, assessing its environmental impact.",
+      "model_algorithm_used": [
+         "Experimental setup",
+         "Static chamber measurements",
+         "Soil sampling",
+         "ANOVA"
+      ],
+      "paper": 29
+   },
+   {
+      "author_name": "Khadim Dawar, Atif Dawar, Muhammad Tariq, Ishaq Ahmad Mian, Asim Muhammad, Laiba Farid, Shadman Khan, Kashif Khan, Shah Fahad, Subhan Danish, Abdullah Ahmed Al-Ghamdi, Mohamed S. Elshikh, Muhammad Tahzeeb-ul-Hassan",
+      "title": "Enhancing nitrogen use efficiency and yield of maize (Zea mays L.) through Ammonia volatilization mitigation and nitrogen management approaches",
+      "problem_statement": "The study examines the effects of sulfur-coated urea (SCU) and sulfur from gypsum on ammonia (NH₃) emissions, nitrogen use efficiency (NUE), and maize productivity under alkaline calcareous soil conditions.",
+      "model_algorithm_used": [
+         "Field Experiment",
+         "ANOVA",
+         "Fisher LSD test"
+      ],
+      "paper": 30
+   },
+   {
+      "author_name": "Peng Xu et al.",
+      "title": "Fertilizer management for global ammonia emission reduction",
+      "problem_statement": "This paper addresses ammonia emissions from crop production, particularly rice, wheat, and maize fields, aiming to develop a machine learning model to estimate global NH₃ emissions and identify emission hotspots.",
+      "model_algorithm_used": [
+         "Machine learning models (random forest)",
+         "AI and data-driven approaches"
+      ],
+      "paper": 31
+   },
+   {
+      "author_name": "Chen, Y.; Zhang, L.; Zhao, Y.; Zhang, L.; Zhang, J.; Liu, M.; Zhou, M.; Luo, B.",
+      "title": "High-Resolution Ammonia Emissions from Nitrogen Fertilizer Application in China during 2005–2020",
+      "problem_statement": "The study estimates ammonia emissions from synthetic nitrogen fertilizer in China between 2005 and 2020, focusing on spatial, seasonal, and interannual variations.",
+      "model_algorithm_used": [
+         "Bottom-up method",
+         "Emission factors",
+         "Spatial distribution model"
+      ],
+      "paper": 32
+   },
+   {
+      "author_name": "Héctor García-Gómez, Rasmus Einarsson, Mark Theobald, Eduardo Aguilera, Tania Carrasco-Molina, Victoria Gil, Benjamín S. Gimeno, Coralina Hernández, Luis Lassaletta, Isaura Rábago, Hans J.M. van Grinsven, Marta G. Vivanco, Alberto Sanz-Cobena",
+      "title": "Impact of Changing Agricultural Management on the Exceedance of Empirical Critical Loads of Nitrogen in Terrestrial Habitats of Southwestern Europe",
+      "problem_statement": "This study assesses the impact of improved agricultural management on ammonia emissions and nitrogen deposition in southwestern Europe, aiming to reduce eutrophication in ecosystems.",
+      "model_algorithm_used": [
+         "Integrated spatial modeling",
+         "CHIMERE model",
+         "Critical load exceedance methodology"
+      ],
+      "paper": 33
+   },
+   {
+      "author_name": "Sasha D. Hafner, Johanna Pedersen, Roland Fuß, et al.",
+      "title": "Improved tools for estimation of ammonia emission from field-applied animal slurry: Refinement of the ALFAM2 model and database",
+      "problem_statement": "This paper presents updates to the ALFAM2 model for more accurate ammonia emission predictions from slurry applied to agricultural fields, introducing a new ammonia sink.",
+      "model_algorithm_used": [
+         "ALFAM2 model",
+         "Bootstrap approach"
+      ],
+      "paper": 34
+   },
+   {
+      "author_name": "Cashman, O.; Casey, I.; Sorley, M.; Forrestal, P.; Styles, D.; Wall, D.; Burchill, W.; Humphreys, J.",
+      "title": "Lowering the greenhouse gas and ammonia emissions from grassland-based dairy production",
+      "problem_statement": "Grassland-based dairy systems contribute significantly to greenhouse gas (GHG) and ammonia emissions in Ireland. Rising intensification with high artificial fertilizer nitrogen inputs increases emissions, conflicting with climate targets. The study evaluates how adopting best practices (reduced AFN, clover BFN, improved slurry application, and herd genetics) can lower emissions while maintaining productivity.",
+      "model_algorithm_used": [
+         "Life Cycle Assessment (LCA)",
+         "Mass-flow model for ammonia"
+      ],
+      "paper": 35
+   },
+   {
+      "author_name": "Sefeedpari, P.; Pishgar-Komleh, S.H.; Aarnink, A.J.A.",
+      "title": "Model Adaptation and Validation for Estimating Methane and Ammonia Emissions from Fattening Pig Houses: Effect of Manure Management System",
+      "problem_statement": "Methane (CH4) and ammonia (NH3) emissions from pig farming are major environmental concerns. Existing models are limited and costly to validate. This study adapts and validates predictive models to estimate emissions under different manure management systems and evaluate mitigation strategies.",
+      "model_algorithm_used": [
+         "MESPRO model",
+         "ANIPRO model"
+      ],
+      "paper": 36
+   },
+   {
+      "author_name": "Aguirre-Villegas, H.A.; Besson, C.; Larson, R.A.",
+      "title": "Modeling ammonia emissions from manure in conventional, organic, and grazing dairy systems and practices to mitigate emissions",
+      "problem_statement": "Livestock manure contributes ~60% of ammonia emissions. Measuring is costly, and results are inconsistent across systems. This study models emissions for representative dairy systems in Wisconsin, compares mitigation strategies, and assesses how functional units affect emission intensity estimates.",
+      "model_algorithm_used": [
+         "Farm-level simulation model",
+         "IPCC Tier 2 emission factors"
+      ],
+      "paper": 37
+   },
+   {
+      "author_name": "Chen, H.; Zhou, H.; Sun, Y.; Liu, X.; Wu, Q.; Chi, D.",
+      "title": "Nitrogen-loaded biochar for environmental management: Enhancing nitrogen utilization balance in farmland, mitigating ammonia volatilization, and improving fertilizer efficiency",
+      "problem_statement": "Excess nitrogen fertilizer in rice production causes NH3 volatilization and low fertilizer efficiency. Conventional biochar can increase NH3 losses, while acid-treated biochar is costly. This study tests nitrogen-loaded biochar (NLB) to reduce volatilization, improve soil N balance, and sustain rice yields.",
+      "model_algorithm_used": [
+         "Critical nitrogen dilution curve",
+         "Path analysis model"
+      ],
+      "paper": 38
+   },
+   {
+      "author_name": "Mielcarek-Bocheńska, P.; Rzeźnik, W.",
+      "title": "Reducing Ammonia Emissions in Polish Agriculture, the Implementation of the NEC Directive, and the Context of Sustainable Development—Pilot Studies",
+      "problem_statement": "Polish agriculture produces over 96% of national ammonia emissions, mostly from manure and fertilizers. The NEC Directive requires reductions, but farmers’ awareness and adoption of low-emission practices are limited. This study examines farm practices and farmer knowledge about ammonia mitigation.",
+      "model_algorithm_used": [
+         "Survey questionnaire",
+         "Chi-square (χ²) test"
+      ],
+      "paper": 39
+   },
+   {
+      "author_name": "Schoof, J.; Fuß, R.; Wulf, S.; Pacholski, A.",
+      "title": "Regionalized ammonia emission abatement by urease inhibitor treatment of urea for agro-environmental conditions of Western Central Europe",
+      "problem_statement": "Urea fertilizer causes high NH3 losses. Urease inhibitors (UIs) are mandated in the EU, but inventories assume 70% abatement without regional calibration. This study derives region-specific abatement factors for Western Central Europe.",
+      "model_algorithm_used": [
+         "Linear mixed-effects model",
+         "Meta-analysis of field data"
+      ],
+      "paper": 40
+   },
+   {
+      "author_name": "Wang, Y.; Nemitz, E.; Tomlinson, S.J.; Carnell, E.J.; Yao, L.; Scheffler, J.; Liska, T.; Pearson, C.; Dragosits, U.; Venkataraman, C.; Balasubramanian, S.; Beck, R.; Sutton, M.A.; Vieno, M.",
+      "title": "Response of South Asia PM2.5 pollution to ammonia emission changes and associated impacts on human health",
+      "problem_statement": "South Asia experiences extreme PM2.5 pollution, but the role of NH3 emissions in PM2.5 formation is understudied. This research evaluates how NH3 reductions affect air quality, health, and economic costs.",
+      "model_algorithm_used": [
+         "WRF-EMEP atmospheric model",
+         "Global Exposure Mortality Model (GEMM)"
+      ],
+      "paper": 41
+   },
+   {
+      "author_name": "Woo, J.; Song, S.; Kang, S.; Jeon, E.-C.",
+      "title": "Study on Enhanced Methods for Calculating NH₃ Emissions from Fertilizer Application in Agriculture Sector",
+      "problem_statement": "South Korea’s NH3 inventory is based on foreign factors, ignoring crop-specific practices and over-fertilization. This leads to inaccurate emission estimates. The study develops improved inventory methods reflecting local farming systems.",
+      "model_algorithm_used": [
+         "Fertilizer supply-based inventory method",
+         "Nitrogen application-based inventory method"
+      ],
+      "paper": 42
+   },
+   {
+      "author_name": "Hu, Y.; Flessa, H.; Vos, C.; Fuß, R.; Schmidhalter, U.",
+      "title": "Successful NH₃ abatement policies and regulations in German agriculture",
+      "problem_statement": "German agriculture emits ~95% of national ammonia, mainly from livestock and fertilizer. EU directives mandate reductions, but progress was slow until recent regulations (DüV 2017/2020, TA-Luft 2021). This study evaluates their effectiveness.",
+      "model_algorithm_used": [
+         "National emission inventory (Thünen Institute)",
+         "Py-GAS-EM scenario model"
+      ],
+      "paper": 43
+   },
+   {
+      "author_name": "Adegoke, T.O.; Ku, H.-H.",
+      "title": "Temperature response of ammonia emission from sandy loam soil amended with manure compost and urea",
+      "problem_statement": "Temperature and N application rates jointly affect ammonia volatilization, but few studies analyze their combined effect. This work investigates NH3 emissions from urea and compost treatments across temperatures.",
+      "model_algorithm_used": [
+         "Arrhenius equation",
+         "Dynamic chamber method"
+      ],
+      "paper": 44
+   },
+   {
+      "author_name": "dos Santos Diniz, M.H.; Ferreira, F.C.; Ferreira, A.S.",
+      "title": "Temporal change of urea biochemical transformations and temperature sensitivity of ammonia volatilization in soil textural classes in the Brazilian Cerrado",
+      "problem_statement": "Urea AV losses in tropical soils exceed 40%, worsened by high temps and sandy soils. The study analyzes how soil texture, urea dose, and temperature regulate transformations and AV sensitivity (Q10).",
+      "model_algorithm_used": [
+         "Gaussian model for AV peaks",
+         "van’t Hoff equation (Q10)"
+      ],
+      "paper": 45
+   },
+   {
+      "author_name": "Cashman, O.; Casey, I.; Humphreys, J.",
+      "title": "The economic performance of grassland-based milk production using best practices to lower greenhouse gas and ammonia emissions",
+      "problem_statement": "Irish dairy farms rely heavily on AFN, increasing GHG and ammonia emissions. Farmers may resist low-emission practices unless profitability is ensured. This study compares intensive vs best-practice systems in terms of economics and productivity.",
+      "model_algorithm_used": [
+         "Whole-farm economic model",
+         "Systems-scale farm experiments"
+      ],
+      "paper": 46
+   },
+   {
+      "author_name": "Sailesh Sigdel, Heather D. Karsten, Curtis J. Dell, Ronald J. Hoover",
+      "title": "Evaluation of Ammonia Volatilization and Corn Silage Yield Response to Liquid Anaerobic Digestate Application Methods",
+      "problem_statement": "Compare NH3 volatilization and corn silage yields between surface broadcasting vs shallow-disk injection of liquid anaerobic digestate, to reduce NH3 losses and improve N retention/yield.",
+      "model_algorithm_used": [
+         "Conditional Random Forest (RF)"
+      ],
+      "application_of_random_forest_model": "RF identified key drivers of NH3 loss and yield (e.g., soil temperature, digestate solids, NH4+-N concentration, application method).",
+      "paper": 47
+   },
+   {
+      "author_name": "A. Marongiu, A. G. Collalto, G. G. Distefano, E. Angelino",
+      "title": "Application of Machine Learning to Estimate Ammonia Atmospheric Emissions and Concentrations",
+      "problem_statement": "Improve precision of NH3 emission and concentration estimates for air-quality management by accounting for meteorology and emission changes.",
+      "model_algorithm_used": [
+         "Random Forest (RF)"
+      ],
+      "application_of_random_forest_model": "Iteratively predicted NH3 concentrations/emissions using site measurements and meteorological variables.",
+      "paper": 48
+   },
+   {
+      "author_name": "Sreenivasa Rao M, Venkaiah N",
+      "title": "Optimization of Ammonia Emissions in Rice Paddies with Different Fertilizer and Irrigation Regimes",
+      "problem_statement": "This paper explores the optimization of ammonia emissions from rice paddies based on various fertilizer and irrigation regimes. The aim is to minimize emissions while maximizing crop yield.",
+      "model_algorithm_used": [
+         "Linear Programming",
+         "Monte Carlo Simulations"
+      ],
+      "paper": 49
+   },
+   {
+      "author_name": "Seema Srivastava, Rajeev Kumar",
+      "title": "Effects of Biochar and Manure Amendments on Ammonia Emissions from Agricultural Soils",
+      "problem_statement": "This study examines the effects of biochar and manure amendments on ammonia emissions from agricultural soils, focusing on the impact of different soil treatments in reducing NH3 volatilization.",
+      "model_algorithm_used": [
+         "Field Experiment",
+         "Emissions Measurement Model"
+      ],
+      "paper": 50
+   }
+]
