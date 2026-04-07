@@ -29,7 +29,7 @@ const ThesisPlan = () => {
                         MSc Research Plan | Mahadi Hasan Mishuk | Presented on 5th August 2025
                     </p>
                 </div>
-
+ <div className="mb-10"></div>
                 {/* Executive Summary */}
                 <div className="mb-16 bg-white border-2 border-blue-500 p-8 rounded-lg shadow-md">
                     <h2 className="text-3xl font-semibold text-green-700 mb-4">Executive Summary</h2>
