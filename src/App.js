@@ -30,6 +30,9 @@ import MmuPhoto from "./components/mmu/MmuPhoto";
 import Confarence from "./components/mmu/confarence";
 import Photocate from "./components/mmu/photocate";
 import "./index.css";
+import Photocateukm from "./components/mmu/photocateukm";
+import MmuPhotoUkm from "./components/mmu/MmuPhotoukm";
+import UKM from "./components/mmu/ukm";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -113,9 +116,12 @@ function App() {
 
           <Route path="/thesisplan" element={<FrontPage />}></Route>
           <Route path="/my-photo" element={<Confarence />}></Route>
-          <Route path="/photo-cate" element={<Photocate />}></Route>
-          <Route path="/mmu-cate" element={<MmuPhoto />}></Route>
-          <Route path="/iium-user" element={<Iiumuser />}></Route>
+          <Route path="/photo-ukm" element={<Photocateukm/>}></Route>
+          {/* <Route path="/photo-cate" element={<Photocate />}></Route> */}
+          <Route path="/mmu-cate" element={<MmuPhotoUkm/>}></Route>
+          {/* <Route path="/mmu-cate" element={<MmuPhoto />}></Route> */}
+          <Route path="/ukm-user" element={<UKM/>}></Route>
+          {/* <Route path="/iium-user" element={<Iiumuser />}></Route> */}
 
           <Route path="/riseuplabs" element={<InternshipDetails />}></Route>
           <Route path="/workprogress" element={<Dashboard />}></Route>

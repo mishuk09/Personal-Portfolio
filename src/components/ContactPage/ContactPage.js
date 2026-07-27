@@ -50,7 +50,7 @@ const ContactPage = () => {
                                             <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600'><FontAwesomeIcon icon={faPhone} color='white' /></div>
                                             <div className="flex-grow leading-3 flex flex-col items-stretch">
                                                 <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap">Call</div>
-                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap">+91 7069078661</div>
+                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap"> 🇲🇾 +60 1123-654378</div>
                                             </div>
                                         </div>
                                     </Fade>
@@ -59,7 +59,7 @@ const ContactPage = () => {
                                             <div className='location-div text-center pt-2 rounded-full w-10 h-10 bg-blue-600'><FontAwesomeIcon icon={faLocationDot} color='white' className='  ' /></div>
                                             <div className="flex-grow leading-3 flex flex-col items-stretch">
                                                 <div className="text-white text-justify text-1xl font-bold leading-3 whitespace-nowrap">Location</div>
-                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap">Rk university Rajkot, Gujarat, India.</div>
+                                                <div className="text-white text-justify text-sm leading-8 whitespace-nowrap">Ayer Keroh,Melaka,Malaysia.</div>
                                             </div>
                                         </div>
                                     </Fade>
