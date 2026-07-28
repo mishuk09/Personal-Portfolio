@@ -15,7 +15,7 @@ const SummaryCard = ({ title, value, loading }) => (
 
 
 
-const SurveySummary = () => {
+const PostSurveySummary = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState("age");
@@ -26,18 +26,23 @@ const SurveySummary = () => {
         { id: "farmingType", label: "🌾 Type of Farming" },
         { id: "farmingSize", label: "📐 Size of Farming" },
         { id: "experience", label: "👨‍🌾 Experience" },
+        { id: "understanding", label: "🚀 Rate level of Understanding (AI)" },
     ];
 
-    // 🔁 Fetch survey data
+    // Fetch post-survey data
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await fetch("http://localhost:5000/get/surveys");
+                const response = await fetch("http://localhost:5000/get/postsurveys");
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch post surveys: ${response.status}`);
+                }
                 const result = await response.json();
-                setData(result);
+                setData(Array.isArray(result) ? result : []);
             } catch (err) {
-                console.error("Failed to fetch data", err);
+                console.error("Failed to fetch post-survey data", err);
+                setData([]);
             } finally {
                 setLoading(false);
             }
@@ -46,84 +51,101 @@ const SurveySummary = () => {
         fetchData();
     }, []);
 
-    // 📊 Count number of respondents by age group
-    const normalize = (str) => str?.toLowerCase().replace(/\s+/g, '');
+    // Normalize labels to make matching resilient to spacing/dashes/wording changes.
+    const normalize = (str) =>
+        String(str || "")
+            .toLowerCase()
+            .replace(/[\s\-–—]/g, "")
+            .replace(/&/g, "and");
+
+    const isSameGroup = (value, target) => {
+        const normalizedValue = normalize(value);
+        const normalizedTarget = normalize(target);
+
+        // Prevent empty values from matching everything.
+        if (!normalizedValue || !normalizedTarget) {
+            return false;
+        }
+
+        return (
+            normalizedValue === normalizedTarget ||
+            normalizedValue.includes(normalizedTarget) ||
+            normalizedTarget.includes(normalizedValue)
+        );
+    };
 
     const countAgeGroup = (groupLabel) => {
         const normalizedTarget = normalize(groupLabel);
-        return data.filter(d => normalize(d.demographics?.age) === normalizedTarget).length;
+        return data.filter(d => isSameGroup(d.demographics?.age, normalizedTarget)).length;
     };
 
     const countEducationGroup = (groupLabel) => {
-        const normalize = (str) => str?.toLowerCase().replace(/\s+/g, '');
         const normalizedTarget = normalize(groupLabel);
-        return data.filter(d => normalize(d.demographics?.education) === normalizedTarget).length;
+        return data.filter(d => isSameGroup(d.demographics?.education, normalizedTarget)).length;
     };
 
 
     const countFarmingType = (typeLabel) => {
-        const normalize = (str) => str?.toLowerCase().replace(/\s+/g, '');
         const normalizedTarget = normalize(typeLabel);
-        return data.filter(d => normalize(d.demographics?.farmingType) === normalizedTarget).length;
+        return data.filter((d) => normalize(d.demographics?.farmingType) === normalizedTarget).length;
     };
 
 
 
     const countFarmSizeGroup = (groupLabel) => {
-        return data.filter(
-            (d) => d.demographics?.farmSize?.trim().toLowerCase() === groupLabel.trim().toLowerCase()
-        ).length;
+        return data.filter((d) => isSameGroup(d.demographics?.farmSize, groupLabel)).length;
     };
 
     const countExperienceGroup = (groupLabel) => {
-        return data.filter(
-            (d) =>
-                d.demographics?.experience?.trim().toLowerCase() ===
-                groupLabel.trim().toLowerCase()
-        ).length;
+        return data.filter((d) => isSameGroup(d.demographics?.experience, groupLabel)).length;
+    };
+    const countUnderstandingGroup = (groupLabel) => {
+        return data.filter((d) => isSameGroup(d.demographics?.understand, groupLabel)).length;
     };
 
+    const toNumericList = (section) => {
+        if (Array.isArray(section)) {
+            return section.map(Number).filter((v) => Number.isFinite(v));
+        }
 
-    const calculateAverageAwareness = () => {
+        if (section && typeof section === "object") {
+            return Object.values(section)
+                .map(Number)
+                .filter((v) => Number.isFinite(v));
+        }
+
+        return [];
+    };
+
+    const calculateOverallAverage = (keys) => {
         let totalScore = 0;
         let totalCount = 0;
 
         data.forEach((entry) => {
-            const awareness = entry?.awareness;
-            if (awareness) {
-                Object.values(awareness).forEach((val) => {
-                    const num = parseInt(val);
-                    if (!isNaN(num)) {
-                        totalScore += num;
-                        totalCount++;
-                    }
+            keys.forEach((key) => {
+                const values = toNumericList(entry?.[key]);
+                values.forEach((num) => {
+                    totalScore += num;
+                    totalCount += 1;
                 });
-            }
+            });
         });
 
-        if (totalCount === 0) return 0;
-        return (totalScore / totalCount).toFixed(2); // rounded to 2 decimal places
+        if (totalCount === 0) return "N/A";
+        return (totalScore / totalCount).toFixed(2);
     };
 
-
-    const readinessScores = data?.map((entry) => {
-        const readinessValues = Object.values(entry.readiness || {});
-        const numericValues = readinessValues.map(Number).filter(v => !isNaN(v));
-        const total = numericValues.reduce((sum, val) => sum + val, 0);
-        const count = numericValues.length;
-        return { total, count };
-    });
-
-    const totalReadiness = readinessScores?.reduce((acc, curr) => {
-        return {
-            total: acc.total + curr.total,
-            count: acc.count + curr.count,
-        };
-    }, { total: 0, count: 0 });
-
-    const readinessAverage = totalReadiness?.count > 0
-        ? (totalReadiness.total / totalReadiness.count).toFixed(2)
-        : 'N/A';
+    const sectionSummaries = [
+        { title: "Knowledge & Understanding", key: "knowledgeUnderstanding", icon: "🧠" },
+        { title: "Perceived Usefulness", key: "perceivedUsefulness", icon: "💡" },
+        { title: "Trust in AI", key: "trustInAI", icon: "🤝" },
+        { title: "Adoption Intention", key: "adoptionIntention", icon: "🚀" },
+        { title: "Future of AI", key: "futureOfAI", icon: "🔮" },
+        { title: "Overall Evaluation", key: "overallEvaluation", icon: "⭐" },
+    ].map((item) => ({
+        ...item,
+        average: calculateOverallAverage([item.key]),
+    }));
 
 
     return (
@@ -132,7 +154,7 @@ const SurveySummary = () => {
             <div className="max-w-7xl mx-auto pt-28 pb-10 ">
                 {/* Title & Description */}
                 <div className="mb-8 text-center">
-                    <h2 className="text-4xl font-bold text-blue-700 mb-2">📝 Survey Summary</h2>
+                    <h2 className="text-4xl font-bold text-blue-700 mb-2">📝 Post-Survey Summary</h2>
                     <p className="text-gray-600  md:text-base font-medium">
                         View a breakdown of the respondent's profile based on age, education,
                         farming type, and more.
@@ -178,7 +200,7 @@ const SurveySummary = () => {
                                 <SummaryCard title="📘 Primary" value={countEducationGroup("Primary")} loading={loading} />
                                 <SummaryCard title="📗 Secondary" value={countEducationGroup("Secondary")} loading={loading} />
                                 <SummaryCard title="🎓 Tertiary" value={countEducationGroup("Tertiary (College/Univ)")} loading={loading} />
-                                <SummaryCard title="📚 Others" value={countEducationGroup("Others")} loading={loading} />
+                                <SummaryCard title="📚 Vocational" value={countEducationGroup("Vocational")} loading={loading} />
                             </div>
                         </div>
                     )}
@@ -188,9 +210,11 @@ const SurveySummary = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
                                 <SummaryCard title="🌿 Mixed Crops" value={countFarmingType("Mixed crops")} loading={loading} />
                                 <SummaryCard title="🌾 Paddy" value={countFarmingType("Paddy")} loading={loading} />
+                                <SummaryCard title="🪵 Palm Oil" value={countFarmingType("Palm oil")} loading={loading} />
+                                <SummaryCard title="🟤 Rubber" value={countFarmingType("Rubber")} loading={loading} />
+                                <SummaryCard title="🐄 Livestock" value={countFarmingType("Livestock")} loading={loading} />
                                 <SummaryCard title="🥬 Vegetables" value={countFarmingType("Vegetables")} loading={loading} />
                                 <SummaryCard title="🍇 Fruits" value={countFarmingType("Fruits")} loading={loading} />
-                                <SummaryCard title="🪵 Others" value={countFarmingType("Others")} loading={loading} />
                             </div>
                         </div>
                     )}
@@ -235,36 +259,43 @@ const SurveySummary = () => {
                             </div>
                         </div>
                     )}
+                    {activeTab === "understanding" && (
+                        <div>
+                            <h3 className="text-xl font-semibold mb-4">🚀 AI Understanding Level</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
+                                <SummaryCard title="⚪ Nil" value={countUnderstandingGroup("Nil")} loading={loading} />
+                                <SummaryCard title="🔵 Basic" value={countUnderstandingGroup("Basic")} loading={loading} />
+                                <SummaryCard title="🟡 Moderate" value={countUnderstandingGroup("Moderate")} loading={loading} />
+                                <SummaryCard title="🟢 Good" value={countUnderstandingGroup("Good")} loading={loading} />
+                                <SummaryCard title="🟣 Expert" value={countUnderstandingGroup("Expert")} loading={loading} />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
             <div className="max-w-7xl mx-auto pt-14 pb-14  ">
                 <div className="flex flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-white shadow p-8">
                     <h1 className="text-3xl font-bold text-center text-blue-800 mb-6">
-                        📊 Summary of Awareness & Readiness
+                        📊 Post-Survey Section Averages
                     </h1>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4 w-full max-w-2xl">
-                        {/* Awareness Card */}
-                        <div className="flex flex-col items-center justify-center bg-purple-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
-                            <h2 className="text-xl font-semibold mb-2">Awareness</h2>
-                            {loading ? (
-                                <LoadingSmall />
-                            ) : (
-                                <p className="text-4xl font-bold">{calculateAverageAwareness()}</p>
-                            )}
-                        </div>
-
-                        {/* Readiness Card */}
-                        <div className="flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
-                            <h2 className="text-xl font-semibold mb-2">Readiness</h2>
-                            {loading ? (
-                                <LoadingSmall />
-                            ) : (
-                                <p className="text-4xl font-bold">{readinessAverage}</p>
-                            )}
-
-                        </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 w-full">
+                        {sectionSummaries.map((section) => (
+                            <div
+                                key={section.key}
+                                className="flex flex-col items-center justify-center bg-blue-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300"
+                            >
+                                <h2 className="text-lg font-semibold mb-2 text-center">
+                                    {section.icon} {section.title}
+                                </h2>
+                                {loading ? (
+                                    <LoadingSmall />
+                                ) : (
+                                    <p className="text-4xl font-bold">{section.average}</p>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -279,4 +310,4 @@ const SurveySummary = () => {
     );
 };
 
-export default SurveySummary;
+export default PostSurveySummary;

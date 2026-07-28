@@ -1,0 +1,57 @@
+ 
+{
+  "_id": {
+    "$oid": "6870fa90f52b63b4989f9254"
+  },
+  "demographics": {
+    "age": " ",
+    "gender": " ",
+    "education": " ",
+    "farmingType": " ",
+    "farmSize": " ",
+    "experience": " "
+  },
+  "KnowledgeUnderstanding": {
+    "question-0": "",
+    "question-1": "",
+    "question-2": "",
+    "question-3": ""
+  },
+  "PerceivedUsefulness": {
+    "question-0": "",
+    "question-1": "",
+    "question-2": "",
+    "question-3": "",
+    "question-4": ""
+    
+  },
+  "TrustinAI": {
+    "question-0": "",
+    "question-1": "",
+    "question-2": "",
+    "question-3": " "
+    
+  },
+  "AdoptionIntention": {
+    "question-0": "",
+    "question-1": "",
+    "question-2": ""
+  
+  },
+  "FutureofAIinAgriculture": {
+    "question-0": "",
+    "question-1": "",
+    "question-2": ""
+  },
+  "OverallEvaluation": {
+    "question-0": "",
+    "question-1": "",
+    "question-2": ""
+  },
+  "textAnswers": {
+    "text-0": "",
+    "text-1": "",
+    "text-2": ""
+  }
+  
+}

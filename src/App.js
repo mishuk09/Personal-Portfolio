@@ -33,6 +33,7 @@ import "./index.css";
 import Photocateukm from "./components/mmu/photocateukm";
 import MmuPhotoUkm from "./components/mmu/MmuPhotoukm";
 import UKM from "./components/mmu/ukm";
+import PostSurveySummary from "./components/Projects/Mmu/PostSurveySummary";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -83,6 +84,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <SurveySummary />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/post-summary"
+            element={
+              <ProtectedRoute>
+                <PostSurveySummary />
               </ProtectedRoute>
             }
           ></Route>
