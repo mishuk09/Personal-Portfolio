@@ -55,53 +55,96 @@ const PostSurveySummary = () => {
     const normalize = (str) =>
         String(str || "")
             .toLowerCase()
-            .replace(/[\s\-–—]/g, "")
-            .replace(/&/g, "and");
+            .trim()
+            .replace(/&/g, "and")
+            .replace(/[\s\-–—_]+/g, "")
+            .replace(/[^a-z0-9]/g, "");
 
-    const isSameGroup = (value, target) => {
+    const groupAliasesMatch = (value, aliases) => {
         const normalizedValue = normalize(value);
-        const normalizedTarget = normalize(target);
 
-        // Prevent empty values from matching everything.
-        if (!normalizedValue || !normalizedTarget) {
+        if (!normalizedValue) {
             return false;
         }
 
-        return (
-            normalizedValue === normalizedTarget ||
-            normalizedValue.includes(normalizedTarget) ||
-            normalizedTarget.includes(normalizedValue)
-        );
+        return aliases.some((alias) => {
+            const normalizedAlias = normalize(alias);
+
+            return (
+                normalizedValue === normalizedAlias ||
+                normalizedValue.includes(normalizedAlias) ||
+                normalizedAlias.includes(normalizedValue)
+            );
+        });
     };
 
-    const countAgeGroup = (groupLabel) => {
-        const normalizedTarget = normalize(groupLabel);
-        return data.filter(d => isSameGroup(d.demographics?.age, normalizedTarget)).length;
-    };
+    const countByAliases = (selector, aliases) =>
+        data.filter((entry) => groupAliasesMatch(selector(entry), aliases)).length;
 
-    const countEducationGroup = (groupLabel) => {
-        const normalizedTarget = normalize(groupLabel);
-        return data.filter(d => isSameGroup(d.demographics?.education, normalizedTarget)).length;
-    };
+    const ageGroups = [
+        { title: "👶 Below 25", aliases: ["Below 25"] },
+        { title: "🧑 25–34", aliases: ["25-34", "25–34", "25 - 34"] },
+        { title: "🧔 35–44", aliases: ["35-44", "35–44", "35 - 44"] },
+        { title: "🧓 45–54", aliases: ["45-54", "45–54", "45 - 54"] },
+        { title: "👴 50 & above", aliases: ["50 & above", "50 and above", "50+", "50 above"] },
+    ];
 
+    const educationGroups = [
+        { title: "📘 Primary", aliases: ["Primary"] },
+        { title: "📗 Secondary", aliases: ["Secondary", "secondary"] },
+        { title: "🎓 Tertiary (Colle/Unive)", aliases: ["tertiary","Tertiary", "Tertiary (Colle/Unive)", "Tertiary (College/Univ)"] },
+        { title: "📚 Vocational", aliases: ["Vocational","vocational"] },
+    ];
 
-    const countFarmingType = (typeLabel) => {
-        const normalizedTarget = normalize(typeLabel);
-        return data.filter((d) => normalize(d.demographics?.farmingType) === normalizedTarget).length;
-    };
+    const farmingTypeGroups = [
+        { title: "🌾 Paddy", aliases: ["Paddy"] },
+        { title: "🪵 Palm Oil", aliases: ["Palm oil", "Palm Oil"] },
+        { title: "🟤 Rubber", aliases: ["Rubber"] },
+        { title: "🍇 Fruits", aliases: ["Fruits"] },
+        { title: "🥬 Vegetables", aliases: ["Vegetables"] },
+        { title: "🌿 Mixed Crops", aliases: ["Mixed crops", "Mixed Crops"] },
+        { title: "🐄 Livestock", aliases: ["Livestock"] },
+    ];
 
+    const farmSizeGroups = [
+        { title: "🌿 Less than 2 hect", aliases: ["Less than 2 hect", "Less than 2 hectares", "Less than 2 hecters"] },
+        { title: "🌿 2–5 hectares", aliases: ["2–5 hectares", "2-5 hectares", "2 - 5 hectares"] },
+        { title: "🌿 6–10 hectares", aliases: ["6–10 hec", "6–10 hectares", "6-10 hectares"] },
+        { title: "🌾 More than 10 hectares", aliases: ["More than 10 hec", "More than 10 hectares", "More than 10 hec"] },
+    ];
 
+    const experienceGroups = [
+        { title: "🟢 Less than 5 years", aliases: ["Less than 5 years"] },
+        { title: "🔵 5–10 years", aliases: ["5–10 years", "5-10 years", "5 - 10 years"] },
+        { title: "🟡 11–20 years", aliases: ["11–20 years", "11-20 years", "11 - 20 years"] },
+        { title: "🔴 More than 20 years", aliases: ["More than 20 years", "More than 20"] },
+    ];
 
-    const countFarmSizeGroup = (groupLabel) => {
-        return data.filter((d) => isSameGroup(d.demographics?.farmSize, groupLabel)).length;
-    };
+    const understandingGroups = [
+        { title: "⚪ Nil", aliases: ["Nil"] },
+        { title: "🔵 Basic", aliases: ["Basic"] },
+        { title: "🟡 Moderate", aliases: ["Moderate"] },
+        { title: "🟢 Good", aliases: ["Good"] },
+        { title: "🟣 Expert", aliases: ["Expert"] },
+    ];
 
-    const countExperienceGroup = (groupLabel) => {
-        return data.filter((d) => isSameGroup(d.demographics?.experience, groupLabel)).length;
-    };
-    const countUnderstandingGroup = (groupLabel) => {
-        return data.filter((d) => isSameGroup(d.demographics?.understand, groupLabel)).length;
-    };
+    const countAgeGroup = (groupLabel) =>
+        countByAliases((entry) => entry.demographics?.age, ageGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
+
+    const countEducationGroup = (groupLabel) =>
+        countByAliases((entry) => entry.demographics?.education, educationGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
+
+    const countFarmingType = (typeLabel) =>
+        countByAliases((entry) => entry.demographics?.farmingType, farmingTypeGroups.find((group) => group.title === typeLabel)?.aliases || [typeLabel]);
+
+    const countFarmSizeGroup = (groupLabel) =>
+        countByAliases((entry) => entry.demographics?.farmSize, farmSizeGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
+
+    const countExperienceGroup = (groupLabel) =>
+        countByAliases((entry) => entry.demographics?.experience, experienceGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
+
+    const countUnderstandingGroup = (groupLabel) =>
+        countByAliases((entry) => entry.demographics?.understanding, understandingGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
 
     const toNumericList = (section) => {
         if (Array.isArray(section)) {
@@ -136,15 +179,15 @@ const PostSurveySummary = () => {
     };
 
     const sectionSummaries = [
-        { title: "Knowledge & Understanding", key: "knowledgeUnderstanding", icon: "🧠" },
-        { title: "Perceived Usefulness", key: "perceivedUsefulness", icon: "💡" },
-        { title: "Trust in AI", key: "trustInAI", icon: "🤝" },
-        { title: "Adoption Intention", key: "adoptionIntention", icon: "🚀" },
-        { title: "Future of AI", key: "futureOfAI", icon: "🔮" },
-        { title: "Overall Evaluation", key: "overallEvaluation", icon: "⭐" },
+        { title: "Knowledge & Understanding", keys: ["knowledgeUnderstanding", "KnowledgeUnderstanding"], icon: "🧠" },
+        { title: "Perceived Usefulness", keys: ["perceivedUsefulness", "PerceivedUsefulness"], icon: "💡" },
+        { title: "Trust in AI", keys: ["trustInAI", "TrustinAI"], icon: "🤝" },
+        { title: "Adoption Intention", keys: ["adoptionIntention", "AdoptionIntention"], icon: "🚀" },
+        { title: "Future of AI", keys: ["futureOfAI", "FutureofAIinAgriculture"], icon: "🔮" },
+        { title: "Overall Evaluation", keys: ["overallEvaluation", "OverallEvaluation"], icon: "⭐" },
     ].map((item) => ({
         ...item,
-        average: calculateOverallAverage([item.key]),
+        average: calculateOverallAverage(item.keys),
     }));
 
 
@@ -183,13 +226,15 @@ const PostSurveySummary = () => {
                     {activeTab === "age" && (
                         <div>
                             <h3 className="text-xl font-semibold mb-4">🎂 Age Distribution</h3>
-                            <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                                <SummaryCard title="👶 Below 25" value={countAgeGroup("Below 25")} loading={loading} />
-                                <SummaryCard title="🧑 25 - 34" value={countAgeGroup("25-34")} loading={loading} />
-                                <SummaryCard title="🧔 35 - 44" value={countAgeGroup("35-44")} loading={loading} />
-                                <SummaryCard title="🧓 45 - 54" value={countAgeGroup("45-54")} loading={loading} />
-                                <SummaryCard title="👴 50 & above" value={countAgeGroup("50 & above")} loading={loading} />
-
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                                {ageGroups.map((group) => (
+                                    <SummaryCard
+                                        key={group.title}
+                                        title={group.title}
+                                        value={countAgeGroup(group.title)}
+                                        loading={loading}
+                                    />
+                                ))}
                             </div>
                         </div>
                     )}
@@ -197,10 +242,14 @@ const PostSurveySummary = () => {
                         <div>
                             <h3 className="text-xl font-semibold mb-4">🎓 Educational Background</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                                <SummaryCard title="📘 Primary" value={countEducationGroup("Primary")} loading={loading} />
-                                <SummaryCard title="📗 Secondary" value={countEducationGroup("Secondary")} loading={loading} />
-                                <SummaryCard title="🎓 Tertiary" value={countEducationGroup("Tertiary (College/Univ)")} loading={loading} />
-                                <SummaryCard title="📚 Vocational" value={countEducationGroup("Vocational")} loading={loading} />
+                                {educationGroups.map((group) => (
+                                    <SummaryCard
+                                        key={group.title}
+                                        title={group.title}
+                                        value={countEducationGroup(group.title)}
+                                        loading={loading}
+                                    />
+                                ))}
                             </div>
                         </div>
                     )}
@@ -208,13 +257,14 @@ const PostSurveySummary = () => {
                         <div>
                             <h3 className="text-xl font-semibold mb-4">🌾 Type of Farming</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                                <SummaryCard title="🌿 Mixed Crops" value={countFarmingType("Mixed crops")} loading={loading} />
-                                <SummaryCard title="🌾 Paddy" value={countFarmingType("Paddy")} loading={loading} />
-                                <SummaryCard title="🪵 Palm Oil" value={countFarmingType("Palm oil")} loading={loading} />
-                                <SummaryCard title="🟤 Rubber" value={countFarmingType("Rubber")} loading={loading} />
-                                <SummaryCard title="🐄 Livestock" value={countFarmingType("Livestock")} loading={loading} />
-                                <SummaryCard title="🥬 Vegetables" value={countFarmingType("Vegetables")} loading={loading} />
-                                <SummaryCard title="🍇 Fruits" value={countFarmingType("Fruits")} loading={loading} />
+                                {farmingTypeGroups.map((group) => (
+                                    <SummaryCard
+                                        key={group.title}
+                                        title={group.title}
+                                        value={countFarmingType(group.title)}
+                                        loading={loading}
+                                    />
+                                ))}
                             </div>
                         </div>
                     )}
@@ -222,26 +272,14 @@ const PostSurveySummary = () => {
                         <div>
                             <h3 className="text-xl font-semibold mb-4">📐 Size of Farming Land</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                                <SummaryCard
-                                    title="🌿 Less than 2 hectares"
-                                    value={countFarmSizeGroup("Less than 2 hect")}
-                                    loading={loading}
-                                />
-                                <SummaryCard
-                                    title="🌿 2–5 hectares"
-                                    value={countFarmSizeGroup("2–5 hectares")}
-                                    loading={loading}
-                                />
-                                <SummaryCard
-                                    title="🌿 6–10 hectares"
-                                    value={countFarmSizeGroup("6–10 hec")}
-                                    loading={loading}
-                                />
-                                <SummaryCard
-                                    title="🌾 More than 10 hectares"
-                                    value={countFarmSizeGroup("More than 10 hec")} // matches your DB string exactly
-                                    loading={loading}
-                                />
+                                {farmSizeGroups.map((group) => (
+                                    <SummaryCard
+                                        key={group.title}
+                                        title={group.title}
+                                        value={countFarmSizeGroup(group.title)}
+                                        loading={loading}
+                                    />
+                                ))}
 
 
                             </div>
@@ -251,10 +289,14 @@ const PostSurveySummary = () => {
                         <div>
                             <h3 className="text-xl font-semibold mb-4">👨‍🌾 Years of Experience</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                                <SummaryCard title="🟢 Less than 5 years" value={countExperienceGroup("Less than 5 years")} loading={loading} />
-                                <SummaryCard title="🔵 5–10 years" value={countExperienceGroup("5–10 years")} loading={loading} />
-                                <SummaryCard title="🟡 11–20 years" value={countExperienceGroup("11–20 years")} loading={loading} />
-                                <SummaryCard title="🔴 More than 20 years" value={countExperienceGroup("More than 20")} loading={loading} />
+                                {experienceGroups.map((group) => (
+                                    <SummaryCard
+                                        key={group.title}
+                                        title={group.title}
+                                        value={countExperienceGroup(group.title)}
+                                        loading={loading}
+                                    />
+                                ))}
 
                             </div>
                         </div>
@@ -263,11 +305,14 @@ const PostSurveySummary = () => {
                         <div>
                             <h3 className="text-xl font-semibold mb-4">🚀 AI Understanding Level</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-10">
-                                <SummaryCard title="⚪ Nil" value={countUnderstandingGroup("Nil")} loading={loading} />
-                                <SummaryCard title="🔵 Basic" value={countUnderstandingGroup("Basic")} loading={loading} />
-                                <SummaryCard title="🟡 Moderate" value={countUnderstandingGroup("Moderate")} loading={loading} />
-                                <SummaryCard title="🟢 Good" value={countUnderstandingGroup("Good")} loading={loading} />
-                                <SummaryCard title="🟣 Expert" value={countUnderstandingGroup("Expert")} loading={loading} />
+                                {understandingGroups.map((group) => (
+                                    <SummaryCard
+                                        key={group.title}
+                                        title={group.title}
+                                        value={countUnderstandingGroup(group.title)}
+                                        loading={loading}
+                                    />
+                                ))}
                             </div>
                         </div>
                     )}
@@ -283,7 +328,7 @@ const PostSurveySummary = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 w-full">
                         {sectionSummaries.map((section) => (
                             <div
-                                key={section.key}
+                                key={section.title}
                                 className="flex flex-col items-center justify-center bg-blue-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300"
                             >
                                 <h2 className="text-lg font-semibold mb-2 text-center">
