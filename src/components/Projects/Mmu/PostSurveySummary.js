@@ -144,7 +144,18 @@ const PostSurveySummary = () => {
         countByAliases((entry) => entry.demographics?.experience, experienceGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
 
     const countUnderstandingGroup = (groupLabel) =>
-        countByAliases((entry) => entry.demographics?.understanding, understandingGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
+        countByAliases((entry) => {
+            const demographics = entry.demographics || {};
+
+            return (
+                demographics.understanding ??
+                demographics.understand ??
+                demographics.Understanding ??
+                demographics.Understand ??
+                entry.understanding ??
+                entry.understand
+            );
+        }, understandingGroups.find((group) => group.title === groupLabel)?.aliases || [groupLabel]);
 
     const toNumericList = (section) => {
         if (Array.isArray(section)) {
