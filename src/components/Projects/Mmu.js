@@ -7,6 +7,8 @@ import Summary from './Mmu/Summary';
 import ThesisAuth from './Mmu/ThesisAuth';
 import Presentation from './Mmu/Presentation';
 import Roadmap from './Roadmap';
+import PostSurveySummary from './Mmu/PostSurveySummary';
+import PostSummaryAuth from './Mmu/PostSummaryAuth';
 
 const Mmu = () => {
     const [isActive, setIsActive] = useState(false);
@@ -17,6 +19,7 @@ const Mmu = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [modal, setModal] = useState(false);
+    const [modalsurvey, setModalsurvey] = useState(false);
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showThesisModal, setShowThesisModal] = useState(false);
     const [showPresentationModal, setShowPresentationModal] = useState(false);
@@ -103,6 +106,11 @@ const Mmu = () => {
             {showLoginModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
                     <Summary onClose={() => setShowLoginModal(false)} />
+                </div>
+            )}
+            {modalsurvey && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 h-screen flex items-center justify-center z-50">
+                    <PostSummaryAuth onClose={() => setModalsurvey(false)} />
                 </div>
             )}
 
@@ -328,7 +336,7 @@ const Mmu = () => {
                     📊 Pre-Survey Summary
                 </button>
                 <button
-                    onClick={() => setShowLoginModal(true)}
+                    onClick={() => setModalsurvey(true)}
                     className="w-full md:w-auto bg-red-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-red-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-200"
                 >
                     📊 Post-Survey Summary

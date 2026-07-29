@@ -5,18 +5,18 @@ import PostFAQComponent from './PostFAQComponent';
 
 const SummaryCard = ({ title, value, loading }) => (
     <div className="bg-white border-2 border-blue-500 hover:scale-105 duration-200 cursor-pointer p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow-md transition min-h-[88px]">
-        <h2 className="text-lg font-medium text-gray-500 text-center">{title}</h2>
+        <h2 className="text-sm sm:text-lg font-medium text-gray-500 text-center">{title}</h2>
         {loading ? (
             <LoadingSmall />
         ) : (
-            <p className="text-3xl font-bold text-blue-800 text-center">{value}</p>
+            <p className="text-sm sm:text-3xl font-bold text-blue-800 text-center">{value}</p>
         )}
     </div>
 );
 
 
 
-const PostSurveySummary = () => {
+const PostSurveySummary = ({ onClose }) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState("age");
@@ -206,10 +206,10 @@ const PostSurveySummary = () => {
     return (
         <div className='bg-blue-50 '>
 
-            <div className="max-w-7xl mx-auto pt-28 pb-10 ">
+            <div className="max-w-7xl mx-auto pt-28 pb-10 px-2">
                 {/* Title & Description */}
                 <div className="mb-8 text-center">
-                    <h2 className="text-4xl font-bold text-blue-700 mb-2">📝 Post-Survey Summary</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-2">📝 Post-Survey Summary</h2>
                     <p className="text-gray-600  md:text-base font-medium">
                         View a breakdown of the respondent's profile based on age, education,
                         farming type, and more.
@@ -222,7 +222,7 @@ const PostSurveySummary = () => {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`px-4 py-2 text-lg font-semibold border-b-2 transition-all duration-200
+                            className={`px-4 py-2 sm:text-lg font-semibold border-b-2 transition-all duration-200
               ${activeTab === tab.id
                                     ? "border-blue-500 text-blue-600"
                                     : "border-transparent text-gray-500 hover:text-blue-500"
@@ -237,8 +237,8 @@ const PostSurveySummary = () => {
                 <div className="mt-6 bg-white p-6 rounded-lg shadow border-2 border-gray-300 text-gray-800">
                     {activeTab === "age" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-4">🎂 Age Distribution</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4">🎂 Age Distribution</h3>
+                            <div className="grid  grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
                                 {ageGroups.map((group) => (
                                     <SummaryCard
                                         key={group.title}
@@ -331,25 +331,25 @@ const PostSurveySummary = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto pt-14 pb-14  ">
+            <div className="max-w-7xl mx-auto pt-14 pb-14 px-2 ">
                 <div className="flex flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-white shadow p-8">
-                    <h1 className="text-3xl font-bold text-center text-blue-800 mb-6">
+                    <h1 className="text-xl md:text-3xl font-bold text-center  mb-6">
                         📊 Post-Survey Section Averages
                     </h1>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 w-full">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 mt-4 w-full">
                         {sectionSummaries.map((section) => (
                             <div
                                 key={section.title}
                                 className="flex flex-col items-center justify-center bg-blue-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300"
                             >
-                                <h2 className="text-lg font-semibold mb-2 text-center">
+                                <h2 className="text-sm md:text-lg font-semibold mb-2 text-center">
                                     {section.icon} {section.title}
                                 </h2>
                                 {loading ? (
                                     <LoadingSmall />
                                 ) : (
-                                    <p className="text-4xl font-bold">{section.average}</p>
+                                    <p className="text-2xl md:text-4xl font-bold">{section.average}</p>
                                 )}
                             </div>
                         ))}

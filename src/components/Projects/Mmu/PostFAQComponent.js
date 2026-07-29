@@ -56,8 +56,8 @@ const PostFAQComponent = () => {
     };
 
     return (
-        <div className=" max-w-7xl mx-auto  mb-10 ">
-            <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">
+        <div className=" max-w-7xl mx-auto  mb-10 px-2 ">
+            <h1 className="text-2xl md:text-4xl font-bold text-center text-gray-900 mb-10">
                 Open-ended Questions Summary
             </h1>
             <div className="space-y-6">
@@ -68,7 +68,7 @@ const PostFAQComponent = () => {
                     >
                         <button
                             onClick={() => toggleAnswer(index)}
-                            className="w-full text-left text-xl font-semibold text-gray-700 hover:text-gray-900 focus:outline-none flex justify-between items-center"
+                            className="w-full text-left text-sm md:text-xl font-semibold text-gray-700 hover:text-gray-900 focus:outline-none flex justify-between items-center"
                         >
                             <span>{faq.question}</span>
                             <span className="text-2xl font-bold">
@@ -86,7 +86,7 @@ const PostFAQComponent = () => {
                             >
                                 <ul className="space-y-3">
                                     {faq.answers.map((answer, idx) => (
-                                        <li key={idx} className="border-b border-gray-300 pb-3 text-gray-700">
+                                        <li key={idx} className="border-b text-sm md:text-base border-gray-300 pb-3 text-gray-700">
                                             <span className="font-semibold text-gray-800">{idx + 1}.</span> {answer}
                                         </li>
                                     ))}

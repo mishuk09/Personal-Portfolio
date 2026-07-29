@@ -4,11 +4,11 @@ import LoadingSmall from '../Utills/LoadingSmall';
 
 const SummaryCard = ({ title, value, loading }) => (
     <div className="bg-white border-2 border-blue-500 hover:scale-105 duration-200 cursor-pointer p-3 rounded-xl shadow flex flex-col items-center justify-center hover:shadow-md transition min-h-[88px]">
-        <h2 className="text-lg font-medium text-gray-500 text-center">{title}</h2>
+        <h2 className="text-sm sm:text-lg font-medium text-gray-500 text-center">{title}</h2>
         {loading ? (
             <LoadingSmall />
         ) : (
-            <p className="text-3xl font-bold text-blue-800 text-center">{value}</p>
+            <p className="text-sm sm:text-3xl font-bold text-blue-800 text-center">{value}</p>
         )}
     </div>
 );
@@ -33,7 +33,7 @@ const SurveySummary = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await fetch("http://localhost:5000/get/surveys");
+                const response = await fetch("https://survey-backend-3ppk.onrender.com/get/surveys");
                 const result = await response.json();
                 setData(result);
             } catch (err) {
@@ -129,10 +129,10 @@ const SurveySummary = () => {
     return (
         <div className='bg-blue-50 '>
 
-            <div className="max-w-7xl mx-auto pt-28 pb-10 ">
+            <div className="max-w-7xl mx-auto pt-28 pb-10 px-2">
                 {/* Title & Description */}
                 <div className="mb-8 text-center">
-                    <h2 className="text-4xl font-bold text-blue-700 mb-2">📝 Survey Summary</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-2">📝 Survey Summary</h2>
                     <p className="text-gray-600  md:text-base font-medium">
                         View a breakdown of the respondent's profile based on age, education,
                         farming type, and more.
@@ -145,7 +145,7 @@ const SurveySummary = () => {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`px-4 py-2 text-lg font-semibold border-b-2 transition-all duration-200
+                            className={`px-4 py-2 sm:text-lg font-semibold border-b-2 transition-all duration-200
               ${activeTab === tab.id
                                     ? "border-blue-500 text-blue-600"
                                     : "border-transparent text-gray-500 hover:text-blue-500"
@@ -157,11 +157,11 @@ const SurveySummary = () => {
                 </div>
 
                 {/* Tab Content */}
-                <div className="mt-6 bg-white p-6 rounded-lg shadow border-2 border-gray-300 text-gray-800">
+                <div className="mt-6 bg-white p-4 sm:p-6 rounded-lg shadow border-2 border-gray-300 text-gray-800">
                     {activeTab === "age" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-4">🎂 Age Distribution</h3>
-                            <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4">🎂 Age Distribution</h3>
+                            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
                                 <SummaryCard title="👶 Below 25" value={countAgeGroup("Below 25")} loading={loading} />
                                 <SummaryCard title="🧑 25 - 34" value={countAgeGroup("25-34")} loading={loading} />
                                 <SummaryCard title="🧔 35 - 44" value={countAgeGroup("35-44")} loading={loading} />
@@ -173,8 +173,8 @@ const SurveySummary = () => {
                     )}
                     {activeTab === "education" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-4">🎓 Educational Background</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4">🎓 Educational Background</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
                                 <SummaryCard title="📘 Primary" value={countEducationGroup("Primary")} loading={loading} />
                                 <SummaryCard title="📗 Secondary" value={countEducationGroup("Secondary")} loading={loading} />
                                 <SummaryCard title="🎓 Tertiary" value={countEducationGroup("Tertiary (College/Univ)")} loading={loading} />
@@ -184,8 +184,8 @@ const SurveySummary = () => {
                     )}
                     {activeTab === "farmingType" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-4">🌾 Type of Farming</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4">🌾 Type of Farming</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
                                 <SummaryCard title="🌿 Mixed Crops" value={countFarmingType("Mixed crops")} loading={loading} />
                                 <SummaryCard title="🌾 Paddy" value={countFarmingType("Paddy")} loading={loading} />
                                 <SummaryCard title="🥬 Vegetables" value={countFarmingType("Vegetables")} loading={loading} />
@@ -196,8 +196,8 @@ const SurveySummary = () => {
                     )}
                     {activeTab === "farmingSize" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-4">📐 Size of Farming Land</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4">📐 Size of Farming Land</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
                                 <SummaryCard
                                     title="🌿 Less than 2 hectares"
                                     value={countFarmSizeGroup("Less than 2 hect")}
@@ -225,8 +225,8 @@ const SurveySummary = () => {
                     )}
                     {activeTab === "experience" && (
                         <div>
-                            <h3 className="text-xl font-semibold mb-4">👨‍🌾 Years of Experience</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                            <h3 className="text-lg sm:text-xl font-semibold mb-4">👨‍🌾 Years of Experience</h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-10">
                                 <SummaryCard title="🟢 Less than 5 years" value={countExperienceGroup("Less than 5 years")} loading={loading} />
                                 <SummaryCard title="🔵 5–10 years" value={countExperienceGroup("5–10 years")} loading={loading} />
                                 <SummaryCard title="🟡 11–20 years" value={countExperienceGroup("11–20 years")} loading={loading} />
@@ -238,30 +238,30 @@ const SurveySummary = () => {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto pt-14 pb-14  ">
-                <div className="flex flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-white shadow p-8">
-                    <h1 className="text-3xl font-bold text-center text-blue-800 mb-6">
+            <div className="max-w-7xl mx-auto pt-14 pb-14  px-2">
+                <div className="flex flex-col items-center justify-center rounded-xl border-2 border-gray-300 bg-white shadow p-6 sm:p-8">
+                    <h1 className="text-xl md:text-3xl font-bold text-center text-blue-800 mb-6">
                         📊 Summary of Awareness & Readiness
                     </h1>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4 w-full max-w-2xl">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6 mt-4 w-full max-w-2xl">
                         {/* Awareness Card */}
                         <div className="flex flex-col items-center justify-center bg-purple-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
-                            <h2 className="text-xl font-semibold mb-2">Awareness</h2>
+                            <h2 className="text-lg sm:text-xl font-semibold mb-2">Awareness</h2>
                             {loading ? (
                                 <LoadingSmall />
                             ) : (
-                                <p className="text-4xl font-bold">{calculateAverageAwareness()}</p>
+                                <p className="text-2xl md:text-4xl font-bold">{calculateAverageAwareness()}</p>
                             )}
                         </div>
 
                         {/* Readiness Card */}
                         <div className="flex flex-col items-center justify-center bg-green-600 text-white rounded-xl shadow-md p-6 transition hover:scale-[1.02] duration-300">
-                            <h2 className="text-xl font-semibold mb-2">Readiness</h2>
+                            <h2 className="text-lg sm:text-xl font-semibold mb-2">Readiness</h2>
                             {loading ? (
                                 <LoadingSmall />
                             ) : (
-                                <p className="text-4xl font-bold">{readinessAverage}</p>
+                                <p className="text-2xl md:text-4xl font-bold">{readinessAverage}</p>
                             )}
 
                         </div>

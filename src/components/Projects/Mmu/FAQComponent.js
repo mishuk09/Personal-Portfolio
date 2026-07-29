@@ -284,22 +284,22 @@ const FAQComponent = () => {
     };
 
     return (
-        <div className=" max-w-7xl mx-auto  mb-10 ">
-            <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">
+        <div className="max-w-7xl mx-auto mb-10 px-2">
+            <h1 className="text-2xl md:text-4xl font-bold text-center text-gray-900 mb-10">
                 Open-ended Questions Summary
             </h1>
             <div className="space-y-6">
                 {faqs.map((faq, index) => (
                     <div
                         key={index}
-                        className="bg-white border-2   border-gray-300 shadow-sm rounded-lg p-6 transition hover:shadow-lg"
+                        className="bg-white border-2 border-gray-300 shadow-sm rounded-lg p-4 md:p-6 transition hover:shadow-lg"
                     >
                         <button
                             onClick={() => toggleAnswer(index)}
-                            className="w-full text-left text-xl font-semibold text-gray-700 hover:text-gray-900 focus:outline-none flex justify-between items-center"
+                            className="w-full text-left text-sm md:text-xl font-semibold text-gray-700 hover:text-gray-900 focus:outline-none flex justify-between items-center gap-3"
                         >
                             <span>{faq.question}</span>
-                            <span className="text-2xl font-bold">
+                            <span className="text-xl md:text-2xl font-bold flex-shrink-0">
                                 {activeIndex === index ? "−" : "+"}
                             </span>
                         </button>
@@ -313,9 +313,9 @@ const FAQComponent = () => {
                                 }}
                             >
                                 {faq.answers.map((answer, idx) => (
-                                    <div key={idx} className="border-b border-gray-300">
-                                        <h3 className="font-semibold text-lg text-gray-800"> ✅ {answer.title}:</h3>
-                                        <p className="text-gray-700">&nbsp;&nbsp;&nbsp; -- {answer.answer}</p>
+                                    <div key={idx} className="border-b border-gray-300 pb-3">
+                                        <h3 className="font-semibold text-base md:text-lg text-gray-800"> ✅ {answer.title}:</h3>
+                                        <p className="text-sm md:text-base text-gray-700">&nbsp;&nbsp;&nbsp; -- {answer.answer}</p>
                                     </div>
                                 ))}
                             </div>
