@@ -1,84 +1,127 @@
 import React from "react";
-import { CheckCircle, Circle } from "lucide-react";
 import { motion } from "framer-motion";
 
-const roadmap = [
-    { task: "Week 1", status: "done", detail: "Completed initial setup & planning" },
-    { task: "Week 2", status: "done", detail: "Built authentication system" },
-    { task: "Week 3", status: "done", detail: "Database integration finished" },
-    { task: "Week 4", status: "done", detail: "Frontend core design ready" },
-    { task: "Week 5", status: "current", detail: "Currently implementing payment system" },
-    { task: "Week 6", status: "upcoming", detail: "Upcoming: API integration" },
-    { task: "Week 7", status: "upcoming", detail: "Upcoming: Testing & bug fixing" },
-    { task: "Week 8", status: "upcoming", detail: "Upcoming: Final launch" },
+const columns = [
+    { key: "2025-q3", year: "2025", quarter: "Q3" },
+    { key: "2025-q4", year: "2025", quarter: "Q4" },
+    { key: "2026-q1", year: "2026", quarter: "Q1" },
+    { key: "2026-q2", year: "2026", quarter: "Q2", current: true },
+    { key: "2026-q3", year: "2026", quarter: "Q3" },
+    { key: "2026-q4", year: "2026", quarter: "Q4" },
+    { key: "2027-q1", year: "2027", quarter: "Q1" },
+    { key: "2027-q2", year: "2027", quarter: "Q2" },
 ];
+
+const roadmapRows = [
+    { task: "1. Survey, Literature Review & Formulation", bars: ["2025-q3", "2025-q4"], style: "solid" },
+    { task: "2. Data Acquisition & Preprocessing", bars: ["2025-q4", "2026-q1"], style: "solid" },
+    { task: "3. ML Model Development & Training", bars: ["2026-q1", "2026-q2"], style: "solid" },
+    { task: "4. Evaluation & Optimization", bars: ["2026-q2", "2026-q3"], style: "planned" },
+    { task: "5. Results Analysis & Discussion", bars: ["2026-q3", "2026-q4"], style: "planned" },
+    { task: "6. Thesis Writing & Editing", bars: ["2026-q4", "2027-q1"], style: "planned" },
+    { task: "7. Submission & Viva Preparation", bars: ["2027-q1", "2027-q2"], style: "planned" },
+];
+
+const gradientCell = (isPlanned) =>
+    isPlanned
+        ? "bg-[linear-gradient(135deg,rgba(147,197,253,0.95)_0%,rgba(191,219,254,0.95)_45%,rgba(219,234,254,0.95)_45%,rgba(219,234,254,0.95)_100%)]"
+        : "bg-blue-500";
 
 export default function RoadmapTimeline() {
     return (
-        <div className="w-full max-w-6xl mx-auto mt-16 px-6">
-            <h2 className="text-2xl font-bold text-center mb-10 text-gray-800">
-                📍 My Roadmap Journey
-            </h2>
-
-            <div className="relative flex items-center justify-between">
-                {/* Progress Line */}
-                <div className="absolute top-6 left-0 w-full h-1 bg-gradient-to-r from-green-500 via-blue-500 to-gray-300 -z-10 rounded-full"></div>
-
-                {roadmap.map((item, index) => (
-                    <div key={index} className="flex flex-col items-center relative w-full group">
-                        {/* Milestone */}
-                        <div className="relative">
-                            {item.status === "done" && (
-                                <motion.div
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                >
-                                    <CheckCircle className="w-12 h-12 text-green-500 bg-white rounded-full shadow-lg border-2 border-green-400" />
-                                </motion.div>
-                            )}
-
-                            {item.status === "current" && (
-                                <motion.img
-                                    src="http://localhost:3000/static/media/mishuk.png" // replace with your photo
-                                    alt="Current"
-                                    className="w-14 h-14 rounded-full border-4 border-blue-500 shadow-xl z-10 animate-pulse"
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1.1 }}
-                                    transition={{ duration: 0.8, repeat: Infinity, repeatType: "mirror" }}
-                                />
-                            )}
-
-                            {item.status === "upcoming" && (
-                                <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                >
-                                    <Circle className="w-12 h-12 text-gray-400 bg-white rounded-full shadow-md border-2 border-gray-300" />
-                                </motion.div>
-                            )}
-
-                            {/* Tooltip (shows on hover) */}
-                            <div className="absolute bottom-16 left-1/2 -translate-x-1/2 hidden group-hover:block">
-                                <div className="bg-gray-800 text-white text-xs px-3 py-2 rounded-lg shadow-lg max-w-[150px] text-center">
-                                    {item.detail}
-                                    <div className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-3 h-3 bg-gray-800 rotate-45"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Task Label */}
-                        <motion.div
-                            className="mt-4 px-4 py-2 bg-white rounded-xl shadow-md text-sm font-medium text-gray-700"
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.15 }}
-                        >
-                            {item.task}
-                        </motion.div>
+        <div className="w-full bg-white px-4 lg:py-10 sm:px-6 lg:px-10">
+            <div className="mx-auto max-w-[1320px]">
+                <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                    <div>
+                       
+                        
+                        <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-gray-950 sm:text-4xl">
+                            Project <span className="text-blue-500">Timeline</span>
+                        </h2>
+                        <p className="mt-2  font-medium text-slate-700 sm:text-xl">
+                            Master&apos;s Research Gantt Chart (July 2025 – June 2027)
+                        </p>
                     </div>
-                ))}
+
+                    <div className="flex items-center w-full lg:w-auto gap-3 self-start rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-base font-semibold text-amber-700 shadow-sm">
+                        <span className="text-lg">📍</span>
+                        <span>We are here: July-Sept 2026</span>
+                    </div>
+                </div>
+
+                <div className="overflow-x-auto rounded-none border border-slate-300 shadow-sm">
+                    <div className="min-w-[1150px]">
+                    <div className="grid grid-cols-[minmax(320px,2.2fr)_repeat(8,minmax(112px,1fr))] border-b border-slate-300 bg-blue-600 text-white">
+                        <div className="border-r border-slate-700 px-3 py-3 text-lg font-bold">Research Activities</div>
+                        <div className="col-span-2 border-r border-slate-700 px-3 py-2 text-center text-lg font-semibold">2025</div>
+                        <div className="col-span-4 border-r border-slate-700 px-3 py-2 text-center text-lg font-semibold">2026</div>
+                        <div className="col-span-2 px-3 py-2 text-center text-lg font-semibold">2027</div>
+                    </div>
+
+                    <div className="grid grid-cols-[minmax(320px,2.2fr)_repeat(8,minmax(112px,1fr))] border-b border-slate-300 bg-blue-500 text-white">
+                        <div className="border-r border-slate-700 px-3 py-2 text-lg font-bold" />
+                        {columns.map((column) => (
+                            <div
+                                key={column.key}
+                                className={`border-r border-slate-700 px-3 py-1 text-center text-lg font-medium ${column.current ? "bg-amber-500 text-white" : "bg-blue-500"}`}
+                            >
+                                {column.current ? (
+                                    <>
+                                        <div>Q2</div>
+                                        <div className="text-sm font-bold">(Current)</div>
+                                    </>
+                                ) : (
+                                    column.quarter
+                                )}
+                            </div>
+                        ))}
+                    </div>
+
+                    {roadmapRows.map((row, rowIndex) => (
+                        <div
+                            key={row.task}
+                            className={`grid grid-cols-[minmax(320px,2.2fr)_repeat(8,minmax(112px,1fr))] border-b border-slate-300 ${rowIndex % 2 === 0 ? "bg-slate-100" : "bg-slate-200"}`}
+                        >
+                            <div className="border-r border-slate-400 px-3 py-2 text-[1.05rem] font-semibold text-slate-800">
+                                {row.task}
+                            </div>
+
+                            {columns.map((column) => {
+                                const isActive = row.bars.includes(column.key);
+                                const isCurrent = column.current && row.task === "3. ML Model Development & Training";
+
+                                return (
+                                    <div key={column.key} className="relative border-r border-slate-400 px-2 py-3">
+                                        {isActive && (
+                                            <motion.div
+                                                initial={{ scaleX: 0, opacity: 0 }}
+                                                animate={{ scaleX: 1, opacity: 1 }}
+                                                transition={{ duration: 0.45, delay: rowIndex * 0.05 }}
+                                                className={`h-9 w-full origin-left rounded-md shadow-sm ${gradientCell(row.style === "planned")}`}
+                                            />
+                                        )}
+
+                                        {isCurrent && (
+                                            <div className="pointer-events-none absolute inset-y-0 left-0 right-0 bg-amber-300/70" />
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    ))}
+                        </div>
+                </div>
+
+                <div className="mt-4 flex flex-wrap items-center justify-end gap-6 pr-2 text-lg text-slate-700">
+                    <div className="flex items-center gap-3">
+                        <span className="h-8 w-8 rounded-md bg-blue-500 shadow-sm" />
+                        <span>Completed / In Progress</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <span className="h-8 w-8 rounded-md bg-[linear-gradient(135deg,rgba(147,197,253,0.95)_0%,rgba(191,219,254,0.95)_45%,rgba(219,234,254,0.95)_45%,rgba(219,234,254,0.95)_100%)] shadow-sm" />
+                        <span>Planned Future Work</span>
+                    </div>
+                </div>
             </div>
         </div>
     );

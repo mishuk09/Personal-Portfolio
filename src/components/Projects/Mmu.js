@@ -325,7 +325,13 @@ const Mmu = () => {
                     onClick={() => setShowLoginModal(true)}
                     className="w-full md:w-auto bg-green-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-green-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200"
                 >
-                    📊 Survey Summary
+                    📊 Pre-Survey Summary
+                </button>
+                <button
+                    onClick={() => setShowLoginModal(true)}
+                    className="w-full md:w-auto bg-red-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-red-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-200"
+                >
+                    📊 Post-Survey Summary
                 </button>
 
                 <button
@@ -340,12 +346,12 @@ const Mmu = () => {
                 >
                     📑 2 Sept Presentation
                 </button>
-                <a
+                {/* <a
                     href='/rf'
                     className="w-full md:w-auto no-underline bg-red-600 text-white py-2.5 px-6 rounded font-medium shadow-md hover:bg-red-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-200"
                 >
                     📑 10 Sept Presentation
-                </a>
+                </a> */}
             </div>
 
         </div>

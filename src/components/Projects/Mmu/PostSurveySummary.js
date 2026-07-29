@@ -35,7 +35,7 @@ const PostSurveySummary = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const response = await fetch("http://localhost:5000/get/postsurveys");
+                const response = await fetch("https://survey-backend-3ppk.onrender.com/get/postsurveys");
                 if (!response.ok) {
                     throw new Error(`Failed to fetch post surveys: ${response.status}`);
                 }

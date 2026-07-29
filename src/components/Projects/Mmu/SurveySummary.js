@@ -270,7 +270,7 @@ const SurveySummary = () => {
             </div>
             {/* <TextZeroResponses /> */}
             <FAQComponent />
-            <a href='/thesisplan' className='mt-6 pb-6 no-underline mx-auto flex items-center justify-center border bg-blue-500 border-blue-600 text-white py-2 px-4   hover:bg-blue-600 hover:text-white transition duration-300'>Thesis Plan</a>
+            {/* <a href='/thesisplan' className='mt-6 pb-6 no-underline mx-auto flex items-center justify-center border bg-blue-500 border-blue-600 text-white py-2 px-4   hover:bg-blue-600 hover:text-white transition duration-300'>Thesis Plan</a> */}
 
 
 

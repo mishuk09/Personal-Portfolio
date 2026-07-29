@@ -284,7 +284,7 @@ const FAQComponent = () => {
     };
 
     return (
-        <div className=" max-w-7xl mx-auto   ">
+        <div className=" max-w-7xl mx-auto  mb-10 ">
             <h1 className="text-4xl font-bold text-center text-gray-900 mb-10">
                 Open-ended Questions Summary
             </h1>
